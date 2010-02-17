@@ -1,4 +1,8 @@
 DirectoryIndex index.rhtml index.php index.html index.htm
+RewriteEngine On
 
 AddHandler rubypage .rhtml
 Action rubypage /eruby.cgi
+
+RewriteRule ^blog/new/(.+)$     blog/new.rhtml
+RewriteRule ^blog/view/(.+)$    blog/view.rhtml?page=$1

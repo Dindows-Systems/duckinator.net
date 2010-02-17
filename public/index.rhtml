@@ -1,1 +1,13 @@
-<%= ENV['REQUEST_URI'] %>
+<%
+require '../backend/index.rb'
+hp = HomePage.new(ENV.clone)
+%>
+<!doctype html>
+<html>
+	<head>
+		<title><%= hp.title %></title>
+	</head>
+	<body>
+	<%= hp.location %>
+	</body>
+</html>
