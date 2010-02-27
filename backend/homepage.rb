@@ -17,6 +17,8 @@ class HomePage
     if @location != '/' and @location.length > 0
       title = "#{title} : #{@env['REQUEST_URI'][1..-1]}"
     end
+    title.chomp!('/index.rhtml')
+    title.chomp!('/')
     title
   end
 
