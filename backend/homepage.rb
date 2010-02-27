@@ -1,3 +1,5 @@
+require 'time'
+
 class HomePage
   attr_accessor :title, :location
   def initialize(env)
@@ -29,6 +31,7 @@ class HomePage
     text.gsub!('%title%', @title)
     text.gsub!('%head%', head)
     text.gsub!('%body%', @body)
+    text.gsub!('%year%', `date +'%Y'`) # ... Why wont Time.now.year work?
     puts text
   end
 end
