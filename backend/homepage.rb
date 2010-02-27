@@ -21,17 +21,13 @@ class HomePage
   end
 
   def print_page
-    puts <<-EOF
-<!doctype html>
-<html>
-	<head>
-		<title>#{@title}</title>
-	</head>
-	<body>
-#{@body}
-	</body>
-</html>
-    EOF
+    head = ''
+
+    text = open(File.dirname(__FILE__) + '/template.html').read
+    text.gsub!('%title%', @title)
+    text.gsub!('%head%', head)
+    text.gsub!('%body%', @body)
+    puts text
   end
 end
 
