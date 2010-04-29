@@ -19,3 +19,7 @@ echo -en "$(date):\n  " >> $LOG
 git pull &> last_git_pull.log
 cat last_git_pull.log >> $LOG
 
+if [ "$(cat last_git_pull.log)" != "Already up-to-date." ]; then
+  echo "Pulled!"
+fi
+
