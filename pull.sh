@@ -16,6 +16,6 @@ fi
 
 cd $DIR
 echo -en "$(date):\n  " >> $LOG
-git pull &> last_git_log
+git pull &> last_git_pull.log
 cat last_git_pull.log >> $LOG
 
