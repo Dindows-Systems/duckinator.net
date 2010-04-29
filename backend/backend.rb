@@ -7,7 +7,7 @@ class HomePage
     @location = @env['REQUEST_URI'] || "/"
     @title = set_title
 
-    body_ex = open(env['PATH_TRANSLATED']).read.split("\n")[2..-1]
+    body_ex = open(env['SITE_FILE_NAME']).read.split("\n")[2..-1]
     @body = body_ex.join("\n")
  
     print_page
@@ -36,3 +36,6 @@ class HomePage
   end
 end
 
+if __FILE__ == "backend.rb"
+  HomePage.new(ENV.clone)
+end
