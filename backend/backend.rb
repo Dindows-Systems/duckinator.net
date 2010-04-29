@@ -30,7 +30,7 @@ class HomePage
     text.gsub!('%title%', @title)
     text.gsub!('%head%', head)
     text.gsub!('%body%', @body)
-    text.gsub!('%year%', `date +'%Y'`) # ... Why wont Time.now.year work?
+    text.gsub!('%year%', `date +'%Y'`.chomp) # ... Why wont Time.now.year work?
     puts text
   end
 end
