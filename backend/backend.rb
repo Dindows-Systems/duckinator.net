@@ -7,8 +7,8 @@ class HomePage
     @location = @env['REQUEST_URI'] || "/"
     @title = set_title
 
-    body_ex = open(env['PATH_TRANSLATED']).read.split("\n")[2..-1]
-    @body = body_ex.join("\n")
+    @body = open(env['PATH_TRANSLATED']).read #.split("\n")[2..-1]
+    #@body = body_ex.join("\n")
  
     print_page
     exit
