@@ -36,6 +36,3 @@ class HomePage
   end
 end
 
-if __FILE__ == "backend.rb"
-  HomePage.new(ENV.clone)
-end
