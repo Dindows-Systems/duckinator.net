@@ -9,7 +9,7 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ] || [ "$1" != "" ]; then
   echo
   echo "Add the following cron entry for this to auto-run every 10 minutes:"
   echo
-  echo "*/10 * * * * ${SCRIPT}"
+  echo "*/3 * * * * ${SCRIPT}"
   echo
   exit
 fi
