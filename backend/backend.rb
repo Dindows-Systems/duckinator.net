@@ -25,7 +25,11 @@ class HomePage
 
       i = location_words.length-1
       i-=1 until title_check(location_words, i) || i == 0
-      title = "#{location_words[i]} : #{title}"
+      if i > 1
+        title = "#{location_words[i]} : #{location_words[0..(i-1)].join(' ')} : #{title}"
+      else
+        title = "#{location_words[i]} : #{title}"
+      end
       #title = "#{title} : #{@env['REQUEST_URI'][1..-1]}"
     end
     #title.chomp!('/index.rhtml')
