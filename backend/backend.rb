@@ -14,13 +14,7 @@ class HomePage
   end
 
   def title_check (location_words, i)
-    if File.directory?(location_words[0..i].join('/'))
-      puts "yay"
-      return true
-    else
-      puts "ohnoes"
-      return false
-    end
+    File.directory?("./#{location_words[0..i].join('/')}")
   end
 
   def set_title
