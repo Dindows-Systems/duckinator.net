@@ -1,7 +1,7 @@
 body{
 	background:#333;
 	color:#000;
-	font-family:helvetica,arial,sans-serif;
+	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
 	height:100%;
 }
 
@@ -14,7 +14,6 @@ a:hover{
 }
 
 .text-content, p {
-	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
 	line-height: 150%;
 	text-align: justify;
 }
