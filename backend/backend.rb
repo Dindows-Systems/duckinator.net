@@ -14,7 +14,13 @@ class HomePage
   end
 
   def title_check (location_words, i)
-    File.directory?(location_words[0..i].join('/'))
+    if File.directory?(location_words[0..i].join('/'))
+      puts "yay"
+      return true
+    else
+      puts "ohnoes"
+      return false
+    end
   end
 
   def set_title
@@ -24,7 +30,7 @@ class HomePage
       location_words = location.split('/')
 
       i = location_words.length-1
-      i-=1 until title_check(location_words, i)
+      i-=1 until title_check(location_words, i) || i == 0
       title = "#{location_words[i]} : #{title}"
       #title = "#{title} : #{@env['REQUEST_URI'][1..-1]}"
     end
