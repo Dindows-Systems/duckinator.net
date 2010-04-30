@@ -13,6 +13,14 @@ a:hover{
 	color:#ad7fa8;
 }
 
+.text-content, p {
+	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
+}
+
+.text-code {
+	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
+}
+
 img{
 	border:none;
 }
