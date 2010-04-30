@@ -13,13 +13,23 @@ class HomePage
     exit
   end
 
+  def title_check (location_words, i)
+    File.directory?(location_words[0..i].join('/'))
+  end
+
   def set_title
     title = "duckinator.net"
     if @location != '/' and @location.length > 0
-      title = "#{title} : #{@env['REQUEST_URI'][1..-1]}"
+      location = @location.chomp('/index.rhtml').chomp('/')
+      location_words = location.split('/')
+
+      i = location_words.length-1
+      i-=1 until title_check(location_words, i)
+      title = "#{location_words[i]} : #{title}"
+      #title = "#{title} : #{@env['REQUEST_URI'][1..-1]}"
     end
-    title.chomp!('/index.rhtml')
-    title.chomp!('/')
+    #title.chomp!('/index.rhtml')
+    #title.chomp!('/')
     title
   end
 
