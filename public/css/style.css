@@ -35,6 +35,14 @@ img {
 	padding-bottom: 50px;
 }
 
+#page:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
 ul {
 	list-style-type: disc;
 	margin: 0 0 10px 32px;
@@ -44,6 +52,7 @@ ul {
 	background: url(/images/header.png) no-repeat scroll 0px 20px;
 	width: 800px;
 	height: 150px;
+	margin-bottom: 20px;
 }
 
 #header h1 {
@@ -53,6 +62,7 @@ ul {
 
 #left {
 	width: 250px;
+	margin-left: -20px;
 	float: left;
 }
 
@@ -63,16 +73,17 @@ ul {
 
 #right {
 	margin: 0;
-	margin-left: 255px;
-	margin-right: 48px; 
+	margin-right: 48px;
+	width: 520px;
+	float: right;
 }
 
 #footer {
 	padding-top: 20px;
+	padding-bottom: 20px;
 	width: 100%;
 	text-align: center;
-	position: relative;
-	bottom: 50px;
+	color: #fff;
 }
 
 
