@@ -1,0 +1,29 @@
+<h3>About metodo</h3>
+
+<p>The dux kernel is called "<strong>metodo</strong>" an Italian word that means <strong>method</strong>.</p>
+<p></p>
+<p>It is a monolithic kernel, or at least right now.</p>
+<p>
+</p>My plans for access levels are that there will be 4 levels of access, they are:</p>
+<ol>
+	<li><a href="#kernel">Kernel</a></li>
+	<li><a href="#kernel_drivers">Kernel drivers</a></li>
+	<li><a href="#user_drivers">User drivers</a></li>
+	<li><a href="#userland">Userland</a></li>
+</ol>
+
+<h3 id="kernel">Kernel access</h3>
+<p>Highest access level.</p>
+<p>Complete hardware access and the ability to do whatever you can imagine (and possibly more).</p>
+
+<h3 id="kernel_drivers">Kernel drivers</h3>
+<p>Second-highest access level.</p>
+<p>Less access than the kernel, but enough to implement the “hardcore” drivers (graphics and whatnot) well.</p>
+
+<h3 id="user_drivers">User drivers</h3>
+<p>Third-highest access level.</p>
+<p>Basically userland access, but a few more syscalls.</p>
+
+<h3 id="userland">Userland</h3>
+<p>Lowest access level.</p>
+<p>Where any untrusted (to the kernel) software runs at – all user programs.</p>
