@@ -30,10 +30,7 @@ class HomePage
       else
         title = "#{location_words[i]} : #{title}"
       end
-      #title = "#{title} : #{@env['REQUEST_URI'][1..-1]}"
     end
-    #title.chomp!('/index.rhtml')
-    #title.chomp!('/')
     title
   end
 
