@@ -36,7 +36,13 @@ class HomePage
     title
   end
 
+  def parse_body
+    maruku = Maruku.new(@body)
+    @body = maruku.to_html
+  end
+
   def print_page
+    parse_body
     head = ''
 
     text = open(File.dirname(__FILE__) + '/template.html').read
@@ -44,7 +50,7 @@ class HomePage
     text.gsub!('%head%', head)
     text.gsub!('%body%', @body)
     text.gsub!('%year%', `date +'%Y'`.chomp) # ... Why wont Time.now.year work?
-    puts Maruku.new(text).to_html
+    puts text
   end
 end
 
