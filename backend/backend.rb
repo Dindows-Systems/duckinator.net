@@ -1,4 +1,6 @@
+require 'rubygems'
 require 'time'
+require 'maruku'
 
 class HomePage
   attr_accessor :title, :location
@@ -42,7 +44,7 @@ class HomePage
     text.gsub!('%head%', head)
     text.gsub!('%body%', @body)
     text.gsub!('%year%', `date +'%Y'`.chomp) # ... Why wont Time.now.year work?
-    puts text
+    puts Maruku.new(text).to_html
   end
 end
 
