@@ -1,15 +1,18 @@
 require 'rubygems'
+require 'cgi'
 require 'time'
 require 'maruku'
 
 class HomePage
   attr_accessor :title, :location
   def initialize(env)
+    cgi = CGI.new
+    cgi.out { "" }
     @env = env
     @location = @env['REQUEST_URI'] || "/"
     @title = set_title
 
-    @body = open(env['PAGE_LOCATION']).read
+    @body = open(env['PATH_TRANSLATED']).read
 
     print_page
     exit
@@ -50,7 +53,9 @@ class HomePage
     text.gsub!('%head%', head)
     text.gsub!('%body%', @body)
     text.gsub!('%year%', `date +'%Y'`.chomp) # ... Why wont Time.now.year work?
+
     puts text
   end
 end
 
+HomePage.new(ENV.clone)
