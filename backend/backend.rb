@@ -5,14 +5,13 @@ require 'maruku'
 
 class HomePage
   attr_accessor :title, :location
-  def initialize(env)
+  def initialize
     cgi = CGI.new
     cgi.out { "" }
-    @env = env
-    @location = @env['REQUEST_URI'] || "/"
+    @location = ENV['REQUEST_URI'] || "/"
     @title = set_title
 
-    @body = open(env['PATH_TRANSLATED']).read
+    @body = open(ENV['PATH_TRANSLATED']).read
 
     print_page
     exit
@@ -58,4 +57,4 @@ class HomePage
   end
 end
 
-HomePage.new(ENV.clone)
+HomePage.new
