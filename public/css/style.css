@@ -71,6 +71,10 @@ ul {
 	list-style-type: none;
 }
 
+#left ul {
+	list-style: none outside none;
+}
+
 #right {
 	margin: 0;
 	margin-right: 48px;
