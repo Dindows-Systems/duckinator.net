@@ -76,10 +76,10 @@ a:active {
 	border: none;
 }
 
-h1 { font-size:24px; }
-h2 { font-size:18px; }
-h3 { font-size:12px; }
-h4, h5, h6 { font-size:10px; }
+h1 { font-size:1.5em; }
+h2 { font-size:1.2em; }
+h3 { font-size:1.1em; }
+h4, h5, h6 { font-size:1em; }
 
 /* Clearfixl, see http://www.positioniseverything.net/easyclearing.html under '"Clearing", 21st Century Style' */
 .clearfix:after {
