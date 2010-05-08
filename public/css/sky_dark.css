@@ -16,22 +16,13 @@ body {
 	border: 5px solid #060A15;
 }
 
-ul#navbar li a:link,
-ul#navbar li a:visited {
-	border: none;
-}
-
 a:link,
 a:visited {
 	color: #A68F98;
-	text-decoration: none;
-	border-bottom: 1px dotted;
 }
 
 a:focus,
 a:hover,
 a:active {
 	color: #CCBEC3;
-	text-decoration: underline;
-	border: none;
 }

@@ -16,6 +16,10 @@ img {
 	border: none;
 }
 
+#header {
+	height: 300px;
+}
+
 #page {
 	margin: auto;
 	width: 850px;
@@ -48,6 +52,24 @@ img {
 
 ul#navbar {
 	list-style: none;
+}
+
+ul#navbar li a:link,
+ul#navbar li a:visited {
+	border: none;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+
+a:focus,
+a:hover,
+a:active {
+	text-decoration: underline;
+	border: none;
 }
 
 h1 { font-size:24px; }
