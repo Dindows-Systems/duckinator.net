@@ -61,14 +61,13 @@ ul#navbar {
 	list-style: none;
 }
 
-/*ul#navbar li a:link,
+ul#navbar li a:link,
 ul#navbar li a:visited {
 	border: none;
-}*/
+}
 
 a:link,
 a:visited {
-	/*color: #75696D;*/
 	color: #A68F98;
 	text-decoration: none;
 	border-bottom: 1px dotted;
@@ -77,7 +76,6 @@ a:visited {
 a:focus,
 a:hover,
 a:active {
-	/*color: #B5A2A9;*/
 	color: #CCBEC3;
 	text-decoration: underline;
 	border: none;
