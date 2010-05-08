@@ -1,22 +1,11 @@
 body {
 	background: #333;
-	color: #000;
 	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
 	height: 100%;
 }
 
-a:link,
-a:visited {
-/*	color: #3040d0;*/
-	text-decoration: underline;
-}
-a:active {
-	text-decoration: underline;
-}
-a:focus,
-a:hover {
-	color: #ad7fa8;
-	text-decoration: none;
+* {
+	color: #B5A2A9;
 }
 
 .text-content, p {
@@ -33,12 +22,8 @@ img {
 }
 
 #page {
-	width: 800px;
-	min-height: 550px;
-	background: #fff;
-	/*border: 1px solid #ddd;*/
 	margin: auto;
-	padding-bottom: 50px;
+	width: 847px;
 }
 
 #page:after {
@@ -49,43 +34,16 @@ img {
 	visibility: hidden;
 }
 
-ul {
-	list-style-type: disc;
-	margin: 0 0 10px 32px;
-}
-
 #header {
-	background: url(/images/header.png) no-repeat scroll 0px 20px;
-	width: 800px;
-	height: 150px;
-	margin-bottom: 20px;
+	background-image: url('file:///home/nick/sky.png');
+	height: 369px;
+	width: 847px;
 }
 
-#header h1 {
-	padding-top: 100px;
-	padding-left: 50px;
-}
-
-#left {
-	width: 250px;
-	margin-left: -20px;
-	float: left;
-}
-
-#left .img {
-	padding-top: 20px;
-	list-style-type: none;
-}
-
-#left ul {
-	list-style: none outside none;
-}
-
-#right {
-	margin: 0;
-	margin-right: 48px;
-	width: 520px;
-	float: right;
+#content {
+	background-color: #181826;
+	border: 5px solid #060A15;
+	padding: 30px;
 }
 
 #footer {
@@ -93,9 +51,36 @@ ul {
 	padding-bottom: 20px;
 	width: 100%;
 	text-align: center;
-	color: #fff;
 }
 
+#header h1 {
+	padding: 10px;
+}
+
+#navbar ul {
+	list-style: none;
+}
+
+a:link,
+a:visited {
+	color: #75696D;
+	text-decoration: none;
+}
+
+a:focus,
+a:hover,
+a:active {
+	color: #B5A2A9;
+	text-decoration: underline;
+}
+
+#valid {
+	position: absolute;
+	top: 20px;
+	margin: auto;
+	text-align: right;
+	width: 847px;
+}
 
 h1 { font-size:24px; }
 h2 { font-size:18px; }
