@@ -23,7 +23,7 @@ img {
 
 #page {
 	margin: auto;
-	width: 847px;
+	width: 850px;
 }
 
 #page:after {
@@ -80,7 +80,7 @@ a:active {
 	top: 20px;
 	margin: auto;
 	text-align: right;
-	width: 847px;
+	width: 850px;
 }
 
 h1 { font-size:24px; }
