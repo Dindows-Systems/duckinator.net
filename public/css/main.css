@@ -27,6 +27,12 @@ img {
 	border: 1px solid #000;
 }
 
+#header h1 {
+	margin-top: 0px;
+	padding: 10px;
+	padding-bottom: 0px;
+}
+
 #page {
 	background: #FFF;
 	margin: auto;
@@ -53,10 +59,8 @@ img {
 	text-align: center;
 }
 
-#header h1 {
-	margin-top: 0px;
-	padding: 10px;
-	padding-bottom: 0px;
+#footer p {
+	text-align: center;
 }
 
 ul#navbar {
