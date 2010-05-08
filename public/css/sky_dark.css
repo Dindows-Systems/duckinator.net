@@ -1,14 +1,9 @@
-body {
-	background: #333;
-}
-
 * {
 	color: #B5A2A9;
 }
 
 #header {
 	background-image: url("/images/sky.jpg");
-	height: 300px;
 }
 
 #content {
