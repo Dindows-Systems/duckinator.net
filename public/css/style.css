@@ -5,13 +5,27 @@ body {
 	height: 100%;
 }
 
-a {
+a:link,
+a:visited {
+	color: #3040d0;
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: underline;
+}
+a:focus,
+a:hover {
+	color: #5060d0;
+	text-decoration: none;
+}
+
+/*a {
 	
 }
 
 a:hover {
 	color: #ad7fa8;
-}
+}*/
 
 .text-content, p {
 	line-height: 150%;
