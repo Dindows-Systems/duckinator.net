@@ -6,9 +6,9 @@
 	background-image: url("/images/sky.jpg");
 }
 
-#content {
+#page div {
 	background-color: #181826;
-	border: 5px solid #060A15;
+	border-color: #060A15;
 }
 
 a:link,

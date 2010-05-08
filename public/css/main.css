@@ -17,6 +17,10 @@ img {
 	border: none;
 }
 
+#page div {
+	border: 5px solid #000;
+}
+
 #header {
 	background: #FFF;
 	height: 300px;
