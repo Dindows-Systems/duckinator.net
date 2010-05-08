@@ -35,7 +35,7 @@ img {
 }
 
 #header {
-	background-image: url('file:///home/nick/sky.png');
+	background-image: url('/images/sky.png');
 	height: 369px;
 	width: 847px;
 }
