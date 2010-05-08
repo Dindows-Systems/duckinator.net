@@ -1,11 +1,6 @@
 body {
-	background: #333;
 	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
 	height: 100%;
-}
-
-* {
-	color: #B5A2A9;
 }
 
 .text-content, p {
@@ -34,14 +29,8 @@ img {
 	visibility: hidden;
 }
 
-#header {
-	background-image: url("/images/sky.jpg");
-	height: 300px;
-}
-
 #content {
-	background-color: #181826;
-	border: 5px solid #060A15;
+	border: 1px solid #000;
 	padding: 30px;
 }
 
@@ -59,34 +48,6 @@ img {
 
 ul#navbar {
 	list-style: none;
-}
-
-ul#navbar li a:link,
-ul#navbar li a:visited {
-	border: none;
-}
-
-a:link,
-a:visited {
-	color: #A68F98;
-	text-decoration: none;
-	border-bottom: 1px dotted;
-}
-
-a:focus,
-a:hover,
-a:active {
-	color: #CCBEC3;
-	text-decoration: underline;
-	border: none;
-}
-
-#valid {
-	position: absolute;
-	top: 20px;
-	margin: auto;
-	text-align: right;
-	width: 850px;
 }
 
 h1 { font-size:24px; }
