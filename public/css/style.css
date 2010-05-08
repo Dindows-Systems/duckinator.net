@@ -35,8 +35,10 @@ img {
 }
 
 #header {
-	background-image: url('/images/sky.png');
-	height: 369px;
+	/*background-image: url("/images/sky.png");
+	height: 369px;*/
+	background: url("/images/sky.png") repeat scroll 0 -50px transparent
+	height: 319px;
 	width: 847px;
 }
 
