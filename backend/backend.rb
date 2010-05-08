@@ -50,7 +50,7 @@ class HomePage
     text = open(File.dirname(__FILE__) + '/template.html').read
     text.gsub!('%title%', @title)
     text.gsub!('%head%', head)
-    text.gsub!('%body%', @body)
+    text.gsub!('%content%', @body)
     text.gsub!('%year%', `date +'%Y'`.chomp) # ... Why wont Time.now.year work?
 
     puts text
