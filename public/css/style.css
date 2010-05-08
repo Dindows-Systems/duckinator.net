@@ -54,7 +54,7 @@ img {
 
 #header h1 {
 	padding: 10px;
-	padding-bottom: 5px;
+	margin-bottom: 0px;
 }
 
 ul#navbar {
