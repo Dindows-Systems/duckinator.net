@@ -7,7 +7,7 @@ body {
 
 a:link,
 a:visited {
-	color: #3040d0;
+/*	color: #3040d0;*/
 	text-decoration: underline;
 }
 a:active {
@@ -15,17 +15,9 @@ a:active {
 }
 a:focus,
 a:hover {
-	color: #5060d0;
+	color: #ad7fa8;
 	text-decoration: none;
 }
-
-/*a {
-	
-}
-
-a:hover {
-	color: #ad7fa8;
-}*/
 
 .text-content, p {
 	line-height: 150%;
