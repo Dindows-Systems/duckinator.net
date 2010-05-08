@@ -18,11 +18,13 @@ img {
 }
 
 #header {
+	background: #FFF;
 	height: 300px;
 	border: 1px solid #000;
 }
 
 #page {
+	background: #FFF;
 	margin: auto;
 	width: 850px;
 }
