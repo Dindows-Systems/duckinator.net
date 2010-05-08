@@ -63,15 +63,15 @@ ul#navbar {
 
 ul#navbar li a:link,
 ul#navbar li a:visited {
-	text-decoration: none;
+	border: none;
 }
 
-ul#navbar li a:focus,
+/*ul#navbar li a:focus,
 ul#navbar li a:hover,
 ul#navbar li a:active {
 	text-decoration: underline;
 	border: none;
-}
+}*/
 
 a:link,
 a:visited {
