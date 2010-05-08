@@ -61,7 +61,8 @@ ul#navbar {
 	list-style: none;
 }
 
-ul#navbar a {
+ul#navbar li a:link,
+ul#navbar li a:visited {
 	text-decoration: none;
 }
 
