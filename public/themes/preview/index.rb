@@ -5,8 +5,8 @@ env = {}
 ENV.each do |k,v|
 	env[k]=v
 end
-env['PATH_TRANSLATED'].delete!('themes/preview/')
-env['PATH_TRANSLATED'].gsub!('/index.rb', '/index.rhtml')
+
+env['PATH_TRANSLATED'] = ENV['PATH_TRANSLATED'].delete('themes/preview/').gsub('/index.rb', '/index.rhtml')
 
 HomePage.new(env, 'dove')
 
