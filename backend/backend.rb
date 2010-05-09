@@ -52,7 +52,6 @@ class HomePage
   def print_page
     @assigns = {
       'title'   => @title,
-      'head'    => '',
       'year'    => `date +'%Y'`.chomp,
       'theme'   => 'dove'
     }
