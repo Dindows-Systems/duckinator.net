@@ -6,13 +6,13 @@ require 'liquid'
 
 class HomePage
   attr_accessor :title, :location
-  def initialize
+  def initialize(env)
     cgi = CGI.new
     cgi.out { "" }
-    @location = ENV['REQUEST_URI'] || "/"
+    @location = @env['REQUEST_URI'] || "/"
     @title = set_title
 
-    @body = open(ENV['PATH_TRANSLATED']).read
+    @body = open(@env['PATH_TRANSLATED']).read
 
     print_page
     exit
@@ -69,5 +69,5 @@ class HomePage
 end
 
 if File.basename(__FILE__) == "backend.rb"
-  HomePage.new
+  HomePage.new(ENV.clone)
 end
