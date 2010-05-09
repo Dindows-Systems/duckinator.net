@@ -29,3 +29,10 @@ a:hover,
 a:active {
 	color: #FFF;
 }
+
+ul#navbar {
+	float: left;
+	position: relative;
+	text-align: right;
+	right: 170px;
+}
