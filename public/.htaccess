@@ -1,4 +1,4 @@
-DirectoryIndex index.rhtml index.php index.html index.htm
+DirectoryIndex index.rhtml index.rb index.php index.html index.htm
 RewriteEngine On
 
 AddHandler rubypage .rhtml
