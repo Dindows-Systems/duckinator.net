@@ -39,6 +39,24 @@ class HomePage
     title
   end
 
+  def parse_liquid(head)
+    assigns = {
+      'title'   => @title,
+      'head'    => '',
+      'content' => @body,
+      'year'    => `date +'%Y'`.chomp,
+      'theme'   => 'dove'
+    }
+    t = Liquid::Template.parse(@body)
+    @body = t.render(assigns)
+
+    text = open(File.dirname(__FILE__) + '/template.html').read
+
+    assigns['content'] = @body
+    t = Liquid::Template.parse(text)
+    t.render(assigns)
+  end
+
   def parse_body
     maruku = Maruku.new(@body)
     @body = maruku.to_html
@@ -46,15 +64,18 @@ class HomePage
 
   def print_page
     parse_body
-    head = ''
+#    head = ''
 
-    text = open(File.dirname(__FILE__) + '/template.html').read
-    text.gsub!('{{ title }}', @title)
-    text.gsub!('{{ head }}', head)
-    text.gsub!('{{ content }}', @body)
-    text.gsub!('{{ year }}', `date +'%Y'`.chomp) # ... Why wont Time.now.year work?
+#    text = open(File.dirname(__FILE__) + '/template.html').read
+    
+#    text.gsub!('{{ title }}', @title)
+#    text.gsub!('{{ head }}', head)
+#    text.gsub!('{{ content }}', @body)
+#    text.gsub!('{{ year }}', `date +'%Y'`.chomp) # ... Why wont Time.now.year work?
 
-    text.gsub!('{{ theme }}', 'dove')
+#    text.gsub!('{{ theme }}', 'dove')
+
+    text = parse_liquid
 
     puts text
   end
