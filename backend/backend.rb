@@ -68,4 +68,6 @@ class HomePage
   end
 end
 
-HomePage.new
+if File.basename(__FILE__) == "backend.rb"
+  HomePage.new
+end
