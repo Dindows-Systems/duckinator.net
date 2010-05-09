@@ -29,48 +29,4 @@ a:hover,
 a:active {
 	color: #FFF;
 }
-/*
-#navbar {
-	float: left;
-	position: relative;
-	text-align: right;
-	right: 170px;
-}*/
 
-/*
-* {
-	margin: 0;
-	padding: 0;
-}
-
-#page {
-	width: 600pt;
-	margin: 40pt auto;
-}
-
-#header h1 {
-	width: 400pt;
-	margin: 20pt auto;
-}
-
-
-#header h1 {
-	width: 400pt;
-	margin: 20pt auto;
-}
-
-#navbar {
-	float: left;
-	list-style: none;
-	text-align: right;
-	width: 60pt;
-	margin: 0 20pt;
-}
-
-#content {
-	clear: both;
-	padding-top: 20pt;
-	margin: 20pt auto;
-	width: 400pt;
-}
-*/
