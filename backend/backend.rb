@@ -69,7 +69,7 @@ class HomePage
 
     @assigns['content'] = @body
 
-    parse_liquid(text) || "Unknown error"
+    parse_liquid(text)
   end
 end
 
