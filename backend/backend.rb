@@ -6,16 +6,21 @@ require 'liquid'
 
 class HomePage
   attr_accessor :title, :location
-  def initialize(env)
+  def initialize(env, theme=nil)
     cgi = CGI.new
     cgi.out { "" }
     @location = env['REQUEST_URI'] || "/"
+    @theme = theme || get_theme
     @title = set_title
 
     @body = open(env['PATH_TRANSLATED']).read
 
     print_page
     exit
+  end
+
+  def get_theme
+    'dark_sky'
   end
 
   def title_check (location_words, i)
@@ -53,7 +58,7 @@ class HomePage
     @assigns = {
       'title'   => @title,
       'year'    => `date +'%Y'`.chomp,
-      'theme'   => 'dove'
+      'theme'   => @theme
     }
     @body = parse_liquid(@body)
     @body = parse_maruku(@body)
