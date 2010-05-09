@@ -17,11 +17,11 @@ body {
 
 a:link,
 a:visited {
-	color: #A68F98;
+	color: #EEE;
 }
 
 a:focus,
 a:hover,
 a:active {
-	color: #CCBEC3;
+	color: #FFF;
 }
