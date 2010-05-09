@@ -54,7 +54,7 @@ class HomePage
     text.gsub!('{{ content }}', @body)
     text.gsub!('{{ year }}', `date +'%Y'`.chomp) # ... Why wont Time.now.year work?
 
-    text.gsub!('{{ theme }}', 'dark_sky')
+    text.gsub!('{{ theme }}', 'dove')
 
     puts text
   end
