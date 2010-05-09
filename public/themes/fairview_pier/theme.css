@@ -10,6 +10,10 @@ body {
 	background-image: url("/themes/fairview_pier/header.jpg");
 }
 
+#header h1, #header ul li a {
+	color: #333;
+}
+
 #page div {
 	background-color: #181826;
 	border-color: #060A15;
