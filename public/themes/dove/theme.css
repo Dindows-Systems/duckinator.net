@@ -1,6 +1,9 @@
+body {
+	background-color: #557D3E;
+}
+
 * {
 	color: #FFF;
-	background-color: #557D3E;
 }
 
 #header {
@@ -9,7 +12,7 @@
 
 #page div {
 	background-color: #60665A;
-	border-color: #060A15;
+	border-color: #3E5B2D;
 }
 
 a:link,
