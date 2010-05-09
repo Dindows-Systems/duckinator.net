@@ -19,7 +19,7 @@ class HomePage
       cgi = CGI.new
       cgi.out { @page }
     else
-      @page
+      return @page
     end
   end
 
@@ -50,7 +50,7 @@ class HomePage
 
   def parse_liquid(text)
     t = Liquid::Template.parse(text)
-    t.render(@assigns)
+    t.render(@assigns).to_s
   end
 
   def parse_maruku(text)
