@@ -72,6 +72,6 @@ class HomePage
   end
 end
 
-if File.basename(__FILE__) == File.basename(ARGV[0])
+def run
   HomePage.new(ENV.clone)
 end
