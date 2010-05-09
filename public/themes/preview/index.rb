@@ -1,4 +1,4 @@
-require File.join(File.basename(__FILE__), 'backend.rb')
+require File.join(File.dirname(__FILE__), 'backend.rb')
 
 env = ENV.clone
 env['PATH_TRANSLATED'].delete('themes/preview/')
