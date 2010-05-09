@@ -39,7 +39,7 @@ class HomePage
     title
   end
 
-  def parse_liquid(head)
+  def parse_liquid
     assigns = {
       'title'   => @title,
       'head'    => '',
