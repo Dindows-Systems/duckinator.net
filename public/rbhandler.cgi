@@ -1,4 +1,3 @@
 #!/bin/sh
 export GEM_PATH=/home/rockermono/.gem/ruby/1.8/
-#exec /usr/bin/env ruby ../backend/rbhandler.rb
-exec /usr/bin/env ruby ${PATH_TRANSLATED}
+exec /usr/bin/env ruby ../backend/rbhandler.rb
