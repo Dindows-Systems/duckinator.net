@@ -1,0 +1,23 @@
+* {
+	color: #B5A2A9;
+}
+
+#header {
+	background-image: url("/themes/kaylee_march_2010/header.jpg");
+}
+
+#page div {
+	background-color: #181826;
+	border-color: #060A15;
+}
+
+a:link,
+a:visited {
+	color: #A68F98;
+}
+
+a:focus,
+a:hover,
+a:active {
+	color: #CCBEC3;
+}
