@@ -2,6 +2,10 @@ body {
 	background-color: #557D3E;
 }
 
+#header h1 {
+	padding-left: 20px;
+}
+
 * {
 	color: #FFF;
 }
