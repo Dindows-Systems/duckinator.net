@@ -8,14 +8,15 @@ class HomePage
   attr_accessor :title, :location
   def initialize(env, theme=nil)
     cgi = CGI.new
-    cgi.out { "" }
+    #cgi.out { "" }
     @location = env['REQUEST_URI'] || "/"
     @theme = theme || get_theme
     @title = set_title
 
     @body = open(env['PATH_TRANSLATED']).read
 
-    print_page
+    #print_page
+    cgi.out { generate_page }
   end
 
   def get_theme
@@ -53,7 +54,7 @@ class HomePage
     maruku.to_html
   end
 
-  def print_page
+  def generate_page
     @assigns = {
       'title'   => @title,
       'year'    => `date +'%Y'`.chomp,
@@ -66,9 +67,7 @@ class HomePage
 
     @assigns['content'] = @body
 
-    text = parse_liquid(text)
-
-    puts text
+    parse_liquid(text)
   end
 end
 
