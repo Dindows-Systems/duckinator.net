@@ -2,6 +2,7 @@ require 'rubygems'
 require 'cgi'
 require 'time'
 require 'maruku'
+require 'liquid'
 
 class HomePage
   attr_accessor :title, :location
