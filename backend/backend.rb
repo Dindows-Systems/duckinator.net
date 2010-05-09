@@ -49,10 +49,12 @@ class HomePage
     head = ''
 
     text = open(File.dirname(__FILE__) + '/template.html').read
-    text.gsub!('%title%', @title)
-    text.gsub!('%head%', head)
-    text.gsub!('%content%', @body)
-    text.gsub!('%year%', `date +'%Y'`.chomp) # ... Why wont Time.now.year work?
+    text.gsub!('{{ title }}', @title)
+    text.gsub!('{{ head }}', head)
+    text.gsub!('{{ content }}', @body)
+    text.gsub!('{{ year }}', `date +'%Y'`.chomp) # ... Why wont Time.now.year work?
+
+    text.gsub!('{{ theme }}', 'dove')
 
     puts text
   end

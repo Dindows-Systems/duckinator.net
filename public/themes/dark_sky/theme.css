@@ -14,10 +14,12 @@
 a:link,
 a:visited {
 	color: #A68F98;
+	border-color: #A68F98;
 }
 
 a:focus,
 a:hover,
 a:active {
 	color: #CCBEC3;
+	border-color: #A68F98;
 }

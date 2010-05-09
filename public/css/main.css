@@ -77,8 +77,8 @@ a:visited {
 a:focus,
 a:hover,
 a:active {
-	text-decoration: underline;
-	border: none;
+	text-decoration: none;
+	border: 1px solid #000;
 }
 
 h1 { font-size:1.5em; }
