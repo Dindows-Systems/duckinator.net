@@ -6,15 +6,19 @@ require 'liquid'
 
 class HomePage
   attr_accessor :title, :location
-  def initialize(env, theme=nil)
-    cgi = CGI.new
+  def initialize(env, print=true, theme=nil)
     @location = env['REQUEST_URI'] || "/"
     @theme = theme || get_theme
     @title = set_title
 
     @body = open(env['PATH_TRANSLATED']).read
 
-    cgi.out { generate_page }
+    if print
+      cgi = CGI.new
+      cgi.out { generate_page }
+    else
+      generate_page
+    end
   end
 
   def get_theme
