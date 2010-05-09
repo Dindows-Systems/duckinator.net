@@ -16,7 +16,6 @@ class HomePage
     @body = open(env['PATH_TRANSLATED']).read
 
     print_page
-    exit
   end
 
   def get_theme
