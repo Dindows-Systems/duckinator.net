@@ -18,9 +18,8 @@ class HomePage
     if print
       cgi = CGI.new
       cgi.out { @page }
-    else
-      return @page
     end
+    @page
   end
 
   def get_theme
@@ -50,7 +49,7 @@ class HomePage
 
   def parse_liquid(text)
     t = Liquid::Template.parse(text)
-    t.render(@assigns).to_s
+    t.render(@assigns)
   end
 
   def parse_maruku(text)
@@ -71,7 +70,7 @@ class HomePage
 
     @assigns['content'] = @body
 
-    @page = parse_liquid(text)
+    parse_liquid(text)
   end
 end
 
