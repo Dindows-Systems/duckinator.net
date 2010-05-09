@@ -2,6 +2,10 @@
 	color: #B5A2A9;
 }
 
+body {
+	background-color: #333;
+}
+
 #header {
 	background-image: url("/themes/fairview_far_coast/header.jpg");
 }

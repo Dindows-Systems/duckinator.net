@@ -2,6 +2,10 @@
 	color: #B5A2A9;
 }
 
+body {
+	background-color: #333;
+}
+
 #header {
 	background-image: url("/themes/schecter_guitar_bw/header.jpg");
 }

@@ -3,7 +3,6 @@
 }
 
 body {
-	background: #333;
 	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
 	height: 100%;
 }
@@ -22,12 +21,12 @@ img {
 }
 
 #page div {
-	border: 5px solid #000;
+	border: 5px solid;
 }
 
 #header {
-	background: #FFF no-repeat;
-	border: 1px solid #000;
+	background-repeat: no-repeat;
+	border: 1px solid;
 	min-height: 300px;
 }
 
@@ -38,13 +37,12 @@ img {
 }
 
 #page {
-	background: #FFF;
 	margin: auto;
 	width: 800px;
 }
 
 #content {
-	border: 1px solid #000;
+	border: 1px solid;
 	padding: 30px;
 }
 
