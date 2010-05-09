@@ -13,11 +13,13 @@ class HomePage
 
     @body = open(env['PATH_TRANSLATED']).read
 
+    generate_page
+
     if print
       cgi = CGI.new
-      cgi.out { generate_page }
+      cgi.out { @page }
     else
-      generate_page
+      @page
     end
   end
 
@@ -69,7 +71,7 @@ class HomePage
 
     @assigns['content'] = @body
 
-    parse_liquid(text)
+    @page = parse_liquid(text)
   end
 end
 
