@@ -24,6 +24,7 @@ img {
 #header {
 	background: #FFF no-repeat;
 	border: 1px solid #000;
+	min-height: 300px;
 }
 
 #header h1 {
