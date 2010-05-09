@@ -64,7 +64,6 @@ class HomePage
     @assigns['content'] = @body
 
     text = parse_liquid(text)
-    text = parse_maruku(text)
 
     puts text
   end
