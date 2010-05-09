@@ -12,26 +12,21 @@ On August 23rd, 2009, [the old dux kernel was removed](http://github.com/RockerM
 
 ## Design ##
 
-It is a monolithic kernel, or at least right now.
-
-My plans for access levels are that there will be 4 levels of access, they are:
-- [Kernel](#kernel_access)
-- [Kernel drivers](#kernel_drivers)
-- [User drivers](#user_drivers)
-- [Userland](#userland)
+Metodo is a hybrid kernel. Non-essential drivers will run in userspace.
+There will be four access levels. They are, in order from least restricted to most restricted, the kernel, the kernel drivers, the userland drivers, and the userland.
 
 ### Kernel access ###
-Highest access level.
-Complete hardware access and the ability to do whatever you can imagine (and possibly more).
+Kernel access will be the highest access level.
+It will provide complete hardware access and the ability to do whatever you can imagine (and possibly more).
 
 ### Kernel drivers ###
-Second-highest access level.
-Less access than the kernel, but enough to implement the “hardcore” drivers (graphics and whatnot) well.
+Kernel drivers will be at the second access level.
+They will have less access than the kernel, but enough to implement the "hardcore" drivers (graphics, for example).
 
 ### User drivers ###
-Third-highest access level.
-Basically userland access, but a few more syscalls.
+User drivers are the third access level.
+They will have Basically userland access, but a few more syscalls.
 
 ### Userland ###
-Lowest access level.
-Where any untrusted (to the kernel) software runs at – all user programs.
+The fourth, and lowest, access level is what userland is given.
+This is where all software that is not trusted by the kernel is ran.
