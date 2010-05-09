@@ -30,14 +30,14 @@ a:active {
 	color: #FFF;
 }
 
-/*#navbar {
+#navbar {
 	float: left;
 	position: relative;
 	text-align: right;
 	right: 170px;
-}*/
+}
 
-
+/*
 * {
 	margin: 0;
 	padding: 0;
@@ -73,4 +73,4 @@ a:active {
 	margin: 20pt auto;
 	width: 400pt;
 }
-
+*/
