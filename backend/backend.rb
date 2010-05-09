@@ -9,10 +9,10 @@ class HomePage
   def initialize(env)
     cgi = CGI.new
     cgi.out { "" }
-    @location = @env['REQUEST_URI'] || "/"
+    @location = env['REQUEST_URI'] || "/"
     @title = set_title
 
-    @body = open(@env['PATH_TRANSLATED']).read
+    @body = open(env['PATH_TRANSLATED']).read
 
     print_page
     exit
