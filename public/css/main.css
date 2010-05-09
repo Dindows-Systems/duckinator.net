@@ -56,6 +56,10 @@ img {
 }
 
 ul#navbar {
+	float: left;
+	position: relative;
+	text-align: right;
+	right: 170px;
 	list-style: none;
 }
 
