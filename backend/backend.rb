@@ -69,7 +69,8 @@ class HomePage
 
     text = parse_liquid(text)
     if !@location_override.nil?
-      text.gsub!(/<a href="\//, "<a href=\"#{@location_override}/")
+      text.gsub!(/<a href='\//, "<a href='#{@location_override}/")
+      text.gsub!(/<a href="\//, "<a href="#{@location_override}/")
     end
     text
   end
