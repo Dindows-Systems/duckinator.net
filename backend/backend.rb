@@ -6,12 +6,14 @@ require 'liquid'
 
 class HomePage
   attr_accessor :title, :location
-  def initialize(env, theme=nil)
+  def initialize(env, theme=nil, location_override=nil)
     @location = env['REQUEST_URI'] || "/"
     @theme = theme || get_theme
     @title = set_title
 
     @body = open(env['PATH_TRANSLATED']).read
+
+    @location_override=location_override
 
     cgi = CGI.new
     cgi.out { generate_page }
@@ -65,7 +67,11 @@ class HomePage
 
     @assigns['content'] = @body
 
-    parse_liquid(text)
+    text = parse_liquid(text)
+    if @location_override
+      text = text.gsub("<a href=\"/", "<a href=\"#{@location_override}/")
+    end
+    text
   end
 end
 

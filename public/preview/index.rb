@@ -27,10 +27,16 @@ if File.directory?(file)
   file = File.join(file, 'index.rhtml')
 end
 
+if query_hash.include?('theme')
+  theme = query_hash['theme']
+else
+  theme = 'dove'
+end
+
 env['PATH_TRANSLATED'] = file
 
 cgi = CGI.new
 cgi.out {
-  HomePage.new(env, 'dove')
+  HomePage.new(env, theme, "/preview?theme=#{theme}&path=")
 }
 
