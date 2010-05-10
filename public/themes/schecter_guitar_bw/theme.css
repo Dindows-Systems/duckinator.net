@@ -1,5 +1,5 @@
 * {
-	color: #B5A2A9;
+	color: #FFF;
 }
 
 body {
@@ -15,17 +15,17 @@ body {
 }
 
 #page div {
-	background-color: #181826;
-	border-color: #060A15;
+	background-color: #444;
+	border-color: #000;
 }
 
 a:link,
 a:visited {
-	color: #A68F98;
+	color: #FFF;
 }
 
 a:focus,
 a:hover,
 a:active {
-	color: #CCBEC3;
+	color: #CCC;
 }
