@@ -1,0 +1,27 @@
+* {
+	color: #FFF;
+}
+
+body {
+	background-color: #BAA06F;
+}
+
+#header {
+	background-image: url("/themes/dark_sky/header.jpg");
+}
+
+#page div {
+	background-color: #776749;
+	border-color: #5D4D32;
+}
+
+/*a:link,
+a:visited {
+	color: #FFF;
+}*/
+
+/*a:focus,
+a:hover,
+a:active {
+	color: #FFF;
+}*/
