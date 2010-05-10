@@ -1,10 +1,10 @@
 require 'rubygems'
-require File.join(File.dirname(__FILE__), '..', '..', '..', 'backend', 'backend.rb')
+require File.join(File.dirname(__FILE__), '..', '..', 'backend', 'backend.rb')
 require 'cgi'
 
 env = ENV.clone
 
-dir = env['PATH_TRANSLATED'].gsub('themes/preview/index.rb','')
+dir = env['PATH_TRANSLATED'].gsub('preview/index.rb','')
 query_string = env['REDIRECT_QUERY_STRING']
 
 begin
