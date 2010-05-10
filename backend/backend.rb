@@ -13,13 +13,8 @@ class HomePage
 
     @body = open(env['PATH_TRANSLATED']).read
 
-    generate_page
-
-    if print
-      cgi = CGI.new
-      cgi.out { @page }
-    end
-    @page
+    cgi = CGI.new
+    cgi.out { generate_page }
   end
 
   def get_theme
@@ -75,5 +70,5 @@ class HomePage
 end
 
 def run
-  HomePage.new(ENV.clone)
+  puts HomePage.new(ENV.clone)
 end
