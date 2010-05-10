@@ -4,20 +4,33 @@ require 'cgi'
 
 env = ENV.clone
 
-def parse_query_string(query)
-	parts = query.split(/&|=/)
-	Hash[*parts]
-end
-
 dir = env['PATH_TRANSLATED'].gsub('themes/preview/index.rb','')
 query_string = env['REDIRECT_QUERY_STRING']
-query_hash = parse_query_string(query_string)
-#env['PATH_TRANSLATED'] = File.join(dir, query_hash['path'])
-env['PATH_TRANSLATED'] = ENV['PATH_TRANSLATED'].gsub('themes/preview/', '').gsub('/index.rb', '/index.rhtml')
+
+begin
+  query_hash = CGI.parse(query_string)
+rescue
+  query_hash = {}
+end
+
+if query_hash.include?('path')
+  file = File.join(dir, query_hash['path'])
+else
+  file = dir
+end
+
+if !File.exist?(file)
+  file = File.join(dir, 'index.rhtml')
+end
+
+if File.directory?(file)
+  file = File.join(file, 'index.rhtml')
+end
+
+env['PATH_TRANSLATED'] = file
 
 cgi = CGI.new
 cgi.out {
-	p query_hash
-	HomePage.new(env, false, 'dove')
+  HomePage.new(env, 'dove')
 }
 

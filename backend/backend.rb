@@ -6,7 +6,7 @@ require 'liquid'
 
 class HomePage
   attr_accessor :title, :location
-  def initialize(env, print=true, theme=nil)
+  def initialize(env, theme=nil)
     @location = env['REQUEST_URI'] || "/"
     @theme = theme || get_theme
     @title = set_title
