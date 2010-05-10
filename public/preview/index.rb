@@ -37,6 +37,6 @@ env['PATH_TRANSLATED'] = file
 
 cgi = CGI.new
 cgi.out {
-  HomePage.new(env, theme, "/preview?theme=#{theme}&path=")
+  HomePage.new(env, theme, "/preview/#{theme}")
 }
 
