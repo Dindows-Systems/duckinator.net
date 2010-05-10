@@ -3,7 +3,7 @@
 }
 
 body {
-	background-color: #CCC;
+	background-color: #333;
 }
 
 #header {
@@ -11,7 +11,7 @@ body {
 }
 
 #header h1, #header ul li a {
-	color: #333;
+	color: #CCC;
 }
 
 #page div {
