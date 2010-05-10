@@ -70,5 +70,5 @@ class HomePage
 end
 
 def run
-  puts HomePage.new(ENV.clone)
+  HomePage.new(ENV.clone)
 end
