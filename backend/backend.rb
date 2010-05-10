@@ -68,7 +68,8 @@ class HomePage
     @assigns['content'] = @body
 
     text = parse_liquid(text)
-    if @location_override
+    if !@location_override.nil?
+      puts "ROFLCOPTER"
       text = text.gsub("<a href=\"/", "<a href=\"#{@location_override}/")
     end
     text
