@@ -1,3 +1,3 @@
 puts "Pulling from github..."
-`git pull`
+`git pull &> autopull/log`
 puts "Done."
