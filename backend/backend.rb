@@ -9,7 +9,7 @@ class HomePage
   def initialize(env, theme=nil, location_override=nil)
     @location = env['REQUEST_URI'] || "/"
     @theme = theme || get_theme
-    @title = set_title
+    set_title
 
     @body = open(env['PATH_TRANSLATED']).read
 
@@ -18,6 +18,10 @@ class HomePage
     cgi = CGI.new
     cgi.out { generate_page }
   end
+
+	def generate_link(url, text)
+		"<a href=\"#{url}\">#{text}</a>"
+	end
 
   def get_theme
     'dark_sky'
@@ -28,7 +32,8 @@ class HomePage
   end
 
   def set_title
-    title = "duckinator.net"
+    @title = "duckinator.net"
+    @breadcrumbs = generate_link('http://duckinator.net', 'duckinator.net')
     if @location != '/' and @location.length > 0
       location = @location.chomp('/index.rhtml').chomp('/')
       location_words = location.split('/')
@@ -36,12 +41,15 @@ class HomePage
       i = location_words.length-1
       i-=1 until title_check(location_words, i) || i == 0
       if i > 1
-        title = "#{location_words[i]} : #{location_words[0..(i-1)].join(' ')} : #{title}"
+        @title = "#{location_words[i]} : #{location_words[0...i)].join(' ')} : #{@title}"
+        (0...i).each do |n|
+          link = "/" + location_words[0...n].join('/')
+          @breadcrumbs "#{generate_link(link, location_words[n])} : #{breadcrumbs}"
+        end
       else
-        title = "#{location_words[i]} : #{title}"
+        @title = "#{location_words[i]} : #{title}"
       end
     end
-    title
   end
 
   def parse_liquid(text)
@@ -56,9 +64,10 @@ class HomePage
 
   def generate_page
     @assigns = {
-      'title'   => @title,
-      'year'    => `date +'%Y'`.chomp,
-      'theme'   => @theme
+      'breadcrumbs' => @breadcrumbs,
+      'title'       => @title,
+      'year'        => `date +'%Y'`.chomp,
+      'theme'       => @theme
     }
     @body = parse_liquid(@body)
     @body = parse_maruku(@body)
