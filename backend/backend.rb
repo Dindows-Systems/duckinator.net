@@ -43,7 +43,7 @@ class HomePage
       if i > 1
         (0...i).each do |n|
           link = "/" + location_words[0...n].join('/')
-          @breadcrumbs = "#{generate_link(link, location_words[n])} : #{breadcrumbs}"
+          @breadcrumbs = "#{generate_link(link, location_words[n])} : #{@breadcrumbs}"
           @title = "#{location_words[n]} : #{@title}"
         end
       else
