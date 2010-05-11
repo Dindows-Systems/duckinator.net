@@ -46,8 +46,6 @@ class HomePage
           @breadcrumbs = "#{generate_link(link, location_words[n])} : #{@breadcrumbs}"
           @title = "#{location_words[n]} : #{@title}"
         end
-      else
-        @title = "#{location_words[i]} : #{title}"
       end
     end
   end
