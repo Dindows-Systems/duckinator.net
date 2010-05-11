@@ -41,7 +41,7 @@ class HomePage
       i = location_words.length-1
       i-=1 until title_check(location_words, i) || i == 0
       if i > 1
-        i.downto(1).each do |n|
+        (1..i).each do |n|
           link = location_words[0..n].join('/')
           @breadcrumbs = "#{generate_link(link, location_words[n])} : #{@breadcrumbs}"
           @title = "#{location_words[n]} : #{@title}"
