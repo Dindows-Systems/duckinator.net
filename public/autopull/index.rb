@@ -1,6 +1,6 @@
 require 'cgi'
 cgi = CGI.new
-cig.out {
+cgi.out {
 	puts "Pulling from github..."
 	`git pull &> autopull/log`
 	puts "Done."
