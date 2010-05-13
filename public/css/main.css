@@ -57,12 +57,12 @@ img {
 	text-align: center;
 }
 
-ul#navbar {
+#navbar {
 	list-style: none;
 }
 
-ul#navbar li a:link,
-ul#navbar li a:visited {
+#navbar li a:link,
+#navbar li a:visited {
 	border: none;
 }
 

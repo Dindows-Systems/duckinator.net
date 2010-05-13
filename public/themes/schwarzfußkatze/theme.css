@@ -14,8 +14,8 @@ body {
 	text-shadow: 2px 2px 10px #000000;
 }
 
-ul#navbar {
-	background-color: #776749
+#navbar {
+	background-color: #776749;
 	border-color: #5D4D32;
 	opacity: 0.7;
 }
