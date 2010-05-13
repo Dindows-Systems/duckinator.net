@@ -23,19 +23,14 @@ body {
 }
 
 a:link,
-a:visited,
-a:link abbr,
-a:visited abbr {
+a:visited {
 	border-color: #FFEDCA;
 	color: #FFEDCA;
 }
 
 a:focus,
 a:hover,
-a:active,
-a:focus abbr,
-a:hover abbr,
-a:focus abbr {
+a:active {
 	border-color: #FFEDCA;
 	color: #FFFFFF;
 }
