@@ -15,6 +15,10 @@ body {
 	color: #FFF;
 }
 
+#navbar {
+	margin-left: 0px;
+}
+
 #page > div {
 	background-color: #5D5757;
 	border-color: #403E3F;
