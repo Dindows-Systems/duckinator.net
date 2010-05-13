@@ -10,7 +10,7 @@ body {
 	background-image: url("/themes/schwarzfußkatze/header.jpg");
 }
 
-#page div {
+#page > div {
 	background-color: #776749;
 	border-color: #5D4D32;
 }
