@@ -14,7 +14,7 @@ body {
 	color: #CCC;
 }
 
-#page div {
+#page > div {
 	background-color: #181826;
 	border-color: #060A15;
 }

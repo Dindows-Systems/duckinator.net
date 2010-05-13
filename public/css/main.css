@@ -20,7 +20,7 @@ img {
 	border: none;
 }
 
-#page div {
+#page > div {
 	border: 5px solid;
 }
 

@@ -10,7 +10,7 @@ body {
 	background-image: url("/themes/dark_sky/header.jpg");
 }
 
-#page div {
+#page > div {
 	background-color: #181826;
 	border-color: #060A15;
 }
