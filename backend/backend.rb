@@ -24,7 +24,7 @@ class HomePage
 	end
 
   def get_theme
-    'schwarzfußkatze'
+    'fairview_pier'
     #'dark_sky'
   end
 
