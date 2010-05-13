@@ -24,7 +24,8 @@ class HomePage
 	end
 
   def get_theme
-    'dark_sky'
+    'schwarzfußkatze'
+    #'dark_sky'
   end
 
   def title_check (location_words, i)
