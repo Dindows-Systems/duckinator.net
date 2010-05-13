@@ -63,6 +63,10 @@ img {
 	border: 1px solid transparent;
 }
 
+#navbar ul {
+	list-style-type:none; padding-left:1em;
+}
+
 #navbar li a:link,
 #navbar li a:visited {
 	border: none;
