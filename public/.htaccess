@@ -10,5 +10,5 @@ Action rawruby /rbhandler.cgi
 RewriteRule ^blog/new/(.+)$     blog/new.rhtml
 RewriteRule ^blog/view/(.+)$    blog/view.rhtml?page=$1
 
-RewriteRule ^preview/(.+)/([^$]+)$          preview/index.rb?theme=$1&path=$2
+RewriteRule ^preview/([^/]+)/([^$]+)$          preview/index.rb?theme=$1&path=$2
 RewriteRule ^preview/(.+)/$    preview/index.rb?theme=$1&path=/
