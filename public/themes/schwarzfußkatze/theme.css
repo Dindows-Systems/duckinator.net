@@ -15,3 +15,15 @@ body {
 	border-color: #5D4D32;
 }
 
+a:link,
+a:visited {
+	border-color: #FFEDCA;
+	color: #FFEDCA;
+}
+
+a:focus,
+a:hover,
+a:active {
+	border-color: #FFEDCA;
+	color: #FFFFFF;
+}
