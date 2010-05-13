@@ -1,6 +1,6 @@
 body {
-	background-color: #333;
-	color: #B5A2A9;
+	background-color: #37522F;
+	color: #FFF;
 }
 
 #header {
@@ -8,21 +8,21 @@ body {
 }
 
 #header h1, #header ul li a {
-	color: #333;
+	color: #FFF;
 }
 
 #page > div {
-	background-color: #181826;
+	background-color: #5D5757;
 	border-color: #060A15;
 }
 
 a:link,
 a:visited {
-	color: #A68F98;
+	color: #FFF;
 }
 
 a:focus,
 a:hover,
 a:active {
-	color: #CCBEC3;
+	color: #FFF;
 }
