@@ -1,8 +1,5 @@
-* {
-	font-size: 12pt;
-}
-
 body {
+	font-size: 12pt;
 	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
 	height: 100%;
 }
