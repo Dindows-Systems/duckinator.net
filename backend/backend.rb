@@ -1,22 +1,27 @@
 require 'rubygems'
-require 'cgi'
 require 'time'
 require 'maruku'
 require 'liquid'
 
 class HomePage
   attr_accessor :title, :location
-  def initialize(env, theme=nil, location_override=nil)
-    @location = env['REQUEST_URI'] || "/"
+  def call(env, theme=nil, location_override=nil)
+    @location = env['PATH_INFO'] || "/"
     @theme = theme || get_theme
     set_title
+    @status = 200
+    @content_type = "text/html"
 
-    @body = open(env['PATH_TRANSLATED']).read
+    #@body = open(env['PATH_TRANSLATED']).read
+    file = "#{env['DOCUMENT_ROOT']}#{env['PATH_INFO']}"
+    if File.directory?(file)
+      file = "#{file}/index.rhtml"
+    end
+    @body = open(file).read
 
     @location_override=location_override
 
-    cgi = CGI.new
-    cgi.out { generate_page }
+    [@status, { "Content-Type" => @content_type }, [generate_page]]
   end
 
 	def generate_link(url, text)
@@ -84,6 +89,3 @@ class HomePage
   end
 end
 
-def run
-  HomePage.new(ENV.clone)
-end
