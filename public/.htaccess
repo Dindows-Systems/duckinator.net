@@ -1,4 +1,4 @@
-DirectoryIndex index.rhtml index.rb index.php index.html index.htm
+DirectoryIndex index.md index.rb index.php index.html index.htm
 RewriteEngine On
 
 RewriteRule ^blog/new/(.+)$     blog/new.rhtml
