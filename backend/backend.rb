@@ -16,7 +16,7 @@ class HomePage
     #@body = open(env['PATH_TRANSLATED']).read
     file = "#{env['DOCUMENT_ROOT']}#{env['PATH_INFO']}"
     if File.directory?(file)
-      file = "#{file}/index.rhtml"
+      file = "#{file}/index.md"
     end
     @body = open(file).read
 
@@ -42,7 +42,7 @@ class HomePage
     @title = "duckinator.net"
     @breadcrumbs = generate_link('http://duckinator.net', 'duckinator.net')
     if @location != '/' and @location.length > 0
-      location = @location.chomp('/index.rhtml').chomp('/')
+      location = @location.chomp('/index.md').chomp('/')
       location_words = location.split('/')
 
       i = location_words.length-1
