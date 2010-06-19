@@ -1,5 +1,5 @@
 ## A little about me ##
-My name is Nick Markwell, also known as duck (or online as "duckinator"). I'm 18 years old as of April 30, 2010, and am in my senior year of high school. I have been programming since 2005. I strongly support [open source software](http://en.wikipedia.org/wiki/Open_source) and the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License) license.
+My name is Nick Markwell, also known as duck (or online as "duckinator"). I'm 18 years old as of April 30, 2010, and graduated from high school on June 18, 2010. I have been programming since 2005. I strongly support [open source software](http://en.wikipedia.org/wiki/Open_source) and the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License).
 
 ## Projects ##
 I have many open source projects on [github](http://github.com/RockerMONO/), some of my more interesting ones are listed below.
@@ -7,6 +7,7 @@ I have many open source projects on [github](http://github.com/RockerMONO/), som
 ### Misc ###
 - [cervello](http://github.com/RockerMONO/cervello): My AI system, written in ruby
 - [duckinator.net](http://github.com/RockerMONO/duckinator.net): This site
+- [fileville.net](http://github.com/RockerMONO/fileville.net): Online CAD software. [http://fileville.net](http://fileville.net)
 - [reditor](http://github.com/RockerMONO/reditor): An emacs-style editor written in [Ruby](http://ruby-lang.org)
 - [rbstamp](http://github.com/RockerMONO/rbstamp): BASIC Stamp programmer, written in Ruby
 - [ragno](http://github.com/RockerMONO/ragno): Web spider/crawler written in Ruby
