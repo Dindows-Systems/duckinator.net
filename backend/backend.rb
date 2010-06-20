@@ -106,9 +106,9 @@ EOF
 
     resp = `git pull`
     if resp.chomp != "Already up-to-date."
-      File.open('public/autopull/log', 'w'){ |f|
+      File.open('public/autopull/log', 'w') do |f|
         f.write("#{Time.now}\n#{resp}")
-      }
+      end
     end
 
     [200, { "Content-Type" => 'text/html' }, [text]]
