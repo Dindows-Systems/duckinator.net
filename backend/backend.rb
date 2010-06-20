@@ -106,7 +106,6 @@ EOF
 
     `git pull &> log`
 
-EOF
     [200, { "Content-Type" => 'text/html' }, [text]]
   end
 end
