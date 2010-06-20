@@ -13,6 +13,8 @@ class HomePage
     @status = 200
     @content_type = "text/html"
 
+    return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
+
     #@body = open(env['PATH_TRANSLATED']).read
     file = "#{env['DOCUMENT_ROOT']}#{env['PATH_INFO']}"
     if File.directory?(file)
@@ -87,6 +89,25 @@ class HomePage
       text.gsub!(/<a href="\//, "<a href=\"#{@location_override}/")
     end
     text
+  end
+
+  def pull
+    text =<<EOF
+<!doctype html>
+<html>
+  <head>
+    <title>Autopull</title>
+  </head>
+  <body>
+    Pulled from github. <a href="logs">View log</a>.
+  </body>
+</html>
+EOF
+
+    `git pull &> log`
+
+EOF
+    [200, { "Content-Type" => 'text/html' }, [text]]
   end
 end
 
