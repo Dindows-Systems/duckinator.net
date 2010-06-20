@@ -107,7 +107,7 @@ EOF
     resp = `git pull`
     if resp.chomp != "Already up to date."
       File.open('public/autopull/log', 'w'){ |f|
-        f.write("#{resp}\n#{`date`}")
+        f.write("#{`date`}\n#{resp}")
       }
     end
 
