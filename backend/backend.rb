@@ -104,7 +104,9 @@ class HomePage
 </html>
 EOF
 
-    `git pull &> log`
+    resp = `git pull`
+    open('log', 'w').write(resp)
+    text += "<br><br><br>#{resp}"
 
     [200, { "Content-Type" => 'text/html' }, [text]]
   end
