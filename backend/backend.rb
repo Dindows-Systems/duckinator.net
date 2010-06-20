@@ -106,8 +106,7 @@ EOF
 
     resp = `git pull`
     File.open('public/autopull/log', 'w'){ |f|
-      f.write(resp)
-      f.write("\n#{Time.now}")
+      f.write("#{resp}\n#{Time.now}")
     }
 
     [200, { "Content-Type" => 'text/html' }, [text]]
