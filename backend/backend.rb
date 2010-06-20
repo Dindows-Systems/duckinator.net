@@ -105,7 +105,9 @@ class HomePage
 EOF
 
     resp = `git pull`
-    open('public/autopull/log', 'w').write(resp)
+    File.open('public/autopull/log', 'w'){ |f|
+      f.write(resp)
+    }
 
     [200, { "Content-Type" => 'text/html' }, [text]]
   end
