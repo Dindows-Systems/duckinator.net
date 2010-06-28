@@ -99,7 +99,7 @@ class HomePage
     <title>Autopull</title>
   </head>
   <body>
-    Pulled from github. <a href="log">View log</a>.
+    Pulled from github. <a href="/autopull/log">View log</a>.
   </body>
 </html>
 EOF
