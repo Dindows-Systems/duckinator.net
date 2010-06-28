@@ -27,13 +27,13 @@ class HomePage
     [@status, { "Content-Type" => @content_type }, [generate_page]]
   end
 
-	def generate_link(url, text)
-		"<a href=\"#{url}\">#{text}</a>"
-	end
+  def generate_link(url, text)
+    "<a href=\"#{url}\">#{text}</a>"
+  end
 
   def get_theme
-    'fairview_pier'
-    #'dark_sky'
+    #'fairview_pier'
+    'dark_sky'
   end
 
   def title_check (location_words, i)
