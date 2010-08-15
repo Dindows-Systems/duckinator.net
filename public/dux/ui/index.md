@@ -23,5 +23,4 @@ There are 3 menus in the top bar. **Dux**, **Windows**, and the *current program
 
 ## Footnotes ##
 
-<sup id="f1">1</sup>
-I am not affiliated with any of the VIM developers, AutoDesk, or Apple.  At all.
+ <sup id="f1">1</sup>  I am not affiliated with any of the VIM developers, AutoDesk, or Apple.  At all.
