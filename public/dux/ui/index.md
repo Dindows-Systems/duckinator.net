@@ -17,8 +17,8 @@ Unless specified through aforementioned special thing I have yet to devise, the 
 
 There are 3 menus in the top bar. **Dux**, **Windows**, and the *current program* menus.
 
-*  The [*Dux* menu](/ui/02_dux_menu.png) is normal system administration.
-*  The [*Windows* menu](/ui/03_windows_menu.png) is a list of open windows, and lets you switch between them.
+*  The [**Dux** menu](/ui/02_dux_menu.png) is normal system administration.
+*  The [**Windows** menu](/ui/03_windows_menu.png) is a list of open windows, and lets you switch between them.
 *  The [*current program* menu](/ui/04_text_editor_menu) is a menu with options specific to the current program that is open. The name of this menu matches the program you are using.
 
 ## Footnotes ##
