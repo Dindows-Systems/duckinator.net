@@ -5,6 +5,23 @@ The project began in late 2008 as an experiment, and it quickly became a regular
 As time went on, more people joined and several revisions of dux were created, leaving a clean and well designed core that will be both fast and extendable.
 On August 2nd, 2009, we started development of the [metodo kernel](/dux/metodo), which is now the kernel dux is built around.
 
+## Releases ##
+
+i386:
+
+* [v0.0.1](iso/i386/dux-v0.0.1.iso): July 19, 2009
+* [v0.0.2](iso/i386/dux-v0.0.2.iso): July 21, 2009
+* [v0.0.3](iso/i386/dux-v0.0.3.iso): July 03, 2010
+* [v0.0.4](iso/i386/dux-v0.0.4.iso): August 15, 2010
+
+x86-64:
+
+* No releases for x86-64 yet
+
+Other:
+
+* No non-i386 and non-x86-64 releases yet
+
 ## What's with the name? ##
 I was given the nickname duck, courtesy of my friend Ashley, in my sophomore year of high school.  Over time, everybody I know started calling me duck.  When I asked a friend what I should call my Operating System, she said, "dux."
 
