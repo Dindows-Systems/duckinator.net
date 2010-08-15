@@ -1,6 +1,6 @@
 ## Dux's <abbr title="User Interface">UI</abbr> ##
 
-The UI design I came up took ideas from VIM<sup><a href="#1">[1]</a></sup>, AutoCAD<sup><a href="#1">[1]</a></sup>, and Mac OS<sup><a href="#1">[1]</a></sup>.
+The UI design I came up took ideas from VIM<sup><a href="#f1">[1]</a></sup>, AutoCAD<sup><a href="#f1">[1]</a></sup>, and Mac OS<sup><a href="#f1">[1]</a></sup>.
 If you are in *command mode*, the `insert` key puts you in *input mode* which lets you directly interact with the program.
 If you are in *input mode*, the `escape` key puts you in *command mode* which lets you type commands in the command box and run them.
 
@@ -23,4 +23,5 @@ There are 3 menus in the top bar. **Dux**, **Windows**, and the *current program
 
 ## Footnotes ##
 
-<sup id="f1">1</sup> I am not affiliated with any of the VIM developers, AutoDesk, or Apple.  At all.
+<sup id="f1">1</sup>
+I am not affiliated with any of the VIM developers, AutoDesk, or Apple.  At all.
