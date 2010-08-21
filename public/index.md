@@ -27,9 +27,7 @@ I have many open source projects on [github](http://github.com/RockerMONO/), som
 
 ### IRC-Related ###
 - [NRO](http://github.com/RockerMONO/nro): Version control informant, similar to [CIA](http://cia.vc) and [FBI](http://fbi.danopia.net)
-- [oocbot](http://github.com/RockerMONO/oocbot): IRC bot written in ooc using my fork of the [spry](http://github.com/RockerMONO/spry) library
 - [cbot](http://github.com/RockerMONO/cbot): Small IRC bot written in C
-- [spry](http://github.com/RockerMONO/spry): My fork of the spry IRC library. ([Main fork of spry](http://github.com/tsion/spry) by Scott Olson)
 - [fluffy](http://github.com/RockerMONO/fluffy): Small IRC daemon written in C, likely will be rewritten in ooc
 - [jsirclib](http://github.com/RockerMONO/jsirclib): IRC library written in Javascript, using a Java plugin to provide raw sockets
 - [jsircbot](http://github.com/RockerMONO/jsircbot): IRC bot using jsirclib
