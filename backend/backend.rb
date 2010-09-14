@@ -17,14 +17,20 @@ class HomePage
 
     #@body = open(env['PATH_TRANSLATED']).read
     file = "#{env['DOCUMENT_ROOT']}#{env['PATH_INFO']}"
-    if File.directory?(file)
-      file = "#{file}/index.md"
+    if file[0..8] == "/preview/" && file.length > 9
+      theme, filename = file[9..-1].split("/", 2)
+      filename = "/" + filename
+      Homepage.new(env, theme, filename)
+    else
+      if File.directory?(file)
+        file = "#{file}/index.md"
+      end
+      @body = open(file).read
+
+      @location_override=location_override
+
+      [@status, { "Content-Type" => @content_type }, [generate_page]]
     end
-    @body = open(file).read
-
-    @location_override=location_override
-
-    [@status, { "Content-Type" => @content_type }, [generate_page]]
   end
 
   def generate_link(url, text)
