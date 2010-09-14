@@ -20,7 +20,8 @@ class HomePage
     if file[0..8] == "/preview/" && file.length > 9
       theme, filename = file[9..-1].split("/", 2)
       env['PATH_INFO'] = filename
-      Homepage.new(env, theme)
+      [@status, { "Content-Type" => "text/plain" }, [env.inspect]]
+      #Homepage.new(env, theme)
     else
       if File.directory?(file)
         file = "#{file}/index.md"
