@@ -6,32 +6,31 @@ require 'liquid'
 
 class HomePage
   attr_accessor :title, :location
-  def call(env, theme=nil, location_override=nil)
+  def call(env, theme=nil)
+    @env = env
     @location = env['PATH_INFO'] || "/"
     @theme = theme || get_theme
     set_title
     @status = 200
     @content_type = "text/html"
+    @preview = false
 
     return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
 
-    #@body = open(env['PATH_TRANSLATED']).read
-    file = "#{env['DOCUMENT_ROOT']}#{env['PATH_INFO']}"
+    file = env['PATH_INFO']
     if file[0..8] == "/preview/" && file.length > 9
-      theme, filename = file[9..-1].split("/", 2)
-      env['PATH_INFO'] = filename
-      [@status, { "Content-Type" => "text/plain" }, [env.inspect]]
-      #Homepage.new(env, theme)
-    else
-      if File.directory?(file)
-        file = "#{file}/index.md"
-      end
-      @body = open(file).read
-
-      @location_override=location_override
-
-      [@status, { "Content-Type" => @content_type }, [generate_page]]
+      @theme, file = env['PATH_INFO'][9..-1].split("/", 2)
+      @preview = true
     end
+
+    file = "#{env['DOCUMENT_ROOT']}/#{file}"
+
+    if File.directory?(file)
+      file = "#{file}/index.md"
+    end
+    @body = open(file).read
+
+    [@status, { "Content-Type" => @content_type }, [generate_page]]
   end
 
   def generate_link(url, text)
@@ -39,7 +38,6 @@ class HomePage
   end
 
   def get_theme
-    #'fairview_pier'
     'dark_sky'
   end
 
@@ -76,8 +74,17 @@ class HomePage
     maruku.to_html
   end
 
+  def preview_fix
+    return "" unless @preview
+
+    preview = <<EOF
+<base href="#{@env['rack.url_scheme']}://#{@env['SERVER_NAME']}/preview/#{@theme}/">
+EOF
+  end
+
   def generate_page
     @assigns = {
+      'preview'     => preview_fix,
       'breadcrumbs' => @breadcrumbs,
       'title'       => @title,
       'year'        => `date +'%Y'`.chomp,
@@ -91,9 +98,9 @@ class HomePage
     @assigns['content'] = @body
 
     text = parse_liquid(text)
-    if !@location_override.nil?
-      text.gsub!(/<a href='\//, "<a href='#{@location_override}/")
-      text.gsub!(/<a href="\//, "<a href=\"#{@location_override}/")
+    if @preview
+      text.gsub!('<a href="/', "<a href=\"/preview/#{@theme}/")
+      text.gsub!("<a href='/", "<a href='/preview/#{@theme}/")
     end
     text
   end
