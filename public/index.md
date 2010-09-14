@@ -4,6 +4,10 @@ My name is Nick Markwell, also known as duck (or online as "duckinator"). I'm 18
 ## Projects ##
 I have many open source projects on [github](http://github.com/RockerMONO/), some of my more interesting ones are listed below.
 
+### Programming languages ###
+- [pulito](http://github.com/RockerMONO/pulito): Italian for "clean". A simple language whose entirety consists of characters, strings, numbers, lists, variables, lambdas, and some builtin functions.
+- [TDL](http://github.com/RockerMONO/TDL): A prototype-based event-driven language with influences from ooc, Ruby, and Ioke.
+
 ### Misc ###
 - [cervello](http://github.com/RockerMONO/cervello): My AI system, written in ruby
 - [duckinator.net](http://github.com/RockerMONO/duckinator.net): This site
