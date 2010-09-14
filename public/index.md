@@ -13,7 +13,7 @@ I have many open source projects on [github](http://github.com/RockerMONO/), som
 - [ragno](http://github.com/RockerMONO/ragno): Web spider/crawler written in Ruby
 - [drepl](http://github.com/RockerMONO/drepl): A [REPL](http://en.wikipedia.org/REPL) using Distributed Ruby
 - [cnc](http://github.com/RockerMONO/cnc): CNC control software
-- [DuCAD]((http://github.com/RockerMONO/DuCAD): CAD software I am (attempting to) make, may integrate a better version into reditor as a plugin
+- [DuCAD](http://github.com/RockerMONO/DuCAD): CAD software I am (attempting to) make, may integrate a better version into reditor as a plugin
 - [loguck](http://github.com/RockerMONO/loguck): Boolean logic expression emulator written in Ruby
 
 ### Operating Systems and Bootloaders ###
