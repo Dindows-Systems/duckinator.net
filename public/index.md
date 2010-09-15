@@ -24,7 +24,7 @@ I have many open source projects on [github](http://github.com/RockerMONO/), som
 - [dux](http://github.com/RockerMONO/dux): An operating system, see [my page on dux](/dux) for more information
 - [piccolo](http://github.com/RockerMONO/piccolo): A toy operating system I wrote
 - [oos](http://github.com/RockerMONO/oos): My fork of an operating system written by [Scott Olson](http://scott-olson.org)
-- [tiny](http://github.com/RockerMONO/tiny): Smallest thing I couuld get to boot on x86 hardware
+- [tiny](http://github.com/RockerMONO/tiny): Smallest thing I could get to boot on x86 hardware
 - [semplice](http://github.com/RockerMONO/semplice): 2-Stage bootloader written in Assembly (NASM)
 - [stampa](http://github.com/RockerMONO/stampa): Small toy bootloader
 - [dux-gba](http://github.com/RockerMONO/dux-gba): Small operating system for the GameBoy Advance
