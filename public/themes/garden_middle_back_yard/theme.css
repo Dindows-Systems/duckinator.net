@@ -3,10 +3,6 @@ body {
 	color: #B5A2A9;
 }
 
-#header {
-	background-image: url("/themes/garden_middle_back_yard/header.jpg");
-}
-
 #header h1, #header ul li a {
 	color: #333;
 }

@@ -3,10 +3,6 @@ body {
 	color: #B5A2A9;
 }
 
-#header {
-	background-image: url("/themes/lights5/header.jpg");
-}
-
 #header h1, #header ul li a {
 	color: #FFF;
 }

@@ -22,6 +22,7 @@ img {
 }
 
 #header {
+	background-image: url("/theme/header.jpg");
 	background-repeat: no-repeat;
 	border: 1px solid;
 	min-height: 300px;
