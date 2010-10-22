@@ -22,7 +22,8 @@ class HomePage
       @theme, file = env['PATH_INFO'][9..-1].split("/", 2)
       @preview = true
     elsif file[0..6] == "/theme/" && file[-4..-1] == ".css"
-      @file = "/themes/#{@theme}/#{env['PATH_INFO'][7..-1]}"
+      file = "/themes/#{@theme}/#{env['PATH_INFO'][7..-1]}"
+      @content_type = "text/css"
     end
 
     file = "#{env['DOCUMENT_ROOT']}/#{file}"
@@ -31,8 +32,10 @@ class HomePage
       file = "#{file}/index.md"
     end
     @body = open(file).read
+    page = generate_page if file[-3..-1] == ".md"
+    page ||= @body
 
-    [@status, { "Content-Type" => @content_type }, [generate_page]]
+    [@status, { "Content-Type" => @content_type }, [page]]
   end
 
   def generate_link(url, text)
