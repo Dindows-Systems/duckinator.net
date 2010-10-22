@@ -3,6 +3,7 @@ require 'rubygems'
 require 'time'
 require 'maruku'
 require 'liquid'
+require 'mime/types'
 
 class HomePage
   attr_accessor :title, :location
@@ -17,25 +18,30 @@ class HomePage
 
     return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
 
-    file = env['PATH_INFO']
-    if file[0..8] == "/preview/" && file.length > 9
-      @theme, file = env['PATH_INFO'][9..-1].split("/", 2)
+    @file = env['PATH_INFO']
+    if @file[0..8] == "/preview/" && file.length > 9
+      @theme, @file = env['PATH_INFO'][9..-1].split("/", 2)
       @preview = true
-    elsif file[0..6] == "/theme/" && file[-4..-1] == ".css"
-      file = "/themes/#{@theme}/#{env['PATH_INFO'][7..-1]}"
-      @content_type = "text/css"
+    elsif @file[0..6] == "/theme/"
+      @file = @file[7..-1]
+      @file = "/themes/#{@theme}/#{@file}"
     end
 
-    file = "#{env['DOCUMENT_ROOT']}/#{file}"
+    @file = "#{env['DOCUMENT_ROOT']}/#{@file}"
 
-    if File.directory?(file)
-      file = "#{file}/index.md"
+    if File.directory?(@file)
+      @file = "#{@file}/index.md"
     end
-    @body = open(file).read
-    page = generate_page if file[-3..-1] == ".md"
+    @body = open(@file).read
+    page = generate_page if markdown?
     page ||= @body
+    @content_type = MIME::Types.type_for(file) unless markdown?
 
     [@status, { "Content-Type" => @content_type }, [page]]
+  end
+
+  def markdown?
+    @file[-3..-1] == ".md"
   end
 
   def generate_link(url, text)
