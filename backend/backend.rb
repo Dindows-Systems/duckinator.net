@@ -21,6 +21,8 @@ class HomePage
     if file[0..8] == "/preview/" && file.length > 9
       @theme, file = env['PATH_INFO'][9..-1].split("/", 2)
       @preview = true
+    elsif file[0..6] == "/theme/" && file[-4..-1] == ".css"
+      @file = "/themes/#{@theme}/#{env['PATH_INFO'][7..-1]}"
     end
 
     file = "#{env['DOCUMENT_ROOT']}/#{file}"
