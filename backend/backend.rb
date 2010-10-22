@@ -18,16 +18,16 @@ class HomePage
 
     return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
 
-    @file = env['PATH_INFO']
-    if @file[0..8] == "/preview/" && @file.length > 9
-      @theme, @file = env['PATH_INFO'][9..-1].split("/", 2)
+    @location = env['PATH_INFO']
+    if @location[0..8] == "/preview/" && @location.length > 9
+      @theme, @location = env['PATH_INFO'][9..-1].split("/", 2)
       @preview = true
-    elsif @file[0..6] == "/theme/"
-      @file = @file[7..-1]
-      @file = "/themes/#{@theme}/#{@file}"
+    elsif @location[0..6] == "/theme/"
+      @location = @location[7..-1]
+      @location = "/themes/#{@theme}/#{@location}"
     end
 
-    @file = "#{env['DOCUMENT_ROOT']}/#{@file}"
+    @file = "#{env['DOCUMENT_ROOT']}/#{@location}"
 
     if File.directory?(@file)
       @file = "#{@file}/index.md"
