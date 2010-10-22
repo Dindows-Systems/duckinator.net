@@ -18,7 +18,6 @@ class HomePage
 
     return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
 
-    @location = env['PATH_INFO']
     if @location[0..8] == "/preview/" && @location.length > 9
       @theme, @location = env['PATH_INFO'][9..-1].split("/", 2)
       @preview = true
