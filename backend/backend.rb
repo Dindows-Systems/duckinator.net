@@ -52,7 +52,7 @@ class HomePage
   end
 
   def title_check (location_words, i)
-    File.directory?("./#{location_words[0..i].join('/')}")
+    File.directory?(File.join(File.dirname(__FILE__), "..", "public", *location_words[0..i])
   end
 
   def set_title
