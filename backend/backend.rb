@@ -19,7 +19,7 @@ class HomePage
     return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
 
     @file = env['PATH_INFO']
-    if @file[0..8] == "/preview/" && file.length > 9
+    if @file[0..8] == "/preview/" && @file.length > 9
       @theme, @file = env['PATH_INFO'][9..-1].split("/", 2)
       @preview = true
     elsif @file[0..6] == "/theme/"
@@ -35,7 +35,7 @@ class HomePage
     @body = open(@file).read
     page = generate_page if markdown?
     page ||= @body
-    @content_type = MIME::Types.type_for(file) unless markdown?
+    @content_type = MIME::Types.type_for(@file) unless markdown?
 
     [@status, { "Content-Type" => @content_type }, [page]]
   end
