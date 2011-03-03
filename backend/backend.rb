@@ -122,7 +122,7 @@ EOF
     if @preview
       text.gsub!('<a href="/', "<a href=\"/preview/#{@theme}/")
       text.gsub!("<a href='/", "<a href='/preview/#{@theme}/")
-      text.gsub!('<link rel="stylesheet" href="/theme/', "<link rel="stylesheet" href=\"/themes/#{@theme}/")
+      text.gsub!('<link rel="stylesheet" href="/theme/', "<link rel=\"stylesheet\" href=\"/themes/#{@theme}/")
       text.gsub!("<link rel='stylesheet' href='/theme/", "<link rel='stylesheet' href='/themes/#{@theme}/")
     end
     text
