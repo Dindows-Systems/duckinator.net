@@ -14,6 +14,9 @@ i386:
 * [v0.0.2](/dux/iso/i386/dux-v0.0.2.iso): July 21, 2009
 * [v0.0.3](/dux/iso/i386/dux-v0.0.3.iso): July 03, 2010
 * [v0.0.4](/dux/iso/i386/dux-v0.0.4.iso): August 15, 2010
+* [v0.0.5](/dux/iso/i386/dux-v0.0.5.iso): September 20, 2010
+* [v0.0.6](/dux/iso/i386/dux-v0.0.6.iso): (planned) March 02, 2011
+* [v0.1.0](/dux/iso/i386/dux-v0.1.0.iso): (planned) March 02-06, 2011
 
 x86-64:
 
