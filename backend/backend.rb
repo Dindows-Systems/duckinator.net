@@ -33,10 +33,15 @@ class HomePage
     end
     @body = open(@file).read
     page = generate_page if markdown?
+    page = generate_css  if css?
     page ||= @body
     @content_type = MIME::Types.type_for(@file) unless markdown?
 
     [@status, { "Content-Type" => @content_type }, [page]]
+  end
+
+  def css?
+    @file[-4..-1] == ".css"
   end
 
   def markdown?
@@ -92,7 +97,7 @@ class HomePage
 EOF
   end
 
-  def generate_page
+  def set_assigns
     @assigns = {
       'preview'     => preview_fix,
       'breadcrumbs' => @breadcrumbs,
@@ -100,6 +105,15 @@ EOF
       'year'        => `date +'%Y'`.chomp,
       'theme'       => @theme
     }
+  end
+
+  def generate_css
+    set_assigns
+    
+  end
+
+  def generate_page
+    set_assigns
     @body = parse_liquid(@body)
     @body = parse_maruku(@body)
 
