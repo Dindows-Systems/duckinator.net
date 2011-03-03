@@ -9,11 +9,11 @@ On August 2nd, 2009, we started development of the [metodo kernel](/dux/metodo),
 
 i386:
 
-* [Earliest working build](iso/i386/dux-2008-12-17.img): December 17, 2008 (Floppy image)
-* [v0.0.1](iso/i386/dux-v0.0.1.iso): July 19, 2009
-* [v0.0.2](iso/i386/dux-v0.0.2.iso): July 21, 2009
-* [v0.0.3](iso/i386/dux-v0.0.3.iso): July 03, 2010
-* [v0.0.4](iso/i386/dux-v0.0.4.iso): August 15, 2010
+* [Earliest working build](/dux/isoi386/dux-2008-12-17.img): December 17, 2008 (Floppy image)
+* [v0.0.1](/dux/isoi386/dux-v0.0.1.iso): July 19, 2009
+* [v0.0.2](/dux/isoi386/dux-v0.0.2.iso): July 21, 2009
+* [v0.0.3](/dux/isoi386/dux-v0.0.3.iso): July 03, 2010
+* [v0.0.4](/dux/isoi386/dux-v0.0.4.iso): August 15, 2010
 
 x86-64:
 
@@ -27,7 +27,7 @@ Other architectures:
 
 i386:
 
-* [Earliest working build](tar/i386/dux-2008-12-17.tar.gz): December 17, 2008 (GZipped tar file)
+* [Earliest working build](/dux/tar/i386/dux-2008-12-17.tar.gz): December 17, 2008 (GZipped tar file)
 
 ## What's with the name? ##
 I was given the nickname duck, courtesy of my friend Ashley, in my sophomore year of high school.  Over time, everybody I know started calling me duck.  When I asked a friend what I should call my Operating System, she said, "dux."
