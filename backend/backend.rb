@@ -109,7 +109,7 @@ EOF
 
   def generate_css
     set_assigns
-    
+    parse_liquid(open(@file).read)
   end
 
   def generate_page
