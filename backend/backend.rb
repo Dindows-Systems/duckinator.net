@@ -34,12 +34,16 @@ class HomePage
     @body = open(@file).read
     page = generate_page if markdown?
     page ||= @body
-    if @location[-4..-1] == ".css"
+    if css?
       page.gsub(/url\(\"\/theme\/(.*)\.jpg\"\)/, 'url("/themes/' + @theme + '/\1.jpg")')
     end
     @content_type = MIME::Types.type_for(@file) unless markdown?
 
     [@status, { "Content-Type" => @content_type }, [page]]
+  end
+
+  def css?
+    @location[-4..-1] == ".css"
   end
 
   def markdown?
