@@ -19,14 +19,10 @@ Below, I've collected information about what seem to be the three most commonly 
 * [Short git tagging cheatsheet](http://blog.andrewcantino.com/2008/12/04/adding-and-removing-remote-git-tags)
 
 #### Mercurial ####
-???
-
-#### SVN ####
-???
+* [Mercurial tutorial](http://mercurial.selenic.com/wiki/Tutorial)
 
 ## Programming ##
 * [Different assembler syntax](http://wiki.osdev.org/Opcode_syntax)
-
 
 ## Operating System Development ##
 * [OSDev Wiki](http://wiki.osdev.org)

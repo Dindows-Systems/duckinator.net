@@ -59,13 +59,4 @@ The source is available at [http://github.com/RockerMONO/dux](http://github.com/
 
 ## Useful links ##
 
-Some useful links to documentation of various things:
-### Assorted ###
-* [multiboot specification](http://www.gnu.org/software/grub/manual/multiboot/html_node/Machine-state.html#Machine-state) – contains information on what is and is not set by grub on bootup. If it is not stated here as set, it should be presumed as *undefined*.
-* [detailed git tagging info](http://blog.ashchan.com/archive/2008/06/30/tags-on-git)
-* [short git tagging cheatsheet](http://blog.andrewcantino.com/2008/12/04/adding-and-removing-remote-git-tags)
-
-### Software ###
-* [VirtualBox](http://virtualbox.org/)
-* [QEMU](http://qemu.org)
-* [SCons](http://scons.org)
+Some useful links and documentation for various things are located in the [resources](/resources) section.
