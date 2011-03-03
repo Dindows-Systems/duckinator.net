@@ -35,7 +35,7 @@ class HomePage
     page = generate_page if markdown?
     page ||= @body
     if css?
-      page.gsub(/^\/theme\/(.*)\.jpg/, '/themes/' + @theme + '/\1.jpg')
+      page.gsub(/url\(\"\/theme\/(.*)\.jpg\"\)/, 'url("/themes/' + @theme + '/\1.jpg")')
     end
     @content_type = MIME::Types.type_for(@file) unless markdown?
 
