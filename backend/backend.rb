@@ -33,8 +33,10 @@ class HomePage
     end
     @body = open(@file).read
     page = generate_page if markdown?
-    page = generate_css  if css?
     page ||= @body
+    if css?
+      page.gsub(/^\/theme\/(.*)\.jpg/, '/themes/' + @theme + '/\1.jpg')
+    end
     @content_type = MIME::Types.type_for(@file) unless markdown?
 
     [@status, { "Content-Type" => @content_type }, [page]]
@@ -107,11 +109,6 @@ EOF
     }
   end
 
-  def generate_css
-    set_assigns
-    parse_liquid(@body)
-  end
-
   def generate_page
     set_assigns
     @body = parse_liquid(@body)
@@ -125,6 +122,8 @@ EOF
     if @preview
       text.gsub!('<a href="/', "<a href=\"/preview/#{@theme}/")
       text.gsub!("<a href='/", "<a href='/preview/#{@theme}/")
+      text.gsub!('<link rel="stylesheet" href="/theme/', "<link rel="stylesheet" href=\"/themes/#{@theme}/")
+      text.gsub!("<link rel='stylesheet' href='/theme/", "<link rel='stylesheet' href='/themes/#{@theme}/")
     end
     text
   end
