@@ -2,6 +2,8 @@
 
 ## Overview ##
 
+This is a specification for the APIs planned to be used by dux starting at v0.1.0, and may be modified or replaced.
+
 List of APIs:
 * [Text](text):&nbsp;&nbsp;&nbsp;&nbsp;Text manipulation and formatting.
 * [Console](console):&nbsp;Console control system, including printing text ("Display" in v0.6.0 and earlier).
