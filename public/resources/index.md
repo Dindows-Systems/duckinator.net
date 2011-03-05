@@ -64,6 +64,7 @@ Below, I've collected information about two of the more commonly used version co
 [Intel manual download page](http://www.intel.com/products/processor/manuals/)
 
 Intel:
+
 * Intel&reg; 64 and IA-32 Architectures Software Developer's Manual
   * [Documentation changes](http://www.intel.com/Assets/PDF/manual/252046.pdf)
   * [Volume 1:  Basic Architecture](http://www.intel.com/Assets/PDF/manual/253665.pdf)
@@ -75,6 +76,7 @@ Intel:
 * [Intel CPUID Specification](http://www.intel.com/Assets/PDF/appnote/241618.pdf)
 
 AMD:
+
 * [Volume 1: Application Programming](http://support.amd.com/us/Processor_TechDocs/24592.pdf)
 * [Volume 2: System Programming](http://support.amd.com/us/Processor_TechDocs/24593.pdf)
 * [Volume 3: General Purpose and System Instructions](http://support.amd.com/us/Processor_TechDocs/24594.pdf)
