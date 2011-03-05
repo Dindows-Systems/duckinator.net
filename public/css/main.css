@@ -59,10 +59,8 @@ img {
 	list-style: none;
 	margin: 1em 2em;
 	padding: 0.5em;
-	width: 15em;
-	/* Not sure why I changed 15->8? 15 works with dark sky theme
-	 * and fixes issues with the dux -> "API documentation" link
-	 */
+	width: 11em;
+	/*width: 15em;*/
 	/*width: 8em;*/
 	border: 1px solid transparent;
 }
