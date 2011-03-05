@@ -15,9 +15,10 @@ body {
 	margin-left: 0px;
 }
 
-#navbar li:hover {
+#navbar li a:hover {
 	background-color: #5D5757;
 	border-color: #394531;
+	opacity: 0.8;
 }
 
 #page > div {
