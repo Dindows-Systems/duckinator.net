@@ -29,6 +29,10 @@ class HomePage
     @file = "#{env['DOCUMENT_ROOT']}/#{@location}"
 
     if File.directory?(@file)
+      if @file[-1] != '/'
+        # 301: Moved permanently
+        return [301, { "Location" => "#{env['PATH_INFO']}/"}, ['']
+      end
       @file = "#{@file}/index.md"
     end
     @body = open(@file).read
