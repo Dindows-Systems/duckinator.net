@@ -1,23 +1,23 @@
 Click a theme name to try it:
 
-[Dark Sky](preview/dark_sky)
+[Dark Sky](dark_sky)
 
-[Dove](preview/dove)
+[Dove](dove)
 
-[Fairview (far coast)](preview/fairview_far_coast)
+[Fairview (far coast)](fairview_far_coast)
 
-[Fairview (near coast)](preview/fairview_near_coast)
+[Fairview (near coast)](fairview_near_coast)
 
-[Fairview (pier)](preview/fairview_pier)
+[Fairview (pier)](fairview_pier)
 
-[Garden (middle back yard)](preview/garden_middle_back_yard)
+[Garden (middle back yard)](garden_middle_back_yard)
 
-[Jet tail](preview/jet_tail)
+[Jet tail](jet_tail)
 
-[Kaylee (March 2010)](preview/kaylee_march_2010)
+[Kaylee (March 2010)](kaylee_march_2010)
 
-[Lights5](preview/lights5)
+[Lights5](lights5)
 
-[Schecter guitar (black and white)](preview/schecter_guitar_bw)
+[Schecter guitar (black and white)](schecter_guitar_bw)
 
-[Schwarzfußkatze (cat)](preview/schwarzfußkatze)
+[Schwarzfußkatze (cat)](schwarzfußkatze)
