@@ -13,10 +13,13 @@ body {
 
 #navbar {
 	margin-left: 0px;
-	opacity: 0.8;
 }
 
-#navbar,
+#navbar li:hover {
+	background-color: #5D5757;
+	border-color: #394531;
+}
+
 #page > div {
 	background-color: #5D5757;
 	border-color: #394531;
