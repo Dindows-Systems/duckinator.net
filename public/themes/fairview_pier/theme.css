@@ -16,14 +16,12 @@ body {
 }
 
 #navbar li a {
+	margin-left: 5px;
 	padding-right: 3px;
 }
 
-#navbar li a:before {
-	content: "  "
-}
-
 #navbar li a:hover {
+	margin-left: 0px;
 	background-color: #5D5757;
 	border-color: #394531;
 	opacity: 0.8;
