@@ -12,13 +12,13 @@ On August 2nd, 2009, we started development of the [metodo kernel](/dux/metodo),
 i386:
 
 * [Earliest working build](/dux/iso/i386/dux-2008-12-17.img): December 17, 2008 (Floppy image)
-* [v0.0.1](/dux/iso/i386/dux-v0.0.1.iso): July 19, 2009
-* [v0.0.2](/dux/iso/i386/dux-v0.0.2.iso): July 21, 2009
-* [v0.0.3](/dux/iso/i386/dux-v0.0.3.iso): July 03, 2010
-* [v0.0.4](/dux/iso/i386/dux-v0.0.4.iso): August 15, 2010
-* [v0.0.5](/dux/iso/i386/dux-v0.0.5.iso): September 20, 2010
-* [v0.0.6](/dux/iso/i386/dux-v0.0.6.iso): March 02, 2011
-* [v0.1.0](/dux/iso/i386/dux-v0.1.0.iso): (planned) March 02-06, 2011
+* [v0.0.1](iso/i386/dux-v0.0.1.iso): July 19, 2009
+* [v0.0.2](iso/i386/dux-v0.0.2.iso): July 21, 2009
+* [v0.0.3](iso/i386/dux-v0.0.3.iso): July 03, 2010
+* [v0.0.4](iso/i386/dux-v0.0.4.iso): August 15, 2010
+* [v0.0.5](iso/i386/dux-v0.0.5.iso): September 20, 2010
+* [v0.0.6](iso/i386/dux-v0.0.6.iso): March 02, 2011
+* [v0.1.0](iso/i386/dux-v0.1.0.iso): (planned) March 2011
 
 x86-64:
 
