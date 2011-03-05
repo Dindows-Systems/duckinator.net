@@ -60,7 +60,7 @@ class HomePage
   end
 
   def get_theme
-    'dark_sky'
+    'fairview_pier'
   end
 
   def title_check (location_words, i)
