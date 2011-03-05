@@ -31,7 +31,7 @@ class HomePage
     if File.directory?(@file)
       if @file[-1] != '/'
         # 301: Moved permanently
-        return [301, { "Location" => "#{env['PATH_INFO']}/"}, ['']
+        return [301, { "Location" => "#{env['PATH_INFO']}/"}, ['']]
       end
       @file = "#{@file}/index.md"
     end
