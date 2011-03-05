@@ -19,6 +19,10 @@ body {
 	opacity: 0.8;
 }
 
+#navbar li a:hover {
+	font-variant: small-caps;
+}
+
 #navbar,
 #page > div {
 	background-color: #5D5757;
