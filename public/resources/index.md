@@ -55,3 +55,16 @@ Below, I've collected information about two of the more commonly used version co
 ### Known hardware and software bugs ###
 * [CPU Bugs](http://wiki.osdev.org/CPU_Bugs)
 * [Bugs in Bran's Kernel Development Tutorial](http://wiki.osdev.org/Bran's_Known_Bugs)
+
+## Manuals ##
+
+* [Intel&reg; 64 and IA-32 Architectures Software Developer's Manuals](http://www.intel.com/products/processor/manuals/)
+
+The [AMD64 Architecture Programmer's Manual's download page](http://developer.amd.com/documentation/guides/pages/default.aspx) is far less organized, so I'll link to the individual PDFs:
+1. [Volume 1: Application Programming](http://support.amd.com/us/Processor_TechDocs/24592.pdf)
+2. [Volume 2: System Programming](http://support.amd.com/us/Processor_TechDocs/24593.pdf)
+3. [Volume 3: General Purpose and System Instructions](http://support.amd.com/us/Processor_TechDocs/24594.pdf)
+4. [Volume 4: 128-bit and 256-bit Media Instructions](http://support.amd.com/us/Processor_TechDocs/26568.pdf)
+5. [Volume 5: 64-bit Media and x87 Floating-Point Instructions](http://support.amd.com/us/Processor_TechDocs/26569.pdf)
+6. [Volume 6: 128-bit and 256-bit XOP and FMA4 Instructions]()
+
