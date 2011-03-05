@@ -15,10 +15,22 @@ body {
 	margin-left: 0px;
 }
 
+#navbar li a {
+	padding-right: 3px;
+}
+
+#navbar li a:before {
+	content: "  "
+}
+
 #navbar li a:hover {
 	background-color: #5D5757;
 	border-color: #394531;
 	opacity: 0.8;
+}
+
+#navbar li a:hover:before {
+	content: "> "
 }
 
 #page > div {
