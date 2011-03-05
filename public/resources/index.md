@@ -66,7 +66,7 @@ Below, I've collected information about two of the more commonly used version co
 Intel:
 
 * Intel&reg; 64 and IA-32 Architectures Software Developer's Manual
-  * [Documentation changes](http://www.intel.com/Assets/PDF/manual/252046.pdf)
+* * [Documentation changes](http://www.intel.com/Assets/PDF/manual/252046.pdf)
   * [Volume 1:  Basic Architecture](http://www.intel.com/Assets/PDF/manual/253665.pdf)
   * [Volume 2A: Instruction Set Reference, A-M](http://www.intel.com/Assets/PDF/manual/253666.pdf)
   * [Volume 2B: Instruction Set Reference, N-Z](http://www.intel.com/Assets/PDF/manual/253667.pdf)
