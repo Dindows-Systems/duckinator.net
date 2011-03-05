@@ -21,7 +21,7 @@
 * [GNU Make](http://www.gnu.org/software/make/)
 
 ### Version control ###
-Below, I've collected information about what seem to be the three most commonly used version control systems.
+Below, I've collected information about two of the more commonly used version control systems.
 
 #### Git ####
 * [Detailed git tagging info](http://blog.ashchan.com/archive/2008/06/30/tags-on-git)
