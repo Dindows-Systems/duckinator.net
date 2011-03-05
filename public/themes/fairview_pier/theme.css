@@ -20,7 +20,7 @@ body {
 }
 
 #navbar li a:hover {
-	font-variant: small-caps;
+	text-decoration: underline;
 }
 
 #navbar,
