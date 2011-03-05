@@ -35,7 +35,8 @@ Below, I've collected information about two of the more commonly used version co
 
 ## Operating System Development ##
 * [OSDev Wiki](http://wiki.osdev.org)
-* [OSDev wiki: Chip Numbers, Acronyms, etc](http://wiki.osdev.org/Chip_Numbers,_Acronyms_and_Things)
+* [OSDev Wiki: Chip Numbers, Acronyms, etc](http://wiki.osdev.org/Chip_Numbers,_Acronyms_and_Things)
+* [OSDev Wiki: CPUID](http://wiki.osdev.org/CPUID)
 * [Operating System Resource Center](http://www.nondot.org/sabre/os/)
 * [Bona Fide OS Developer tutorials](http://www.osdever.net/tutorials/index)
 
@@ -58,13 +59,25 @@ Below, I've collected information about two of the more commonly used version co
 
 ## Manuals ##
 
-* [Intel&reg; 64 and IA-32 Architectures Software Developer's Manuals](http://www.intel.com/products/processor/manuals/)
+[AMD manual download page](http://developer.amd.com/documentation/guides/pages/default.aspx)
+[Intel manual download page](http://www.intel.com/products/processor/manuals/).
 
-The [AMD64 Architecture Programmer's Manual's download page](http://developer.amd.com/documentation/guides/pages/default.aspx) is far less organized, so I'll link to the individual PDFs:
-1. [Volume 1: Application Programming](http://support.amd.com/us/Processor_TechDocs/24592.pdf)
-2. [Volume 2: System Programming](http://support.amd.com/us/Processor_TechDocs/24593.pdf)
-3. [Volume 3: General Purpose and System Instructions](http://support.amd.com/us/Processor_TechDocs/24594.pdf)
-4. [Volume 4: 128-bit and 256-bit Media Instructions](http://support.amd.com/us/Processor_TechDocs/26568.pdf)
-5. [Volume 5: 64-bit Media and x87 Floating-Point Instructions](http://support.amd.com/us/Processor_TechDocs/26569.pdf)
-6. [Volume 6: 128-bit and 256-bit XOP and FMA4 Instructions]()
+Intel:
+* Intel&reg; 64 and IA-32 Architectures Software Developer's Manual
+    * [Documentation changes](http://www.intel.com/Assets/PDF/manual/252046.pdf)
+    * [Volume 1:  Basic Architecture](http://www.intel.com/Assets/PDF/manual/253665.pdf)
+    * [Volume 2A: Instruction Set Reference, A-M](http://www.intel.com/Assets/PDF/manual/253666.pdf)
+    * [Volume 2B: Instruction Set Reference, N-Z](http://www.intel.com/Assets/PDF/manual/253667.pdf)
+    * [Volume 3A: System Programming Guide](http://www.intel.com/Assets/PDF/manual/253668.pdf)
+    * [Volume 3B: System Programming Guide](http://www.intel.com/Assets/PDF/manual/253669.pdf)
+* [Intel 64 Architecture x2APIC Specification](http://www.intel.com/Assets/pdf/manual/318148.pdf)
+* [Intel CPUID Specification](http://www.intel.com/Assets/PDF/appnote/241618.pdf)
 
+AMD:
+* [Volume 1: Application Programming](http://support.amd.com/us/Processor_TechDocs/24592.pdf)
+* [Volume 2: System Programming](http://support.amd.com/us/Processor_TechDocs/24593.pdf)
+* [Volume 3: General Purpose and System Instructions](http://support.amd.com/us/Processor_TechDocs/24594.pdf)
+* [Volume 4: 128-bit and 256-bit Media Instructions](http://support.amd.com/us/Processor_TechDocs/26568.pdf)
+* [Volume 5: 64-bit Media and x87 Floating-Point Instructions](http://support.amd.com/us/Processor_TechDocs/26569.pdf)
+* [Volume 6: 128-bit and 256-bit XOP and FMA4 Instructions](http://support.amd.com/us/Processor_TechDocs/43479.pdf)
+* [AMD CPUID Specification](http://support.amd.com/us/Processor_TechDocs/25481.pdf)
