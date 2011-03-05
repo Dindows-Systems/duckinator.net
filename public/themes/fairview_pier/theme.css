@@ -13,27 +13,7 @@ body {
 
 #navbar {
 	margin-left: 0px;
-}
-
-#navbar li a {
-	margin-left: 19px;
-	padding-right: 3px;
-}
-
-#navbar li a:hover {
-	margin-left: 0px;
-	background-color: #5D5757;
-	border-color: #394531;
 	opacity: 0.8;
-}
-
-#navbar li a:hover:before {
-	content: "> "
-}
-
-#navbar li ul li a:hover {
-	margin-left: -20px;
-	padding-left: 20px;
 }
 
 #page > div {
