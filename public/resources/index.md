@@ -60,16 +60,16 @@ Below, I've collected information about two of the more commonly used version co
 ## Manuals ##
 
 [AMD manual download page](http://developer.amd.com/documentation/guides/pages/default.aspx)
-[Intel manual download page](http://www.intel.com/products/processor/manuals/).
+[Intel manual download page](http://www.intel.com/products/processor/manuals/)
 
 Intel:
 * Intel&reg; 64 and IA-32 Architectures Software Developer's Manual
-    * [Documentation changes](http://www.intel.com/Assets/PDF/manual/252046.pdf)
-    * [Volume 1:  Basic Architecture](http://www.intel.com/Assets/PDF/manual/253665.pdf)
-    * [Volume 2A: Instruction Set Reference, A-M](http://www.intel.com/Assets/PDF/manual/253666.pdf)
-    * [Volume 2B: Instruction Set Reference, N-Z](http://www.intel.com/Assets/PDF/manual/253667.pdf)
-    * [Volume 3A: System Programming Guide](http://www.intel.com/Assets/PDF/manual/253668.pdf)
-    * [Volume 3B: System Programming Guide](http://www.intel.com/Assets/PDF/manual/253669.pdf)
+  * [Documentation changes](http://www.intel.com/Assets/PDF/manual/252046.pdf)
+  * [Volume 1:  Basic Architecture](http://www.intel.com/Assets/PDF/manual/253665.pdf)
+  * [Volume 2A: Instruction Set Reference, A-M](http://www.intel.com/Assets/PDF/manual/253666.pdf)
+  * [Volume 2B: Instruction Set Reference, N-Z](http://www.intel.com/Assets/PDF/manual/253667.pdf)
+  * [Volume 3A: System Programming Guide](http://www.intel.com/Assets/PDF/manual/253668.pdf)
+  * [Volume 3B: System Programming Guide](http://www.intel.com/Assets/PDF/manual/253669.pdf)
 * [Intel 64 Architecture x2APIC Specification](http://www.intel.com/Assets/pdf/manual/318148.pdf)
 * [Intel CPUID Specification](http://www.intel.com/Assets/PDF/appnote/241618.pdf)
 
