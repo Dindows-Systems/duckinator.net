@@ -12,6 +12,10 @@ body {
 }
 
 #navbar {
+	opacity: 0.5;
+}
+
+#navbar:hover {
 	opacity: 0.8;
 }
 
