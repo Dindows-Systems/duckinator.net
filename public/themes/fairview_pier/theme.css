@@ -31,6 +31,18 @@ body {
 	content: "> "
 }
 
+#navbar li ul li a:hover {
+	margin-left: -10px;
+	background-color: #5D5757;
+	border-color: #394531;
+	opacity: 0.8;
+}
+
+#navbar li ul li a:hover:before {
+	content: "> "
+	margin-left: 10px;
+}
+
 #page > div {
 	background-color: #5D5757;
 	border-color: #394531;
