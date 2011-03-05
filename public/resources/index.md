@@ -60,6 +60,7 @@ Below, I've collected information about two of the more commonly used version co
 ## Manuals ##
 
 [AMD manual download page](http://developer.amd.com/documentation/guides/pages/default.aspx)
+
 [Intel manual download page](http://www.intel.com/products/processor/manuals/)
 
 Intel:
