@@ -39,6 +39,7 @@ Below, I've collected information about two of the more commonly used version co
 * [OSDev Wiki: CPUID](http://wiki.osdev.org/CPUID)
 * [Operating System Resource Center](http://www.nondot.org/sabre/os/)
 * [Bona Fide OS Developer tutorials](http://www.osdever.net/tutorials/index)
+* [sandpile.org: x86 information](http://www.sandpile.org/)
 
 ### Old, but frequently referenced, information ###
 * [James Malloy's tutorial](http://www.jamesmolloy.co.uk/tutorial_html/)
