@@ -31,6 +31,7 @@ Below, I've collected information about two of the more commonly used version co
 * [Mercurial tutorial](http://mercurial.selenic.com/wiki/Tutorial)
 
 ## Programming ##
+* [Learn You A Haskell](http://learnyouahaskell.com)
 * [Different assembler syntax](http://wiki.osdev.org/Opcode_syntax)
 
 ## Operating System Development ##
