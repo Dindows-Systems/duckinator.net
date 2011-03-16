@@ -27,7 +27,7 @@ Provides information about all CPU(s) on the system.
   Returns a `String` representation of the CPU model, as the system reports it. Possible values include, but are not limited to:
   *
 
-* <p><span class="type">int</span> <span class="name">CPUCount</span>():</p>
+* <p><span class="type">int</span> <span class="name">CPUPopulation</span>():</p>
   Returns an `Integer` representation of the number of CPUs in the system.
 
 * <p><span class="type">CPU_features_t</span>  <span class="name">CPUFeatures</span>():</p>
