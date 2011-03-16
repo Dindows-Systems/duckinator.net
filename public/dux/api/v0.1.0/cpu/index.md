@@ -30,6 +30,9 @@ Provides information about all CPU(s) on the system.
 * <p><span class="type">int</span> <span class="name">CPUPopulation</span>():</p>
   Returns an `Integer` representation of the number of CPUs in the system.
 
+* <p><span class="type">int</span> <span class="name">CPUActivePopulation</span>():</p>
+  Returns an `Integer` representation of the number of enabled CPUs in the system.
+
 * <p><span class="type">CPU_features_t</span>  <span class="name">CPUFeatures</span>():</p>
   Returns a `CPU_features_t` struct (or a fully-equivalent alternative representation) containing information about CPU features.
   *TODO:* Find out exactly which features are important on all systems (not x86-specific, we have CPUID functions for that).
