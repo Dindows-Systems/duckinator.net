@@ -4,8 +4,6 @@
 
 Provides information about all CPU(s) on the system.
 
-* <p><span class="type">void</span> <span class="name">MoveCursor</span>(<span class="type">int</span> <span class="arg">row</span>, <span class="ret">int</span> <span class="arg">col</span>):</p>
-
 * <p><span class="type">char*</span> <span class="name">CPUBrand</span>():</p>
   Returns a `String` representation of the CPU brand, as the system reports it. Possible values include, but are not limited to:
   * "AMDisbetter!"
