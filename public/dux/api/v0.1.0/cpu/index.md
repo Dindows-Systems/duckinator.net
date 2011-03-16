@@ -53,7 +53,6 @@ Provides information about all CPU(s) on the system.
   * Cyrix
   * NexGen
   * UMC
-  * NSC Geode
-  * AMD Geode
+  * NSC
   * Rise
 
