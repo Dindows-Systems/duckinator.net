@@ -39,7 +39,7 @@ Provides information about all CPU(s) on the system.
 * <p><span class="type">int</span> <span class="name">CPUCacheSize</span>():</p>
   Returns a `Integer` representation of the size of all caches combined.
 
-* <p><span class="type">char*</span> <span class="name">CPUSerial</span>():</p>
+* <p><span class="type">char*</span> <span class="name">CPUSerialNumber</span>():</p>
   Returns a `String` representation of the serial number of the processor.
 
 ### Possible additions ###
