@@ -11,3 +11,4 @@ List of APIs:
 * [Display](display): Desktop management, image displaying.
 * [Network](network): Network connectivity, network driver management, etc.
 * [VFS](vfs):         Virtual File System support.
+* [CPU](cpu):         Provides information about all CPUs on the system. May eventually be able to adjust CPU configurations.
