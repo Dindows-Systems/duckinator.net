@@ -2,8 +2,7 @@
 
 ## Console API ##
 
-For these, you explicitly specify the row and column to start printing from.
-These *should be stored internally* for use from the [Relative Positioning](#relative_positioning) functions.
+Functions for printing information to the screen.
 
 * <p><span class="type">void</span> <span class="name">MoveCursor</span>(<span class="type">int</span> <span class="arg">row</span>, <span class="ret">int</span> <span class="arg">col</span>):</p>
   <p class="types_overview"><code>row</code> and <code>col</code> are <code>Integer</code>s.</p>
