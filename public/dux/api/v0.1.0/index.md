@@ -4,7 +4,7 @@
 
 This is a specification for the APIs planned to be used by dux starting at v0.1.0, and may be modified or replaced.
 
-APIs are striked out if they're not started, followed by a question mark if started but incomplete. Others are finished, or have no *expected* changes.
+APIs are striked out if they're not started, followed by a question mark if started but incomplete. Others are finished, and have no *expected* changes.
 
 List of APIs:
 * [Text?](text):       Text manipulation and formatting.
