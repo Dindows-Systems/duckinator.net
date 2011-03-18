@@ -4,30 +4,29 @@
 
 Provides functions for formatting text.
 
-* char *TextIntBase(int number, int base):
-  `number` is a `Integer`.
+* <p><span class="type">char*</span> TextIntBase(<span class="type">int</span> <span class="arg">number</span>, <span class="type">int</span> <span class="arg">base</span>):</p>
+  <p class="types_overview"><code>number</code> is a <code>Integer</code>.</p>
+  Converts `number` to `base` and returns it as a string.
+  `TextIntBase(<span class="arg">number</span>, 10)` converts `number` to it's string form in decimal.
+
+* <p><span class="type">char*</span> TextDoubleBase(<span class="type">double</span> <span class="arg">number</span>, <span class="type">int</span> <span class="arg">base</span>):</p>
+  <p class="types_overview"><code>number</code> is a <code>Double</code>.
   
   Converts `number` to `base` and returns it as a string.
-  `TextIntBase(number, 10)` converts `number` to it's string form in decimal.
+  `TextIntBase(<span class="arg">number</span>, 10)` converts `number` to it's string form in decimal.
 
-* char *TextDoubleBase(double number, int base):
-  `number` is a `Double`.
+* <p><span class="type">char*</span> TextFloatBase(<span class="type">float</span> <span class="arg">number</span>, <span class="type">int</span> <span class="arg">base</span>):</p>
+  <p class="types_overview"><code>number</code> is a <code>Float</code>.</p>
   
   Converts `number` to `base` and returns it as a string.
-  `TextIntBase(number, 10)` converts `number` to it's string form in decimal.
+  `TextIntBase(<span class="arg">number</span>, 10)` converts `number` to it's string form in decimal.
 
-* char *TextFloatBase(float number, int base):
-  `number` is a `Float`.
+* <p><span class="type">char*</span> TextLongBase(long <span class="arg">number</span>, <span class="type">int</span> <span class="arg">base</span>):</p>
+  <p class="types_overview"><code>number</code> is a <code>Long</code>.</p>
   
   Converts `number` to `base` and returns it as a string.
-  `TextIntBase(number, 10)` converts `number` to it's string form in decimal.
+  `TextIntBase(<span class="arg">number</span>, 10)` converts `number` to it's string form in decimal.
 
-* char *TextLongBase(long number, int base):
-  `number` is a `Long`.
-  
-  Converts `number` to `base` and returns it as a string.
-  `TextIntBase(number, 10)` converts `number` to it's string form in decimal.
-
-* char *TextStringFormat(conat char *format, ...):
+* <p><span class="type">char*</span> TextStringFormat(<span class="type">conat char*</span> format, ...):</p>
   Similar to printf. Not sure if the formatting strings should be the same or not.
 
