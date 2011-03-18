@@ -28,5 +28,5 @@ Provides functions for formatting text.
   `TextIntBase(number, 10)` converts `number` to it's string form in decimal.
 
 * <p><span class="type">char*</span> TextStringFormat(<span class="type">conat char*</span> format, ...):</p>
-  Similar to printf. Not sure if the formatting strings should be the same or not.
+  Similar to sprintf. Not sure if the formatting strings should be the same or not.
 
