@@ -1,5 +1,7 @@
 ## A little about me ##
-My name is Nick Markwell, also known as duck (or online as "duckinator"). I'm 18 years old as of April 30, 2010, and graduated from high school on June 18, 2010. I have been programming since 2005. I strongly support [open source software](http://en.wikipedia.org/wiki/Open_source) and the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License).
+My name is Nick Markwell, also known as duck (or online as "duckinator"). I have been programming since 2005, and pick up new languages quickly. I strongly support [open source software](http://en.wikipedia.org/wiki/Open_source) and the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License).
+
+You can visit [profile.io/duckinator](http://profile.io/duckinator) for more information.
 
 ## Projects ##
 I have many open source projects on [github](http://github.com/RockerMONO/), some of my more interesting ones are listed below.
