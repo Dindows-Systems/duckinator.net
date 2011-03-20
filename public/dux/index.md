@@ -5,6 +5,17 @@ The project began in late 2008 as an experiment, and it quickly became a regular
 As time went on, more people joined and several revisions of dux were created, leaving a clean and well designed core that will be both fast and extendable.
 On August 2nd, 2009, we started development of the [metodo kernel](metodo), which is now the kernel dux is built around.
 
+## Open Source ##
+
+The source for Dux is fully [open source software](http://en.wikipedia.org/wiki/Open_source) released under the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License).
+The source can be found on [github](http://github.com/RockerMONO/dux).
+
+## API ##
+
+Dux's API is a specification for each version of dux released, starting at v0.1.0.
+The API can be implemented freely in *any operating system* if they wish to be compatible.
+It will not follow POSIX by design, but POSIX compatibility will not be actively avoided.
+
 [API documentation](api/v0.1.0) is available for the upcoming release of Dux v0.1.0.
 
 ## Releases ##
