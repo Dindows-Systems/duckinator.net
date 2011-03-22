@@ -6,18 +6,18 @@ Provides information about all CPU(s) on the system.
 
 * <p><span class="type">char*</span> <span class="name">CPUBrand</span>():</p>
   Returns a `String` representation of the CPU brand, as the system reports it. Possible values include, but are not limited to:
-  * "AMDisbetter!"
-  * "AuthenticAMD"
-  * "GenuineIntel"
-  * "CentaurHauls"
-  * "TransmetaCPU"
-  * "GenuineTMx86"
-  * "CyrixInstead"
-  * "NexGenDriven"
-  * "UMC UMC UMC "
-  * "SiS SiS SiS "
-  * "Geode by NSC"
-  * "RiseRiseRise"
+  * "<code>AMDisbetter!</code>"
+  * "<code>AuthenticAMD</code>"
+  * "<code>GenuineIntel</code>"
+  * "<code>CentaurHauls</code>"
+  * "<code>TransmetaCPU</code>"
+  * "<code>GenuineTMx86</code>"
+  * "<code>CyrixInstead</code>"
+  * "<code>NexGenDriven</code>"
+  * "<code>UMC UMC UMC </code>"
+  * "<code>SiS SiS SiS </code>"
+  * "<code>Geode by NSC</code>"
+  * "<code>RiseRiseRise</code>"
 
 * <p><span class="type">char*</span> <span class="name">CPUFamily</span>():</p>
   Returns a `String` representation of the CPU family, as the system reports it. Possible values include, but are not limited to:
