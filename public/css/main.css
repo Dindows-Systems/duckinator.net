@@ -9,7 +9,7 @@ body {
 	text-align: justify;
 }
 
-.monospace, code {
+.func-ret, .func-type, .func-name, .func-arg, .monospace, code {
 	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
 }
 
