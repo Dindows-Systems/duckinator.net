@@ -1,5 +1,6 @@
 body {
 	background-color: #37522F;
+	border-color: #394531;
 	color: #FFF;
 }
 
@@ -26,7 +27,6 @@ body {
 #navbar,
 #page > div {
 	background-color: #5D5757;
-	border-color: #394531;
 }
 
 a:link,
