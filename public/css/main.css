@@ -9,10 +9,12 @@ body {
 	text-align: justify;
 }
 
-.text-code, code {
+.monospace, code {
 	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
-	border: 1px solid #000;
 }
+
+code {
+	border: 1px solid #000;
 
 img {
 	border: none;
