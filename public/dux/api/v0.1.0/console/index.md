@@ -5,7 +5,7 @@
 Functions for printing information to the screen.
 
 * <p class="func"><span class="type">void</span> <span class="name">MoveCursor</span>(<span class="type">int</span> <span class="arg">row</span>, <span class="ret">int</span> <span class="arg">col</span>):</p>
-  <p class="types_overview"><code>row</code> and <code>col</code> are <code>Integer</code>s.</p>
+  <p class="types_overview"><code>row</code> and <code>col</code> are both of the type <code>Integer</code>.</p>
   Places the cursor on row `row`, column `col`.
 
 * <p class="func"><span class="type">void</span> <span class="name">PrintChar</span>(<span class="type">char</span> <span class="arg">chr</span>):</p>
