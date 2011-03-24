@@ -66,10 +66,6 @@ The rest of the group and I would like to thank everyone involved:
 	- [Nick Markwell](http://duckinator.net)
 	- Joe T. Techinus
 
-## More information ##
-The dux operating system is fully [open-source software](http://en.wikipedia.org/wiki/Open-source_software), released under the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License).
-The source is available at [http://github.com/RockerMONO/dux](http://github.com/RockerMONO/dux).
-
 ## Useful links ##
 
 Some useful links and documentation for various things are located in the [resources](/resources) section.
