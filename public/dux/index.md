@@ -8,7 +8,7 @@ On August 2nd, 2009, we started development of the [metodo kernel](metodo), whic
 ## Open Source ##
 
 The source for Dux is fully [open source software](http://en.wikipedia.org/wiki/Open_source) released under the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License).
-The source can be found on [github](http://github.com/RockerMONO/dux).
+The source can be found on [github](http://github.com/duckinator/dux).
 
 ## API ##
 
