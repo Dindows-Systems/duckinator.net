@@ -3,7 +3,10 @@ body {
 	color: #FFF;
 }
 
-/*.func .ret {
+/*.func {
+}
+
+.func .ret {
 }
 
 .func .type {
@@ -15,7 +18,7 @@ body {
 .func .arg {
 }*/
 
-code {
+p code, span code, li code {
 	border-color: #394531;
 }
 
