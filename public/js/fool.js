@@ -2,14 +2,24 @@
 // This script turns the page sideways if it's April 1st
 
 function AprilFoolsCreateEscape() {
+  var messages = [
+    "Help!! Everything is tilted and I'm SCARED!!!!!!",
+    "Ok, ok. Har Har. Can I see the page now?",
+    "OH NO, MY EYES ARE LOPSIDED!",
+    "WHAT IS THIS MADNESS?!",
+    "MY BRAIN IS EXPLODING!",
+    "My chair wont stick to the ceiling anymore, can we go back to the normal version?"
+  ];
+
   div = document.createElement("div");
   div.style.position = "absolute";
   div.style.top = "0px";
   div.style.left = "0px";
   
   a = document.createElement("a");
-  a.innerHTML = "Help everything is tilted and I'm scared!!!!!!!";
-  a.setAttribute('href', '?help-everything-is-tilted-and-im-scared');
+  //a.innerHTML = "Help everything is tilted and I'm scared!!!!!!!";
+  a.innerHTML = messages[Math.floor(Math.random() * messages.length)];
+  a.setAttribute('href', '?april-fools');
   
   div.appendChild(a);
   document.getElementsByTagName('body')[0].appendChild(div);
@@ -24,7 +34,7 @@ function AprilFools() {
   var date = new Date();
   if (date.getMonth() == 3 && date.getDate() == 1) { // If it's April 1
     //  Uncomment the next line if you want the prank to happen only when the url hashtag is #april
-    if (document.location.search.indexOf('help-everything-is-tilted-and-im-scared') < 0) {
+    if (document.location.search.indexOf('april-fools') < 0) {
       AprilFoolsCreateEscape();
       el = document.getElementById("wrap");
       el.style.transform =
