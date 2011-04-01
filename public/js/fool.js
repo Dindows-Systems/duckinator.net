@@ -10,6 +10,9 @@ function AprilFoolsCreateEscape() {
   a = document.createElement("a");
   a.innerText = "Help everything is spinning and I'm scared!!!!!!!";
   a.setAttribute('href', '#help-everything-is-spinning-and-im-scared');
+  
+  div.appendChild(a);
+  document.getElementsByTagName('body')[0].appendChild(div);
 }
 
 function AprilFools() {
