@@ -3,9 +3,7 @@
 
 function AprilFoolsCreateEscape() {
   div = document.createElement("div");
-  div.setAttribute('position', 'absolute');
-  div.setAttribute('top', '0px');
-  div.setAttribute('left', '0px');
+  div.setAttribute('style', 'position:absolute; top: 0px; left: 0px;');
   
   a = document.createElement("a");
   a.innerHTML = "Help everything is spinning and I'm scared!!!!!!!";
