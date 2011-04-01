@@ -8,8 +8,8 @@ function AprilFoolsCreateEscape() {
   div.style.left = "0px";
   
   a = document.createElement("a");
-  a.innerHTML = "Help everything is spinning and I'm scared!!!!!!!";
-  a.setAttribute('href', '#help-everything-is-spinning-and-im-scared');
+  a.innerHTML = "Help everything is tilted and I'm scared!!!!!!!";
+  a.setAttribute('href', '#help-everything-is-tilted-and-im-scared');
   
   div.appendChild(a);
   document.getElementsByTagName('body')[0].appendChild(div);
@@ -24,7 +24,7 @@ function AprilFools() {
   var date = new Date();
   if (date.getMonth() == 3 && date.getDate() == 1) { // If it's April 1
     //  Uncomment the next line if you want the prank to happen only when the url hashtag is #april
-    if (document.location.hash.indexOf('help-everything-is-spinning-and-im-scared') < 0) {
+    if (document.location.hash.indexOf('help-everything-is-tilted-and-im-scared') < 0) {
       AprilFoolsCreateEscape();
       el = document.getElementById("wrap");
       el.style.transform =
