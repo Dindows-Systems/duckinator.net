@@ -24,7 +24,7 @@ function AprilFools() {
   var date = new Date();
   if (date.getMonth() == 3 && date.getDate() == 1) { // If it's April 1
     //  Uncomment the next line if you want the prank to happen only when the url hashtag is #april
-    if (document.location.hash.indexOf('help-everything-is-spinning-and-i-am-scared') < 0) {
+    if (document.location.hash.indexOf('help-everything-is-spinning-and-im-scared') < 0) {
       AprilFoolsCreateEscape();
       el = document.getElementById("wrap");
       el.style.transform =
