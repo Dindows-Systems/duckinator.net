@@ -3,7 +3,9 @@
 
 function AprilFoolsCreateEscape() {
   div = document.createElement("div");
-  div.setAttribute('style', 'position:absolute; top: 0px; left: 0px;');
+  div.style.position = "absolute";
+  div.style.top = "0px";
+  div.style.left = "0px";
   
   a = document.createElement("a");
   a.innerHTML = "Help everything is spinning and I'm scared!!!!!!!";
@@ -24,11 +26,12 @@ function AprilFools() {
     //  Uncomment the next line if you want the prank to happen only when the url hashtag is #april
     if (document.location.hash.indexOf('help-everything-is-spinning-and-i-am-scared') < 0) {
       AprilFoolsCreateEscape();
-      document.body.style.transform =
-      document.body.style.webkitTransform =
-      document.body.style.MozTransform =
-      document.body.style.OTransform =
-      document.body.style.msTransform =
+      el = document.getElementById("wrap");
+      el.style.transform =
+      el.style.webkitTransform =
+      el.style.MozTransform =
+      el.style.OTransform =
+      el.style.msTransform =
       'rotate(' + [45, 90, 135, 180, 225, 270, 315][Math.floor(Math.random() * 7)] + 'deg)';
     }
   }
