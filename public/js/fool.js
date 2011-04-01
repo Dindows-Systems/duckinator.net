@@ -8,7 +8,7 @@ function AprilFoolsCreateEscape() {
   div.setAttribute('left', '0px');
   
   a = document.createElement("a");
-  a.innerText = "Help everything is spinning and I'm scared!!!!!!!";
+  a.innerHTML = "Help everything is spinning and I'm scared!!!!!!!";
   a.setAttribute('href', '#help-everything-is-spinning-and-im-scared');
   
   div.appendChild(a);
