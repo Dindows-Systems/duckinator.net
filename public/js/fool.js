@@ -32,19 +32,19 @@ function AprilFools() {
   }
   
   var date = new Date();
-  if (date.getMonth() == 3 && date.getDate() == 1) { // If it's April 1
-    //  Uncomment the next line if you want the prank to happen only when the url hashtag is #april
-    if (document.location.search.indexOf('april-fools') < 0) {
-      AprilFoolsCreateEscape();
-      el = document.getElementById("wrap");
-      el.style.transform =
-      el.style.webkitTransform =
-      el.style.MozTransform =
-      el.style.OTransform =
-      el.style.msTransform =
+  //  Uncomment the next line if you want the prank to happen only when the url hashtag is #april
+  if (document.location.search.indexOf('april-fools') < 0) {
+    AprilFoolsCreateEscape();
+    el = document.getElementById("wrap");
+    el.style.transform =
+    el.style.webkitTransform =
+    el.style.MozTransform =
+    el.style.OTransform =
+    el.style.msTransform =
       'rotate(' + [45, 90, 135, 180, 225, 270, 315][Math.floor(Math.random() * 7)] + 'deg)';
-    }
   }
 }
 
-AprilFools();
+if (date.getMonth() == 3 && date.getDate() == 1) { // If it's April 1
+  AprilFools();
+}
