@@ -6,9 +6,9 @@ require 'liquid'
 require 'mime/types'
 
 class HomePage
-  attr_accessor :title, :location, :body
+  attr_accessor :title, :location
+
   def call(env, theme=nil, error=nil)
-    $hp = self # For spiffy ruby pages. Any better ideas?
     @env = env
     @location = env['PATH_INFO'] || "/"
     @original = @location
@@ -17,7 +17,7 @@ class HomePage
     @status = 200
     @content_type = "text/html"
     @preview = false
-    @body = nil
+    $body = nil
 
     return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
 
@@ -61,10 +61,10 @@ class HomePage
     if @file.end_with?('.rb')
       load @file
     else
-      @body = open(@file).read
+      $body = open(@file).read
     end
     page = generate_page if markdown? || ruby?
-    page ||= @body
+    page ||= $body
     if css?
       page.gsub!(/url\(\"\/theme\/(.*)\.jpg\"\)/, 'url("/themes/' + @theme + '/\1.jpg")')
     end
@@ -155,12 +155,12 @@ EOF
 
   def generate_page
     set_assigns
-    @body = parse_liquid(@body)
-    @body = parse_maruku(@body)
+    $body = parse_liquid($body)
+    $body = parse_maruku($body)
 
     text = open(File.dirname(__FILE__) + '/template.html').read
 
-    @assigns['content'] = @body
+    @assigns['content'] = $body
 
     text = parse_liquid(text)
     if @preview
