@@ -70,12 +70,12 @@ class HomePage
     end
     @content_type = MIME::Types.type_for(@file) unless markdown? || ruby?
 
-    ret page
+    ret(nil, nil, page)
   rescue => e
     ret(500, "text/plain", e.to_s)
   end
 
-  def ret(status = nil, content_type = nil, page)
+  def ret(status, content_type, page)
     status ||= @status
     content_type ||= @content_type
     [status, { "Content-Type" => content_type }, [page]]
