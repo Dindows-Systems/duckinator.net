@@ -62,7 +62,7 @@ class HomePage
     else
       @body = open(@file).read
     end
-    page = generate_page if markdown?
+    page = generate_page if markdown? || ruby?
     page ||= @body
     if css?
       page.gsub!(/url\(\"\/theme\/(.*)\.jpg\"\)/, 'url("/themes/' + @theme + '/\1.jpg")')
