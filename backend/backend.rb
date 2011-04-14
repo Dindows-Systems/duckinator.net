@@ -10,6 +10,7 @@ class HomePage
   def call(env, theme=nil, error=nil)
     @env = env
     @location = env['PATH_INFO'] || "/"
+    @original = @location
     @theme = theme || get_theme
     set_title
     @status = 200
@@ -38,7 +39,21 @@ class HomePage
         # 301: Moved permanently
         return [301, { "Location" => "#{env['PATH_INFO']}/"}, ['']]
       end
-      @file = "#{@file}/index.md"
+      if File.file?("#{@file}/index.rb")
+        @file = "#{@file}/index.rb"
+      elsif File.file?("#{@file}/index.md")
+        @file = "#{@file}/index.md"
+      else
+        # Directory exists, no index file
+        # Handle this better. 404 is not correct.
+        @status = 404
+      end
+    end
+
+    @status = 404 if !File.exist?(@file)
+
+    if @status != 200
+      @file = "#{env['DOCUMENT_ROOT']}/#{@status}.md"
     end
     @body = open(@file).read
     page = generate_page if markdown?
@@ -114,7 +129,8 @@ EOF
       'breadcrumbs' => @breadcrumbs,
       'title'       => @title,
       'year'        => `date +'%Y'`.chomp,
-      'theme'       => @theme
+      'theme'       => @theme,
+      'file'        => @original
     }
   end
 
