@@ -6,8 +6,9 @@ require 'liquid'
 require 'mime/types'
 
 class HomePage
-  attr_accessor :title, :location
+  attr_accessor :title, :location, :body
   def call(env, theme=nil, error=nil)
+    $hp = self # For spiffy ruby pages. Any better ideas?
     @env = env
     @location = env['PATH_INFO'] || "/"
     @original = @location
@@ -69,9 +70,15 @@ class HomePage
     end
     @content_type = MIME::Types.type_for(@file) unless markdown? || ruby?
 
-    [@status, { "Content-Type" => @content_type }, [page]]
+    ret page
   rescue => e
-    [500, { "Content-Type" => "text/plain" }, [e.to_s]]
+    ret(500, "text/plain", e.to_s)
+  end
+
+  def ret(status = nil, content_type = nil, page)
+    status ||= @status
+    content_type ||= @content_type
+    [status, { "Content-Type" => content_type }, [page]]
   end
 
   def css?
