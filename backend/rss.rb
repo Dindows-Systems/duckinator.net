@@ -5,12 +5,14 @@ require 'maruku'
 require 'liquid'
 require 'mime/types'
 
-feed_handlers = {
-                  'commits' => Feeds.commits,
-                  'dux'     => Feeds.dux
-                }
-
 class RSS
+  def set_handlers
+    @@feed_handlers = {
+                      'commits' => Feeds.commits,
+                      'dux'     => Feeds.dux
+                    }
+  end
+
   def call(env)
     location = env['PATH_INFO'] || "/"
     status = 200
@@ -24,7 +26,7 @@ class RSS
   def handle(location)
     feed = location[5..-1]
     if feed_handlers.include?(feed)
-      handler = feed_handlers[feed]
+      handler = @@feed_handlers[feed]
       render(parse(handler.call))
 #    else
 #      env[''] # What in the heck was I going to put here?! Stupid power outage >:(
