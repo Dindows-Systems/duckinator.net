@@ -72,7 +72,7 @@ class HomePage
 
     ret(nil, nil, page)
   rescue => e
-    ret(500, "text/plain", "#{e.message}\n#{e.backtrace.inspect}")
+    ret(500, "text/plain", "#{e.message}\n#{e.backtrace.join("\n")}")
   end
 
   def ret(status, content_type, page)
