@@ -67,7 +67,7 @@ class HomePage
     if css?
       page.gsub!(/url\(\"\/theme\/(.*)\.jpg\"\)/, 'url("/themes/' + @theme + '/\1.jpg")')
     end
-    @content_type = MIME::Types.type_for(@file) unless markdown?
+    @content_type = MIME::Types.type_for(@file) unless markdown? || ruby?
 
     [@status, { "Content-Type" => @content_type }, [page]]
   rescue => e
@@ -75,11 +75,15 @@ class HomePage
   end
 
   def css?
-    @file[-4..-1] == ".css"
+    @file.end_with?('.css')
   end
 
   def markdown?
-    @file[-3..-1] == ".md"
+    @file.end_with?('.md')
+  end
+
+  def ruby?
+    @file.end_with?('.rb')
   end
 
   def generate_link(url, text)
