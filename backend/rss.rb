@@ -6,7 +6,7 @@ require 'liquid'
 require 'mime/types'
 
 feed_handlers = {
-                  'commits' => Feeds.commits
+                  'commits' => Feeds.commits,
                   'dux'     => Feeds.dux
                 }
 
