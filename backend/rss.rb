@@ -26,9 +26,9 @@ class RSS
     if feed_handlers.include?(feed)
       handler = feed_handlers[feed]
       render(parse(handler.call))
-    else
-      env['
-    fi
+#    else
+#      env[''] # What in the heck was I going to put here?! Stupid power outage >:(
+    end
   end
 end
 
