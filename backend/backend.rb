@@ -16,6 +16,7 @@ class HomePage
     @status = 200
     @content_type = "text/html"
     @preview = false
+    @body = nil
 
     return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
 
@@ -55,7 +56,12 @@ class HomePage
     if @status != 200
       @file = "#{env['DOCUMENT_ROOT']}/../errors/#{@status}.md"
     end
-    @body = open(@file).read
+    
+    if @file.end_with?('.rb')
+      load @file
+    else
+      @body = open(@file).read
+    end
     page = generate_page if markdown?
     page ||= @body
     if css?
