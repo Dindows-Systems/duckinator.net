@@ -64,6 +64,8 @@ class HomePage
     @content_type = MIME::Types.type_for(@file) unless markdown?
 
     [@status, { "Content-Type" => @content_type }, [page]]
+  rescue => e
+    [500, { "Content-Type" => "text/plain" }, [e.to_s]]
   end
 
   def css?
