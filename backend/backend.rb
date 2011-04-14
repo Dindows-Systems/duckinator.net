@@ -7,7 +7,7 @@ require 'mime/types'
 
 class HomePage
   attr_accessor :title, :location
-  def call(env, theme=nil)
+  def call(env, theme=nil, error=nil)
     @env = env
     @location = env['PATH_INFO'] || "/"
     @theme = theme || get_theme
@@ -18,7 +18,11 @@ class HomePage
 
     return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
 
-    if @location[0..8] == "/preview/" && @location.length > 9
+    if !error.nil?
+      
+    elsif @location[0..5] == "/rss/" && @location.length > 5
+      return RSS.new(env)
+    elsif @location[0..8] == "/preview/" && @location.length > 9
       @theme, @location = env['PATH_INFO'][9..-1].split("/", 2)
       @preview = true
     elsif @location[0..6] == "/theme/"
