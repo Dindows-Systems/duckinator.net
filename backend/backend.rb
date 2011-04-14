@@ -53,7 +53,7 @@ class HomePage
     @status = 404 if !File.exist?(@file)
 
     if @status != 200
-      @file = "#{env['DOCUMENT_ROOT']}/#{@status}.md"
+      @file = "#{env['DOCUMENT_ROOT']}/../errors/#{@status}.md"
     end
     @body = open(@file).read
     page = generate_page if markdown?
