@@ -13,5 +13,5 @@
 * [Dux](/dux) operating system
   * The [Metodo kernel](/dux/metodo)
   * Dux [API documentation](/api)
-    * Dux [API v0.1.0 documentation](/api/v0.1.0)
+   * Dux [API v0.1.0 documentation](/api/v0.1.0)
 
