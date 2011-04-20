@@ -2,3 +2,8 @@
 
 User-Agent: *
 Allow: /
+Disallow: /dux/iso/
+Disallow: /dux/tar
+Disallow: /images/
+Disallow: /js/
+Disallow: /themes/
