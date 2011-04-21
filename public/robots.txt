@@ -6,4 +6,7 @@ Disallow: /dux/iso/
 Disallow: /dux/tar
 Disallow: /images/
 Disallow: /js/
+Disallow: /css/
 Disallow: /themes/
+Disallow: /preview/
+
