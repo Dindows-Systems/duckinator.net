@@ -57,7 +57,7 @@
   <loc>http://duckinator.net/dux/api/v0.1.0/vfs</loc>
 </url>
 <url>
-  <loc>http://duckinator.net/dux/api/v0.1.0/CPU</loc>
+  <loc>http://duckinator.net/dux/api/v0.1.0/cpu</loc>
 </url>
 
 </urlset>

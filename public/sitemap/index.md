@@ -23,5 +23,5 @@
   * [v0.1.0 Display API](/dux/api/v0.1.0/display)
   * [v0.1.0 Network API](/dux/api/v0.1.0/network)
   * [v0.1.0 Virtual File System API](/dux/api/v0.1.0/vfs)
-  * [v0.1.0 CPU API](/dux/api/v0.1.0/CPU)
+  * [v0.1.0 CPU API](/dux/api/v0.1.0/cpu)
 
