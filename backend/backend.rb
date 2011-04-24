@@ -17,7 +17,7 @@ class HomePage
     @status = 200
     @content_type = "text/html"
     @preview = false
-    @document_root = env['DOCUMENT_ROOT'] || File.join(File.dirname(__FILE__, '..', 'public'))
+    @document_root = env['DOCUMENT_ROOT'] || File.join(File.dirname(__FILE__), '..', 'public')
     $body = nil
 
     return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
