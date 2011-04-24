@@ -120,8 +120,8 @@ class HomePage
     location_words = []
     breadcrumbs = [generate_link('http://duckinator.net', 'duckinator.net')]
     if @location != '/' and @location.length > 0
-      location = @location.chomp('/index.md').chomp('/')
-      location_words = location.split('/')
+      location = @location.chomp('/index.md')
+      location_words = location.split('/').reject(&:nil?)
 
       i = location_words.length-1
       i-=1 until title_check(location_words, i) || i == 0
