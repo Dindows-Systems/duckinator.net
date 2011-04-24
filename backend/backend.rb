@@ -125,7 +125,7 @@ class HomePage
     end
   end
 
-  def parse_liquid(text, assigns)
+  def parse_liquid(text)
     t = Liquid::Template.parse(text)
     t.render(@@assigns)
   end
