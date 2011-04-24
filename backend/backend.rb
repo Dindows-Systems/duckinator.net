@@ -124,12 +124,12 @@ class HomePage
       end
     end
   end
-=begin
-  def parse_liquid(text)
-    t = Liquid::Template.parse(text)
-    t.render(@assigns)
-  end
 
+  def parse_liquid(text, assigns)
+    t = Liquid::Template.parse(text)
+    t.render(@@assigns)
+  end
+=begin
   def parse_maruku(text)
     maruku = Maruku.new(text)
     maruku.to_html
@@ -155,7 +155,7 @@ EOF
   end
 =end
   def generate_page
-    assigns = {
+    @@assigns = {
       'preview'     => preview_fix,
       'breadcrumbs' => @breadcrumbs,
       'title'       => @title,
@@ -164,15 +164,14 @@ EOF
       'file'        => @original
     }
     #set_assigns
-    #$body = Liquid::Template.parse($body).render(assigns)
+    $body = parse_liquid($body)
     $body = Maruku.new($body).to_html
 
     text = open(File.dirname(__FILE__) + '/template.html').read
 
     assigns['content'] = $body
 
-    #text = parse_liquid(text)
-    text = Liquid::Template.parse(text).render(assigns)
+    text = parse_liquid(text)
     if @preview
       text.gsub!('<a href="/', "<a href=\"/preview/#{@theme}/")
       text.gsub!("<a href='/", "<a href='/preview/#{@theme}/")
