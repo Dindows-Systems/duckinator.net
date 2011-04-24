@@ -116,7 +116,7 @@ class HomePage
     File.directory?(File.join(File.dirname(__FILE__), "..", "public", *location_words[0..i]))
   end
 
-  def set_title
+  def get_title
     title = "duckinator.net"
     breadcrumbs = generate_link('http://duckinator.net', 'duckinator.net')
     if @location != '/' and @location.length > 0
@@ -155,7 +155,7 @@ EOF
   end
 
   def generate_page
-    breadcrumbs, title = set_title
+    breadcrumbs, title = get_title
     @assigns['breadcrumbs'] = breadcrumbs
     @assigns['title'] = title
     if @preview
