@@ -117,8 +117,8 @@ class HomePage
   end
 
   def get_title
-    title = "duckinator.net"
-    breadcrumbs = generate_link('http://duckinator.net', 'duckinator.net')
+    location_words = []
+    breadcrumbs = [generate_link('http://duckinator.net', 'duckinator.net')]
     if @location != '/' and @location.length > 0
       location = @location.chomp('/index.md').chomp('/')
       location_words = location.split('/')
@@ -128,11 +128,13 @@ class HomePage
       if i >= 1
         (1..i).each do |n|
           link = location_words[0..n].join('/')
-          breadcrumbs = "#{generate_link(link, location_words[n])} : #{@breadcrumbs}"
-          title = "#{location_words[n]} : #{@title}"
+          breadcrumbs.unshift(generate_link(link, location_words[n]))
         end
       end
     end
+    location_words << 'duckinator.net'
+    breadcrumbs = breadcrumbs.join(' : ')
+    title = location_words.join(' : ')
     [breadcrumbs, title]
   end
 
