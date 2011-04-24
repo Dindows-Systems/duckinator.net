@@ -8,26 +8,29 @@ require 'mime/types'
 class HomePage
   attr_accessor :title, :location
 
-  def call(env, theme=nil, error=nil)
+  def initialize(env, theme = nil)
+    @@theme = theme || get_theme
+    @@document_root = env['DOCUMENT_ROOT'] || File.join(File.dirname(__FILE__), '..', 'public')
+  end
+
+  def call(env, error=nil)
     @env = env
     @location = env['PATH_INFO'] || "/"
     @original = @location
-    @theme = theme || get_theme
     set_title
     @status = 200
-    @content_type = "text/html"
+    @content_type = 'text/html'
     @preview = false
-    @document_root = env['DOCUMENT_ROOT'] || File.join(File.dirname(__FILE__), '..', 'public')
     $body = nil
 
     if !error.nil?
       # ?
 #    elsif @location[0..5] == "/rss/" && @location.length > 5
 #      return RSS.new(env)
-    elsif @location[0..8] == "/preview/" && @location.length > 9
+    elsif @location[0..8] == '/preview/' && @location.length > 9
       @theme, @location = env['PATH_INFO'][9..-1].split("/", 2)
       @preview = true
-    elsif @location[0..6] == "/theme/"
+    elsif @location[0..6] == '/theme/'
       @location = @location[7..-1]
       @location = "/themes/#{@theme}/#{@location}"
     end
@@ -39,7 +42,7 @@ class HomePage
       # Had to use @file[-1,1] because DreamHost uses ruby 1.8 :(
       if @file[-1,1] != '/'
         # 301: Moved permanently
-        return [301, { "Location" => "#{env['PATH_INFO']}/"}, ['']]
+        return [301, { 'Location' => "#{env['PATH_INFO']}/"}, ['']]
       end
       if File.file?("#{@file}/index.rb")
         @file = "#{@file}/index.rb"
@@ -64,12 +67,16 @@ class HomePage
     else
       $body = open(@file).read
     end
-    page = generate_page if markdown? || ruby?
+    if markdown? || ruby?
+      page = generate_page
+    else
+      @content_type = MIME::Types.type_for(@file)
+    end
+    
     page ||= $body
     if css?
       page.gsub!(/url\(\"\/theme\/(.*)\.jpg\"\)/, 'url("/themes/' + @theme + '/\1.jpg")')
     end
-    @content_type = MIME::Types.type_for(@file) unless markdown? || ruby?
 
     ret(nil, nil, page)
   rescue => e

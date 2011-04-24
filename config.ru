@@ -1,3 +1,5 @@
 require File.join(File.dirname(__FILE__), "backend", "backend.rb")
 
-run HomePage.new
+homepage = Homepage.new(ENV.clone)
+
+run homepage
