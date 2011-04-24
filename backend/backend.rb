@@ -1,5 +1,5 @@
-require File.join(File.dirname(__FILE__), '..', 'gemfix.rb')
-require 'rubygems'
+#require File.join(File.dirname(__FILE__), '..', 'gemfix.rb')
+#require 'rubygems'
 require 'time'
 require 'maruku'
 require 'liquid'
