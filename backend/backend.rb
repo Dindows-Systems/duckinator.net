@@ -164,14 +164,15 @@ EOF
       'file'        => @original
     }
     #set_assigns
-    $body = Liquid::Template.parse($body).render(assigns)
+    #$body = Liquid::Template.parse($body).render(assigns)
     $body = Maruku.new($body).to_html
 
     text = open(File.dirname(__FILE__) + '/template.html').read
 
     assigns['content'] = $body
 
-    text = parse_liquid(text)
+    #text = parse_liquid(text)
+    text = Liquid::Template.parse(text).render(assigns)
     if @preview
       text.gsub!('<a href="/', "<a href=\"/preview/#{@theme}/")
       text.gsub!("<a href='/", "<a href='/preview/#{@theme}/")
