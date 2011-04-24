@@ -55,7 +55,8 @@ class HomePage
     @status = 404 if !File.exist?(@file)
 
     if @status != 200
-      @file = "#{env['DOCUMENT_ROOT']}/../errors/#{@status}.md"
+      @file = File.join(File.dirname(__FILE__), '..', 'errors', "#{@status}.md")
+      #@file = "#{env['DOCUMENT_ROOT']}/../errors/#{@status}.md"
     end
     
     if @file.end_with?('.rb')
