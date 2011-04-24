@@ -20,12 +20,10 @@ class HomePage
     @document_root = env['DOCUMENT_ROOT'] || File.join(File.dirname(__FILE__), '..', 'public')
     $body = nil
 
-    return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
-
     if !error.nil?
-      
-    elsif @location[0..5] == "/rss/" && @location.length > 5
-      return RSS.new(env)
+      # ?
+#    elsif @location[0..5] == "/rss/" && @location.length > 5
+#      return RSS.new(env)
     elsif @location[0..8] == "/preview/" && @location.length > 9
       @theme, @location = env['PATH_INFO'][9..-1].split("/", 2)
       @preview = true
@@ -126,7 +124,7 @@ class HomePage
       end
     end
   end
-
+=begin
   def parse_liquid(text)
     t = Liquid::Template.parse(text)
     t.render(@assigns)
@@ -136,7 +134,7 @@ class HomePage
     maruku = Maruku.new(text)
     maruku.to_html
   end
-
+=end
   def preview_fix
     return "" unless @preview
 
@@ -144,7 +142,7 @@ class HomePage
 <base href="#{@env['rack.url_scheme']}://#{@env['SERVER_NAME']}/preview/#{@theme}/">
 EOF
   end
-
+=begin
   def set_assigns
     @assigns = {
       'preview'     => preview_fix,
@@ -155,15 +153,23 @@ EOF
       'file'        => @original
     }
   end
-
+=end
   def generate_page
-    set_assigns
-    $body = parse_liquid($body)
-    $body = parse_maruku($body)
+    assigns = {
+      'preview'     => preview_fix,
+      'breadcrumbs' => @breadcrumbs,
+      'title'       => @title,
+      'year'        => `date +'%Y'`.chomp,
+      'theme'       => @theme,
+      'file'        => @original
+    }
+    #set_assigns
+    $body = Liquid::Template.parse($body).render(assigns)
+    $body = Maruku.new($body).to_html
 
     text = open(File.dirname(__FILE__) + '/template.html').read
 
-    @assigns['content'] = $body
+    assigns['content'] = $body
 
     text = parse_liquid(text)
     if @preview
@@ -175,29 +181,6 @@ EOF
       text.gsub!("<link rel='stylesheet' href='/css/", "<link rel='stylesheet' href='/preview/#{@theme}/css/")
     end
     text
-  end
-
-  def pull
-    text =<<EOF
-<!doctype html>
-<html>
-  <head>
-    <title>Autopull</title>
-  </head>
-  <body>
-    Pulled from github. <a href="/autopull/log">View log</a>.
-  </body>
-</html>
-EOF
-
-    resp = `git pull`
-    if resp.chomp != "Already up-to-date."
-      File.open('public/autopull/log', 'w') do |f|
-        f.write("#{Time.now}\n#{resp}")
-      end
-    end
-
-    [200, { "Content-Type" => 'text/html' }, [text]]
   end
 end
 
