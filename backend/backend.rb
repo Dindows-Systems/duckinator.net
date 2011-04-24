@@ -17,6 +17,7 @@ class HomePage
     @status = 200
     @content_type = "text/html"
     @preview = false
+    @document_root = env['DOCUMENT_ROOT'] || File.join(File.dirname(__FILE__, '..', 'public'))
     $body = nil
 
     return pull if env['PATH_INFO'].gsub('/','') == 'autopull'
@@ -33,7 +34,8 @@ class HomePage
       @location = "/themes/#{@theme}/#{@location}"
     end
 
-    @file = "#{env['DOCUMENT_ROOT']}/#{@location}"
+    #@file = "#{env['DOCUMENT_ROOT']}/#{@location}"
+    @file = "#{@document_root}/#{@location}"
 
     if File.directory?(@file)
       # Had to use @file[-1,1] because DreamHost uses ruby 1.8 :(
