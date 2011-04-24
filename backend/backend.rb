@@ -138,7 +138,7 @@ class HomePage
 
   def parse_liquid(text)
     t = Liquid::Template.parse(text)
-    t.render(@@assigns)
+    t.render(@assigns)
   end
 
   def parse_maruku(text)
