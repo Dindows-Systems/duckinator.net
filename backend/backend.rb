@@ -9,15 +9,23 @@ class HomePage
   attr_accessor :title, :location
 
   def initialize(theme)
-    @@theme = theme
-    @@document_root = File.join(File.dirname(__FILE__), '..', 'public')
+    @theme = theme
+    @document_root = File.join(File.dirname(__FILE__), '..', 'public')
+
+    @assigns = {
+      'preview'     => preview_fix,
+      'breadcrumbs' => @breadcrumbs,
+      'title'       => @title,
+      'year'        => `date +'%Y'`.chomp,
+      'theme'       => @theme,
+      'file'        => @original
+    }
   end
 
   def call(env, error=nil)
     @env = env
     @location = env['PATH_INFO'] || "/"
     @original = @location
-    set_title
     @status = 200
     @content_type = 'text/html'
     @preview = false
@@ -35,7 +43,7 @@ class HomePage
       @location = "/themes/#{@theme}/#{@location}"
     end
 
-    @file = "#{@@document_root}/#{@location}"
+    @file = "#{@document_root}/#{@location}"
 
     if File.directory?(@file)
       # Had to use @file[-1,1] because DreamHost uses ruby 1.8 :(
@@ -109,8 +117,8 @@ class HomePage
   end
 
   def set_title
-    @title = "duckinator.net"
-    @breadcrumbs = generate_link('http://duckinator.net', 'duckinator.net')
+    title = "duckinator.net"
+    breadcrumbs = generate_link('http://duckinator.net', 'duckinator.net')
     if @location != '/' and @location.length > 0
       location = @location.chomp('/index.md').chomp('/')
       location_words = location.split('/')
@@ -120,23 +128,24 @@ class HomePage
       if i >= 1
         (1..i).each do |n|
           link = location_words[0..n].join('/')
-          @breadcrumbs = "#{generate_link(link, location_words[n])} : #{@breadcrumbs}"
-          @title = "#{location_words[n]} : #{@title}"
+          breadcrumbs = "#{generate_link(link, location_words[n])} : #{@breadcrumbs}"
+          title = "#{location_words[n]} : #{@title}"
         end
       end
     end
+    [breadcrumbs, title]
   end
 
   def parse_liquid(text)
     t = Liquid::Template.parse(text)
     t.render(@@assigns)
   end
-=begin
+
   def parse_maruku(text)
     maruku = Maruku.new(text)
     maruku.to_html
   end
-=end
+
   def preview_fix
     return "" unless @preview
 
@@ -144,34 +153,23 @@ class HomePage
 <base href="#{@env['rack.url_scheme']}://#{@env['SERVER_NAME']}/preview/#{@theme}/">
 EOF
   end
-=begin
-  def set_assigns
-    @assigns = {
-      'preview'     => preview_fix,
-      'breadcrumbs' => @breadcrumbs,
-      'title'       => @title,
-      'year'        => `date +'%Y'`.chomp,
-      'theme'       => @theme,
-      'file'        => @original
-    }
-  end
-=end
+
   def generate_page
-    @@assigns = {
-      'preview'     => preview_fix,
-      'breadcrumbs' => @breadcrumbs,
-      'title'       => @title,
-      'year'        => `date +'%Y'`.chomp,
-      'theme'       => @theme,
-      'file'        => @original
-    }
-    #set_assigns
+    breadcrumbs, title = set_title
+    @assigns['breadcrumbs'] = breadcrumbs
+    @assigns['title'] = title
+    if @preview
+      @assigns['preview'] = preview_fix
+    else
+      @assigns['preview'] = ''
+    end
+    
     $body = parse_liquid($body)
     $body = Maruku.new($body).to_html
 
     text = open(File.dirname(__FILE__) + '/template.html').read
 
-    @@assigns['content'] = $body
+    @assigns['content'] = $body
 
     text = parse_liquid(text)
     if @preview
