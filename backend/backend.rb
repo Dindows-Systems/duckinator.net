@@ -122,14 +122,13 @@ class HomePage
     if @location != '/' and @location.length > 0
       location = @location.chomp('/index.md')
       location_words = location.split('/').reject(&:nil?)
+      location_words.shift
 
       i = location_words.length-1
-      i-=1 until title_check(location_words, i) || i == 0
-      if i >= 1
-        (1..i).each do |n|
-          link = location_words[0..n].join('/')
-          breadcrumbs.unshift(generate_link(link, location_words[n]))
-        end
+      i-=1 until title_check(location_words, i) || i < 0
+      location_words.map do |n|
+        link = location_words[0..n].join('/')
+        breadcrumbs.unshift(generate_link(link, location_words[n]))
       end
     end
     location_words << 'duckinator.net'
