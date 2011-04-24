@@ -8,9 +8,9 @@ require 'mime/types'
 class HomePage
   attr_accessor :title, :location
 
-  def initialize(env, theme = nil)
-    @@theme = theme || get_theme
-    @@document_root = env['DOCUMENT_ROOT'] || File.join(File.dirname(__FILE__), '..', 'public')
+  def initialize(theme)
+    @@theme = theme
+    @@document_root = File.join(File.dirname(__FILE__), '..', 'public')
   end
 
   def call(env, error=nil)
@@ -102,10 +102,6 @@ class HomePage
 
   def generate_link(url, text)
     "<a href=\"#{url}\">#{text}</a>"
-  end
-
-  def get_theme
-    'fairview_pier'
   end
 
   def title_check (location_words, i)
