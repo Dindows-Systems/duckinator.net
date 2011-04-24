@@ -3,7 +3,7 @@ require 'rubygems'
 require 'time'
 require 'maruku'
 require 'liquid'
-require 'mime/types'
+#require 'mime/types'
 
 class HomePage
   attr_accessor :title, :location
@@ -66,18 +66,23 @@ class HomePage
 
     if @status != 200
       @file = File.join(File.dirname(__FILE__), '..', 'errors', "#{@status}.md")
-      #@file = "#{env['DOCUMENT_ROOT']}/../errors/#{@status}.md"
     end
     
-    if @file.end_with?('.rb')
+    if ruby?
       load @file
     else
       $body = open(@file).read
     end
-    if markdown? || ruby?
+
+    if css?
+      @content_type = 'text/css'
+    elsif js?
+      @content_type = 'text/javascript'
+    elsif markdown? || ruby?
       page = generate_page
-    else
-      @content_type = MIME::Types.type_for(@file)
+      @content_type = 'text/html'
+    #else
+    #  @content_type = MIME::Types.type_for(@file)
     end
     
     page ||= $body
@@ -97,7 +102,11 @@ class HomePage
   end
 
   def css?
-    @file.end_with?('.css')
+    @file.end_with?('.css') || @file.end_with?('.css.rb')
+  end
+
+  def js?
+    @file.end_with?('.js') || @file.end_with?('.js.rb')
   end
 
   def markdown?
