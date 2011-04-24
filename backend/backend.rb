@@ -169,7 +169,7 @@ EOF
 
     text = open(File.dirname(__FILE__) + '/template.html').read
 
-    assigns['content'] = $body
+    @@assigns['content'] = $body
 
     text = parse_liquid(text)
     if @preview
