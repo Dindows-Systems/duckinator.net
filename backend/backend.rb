@@ -1,5 +1,5 @@
-#require File.join(File.dirname(__FILE__), '..', 'gemfix.rb')
-#require 'rubygems'
+require File.join(File.dirname(__FILE__), '..', 'gemfix.rb')
+require 'rubygems'
 require 'time'
 require 'maruku'
 require 'liquid'
@@ -91,8 +91,6 @@ class HomePage
     end
 
     ret(nil, nil, page)
-  rescue => e
-    ret(500, "text/plain", "#{e.message}\n#{e.backtrace.join("\n")}")
   end
 
   def ret(status, content_type, page)
