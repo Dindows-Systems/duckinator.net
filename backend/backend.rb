@@ -147,7 +147,7 @@ class HomePage
   end
 
   def preview_fix
-    return "" unless @preview
+    return '' unless @preview
 
     preview = <<EOF
 <base href="#{@env['rack.url_scheme']}://#{@env['SERVER_NAME']}/preview/#{@theme}/">
@@ -158,11 +158,7 @@ EOF
     breadcrumbs, title = get_title
     @assigns['breadcrumbs'] = breadcrumbs
     @assigns['title'] = title
-    if @preview
-      @assigns['preview'] = preview_fix
-    else
-      @assigns['preview'] = ''
-    end
+    @assigns['preview'] = preview_fix
     
     $body = parse_liquid($body)
     $body = Maruku.new($body).to_html
