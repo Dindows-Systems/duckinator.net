@@ -36,7 +36,7 @@ class HomePage
 #    end
   end
 
-  def call(env, error=nil)
+  def call(env)
     @env = env
     @location = env['PATH_INFO'] || "/"
     @assigns['file'] = @location
