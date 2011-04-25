@@ -161,7 +161,7 @@ class HomePage
     t.render(@assigns)
   end
 
-  def parse_maruku(text)
+  def parse_markup(text)
     maruku = Maruku.new(text)
     maruku.to_html
   end
@@ -181,7 +181,7 @@ EOF
     @assigns['preview'] = preview_fix
     
     $body = parse_liquid($body)
-    $body = Maruku.new($body).to_html
+    $body = parse_markup($body)
 
     text = open(File.dirname(__FILE__) + '/template.html').read
 
