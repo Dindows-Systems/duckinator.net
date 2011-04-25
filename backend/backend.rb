@@ -100,6 +100,25 @@ class HomePage
     end
 
     ret(nil, nil, page)
+
+  rescue => e
+  str = <<EOF
+<!doctype html>
+<html>
+<head>
+  <title>Error - duckinator.net</title>
+</head>
+<body>
+There was an error processing your request. Details below.
+
+<pre>
+#{e.exception}: #{e.message}
+#{e.backtrace.join("\n")}
+</pre>
+</body>
+</html>
+EOF
+    ret(500, "text/html", str)
   end
 
   def ret(status, content_type, page)
