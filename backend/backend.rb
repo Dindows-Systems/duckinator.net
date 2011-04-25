@@ -161,7 +161,7 @@ EOF
 
       i = location_words.length-1
       i-=1 until title_check(location_words, i) || i < 0
-      location_words.map do |n|
+      location_words.length.times do |n|
         link = location_words[0..n].join('/')
         breadcrumbs.unshift(generate_link(link, location_words[n]))
       end
