@@ -161,6 +161,7 @@ EOF
 
       i = location_words.length-1
       i-=1 until title_check(location_words, i) || i < 0
+      i+=1 # Temporary fix...This needs a bit more cleaning
       i.times do |n|
         link = location_words[0..n].join('/')
         breadcrumbs.unshift(generate_link(link, location_words[n], '/'))
