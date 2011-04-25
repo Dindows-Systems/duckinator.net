@@ -36,6 +36,7 @@ class HomePage
   end
 
   def call(env)
+    update
     @server_name ||= env['SERVER_NAME']
     @url_scheme = env['rack.url_scheme']
     @location = env['PATH_INFO'] || '/'
