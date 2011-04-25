@@ -39,7 +39,7 @@ class HomePage
   def call(env, error=nil)
     @env = env
     @location = env['PATH_INFO'] || "/"
-    @original = @location
+    @assigns['file'] = @location
     @status = 200
     @content_type = 'text/html'
     @preview = false
