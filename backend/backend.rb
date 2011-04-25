@@ -13,13 +13,27 @@ class HomePage
     @document_root = File.join(File.dirname(__FILE__), '..', 'public')
 
     @assigns = {
-      'preview'     => preview_fix,
-      'breadcrumbs' => @breadcrumbs,
-      'title'       => @title,
-      'year'        => `date +'%Y'`.chomp,
+      'preview'     => '', # Filled in later
+      'breadcrumbs' => '', # Filled in later
+      'title'       => '', # Filled in later
+      'year'        => Time.now.year,
       'theme'       => @theme,
-      'file'        => @original
+      'file'        => ''  # Filled in later
     }
+  end
+
+  def update
+    @assigns['year']  = Time.now.year
+    @assigns['theme'] = get_theme
+  end
+
+  def get_theme
+    @theme # Stop-gap until yaml config is done.
+#    if File.exist?(File.join(File.dirname(__FILE__), '..', 'config.yaml'))
+      # Handle yaml config here
+#    else
+#      @theme
+#    end
   end
 
   def call(env, error=nil)
@@ -31,16 +45,14 @@ class HomePage
     @preview = false
     $body = nil
 
-    if !error.nil?
-      # ?
-#    elsif @location[0..5] == "/rss/" && @location.length > 5
-#      return RSS.new(env)
-    elsif @location[0..8] == '/preview/' && @location.length > 9
+    if @location[0..8] == '/preview/' && @location.length > 9
       @theme, @location = env['PATH_INFO'][9..-1].split("/", 2)
       @preview = true
     elsif @location[0..6] == '/theme/'
       @location = @location[7..-1]
       @location = "/themes/#{@theme}/#{@location}"
+#    elsif @location[0..5] == "/rss/" && @location.length > 5
+#      return RSS.new(env)
     end
 
     @file = "#{@document_root}/#{@location}"
