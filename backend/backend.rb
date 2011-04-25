@@ -143,8 +143,8 @@ EOF
     @file.end_with?('.rb')
   end
 
-  def generate_link(url, text)
-    "<a href=\"#{url}\">#{text}</a>"
+  def generate_link(url, text, prefix='')
+    "<a href=\"#{prefix}#{url}\">#{text}</a>"
   end
 
   def title_check (location_words, i)
@@ -153,7 +153,7 @@ EOF
 
   def get_title
     location_words = []
-    breadcrumbs = [generate_link('http://duckinator.net', 'duckinator.net')]
+    breadcrumbs = [generate_link('/', 'duckinator.net')]
     if @location != '/' and @location.length > 0
       location = @location.chomp('/index.md')
       location_words = location.split('/').reject(&:nil?)
@@ -163,7 +163,7 @@ EOF
       i-=1 until title_check(location_words, i) || i < 0
       i.times do |n|
         link = location_words[0..n].join('/')
-        breadcrumbs.unshift(generate_link(link, location_words[n]))
+        breadcrumbs.unshift(generate_link(link, location_words[n], '/'))
       end
     end
     location_words << 'duckinator.net'
