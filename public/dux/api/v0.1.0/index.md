@@ -7,6 +7,7 @@ This is a specification for the APIs planned to be used by dux starting at v0.1.
 APIs are striked out if they're not started, followed by a question mark if started but incomplete. Others are finished, and have no *expected* changes.
 
 List of APIs:
+
 * [Text?](text):       Text manipulation and formatting.
 * [Console?](console): Console control system, including printing text ("Display" in v0.0.6 and earlier).
 * [<del>Image</del>](image):     Image rendering, manipulation, and formatting.
