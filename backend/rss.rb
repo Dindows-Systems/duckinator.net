@@ -1,9 +1,8 @@
 require File.join(File.dirname(__FILE__), '..', 'gemfix.rb')
 require 'rubygems'
 require 'time'
-require 'maruku'
+require 'redcarpet'
 require 'liquid'
-require 'mime/types'
 
 class RSS
   def set_handlers
