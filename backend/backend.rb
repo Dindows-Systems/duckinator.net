@@ -9,6 +9,7 @@ class HomePage
   def initialize(theme)
     @theme = theme
     @document_root = File.join(File.dirname(__FILE__), '..', 'public')
+    @server_name = nil
 
     @assigns = {
       'preview'     => '', # Filled in later
@@ -35,8 +36,9 @@ class HomePage
   end
 
   def call(env)
-    @env = env
-    @location = env['PATH_INFO'] || "/"
+    @server_name ||= env['SERVER_NAME']
+    @url_scheme = env['rack.url_scheme']
+    @location = env['PATH_INFO'] || '/'
     @assigns['file'] = @location
     @status = 200
     @content_type = 'text/html'
@@ -186,7 +188,7 @@ EOF
     return '' unless @preview
 
     preview = <<EOF
-<base href="#{@env['rack.url_scheme']}://#{@env['SERVER_NAME']}/preview/#{@theme}/">
+<base href="#{@url_scheme}://#{@server_name}/preview/#{@theme}/">
 EOF
   end
 
