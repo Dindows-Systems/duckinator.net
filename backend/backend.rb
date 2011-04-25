@@ -163,8 +163,8 @@ class HomePage
   end
 
   def parse_markup(text)
-    maruku = Maruku.new(text)
-    maruku.to_html
+    parser = Redcarpet.new(text)
+    parser.to_html
   end
 
   def preview_fix
