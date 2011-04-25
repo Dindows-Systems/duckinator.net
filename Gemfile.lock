@@ -2,7 +2,6 @@ GEM
   remote: http://rubygems.org/
   specs:
     liquid (2.2.2)
-    mime-types (1.16)
     redcarpet (1.11.0)
 
 PLATFORMS
@@ -10,5 +9,4 @@ PLATFORMS
 
 DEPENDENCIES
   liquid (>= 2.2.2)
-  mime-types (>= 1.16)
   redcarpet (>= 1.11.0)

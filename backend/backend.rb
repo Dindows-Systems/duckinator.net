@@ -92,8 +92,6 @@ class HomePage
     elsif markdown? || ruby?
       page = generate_page
       @content_type = 'text/html'
-    #else
-    #  @content_type = MIME::Types.type_for(@file)
     end
     
     page ||= $body
