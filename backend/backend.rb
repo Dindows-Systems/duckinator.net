@@ -112,7 +112,7 @@ class HomePage
 There was an error processing your request. Details below.
 
 <pre>
-#{e.exception}: #{e.message}
+#{e.message}
 #{e.backtrace.join("\n")}
 </pre>
 </body>
