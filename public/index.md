@@ -1,3 +1,5 @@
+Duckinator.net and *all subdomains* are in the process of being moved from dreamhost to duostack or my VPS. I have no clue how long this will take, or when my gallery will become fully operational.
+
 ## A little about me ##
 My name is Nick Markwell, also known as duck (or online as "duckinator"). I have been programming since 2005, and pick up new languages quickly. I strongly support [open source software](http://en.wikipedia.org/wiki/Open_source) and the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License).
 
