@@ -1,5 +1,14 @@
-If you are seeing this, duckinator.net has successfully migrated from dreamhost to duostack. All subdomains are in the process of being migrated to duostack or my VPS.
-DNS for email has *not updated properly* as of the time I wrote this. Hopefully the not-yet-propogated update I just finished should fix it within the next few hours.
+All of the following appear to have been successfully migrated, including DNS records at NameCheap:
+
+* duckinator.net
+* www.duckinator.net
+* anatra.duckinator.net
+* mail.duckinator.net
+* blog.duckinator.net
+* misc.duckinator.net
+* home.duckinator.net
+
+Email appears to be working, as well! This means once I finish rewriting my gallery in ruby the entire migration will be complete.
 
 ## A little about me ##
 My name is Nick Markwell, also known as duck (or online as "duckinator"). I have been programming since 2005, and pick up new languages quickly. I strongly support [open source software](http://en.wikipedia.org/wiki/Open_source) and the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License).
