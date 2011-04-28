@@ -1,4 +1,5 @@
-Duckinator.net and *all subdomains* are in the process of being moved from dreamhost to duostack or my VPS. I have no clue how long this will take, or when my gallery will become fully operational.
+If you are seeing this, duckinator.net has successfully migrated from dreamhost to duostack. All subdomains are in the process of being migrated to duostack or my VPS.
+DNS for email has *not updated properly* as of the time I wrote this. Hopefully the not-yet-propogated update I just finished should fix it within the next few hours.
 
 ## A little about me ##
 My name is Nick Markwell, also known as duck (or online as "duckinator"). I have been programming since 2005, and pick up new languages quickly. I strongly support [open source software](http://en.wikipedia.org/wiki/Open_source) and the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License).
