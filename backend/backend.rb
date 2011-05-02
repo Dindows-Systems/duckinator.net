@@ -1,3 +1,5 @@
+Encoding.default_internal = 'UTF-8'
+
 require File.join(File.dirname(__FILE__), '..', 'gemfix.rb')
 require 'time'
 require 'redcarpet'
