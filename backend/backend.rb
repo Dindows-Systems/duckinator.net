@@ -133,9 +133,9 @@ class HomePage
 
     update
 
-    #if markdown? || ruby?
+    if markdown? || ruby?
       page = generate_page
-    #end
+    end
     
     page ||= $body
     if css?
