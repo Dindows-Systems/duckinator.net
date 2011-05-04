@@ -117,11 +117,17 @@ class HomePage
         @file = File.join(File.dirname(__FILE__), '..', 'errors', 'unknown.md')
       end
     end
-    
+
+    content_type = get_content_type(@file)
+
     if ruby?
       load @file
     else
-      $body = open(@file).read
+      if content_type[0..4] == 'text/'
+        $body = File.open(@file, 'r:UTF-8').read
+      else
+        $body = File.open(@file, 'rb').read
+      end
     end
 
     update
@@ -134,8 +140,6 @@ class HomePage
     if css?
       page.gsub!(/url\(\"\/theme\/(.*)\.jpg\"\)/, 'url("/themes/' + @theme + '/\1.jpg")')
     end
-
-    content_type = get_content_type(@file)
 
     ret(status, content_type, page)
 
