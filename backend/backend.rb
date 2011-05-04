@@ -17,8 +17,42 @@ class HomePage
       'title'       => '', # Filled in later
       'year'        => Time.now.year,
       'theme'       => @theme,
+      'status'      => 200,
       'file'        => ''  # Filled in later
     }
+
+    @@content_types = {
+      '.css'  => 'text/css',
+      '.js'   => 'text/javascript',
+      '.html' => 'text/html',
+      '.txt'  => 'text/plain',
+      '.rb'   => 'text/html', # .rb is a HTML file
+      '.md'   => 'text/html', # .md is a HTML file, too
+      '.png'  => 'image/png',
+      '.gif'  => 'image/gif',
+      '.jpg'  => 'image/jpeg',
+      '.jpeg' => 'image/jpeg', # JPEG file
+      '.tar'  => 'application/x-tar',   # .tar file
+      '.gz'   => 'application/x-gzip',  # .gz  file (including .tar.gz)
+      '.bz2'  => 'application/x-bzip2', # .bz2 file (including .tar.bz2)
+      #'.img'  => 'application/x-', #???!?!?!?!?!
+      '.iso'  => 'application/x-iso-9660-image' # CD .iso image
+    }
+
+    @@status_codes = {
+      :information  => [100, 101],      # Informational 1xx
+      :success      => (200..206).to_a, # Successful    2xx
+      :redirect     => (300..307).to_a, # Redirection   3xx
+      :error        => [*(400..417), *(500..505)] # Client Error 4xx, Server Error 5xx
+#      :client_error => (400..417).to_a, # Client Error  4xx
+#      :server_error => (500..505).to_a, # Server Error  5xx
+    }
+  end
+
+  def get_content_type(file)
+    type = @@content_types[File.extname(@file)]
+    type ||= 'application/octet-stream' # Default to a download
+    type
   end
 
   def update
@@ -36,13 +70,10 @@ class HomePage
   end
 
   def call(env)
-    update
     @server_name ||= env['SERVER_NAME']
     @url_scheme = env['rack.url_scheme']
     @location = env['PATH_INFO'] || '/'
     @assigns['file'] = @location
-    @status = 200
-    @content_type = 'text/html'
     @preview = false
     $body = nil
 
@@ -71,14 +102,20 @@ class HomePage
       else
         # Directory exists, no index file
         # Handle this better. 404 is not correct.
-        @status = 404
+        status = 404
       end
     end
 
-    @status = 404 if !File.exist?(@file)
+    status = 404 unless File.exist?(@file)
 
-    if @status != 200
-      @file = File.join(File.dirname(__FILE__), '..', 'errors', "#{@status}.md")
+    # Handle errors
+    if @@status_codes[:error].include?(status)
+      error_file = File.join(File.dirname(__FILE__), '..', 'errors', "#{status}.md")
+      if File.exist?(error_file)
+        @file = error_file
+      else
+        @file = File.join(File.dirname(__FILE__), '..', 'errors', 'unknown.md')
+      end
     end
     
     if ruby?
@@ -87,21 +124,20 @@ class HomePage
       $body = open(@file).read
     end
 
-    if css?
-      @content_type = 'text/css'
-    elsif js?
-      @content_type = 'text/javascript'
-    elsif markdown? || ruby?
+    update
+
+    #if markdown? || ruby?
       page = generate_page
-      @content_type = 'text/html'
-    end
+    #end
     
     page ||= $body
     if css?
       page.gsub!(/url\(\"\/theme\/(.*)\.jpg\"\)/, 'url("/themes/' + @theme + '/\1.jpg")')
     end
 
-    ret(nil, nil, page)
+    content_type = get_content_type(@file)
+
+    ret(status, content_type, page)
 
   rescue => e
   str = <<EOF
@@ -120,12 +156,10 @@ There was an error processing your request. Details below.
 </body>
 </html>
 EOF
-    ret(500, "text/html", str)
+    ret(500, 'text/html', str)
   end
 
   def ret(status, content_type, page)
-    status ||= @status
-    content_type ||= @content_type
     [status, { "Content-Type" => content_type }, [page]]
   end
 
