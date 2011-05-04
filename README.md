@@ -1,4 +1,5 @@
-My website (frontend and backend), requires ruby, and the redcarpet and liquid ruby gems
+Requires `ruby`, along with the `redcarpet` and `liquid` ruby gems.
+
 Released under MIT/X11 license (see COPYING)
 
 If you encounter the following error on a page when trying to run this or something based on it:
