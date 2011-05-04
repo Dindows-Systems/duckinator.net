@@ -76,6 +76,7 @@ class HomePage
     @assigns['file'] = @location
     @preview = false
     $body = nil
+    status = 200
 
     if @location[0..8] == '/preview/' && @location.length > 9
       @theme, @location = env['PATH_INFO'][9..-1].split("/", 2)
