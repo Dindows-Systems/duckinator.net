@@ -18,6 +18,10 @@ It will not follow POSIX by design, but POSIX compatibility will not be actively
 
 [API documentation](api/v0.1.0) is available for the upcoming release of Dux v0.1.0.
 
+### API Finalization ###
+
+The Dux v0.1.0 API was planned to be finalized on March 14, 2011. After multiple date bumps it's now planned to be finalized on June 01, 2011.
+
 ## Releases ##
 
 i386:
@@ -29,7 +33,7 @@ i386:
 * [v0.0.4](iso/i386/dux-v0.0.4.iso): August 15, 2010
 * [v0.0.5](iso/i386/dux-v0.0.5.iso): September 20, 2010
 * [v0.0.6](iso/i386/dux-v0.0.6.iso): March 02, 2011
-* [v0.1.0](iso/i386/dux-v0.1.0.iso): (planned) March 2011
+* [v0.1.0](iso/i386/dux-v0.1.0.iso): To be announced
 
 x86-64:
 
