@@ -66,6 +66,7 @@ The rest of the group and I would like to thank everyone involved:
 	- [Nick Markwell](http://duckinator.net)
 	- [Scott Olson](http://scott-olson.org)
 	- James E. Spahlinger
+	- Thomas Miletich
 * Documentation
 	- [Nick Markwell](http://duckinator.net)
 	- Joe T. Techinus
