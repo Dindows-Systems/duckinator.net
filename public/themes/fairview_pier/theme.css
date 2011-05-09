@@ -43,7 +43,8 @@ p code, span code, li code {
 }
 
 #navbar,
-#page > div {
+#page > div,
+div.post div {
 	background-color: #5D5757;
 	border-color: #394531;
 }
