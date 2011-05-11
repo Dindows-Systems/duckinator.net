@@ -4,7 +4,9 @@
 
 Provides functions for formatting text.
 
-* <p class="func"><code><span class="type">char*</span> TextIntBase(<span class="type">int</span> <span class="arg">number</span>, <span class="type">int</span> <span class="arg">base</span>)</code>:</p>
+* ```C
+char* TextIntBase(int number, int base)
+```:
   <p class="types_overview"><code>number</code> is a <code>Integer</code>.</p>
   Converts `number` to `base` and returns it as a string.
   `TextIntBase(number, 10)` converts `number` to it's string form in decimal.
