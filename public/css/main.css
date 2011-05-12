@@ -70,9 +70,11 @@ body header, body article {
 	width: 800px;
 }
 
-#content {
-	padding: 30px;
+body article > * {
+	padding-left: 30px;
+	padding-right: 30px;
 }
+
 
 footer {
 	padding-top: 20px;
