@@ -21,6 +21,7 @@ body {
 code {
 	border: 1px solid;
 	padding: 3px;
+	display: block;
 }
 
 code * {
@@ -29,6 +30,7 @@ code * {
 
 p code, span code, li code {
   padding: 1px;
+  display: inline;
 }
 
 img {
