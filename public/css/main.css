@@ -113,10 +113,10 @@ a:active {
 	border-bottom: 1px solid;
 }
 
-h1 { font-size:2em; }
-h2 { font-size:1.5em; }
-h3 { font-size:1em; }
-h4, h5, h6 { font-size:0.8em; }
+h1 { font-size:1.5em; }
+h2 { font-size:1.4em; }
+h3 { font-size:1.1em; }
+h4, h5, h6 { font-size:1.1em; }
 
 /* Clearfix, see http://www.positioniseverything.net/easyclearing.html under '"Clearing", 21st Century Style' */
 .clearfix:after {
