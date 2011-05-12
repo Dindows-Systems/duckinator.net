@@ -35,7 +35,7 @@ Functions for printing information to the screen.
   Prints a string (`str`) to the console.
   Returns number of characters printed.
   Adjusts internal row and column representations.
-7
+
 ## Possible additions for Console API ##
 
 ### Functions ###
