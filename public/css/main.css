@@ -69,14 +69,14 @@ header h1 {
 	padding: 30px;
 }
 
-#footer {
+footer {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	width: 100%;
 	text-align: center;
 }
 
-#footer p, #footer div {
+footer p, footer div {
 	text-align: center;
 }
 
