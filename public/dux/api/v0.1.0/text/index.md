@@ -4,10 +4,6 @@
 
 Provides functions for formatting text.
 
-``` c
-char *TextIntBase(int number, int base)
-```
-
 * ``` c
 char* TextIntBase(int number, int base)
 ```
