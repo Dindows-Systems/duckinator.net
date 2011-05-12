@@ -8,6 +8,7 @@ Structs used by the console API, represented with their C equivalents from Dux.
 
 
 `ConsoleInfo_t` contains information about an individual console:
+
 ``` c
 typedef struct ConsoleInfo_s {
   unsigned int width;
