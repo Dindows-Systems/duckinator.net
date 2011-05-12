@@ -220,7 +220,7 @@ EOF
   end
 
   def parse_markup(text)
-    parser = Redcarpet.new(text)
+    parser = Redcarpet.new(text, :smart, :hard_wrap, :generate_toc, :tables, :strikethrough, :lax_htmlblock, :no_intraemphasis)
     parser.to_html
   end
 
