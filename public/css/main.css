@@ -4,6 +4,11 @@ body {
 	height: 100%;
 }
 
+/* Fixes for HTML5 docs in non-HTML5-compat browsers */
+header, footer, article, section {
+  display: block;
+}
+
 .dot {
   opacity: 0.5;
   font-weight: bold;
