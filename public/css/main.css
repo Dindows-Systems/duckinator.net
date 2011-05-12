@@ -43,7 +43,7 @@ img {
 	border: none;
 }
 
-#page > div {
+header, #content {
 	border: 5px solid;
 }
 

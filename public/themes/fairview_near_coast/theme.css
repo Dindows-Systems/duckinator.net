@@ -7,7 +7,7 @@ header h1, header ul li a {
 	color: #333;
 }
 
-#page > div,
+header, #content,
 div.post div {
 	background-color: #181826;
 	border-color: #060A15;

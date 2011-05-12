@@ -28,7 +28,7 @@ header h1, header ul li a {
 }
 
 #navbar,
-#page > div,
+header, #content,
 div.post div {
 	background-color: #5D5757;
 	border-color: #394531;

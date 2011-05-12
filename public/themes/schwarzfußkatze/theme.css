@@ -12,7 +12,7 @@ header h1 {
 }
 
 #navbar,
-#page > div,
+header, #content,
 div.post div {
 	background-color: #776749;
 	border-color: #5D4D32;

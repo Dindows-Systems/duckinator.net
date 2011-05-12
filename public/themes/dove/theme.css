@@ -13,7 +13,7 @@ body {
 }
 
 #navbar,
-#page > div,
+header, #content,
 div.post div {
 	background-color: #60665A;
 	border-color: #3E5B2D;
