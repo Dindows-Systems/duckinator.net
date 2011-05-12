@@ -65,7 +65,7 @@ header h1 {
 	padding-bottom: 0px;
 }
 
-#page {
+body header, body article {
 	margin: auto;
 	width: 800px;
 }
