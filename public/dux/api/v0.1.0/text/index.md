@@ -6,7 +6,7 @@ Provides functions for formatting text.
 
 * ``` c
 char* TextIntBase(int number, int base)
-```:
+```
   <p class="types_overview"><code>number</code> is a <code>Integer</code>.</p>
   Converts `number` to `base` and returns it as a string.
   `TextIntBase(number, 10)` converts `number` to it's string form in decimal.
