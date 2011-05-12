@@ -50,7 +50,7 @@ header, #content {
 header {
 	background-image: url("/theme/header.jpg");
 	background-repeat: no-repeat;
-	border: 1px solid;
+	border-bottom: none;
 	min-height: 300px;
 }
 
