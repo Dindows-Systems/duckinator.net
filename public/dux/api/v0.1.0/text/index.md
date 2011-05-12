@@ -4,7 +4,7 @@
 
 Provides functions for formatting text.
 
-* ``` C
+* ``` c
 char* TextIntBase(int number, int base)
 ```:
   <p class="types_overview"><code>number</code> is a <code>Integer</code>.</p>
