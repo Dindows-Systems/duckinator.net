@@ -3,22 +3,7 @@ body {
 	color: #FFF;
 }
 
-/*.func {
-}
-
-.func .ret {
-}
-
-.func .type {
-}
-
-.func .name {
-}
-
-.func .arg {
-}*/
-
-p code, span code, li code {
+code {
 	border-color: #394531;
 }
 

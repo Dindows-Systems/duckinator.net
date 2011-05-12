@@ -18,8 +18,17 @@ body {
 	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
 }
 
+code {
+	border: 1px solid;
+	padding: 3px;
+}
+
+code * {
+  border: none;
+}
+
 p code, span code, li code {
-	border: 1px solid #000;
+  padding: 1px;
 }
 
 img {
