@@ -47,14 +47,14 @@ img {
 	border: 5px solid;
 }
 
-#header {
+header {
 	background-image: url("/theme/header.jpg");
 	background-repeat: no-repeat;
 	border: 1px solid;
 	min-height: 300px;
 }
 
-#header h1 {
+header h1 {
 	margin-top: 0px;
 	padding: 10px;
 	padding-bottom: 0px;

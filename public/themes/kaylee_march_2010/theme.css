@@ -3,7 +3,7 @@ body {
 	color: #B5A2A9;
 }
 
-#header h1, #header ul li a {
+header h1, header ul li a {
 	color: #CCC;
 }
 
