@@ -22,21 +22,22 @@ class HomePage
     }
 
     @@content_types = {
-      '.css'  => 'text/css',
-      '.js'   => 'text/javascript',
-      '.html' => 'text/html',
-      '.txt'  => 'text/plain',
-      '.rb'   => 'text/html', # .rb is a HTML file
-      '.md'   => 'text/html', # .md is a HTML file, too
-      '.png'  => 'image/png',
-      '.gif'  => 'image/gif',
-      '.jpg'  => 'image/jpeg',
-      '.jpeg' => 'image/jpeg', # JPEG file
-      '.tar'  => 'application/x-tar',   # .tar file
-      '.gz'   => 'application/x-gzip',  # .gz  file (including .tar.gz)
-      '.bz2'  => 'application/x-bzip2', # .bz2 file (including .tar.bz2)
-      #'.img'  => 'application/x-', #???!?!?!?!?!
-      '.iso'  => 'application/x-iso-9660-image' # CD .iso image
+      '.css'      => 'text/css',
+      '.js'       => 'text/javascript',
+      '.html'     => 'text/html',
+      '.txt'      => 'text/plain',
+      '.rb'       => 'text/html', # .rb is a HTML file
+      '.md'       => 'text/html', # .md is a HTML file, too
+      '.png'      => 'image/png',
+      '.gif'      => 'image/gif',
+      '.jpg'      => 'image/jpeg',
+      '.jpeg'     => 'image/jpeg', # JPEG file
+      '.tar'      => 'application/x-tar',   # .tar file
+      '.gz'       => 'application/x-gzip',  # .gz  file (including .tar.gz)
+      '.bz2'      => 'application/x-bzip2', # .bz2 file (including .tar.bz2)
+      #'.img'      => 'application/x-', #???!?!?!?!?!
+      '.iso'      => 'application/x-iso-9660-image' # CD .iso image
+      '.appcache' => 'text/cache-manifest' # Cache manifest for HTML5 offline apps
     }
 
     @@status_codes = {
