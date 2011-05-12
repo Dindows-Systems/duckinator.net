@@ -2,9 +2,9 @@
 
 ## Console API ##
 
-### Structs ###
+### Data structures ###
 
-Structs used by the console API, represented with their C equivalents from Dux.
+Data structures defined by the console API, represented with their C equivalents from Dux.
 
 
 `ConsoleInfo_t` contains information about an individual console:
