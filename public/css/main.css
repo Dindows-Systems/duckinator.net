@@ -6,12 +6,12 @@ body {
 
 /* Fixes for HTML5 docs in non-HTML5-compat browsers */
 header, footer, article, section {
-  display: block;
+	display: block;
 }
 
 .dot {
-  opacity: 0.5;
-  font-weight: bold;
+	opacity: 0.5;
+	font-weight: bold;
 }
 
 .text-content, p {
@@ -31,17 +31,17 @@ code {
 }
 
 code * {
-  border: none;
+	border: none;
 }
 
 p code, span code, li code {
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding: 1px;
-  margin: 0px;
-  display: inline;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding: 1px;
+	margin: 0px;
+	display: inline;
 }
 
 img {
