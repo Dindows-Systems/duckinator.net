@@ -1,15 +1,3 @@
-All of the following appear to have been successfully migrated, including DNS records at NameCheap:
-
-* duckinator.net
-* www.duckinator.net
-* anatra.duckinator.net
-* mail.duckinator.net
-* blog.duckinator.net
-* misc.duckinator.net
-* home.duckinator.net
-
-Email appears to be working, as well! This means once I finish rewriting my gallery in ruby the entire migration will be complete.
-
 ## A little about me ##
 My name is Nick Markwell, also known as duck (or online as "duckinator"). I have been programming since 2005, and pick up new languages quickly. I strongly support [open source software](http://en.wikipedia.org/wiki/Open_source) and the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License).
 
