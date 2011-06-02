@@ -107,7 +107,8 @@ footer p, footer div {
 
 a:link,
 a:visited,
-span a.aptureLink {
+span a.aptureLink:link,
+span a.aptureLink:visited {
 	text-decoration: none;
 	/* Tacked on "!important"s to get control
 	 * back from Apture. Definitely worth it. */
@@ -117,7 +118,8 @@ span a.aptureLink {
 a:focus,
 a:hover,
 a:active,
-span a.aptureLink {
+span a.aptureLink:focus,
+span a.aptureLink:hover {
 	/* Tacked on "!important"s to get control
 	 * back from Apture. Definitely worth it. */
 	text-decoration: none !important;
