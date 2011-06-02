@@ -106,16 +106,22 @@ footer p, footer div {
 }
 
 a:link,
-a:visited {
+a:visited,
+span a.aptureLink {
 	text-decoration: none;
-	border-bottom: 1px dotted;
+	/* Tacked on "!important"s to get control
+	 * back from Apture. Definitely worth it. */
+	border-bottom: 1px dotted !important;
 }
 
 a:focus,
 a:hover,
-a:active {
-	text-decoration: none;
-	border-bottom: 1px solid;
+a:active,
+span a.aptureLink {
+	/* Tacked on "!important"s to get control
+	 * back from Apture. Definitely worth it. */
+	text-decoration: none !important;
+	border-bottom: 1px solid !important;
 }
 
 h1 { font-size:1.5em; }
