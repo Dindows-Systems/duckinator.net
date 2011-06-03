@@ -139,3 +139,9 @@ h4, h5, h6 { font-size:1.1em; }
 	clear: both;
 	visibility: hidden;
 }
+
+/* See: http://www.viglink.com/policies/ftc */
+.viglink-icon {
+	background: url("http://www.viglink.com/public/images/favicon.png") no-repeat scroll 0% 50% transparent;
+	padding-left: 18px;
+}
