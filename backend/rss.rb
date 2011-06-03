@@ -1,4 +1,3 @@
-#require File.join(File.dirname(__FILE__), '..', 'gemfix.rb')
 require 'time'
 require 'redcarpet'
 require 'liquid'
