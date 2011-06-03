@@ -51,17 +51,17 @@ header, #content {
 	border: 5px solid;
 }
 
-header {
-	background-image: url("/theme/header.jpg");
-	background-repeat: no-repeat;
-	border-bottom: none;
-	min-height: 300px;
-}
-
 header h1 {
 	margin-top: 0px;
 	padding: 10px;
 	padding-bottom: 0px;
+}
+
+body header {
+	background-image: url("/theme/header.jpg");
+	background-repeat: no-repeat;
+	border-bottom: none;
+	min-height: 300px;
 }
 
 body header, body article {
