@@ -60,7 +60,7 @@ header h1 {
 body header {
 	background-image: url("/theme/header.jpg");
 	background-repeat: no-repeat;
-	border-bottom: none;
+	border-bottom: 0px solid;
 	min-height: 300px;
 }
 
