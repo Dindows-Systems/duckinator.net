@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# An example hook script that is called after a successful
+# commit is made.
+# Pushes to dotcloud's APP.NAME
+#
+# To enable this hook, copy this file to .git/hooks/post-commit
+
+dotcloud push APP.NAME .
