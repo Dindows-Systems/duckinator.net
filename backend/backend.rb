@@ -186,8 +186,10 @@ EOF
     @file.end_with?('.rb')
   end
 
-  def generate_link(url, text, prefix='')
-    "<a href=\"#{prefix}#{url}\">#{text}</a>"
+  def generate_link(url, text, prefix='', postfix='')
+    url = prefix + url unless url.start_with?(prefix)
+    url = url + postfix unless url.end_with?(postfix)
+    "<a href=\"#{url}\">#{text}</a>"
   end
 
   def title_check (location_words, i)
@@ -207,7 +209,7 @@ EOF
       i+=1 # Temporary fix...This needs a bit more cleaning
       i.times do |n|
         link = location_words[0..n].join('/')
-        breadcrumbs.unshift(generate_link(link, location_words[n], '/'))
+        breadcrumbs.unshift(generate_link(link, location_words[n], '/', '/'))
       end
     end
     location_words << 'duckinator.net'
