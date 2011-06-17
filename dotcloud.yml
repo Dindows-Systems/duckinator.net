@@ -1,0 +1,4 @@
+www:
+    approot: .
+    type: ruby
+
