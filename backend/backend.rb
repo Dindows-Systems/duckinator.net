@@ -102,6 +102,8 @@ class HomePage
         @file = "#{@file}/index.rb"
       elsif File.file?("#{@file}/index.md")
         @file = "#{@file}/index.md"
+      elsif File.file?("#{@file}/index.html")
+        @file = "#{@file}/index.html"
       else
         # Directory exists, no index file
         # Handle this better. 404 is not correct.
