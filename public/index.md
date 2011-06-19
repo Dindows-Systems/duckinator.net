@@ -1,5 +1,6 @@
 ## A little about me ##
-My name is Nick Markwell, also known as duck (or online as "duckinator"). I have been programming since 2005, and pick up new languages quickly. I strongly support [open source software](http://en.wikipedia.org/wiki/Open_source) and the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License).
+My name is Nick Markwell, also known as duck (or online as "duckinator"). I have been programming since 2005, and pick up new languages quickly.
+I strongly support [open source software](http://en.wikipedia.org/wiki/Open_source) as well as both the [MIT/X11 license](http://en.wikipedia.org/wiki/MIT_License) and [ISC license](http://en.wikipedia.org/wiki/ISC_License).
 
 You can visit [profile.io/duckinator](http://profile.io/duckinator) for more information.
 
