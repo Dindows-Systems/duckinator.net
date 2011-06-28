@@ -1,4 +1,13 @@
-www:
-    approot: .
-    type: ruby
+#www:
+#    approot: .
+#    type: ruby
 
+www:
+    approot: static
+    type: ruby
+    requirements:
+        - redcarpet
+        - liquid
+    environment:
+        theme: 'fairview_pier'
+        title: 'duckinator.net'
