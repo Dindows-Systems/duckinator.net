@@ -1,12 +1,25 @@
+/* andika - eot/ttf */
 @font-face {
 	font-family: andika;
 	src: url('http://duckinator.net/fonts/andika/AndBasR.eot');
 	src: local(my_font), url('http://duckinator.net/fonts/andika/AndBasR.ttf') format('opentype');
 }
 
+/* use Gentium Plus - Regular in .woff format */
+@font-face {
+  font-family: GentiumPlus;
+  src: url('http://duckinator.net/fonts/gentium/GentiumPlus-R.woff');
+}
+/* use Gentium Plus - Italic in .woff format */
+@font-face {
+  font-family: GentiumPlus;
+  font-style: italic;
+  src: url('http://duckinator.net/fonts/gentium/GentiumPlus-I.woff');
+}
+
 body {
 	font-size: 100%;
-	font-family: andika, "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
+	font-family: GentiumPlus, "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
 	height: 100%;
 }
 
