@@ -10,7 +10,7 @@ end
 
 class Renderer
   def initialize
-    config_file = File.join(File.dirname(__FILE__), '..', 'dotcloud_build.yml')
+    config_file = File.join(File.dirname(__FILE__), '..', 'dotcloud.yml')
     config_file += '.dist' unless File.file?(config_file)
     config   = YAML.parse(File.open(config_file))
     @appname = config.value.keys[0].value
