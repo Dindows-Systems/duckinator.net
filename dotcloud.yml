@@ -1,5 +1,5 @@
 www:
-    approot: static
+    approot: .
     type: ruby
     requirements:
         - redcarpet
