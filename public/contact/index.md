@@ -1,4 +1,3 @@
-$body = <<EOF
 ## Contact ##
 
 Why hello there, my friendly stalker buddy. Feel free to sneak around behind me in a dark alley via the following:
@@ -8,5 +7,3 @@ Why hello there, my friendly stalker buddy. Feel free to sneak around behind me 
 * [profile.io](http://profile.io/duckinator)
 * [LinkedIn](http://www.linkedin.com/pub/nick-markwell/20/261/325)
 * [Twitter](http://twitter.com/duckinator)
-EOF
-
