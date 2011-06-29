@@ -9,7 +9,11 @@ Why hello there, my friendly stalker buddy. Feel free to sneak around behind me 
 * [Twitter](http://twitter.com/duckinator)
 
 
-If you have a job offering, feel free contact me via the following methods:
+<!--sse-->
 
-* Phone: <span class="rot5" data-rot="67890123465">This should be replaced with 1-234-567-8910: 67890123465</span>
-* E-mail: <span class="rot47" data-rot="7@@o6I2&#62;A=6]4@&#62;">This should be replaced with foo@example.com: 7@@o6I2&gt;A=6]4@&gt;</span>
+If you have a job offering, feel free contact me via the following methods <span class="rot47" data-rot="">(values are rot47 encoded)</span>:
+
+* Phone: <span class="rot47" data-rot="dc_]hhh]g_`a">dc_]hhh]g_`a</span>
+* E-mail: <span class="rot47" data-rot="5F4&#60;o5F4&#60;:?2E@C]?6E">5F4&#60;o5F4&#60;:?2E@C]?6E</span>
+
+<!--/sse-->
