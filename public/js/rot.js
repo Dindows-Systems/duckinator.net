@@ -59,8 +59,7 @@ function rot_fn(fn) {
 	
 	for(var i =0; i < spans.length; i++) {
 		var span = spans[i];
-		var children = span.childNodes;
-		var text = window[fn](children[1].innerHTML);
+		var text = window[fn](span.getAttribute("data-rot"));
 		span.innerHTML = text;
 	}
 }
