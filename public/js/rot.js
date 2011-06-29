@@ -60,7 +60,7 @@ function rot_fn(fn) {
 	for(var i =0; i < spans.length; i++) {
 		var span = spans[i];
 		var children = span.childNodes;
-		var text = window[fn](children[0].innerHTML);
+		var text = window[fn](children[1].innerHTML);
 		children[0].style.display = 'none';
 		children[1].style.display = 'none';
 		span.appendChild(document.createTextNode(text));
