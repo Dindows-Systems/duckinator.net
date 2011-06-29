@@ -14,5 +14,3 @@ function legacyfix() {
 		_legacy_moz_fix_tag(moz_tags[i]);
 	}
 }
-
-legacyfix();
