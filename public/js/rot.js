@@ -1,6 +1,9 @@
 function _rot_js_entity_decode(data) {
 	var matches = data.match(/&#\d+;?/g);
 
+	if(matches == null)
+		return data;
+	
 	for(var i = 0; i < matches.length; i++) {
 		var replacement = String.fromCharCode((matches[i]).replace(/\D/g,""));
 
