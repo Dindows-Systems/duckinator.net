@@ -11,9 +11,9 @@ Why hello there, my friendly stalker buddy. Feel free to sneak around behind me 
 
 <!--sse-->
 
-If you have a job offering, feel free contact me via the following methods <span class="rot47" data-rot="">(values are rot47 encoded)</span>:
+If you have a job offering, feel free contact me via the following methods:
 
-* Phone: <span class="rot47" data-rot="dc_]hhh]g_`a">dc_]hhh]g_`a</span>
-* E-mail: <span class="rot47 mail" data-rot="5F4&#60;o5F4&#60;:?2E@C]?6E">5F4&#60;o5F4&#60;:?2E@C]?6E</span>
+* Phone: <span class="rot5" data-rot="095.444.3567">095.444.3567</span>  <span class="rot5" data-rot="">(rot5 encoded)</span>
+* E-mail: <span class="rot47 mail" data-rot="{{ "5F4<o5F4<:?2E@C]?6E" | htmlencode }}">{{ "5F4<o5F4<:?2E@C]?6E" | htmlencode }}</span> <span class="rot5" data-rot="">(rot47 encoded)</span>
 
 <!--/sse-->

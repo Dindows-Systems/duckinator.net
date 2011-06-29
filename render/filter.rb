@@ -1,5 +1,6 @@
 require 'liquid'
 require 'redcarpet'
+require 'htmlentities'
 
 module TextFilter
   def markdown(input)
@@ -15,5 +16,9 @@ module TextFilter
 
   def date(input)
     Time.now.strftime(input)
+  end
+
+  def htmlencode(input)
+    HTMLEntities.new.encode(input)
   end
 end

@@ -115,6 +115,8 @@ class Renderer
   def generate_html(file)
     raw_text = File.open(file) {|f| f.read }
     breadcrumbs = BreadCrumbs.new(file)
+    raw_text = parse_liquid(raw_text,  'breadcrumbs' => breadcrumbs,
+                                       'title'       => @config['environment']['title'].value)
     parse_liquid(@template, 'breadcrumbs' => breadcrumbs,
                             'content'     => raw_text,
                             'title'       => @config['environment']['title'].value)

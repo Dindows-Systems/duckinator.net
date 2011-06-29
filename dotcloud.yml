@@ -4,6 +4,7 @@ www:
     requirements:
         - redcarpet
         - liquid
+        - htmlentities
     environment:
         theme: 'fairview_pier'
         title: 'duckinator.net'
