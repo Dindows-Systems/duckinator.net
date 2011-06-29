@@ -2,7 +2,8 @@ function _legacy_moz_fix_tag(tag) {
 	tags = document.getElementsByTagName(tag);
 	if(tags[0] && (tags[0].getAttribute('_moz-userdefined') != null)) {
 		for(var i in tags) {
-			tags[i].style.display='none';
+			if(tags[i])
+				tags[i].style.display='none';
 		}
 	}	
 }
