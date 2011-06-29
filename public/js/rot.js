@@ -1,3 +1,14 @@
+function _rot_js_entity_decode(data) {
+	var matches = data.match(/&#\d+;?/g);
+
+	for(var i = 0; i < matches.length; i++) {
+		var replacement = String.fromCharCode((matches[i]).replace(/\D/g,""));
+
+		data = data.replace(/&#\d+;?/,replacement);
+	}
+	return data;
+}
+
 // rot47() takes a string of any valid ASCII character
 function rot47(text) {
 	newtext = "";
@@ -59,7 +70,8 @@ function rot_fn(fn) {
 	
 	for(var i =0; i < spans.length; i++) {
 		var span = spans[i];
-		var text = window[fn](span.getAttribute("data-rot"));
+		var old = _rot_js_entity_decode(span.getAttribute("data-rot"));
+		var text = window[fn](old);
 		span.innerHTML = text;
 	}
 }
