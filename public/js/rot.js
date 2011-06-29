@@ -61,8 +61,8 @@ function rot_fn(fn) {
 		var span = spans[i];
 		var children = span.childNodes;
 		var text = window[fn](children[0].innerHTML);
-		span.removeChild(children[0]);
-		span.removeChild(children[1]);
+		children[0].style.display = 'none';
+		children[1].style.display = 'none';
 		span.appendChild(document.createTextNode(text));
 	}
 }
