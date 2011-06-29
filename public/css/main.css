@@ -4,6 +4,10 @@ body {
 	height: 100%;
 }
 
+.wf-active body {
+	font-family: Arimo,"DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
+}
+
 /* Fixes for HTML5 docs in non-HTML5-compat browsers */
 header, footer, article, section {
 	display: block;
@@ -21,6 +25,10 @@ header, footer, article, section {
 
 .func, .monospace, code {
 	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
+}
+
+.wf-active .func, .wf-active .monospace, .wf-active code {
+	font-family: Inconsolata, "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
 }
 
 code {
@@ -129,6 +137,14 @@ h1 { font-size:1.5em; }
 h2 { font-size:1.4em; }
 h3 { font-size:1.1em; }
 h4, h5, h6 { font-size:1.1em; }
+
+.wf-active h1, .wf-active h2, .wf-active h3,
+.wf-active h4, .wf-active h5, .wf-active h6 {
+	font-family: Amaranth,"DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
+}
+
+.wf-active h1 { letter-spacing: 2pt; }
+.wf-active h2 { letter-spacing: 1pt; }
 
 /* Clearfix, see http://www.positioniseverything.net/easyclearing.html under '"Clearing", 21st Century Style' */
 .clearfix:after {

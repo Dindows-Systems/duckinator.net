@@ -7,6 +7,22 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<title>{{ pretitle }}{{ title }}</title>
+    <script type="text/javascript">
+		WebFontConfig = {
+			google: { families: [    'Amaranth:bold,bolditalic,italic,regular',
+			                            'Arimo:bold,bolditalic,italic,regular',
+			                      'Inconsolata:bold,bolditalic,italic,regular' ] }
+		};
+		(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})();
+	</script>
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<link rel="stylesheet" type="text/css" href="/theme/theme.css">
 	<!--<script type="text/javascript" src="/js/fool.js"></script>-->
