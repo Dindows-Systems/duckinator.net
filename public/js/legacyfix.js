@@ -2,7 +2,7 @@ function _legacy_moz_fix_tag(tag) {
 	tags = document.getElementsByTagName(tag);
 	if(tags[0] && (tags[0].getAttribute('_moz-userdefined') != null)) {
 		for(var i in tags) {
-			if('style' in tags[i])
+			if(tags[i].style)
 				tags[i].style.display='none';
 		}
 	}	
