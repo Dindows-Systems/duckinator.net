@@ -80,6 +80,9 @@ function rot_fn(fn) {
 }
 
 function rot_all() {
+	if(!('getElementsByClassName' in document))
+		return false;
+
 	var types = ['rot5', 'rot13', 'rot47'];
 	for(var i = 0; i < types.length; i++) {
 		rot_fn(types[i]);
