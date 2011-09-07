@@ -84,7 +84,14 @@ a:hover {
   color: #AAA;
 }
 
-#breadcrumbs a:not(:hover) {
+/* This > is not needed, it's a hack because cloudflare changes:
+ *    #breadcrumbs a:not(:hover) {
+ * to:
+ *    #breadcrumbsa:not(:hover) {
+ * instead of:
+ *    #breadcrumbs a:not(:hover){
+ */
+#breadcrumbs > a:not(:hover) {
   text-decoration: none;
 }
 
