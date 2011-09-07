@@ -107,6 +107,33 @@ a:hover {
   text-decoration: none;
 }
 
+#navbar, #navbar * {
+  background-color: #DDD;
+  color: #222;
+}
+
+#navbar > li {
+  display: inline-block;
+  list-style: none;
+}
+
+#navbar > li:not(:last-child):after {
+  content: '\B7';
+	opacity: 0.5;
+	font-weight: bold;
+  padding-left: 5px;
+}
+
+#navbar li > ul {
+  display: none;
+  position: absolute;
+}
+
+
+#navbar li:hover > ul {
+  display: block;
+}
+
   </style>
 </head>
 
