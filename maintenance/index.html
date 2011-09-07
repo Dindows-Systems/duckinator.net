@@ -1,11 +1,164 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>duckinator.net (under maintenance)</title>
-  </head>
-  <body>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>duckinator.net</title>
+	<style type="text/css">
+/* main.css */
+
+body {
+	font-size: 100%;
+	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
+	height: 100%;
+}
+
+/* Fixes for HTML5 docs in non-HTML5-compat browsers */
+header, footer, article, section {
+	display: block;
+}
+
+.dot {
+	opacity: 0.5;
+	font-weight: bold;
+}
+
+.text-content, p {
+	line-height: 150%;
+	text-align: justify;
+}
+
+.func, .monospace, code {
+	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
+}
+
+code {
+	border: 1px solid;
+	margin: 15px;
+	padding: 15px;
+	display: block;
+}
+
+code * {
+	border: none;
+}
+
+p code, span code, li code {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0px;
+	display: inline;
+}
+
+img {
+	border: none;
+}
+
+h1 { font-size:1.5em; }
+h2 { font-size:1.4em; }
+h3 { font-size:1.1em; }
+h4, h5, h6 { font-size:1.1em; }
+
+/* Clearfix, see http://www.positioniseverything.net/easyclearing.html under '"Clearing", 21st Century Style' */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+
+/* theme.css */
+
+* {
+  background-color: #222;
+  color: #DDD;
+  border-color: #DDD;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #AAA;
+}
+
+#breadcrumbs a:not(:hover) {
+  text-decoration: none;
+}
+
+#breadcrumbs a:hover {
+  color: #BBB;
+}
+
+#breadcrumbs a:last-child {
+  text-decoration: underline;
+}
+
+#breadcrumbs a:last-child:hover {
+  text-decoration: none;
+}
+
+  </style>
+</head>
+
+<body>
+	<header class="clearfix">
+		<nav>
+			<h1 id="breadcrumbs">
+        <a href="/">duckinator.net</a>
+        /
+        <a href="#">path</a>
+        /
+        <a href="#">to</a>
+        /
+        <a href="#">where</a>
+        /
+        <a href="#">you</a>
+        /
+        <a href="#">are</a>
+			</h1>
+			<ul id="navbar">
+				<li><a href="/">Home</a></li>
+				<li><a href="/dux/">dux</a>
+				<ul>
+						<li><a href="/dux/api/v0.1.0/">API documentation</a></li>
+						<li><a href="/dux/metodo/">metodo</a></li>
+				</ul>
+				</li>
+				<li><a href="/resources/">Resources and Links</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<article id="content">
     <p>Hi, you're probably here looking for my site.</p>
     <p>It's embarassing, and getting lots of hits, so I'm hiding it. Come back soon, though!</p>
     <p>Maybe I'll actually rewrite it now :)</p>
-  </body>
+	</article>
+
+	<footer>
+		<p>Copyright &copy; 2011 Nick Markwell. All rights reserved.</p>
+		<div>
+			<a href="http://validator.w3.org/check?uri=referer">HTML5</a>
+			<span class="dot">&middot;</span>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS3</a>
+			<span class="dot">&middot;</span>
+			<a href="http://github.com/duckinator/duckinator.net">Open Source</a>
+			<span class="dot">&middot;</span>
+			<a href="/sitemap">Sitemap</a>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="/js/legacyfix.js"></script>
+	<script type="text/javascript" src="/js/rot.js"></script>
+	<script type="text/javascript" src="/js/mail.js"></script>
+	<script type="text/javascript">
+		legacyfix();
+		rot_all();
+		mailfix();
+	</script>
+</body>
 </html>
