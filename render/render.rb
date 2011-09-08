@@ -119,7 +119,7 @@ class Renderer
                                        'title'       => @config['environment']['title'].value)
     parse_liquid(@template, 'breadcrumbs' => breadcrumbs,
                             'content'     => raw_text,
-                            'title'       => @config['environment']['title'].value)
+                            'title'       => @config['environment']['title'].value).strip
   end
 
   def parse_liquid(text, opts)
