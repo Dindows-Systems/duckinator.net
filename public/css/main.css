@@ -1,11 +1,11 @@
+/* main.css */
+
 body {
+  margin: 15px;
+  padding: 0px;
 	font-size: 100%;
 	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
 	height: 100%;
-}
-
-.wf-active body {
-	font-family: "Open Sans","DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
 }
 
 /* Fixes for HTML5 docs in non-HTML5-compat browsers */
@@ -25,10 +25,6 @@ header, footer, article, section {
 
 .func, .monospace, code {
 	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
-}
-
-.wf-active .func, .wf-active .monospace, .wf-active code {
-	font-family: Inconsolata, "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
 }
 
 code {
@@ -55,91 +51,10 @@ img {
 	border: none;
 }
 
-header, #content {
-	border: 5px solid;
-}
-
-header h1 {
-	margin-top: 0px;
-	padding: 10px;
-	padding-bottom: 0px;
-}
-
-body header {
-	background-image: url("/theme/header.jpg");
-	background-repeat: no-repeat;
-	border-bottom-width: 0px;
-	min-height: 300px;
-}
-
-body header, body article {
-	margin: auto;
-	width: 800px;
-}
-
-body article > * {
-	margin-left: 30px;
-	margin-right: 30px;
-}
-
-
-footer {
-	padding-bottom: 20px;
-	width: 100%;
-	text-align: center;
-}
-
-footer p, footer div {
-	text-align: center;
-}
-
-#navbar {
-	list-style: none;
-	margin: 1em 2em;
-	padding: 0.5em;
-	width: 11em;
-	/*width: 15em;*/
-	/*width: 8em;*/
-	border: 1px solid transparent;
-}
-
-#navbar ul {
-	list-style-type:none; padding-left:1em;
-}
-
-#navbar li a:link,
-#navbar li a:visited {
-	border: none;
-}
-
-a:link,
-a:visited,
-span a.aptureLink:link,
-span a.aptureLink:visited {
-	text-decoration: none;
-	/* Tacked on "!important"s to get control
-	 * back from Apture. Definitely worth it. */
-	border-bottom: 1px dotted !important;
-}
-
-a:focus,
-a:hover,
-a:active,
-span a.aptureLink:focus,
-span a.aptureLink:hover {
-	/* Tacked on "!important"s to get control
-	 * back from Apture. Definitely worth it. */
-	text-decoration: none !important;
-	border-bottom: 1px solid !important;
-}
-
 h1 { font-size:1.5em; }
 h2 { font-size:1.4em; }
 h3 { font-size:1.1em; }
 h4, h5, h6 { font-size:1.1em; }
-
-.wf-active h1 { letter-spacing: 2pt; }
-.wf-active h2 { letter-spacing: 1pt; }
 
 /* Clearfix, see http://www.positioniseverything.net/easyclearing.html under '"Clearing", 21st Century Style' */
 .clearfix:after {
@@ -150,8 +65,110 @@ h4, h5, h6 { font-size:1.1em; }
 	visibility: hidden;
 }
 
-/* See: http://www.viglink.com/policies/ftc */
-.viglink-icon {
-	background: url("http://duckinator.net/images/16x16/viglink.png") no-repeat scroll 0% 50% transparent;
-	padding-left: 18px;
+
+
+/* theme.css */
+
+* {
+  background-color: #222;
+  color: #DDD;
+  border-color: #DDD;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #AAA;
+}
+
+#breadcrumbs a:not(:hover) {
+  text-decoration: none;
+}
+
+#breadcrumbs a:hover {
+  color: #BBB;
+}
+
+#breadcrumbs a:last-child {
+  text-decoration: underline;
+}
+
+#breadcrumbs a:last-child:hover {
+  text-decoration: none;
+}
+
+#navbar {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 20px;
+}
+
+#navbar, #navbar * {
+  background-color: #DDD;
+  color: #222;
+}
+
+#navbar li:hover > a, #navbar li:hover {
+  background-color: #222;
+  color: #DDD;
+}
+
+#navbar > li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 10px;
+  padding: 4px;
+}
+
+#navbar li > ul {
+  visibility: hidden;
+  position: absolute;
+  list-style: none;
+  margin-left: -14px;
+  margin-top: 4px;
+  padding: 10px;
+  opacity: 0;
+
+  -webkit-border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -ms-border-radius: 0px 0px 5px 5px;
+  -o-border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#navbar li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+
+  -webkit-transition: opacity .25s linear 0s;
+  -moz-transition: opacity .25s linear 0s;
+  -ms-transition: opacity .25s linear 0s;
+  -o-transition: opacity .25s linear 0s;
+  transition: opacity .25s linear 0s;
+}
+
+#navbar li > ul > li > a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+#navbar li > ul > li {
+  margin-top: 2px;
+  padding: 4px;
+}
+
+article {
+  min-height: 150px;
+}
+
+footer {
+  margin-top: 40px;
+  border-top: 2px solid;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+footer > * {
+  margin-left: 15px;
+  margin-right: 15px;
 }
