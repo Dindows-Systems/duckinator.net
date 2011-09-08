@@ -1,4 +1,4 @@
-class BreadCrumb
+class BreadCrumb < Liquid::Drop
   attr_accessor :name, :url
   def initialize(name, url)
     @name, @url = name, url
@@ -12,11 +12,11 @@ class BreadCrumbs
   end
 
   def get
-    parts = @file.split('/')
+    parts = @file.split('/')[4..-1]
     ret = []
-    (1..parts.length).map do |i|
+    parts.length.times do |i|
       if File.directory?(File.join(File.dirname(__FILE__), '..', 'public', *parts[0..i]))
-        ret << BreadCrumb.new(parts[i], parts[0..i].join('/'))
+        ret << BreadCrumb.new(parts[i], '/'+parts[0..i].join('/'))
       end
     end
     ret
