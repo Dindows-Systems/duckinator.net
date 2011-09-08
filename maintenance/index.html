@@ -113,27 +113,47 @@ a:hover {
   color: #222;
 }
 
+#navbar li:hover > a, #navbar li:hover {
+  background-color: #222;
+  color: #DDD;
+}
+
 #navbar > li {
   display: inline-block;
   list-style: none;
   margin-right: 10px;
+  padding: 4px;
 }
 
 #navbar li > ul {
   display: none;
-  position: absolute;
 }
 
 
 #navbar li:hover > ul {
   display: block;
+  position: absolute;
   list-style: none;
-  margin-left: 0px;
+  margin-left: -10px;
+  margin-top: 4px;
   padding: 10px;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
 
-#navbar li:hover > ul > li:not(:first-child) {
-  padding-top: 10px;
+#navbar li:hover > ul > li > a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+#navbar li:hover > ul > li {
+  margin-top: 2px;
+  padding: 4px;
 }
 
 article {
