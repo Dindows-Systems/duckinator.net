@@ -19,27 +19,12 @@ class Renderer
     Liquid::Template.register_filter(TextFilter)
     @old_root = File.join(File.dirname(__FILE__), '..', 'public')
     @new_root = File.join(File.dirname(__FILE__), '..', 'static')
-    @theme_old_root = File.join(@old_root, 'themes', @config['environment']['theme'].value)
-    @theme_new_root = File.join(@new_root, 'themes', @config['environment']['theme'].value)
-    @theme_dir      = File.join(@new_root, 'theme')
 
     @template = File.open(File.join(File.dirname(__FILE__), '..', 'template.html')) do |f|
       f.read
     end
 
     FileUtils.mkdir_p(@new_root)
-  end
-
-  def in_theme_dir?(file)
-    file.start_with?(@theme_old_root) || file.start_with?(@theme_new_root)
-  end
-
-  def theme_dir_fix(file)
-    if in_theme_dir?(file)
-      file.gsub(@theme_old_root, @theme_dir).gsub(@theme_new_root, @theme_dir)
-    else
-      file
-    end
   end
 
   def css?(file)
@@ -80,7 +65,6 @@ class Renderer
   end
 
   def save_file(file, content)
-    file = theme_dir_fix(file)
     FileUtils.mkdir_p(File.expand_path(File.dirname(file)))
     File.open(file, 'wb') do |f|
       f.print content
