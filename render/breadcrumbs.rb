@@ -8,7 +8,9 @@ end
 
 class BreadCrumbs
   def initialize(file)
-    @file = file
+    @file = File.expand_path(file)
+    dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'public'))
+    @file.sub!(dir, '')
   end
 
   def get
