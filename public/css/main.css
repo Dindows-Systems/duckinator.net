@@ -90,10 +90,12 @@ a:hover {
 
 #breadcrumbs a:last-child {
 	text-decoration: underline;
+	color: #BBB;
 }
 
 #breadcrumbs a:last-child:hover {
 	text-decoration: none;
+	color: #DDD;
 }
 
 #navbar {
