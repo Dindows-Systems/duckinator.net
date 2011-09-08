@@ -12,7 +12,7 @@ class BreadCrumbs
   end
 
   def get
-    parts = @file.split('/')[4..-1]
+    parts = @file.split('/')[1..-1]
     ret = []
     parts.length.times do |i|
       if File.directory?(File.join(File.dirname(__FILE__), '..', 'public', *parts[0..i]))
