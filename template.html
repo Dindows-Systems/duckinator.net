@@ -34,9 +34,14 @@
 		</nav>
 	</header>
 
-	<article id="content">
+	<div id="wrap">
+		<article id="content">
 {{ content | markdown }}
-	</article>
+		</article>
+		<div id="right">
+			
+		</div>
+	</div>
 
 	<footer>
 		<p>Copyright &copy; {{ "%Y" | date }} Nick Markwell. All rights reserved.</p>
@@ -54,10 +59,14 @@
 	<script type="text/javascript" src="/js/legacyfix.js"></script>
 	<script type="text/javascript" src="/js/rot.js"></script>
 	<script type="text/javascript" src="/js/mail.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.tweets.0.2.js"></script>
+	<script type="text/javascript" src="/js/twitter.js"></script>
 	<script type="text/javascript">
 		legacyfix();
 		rot_all();
 		mailfix();
+		twitter('duckinator', '#twitter');
 	</script>
 </body>
 </html>

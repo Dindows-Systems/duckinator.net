@@ -159,8 +159,18 @@ a:hover {
 	padding: 4px;
 }
 
-article {
+#wrap {
 	min-height: 150px;
+	width: 90%;
+	text-align: center;
+}
+
+#article {
+	float: left;
+}
+
+#right {
+	float: right;
 }
 
 footer {
