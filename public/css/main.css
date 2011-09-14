@@ -161,7 +161,7 @@ a:hover {
 
 #wrap {
 	min-height: 150px;
-	width: 90%;
+	width: 100%;
 	text-align: center;
 }
 
@@ -171,12 +171,12 @@ a:hover {
 
 #content {
 	float: left;
-	width: 80%;
+	width: 70%;
 }
 
 #right {
 	float: right;
-	width: 19%;
+	width: 29%;
 	border: 1px dotted;
 }
 
