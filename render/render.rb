@@ -39,6 +39,10 @@ class Renderer
     file.end_with?('.md') || file.end_with?('.markdown')
   end
 
+  def inc?(file)
+    file.end_with?('.inc')
+  end
+
   def render_all
     render(@old_root)
   end
@@ -52,63 +56,55 @@ class Renderer
       if File.directory?(f)
         render(f)
       elsif File.file?(f)
-        if markdown?(f)
-          puts "Rendering #{pretty}..."
-          save_static_html_file(f)
-        else
-          puts "Copying #{pretty}..."
-          copy_to_static_file(f)
-        end
+        copy_file(file)
       end
     end
     puts "Leaving #{pretty_dir}..."
   end
 
-  def save_file(file, content)
-    FileUtils.mkdir_p(File.expand_path(File.dirname(file)))
-    File.open(file, 'wb') do |f|
-      f.print content
-    end
-  end
-
-  def copy_to_static_file(file)
-    if css?(file) || javascript?(file)
-      text = generate_file(file)
-    else
-      text = File.open(file, 'rb') {|f| f.read }
-    end
+  def copy_file(file, raw = true)
+    text = File.open(file, 'rb') {|f| f.read }
+    
     old_file = File.join(File.expand_path(File.dirname(file)), File.basename(file))
     new_file = file.gsub(@old_root, @new_root)
     save_file(new_file, text)
   end
 
-  def save_static_html_file(file)
-    text = generate_html(file)
+  def save_file(file, text)
     old_file = File.join(File.expand_path(File.dirname(file)), File.basename(file))
-    new_file = file.gsub(@old_root, @new_root).gsub(/\.(md|markdown)$/, '.html')
-    save_file(new_file, text)
-  end
+    new_file = old_file.sub(@old_root, @new_root)
 
-  def generate_file(file)
-    raw_text = File.open(file) {|f| f.read }
-    breadcrumbs = BreadCrumbs.new(file)
-    parse_liquid(raw_text, 'breadcrumbs' => breadcrumbs,
-                           'title'       => @config['environment']['title'].value)
-  end
-
-  def generate_html(file)
-    raw_text = File.open(file) {|f| f.read }
-    breadcrumbs = BreadCrumbs.new(file)
-    raw_text = parse_liquid(raw_text,  'breadcrumbs' => breadcrumbs,
-                                       'title'       => @config['environment']['title'].value)
-    parse_liquid(@template, 'breadcrumbs' => breadcrumbs,
-                            'content'     => raw_text,
-                            'title'       => @config['environment']['title'].value).strip
+    if markdown?(file) || inc?(file)
+      text = generate_html(file)
+      new_file.sub!(/\.(md|markdown|inc)$/, '.html')
+    else
+      text = File.open(old_file, 'rb') {|f| f.read }
+    end
+    
+    new_dir = File.dirname(new_file).sub(@old_root, @new_root)
+    FileUtils.mkdir_p(new_dir)
+    
+    File.open(file, 'wb') {|f| f.print content }
   end
 
   def parse_liquid(text, opts)
     t = Liquid::Template.parse(text)
     t.render(opts)
+  end
+
+  def parse_file(file, html = false)
+    content = File.open(file) {|f| f.read }
+    breadcrumbs = BreadCrumbs.new(filename)
+    opts = {
+            'breadcrumbs' => breadcrumbs
+            'title'       => @config['environment']['title'].value 
+           }
+    parse_liquid(content, opts)
+    
+    return content unless html
+    
+    opts['content'] = content
+    parse_liquid(@template, opts)
   end
 end
 
