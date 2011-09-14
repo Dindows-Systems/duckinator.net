@@ -56,7 +56,7 @@ class Renderer
       if File.directory?(f)
         render(f)
       elsif File.file?(f)
-        copy_file(file)
+        copy_file(f)
       end
     end
     puts "Leaving #{pretty_dir}..."
