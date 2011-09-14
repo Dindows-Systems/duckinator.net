@@ -177,6 +177,7 @@ a:hover {
 #right {
 	float: right;
 	width: 19%;
+	border: 1px dotted;
 }
 
 footer {
