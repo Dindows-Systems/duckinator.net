@@ -171,10 +171,12 @@ a:hover {
 
 #article {
 	float: left;
+	width: 80%;
 }
 
 #right {
 	float: right;
+	width: 19%;
 }
 
 footer {
