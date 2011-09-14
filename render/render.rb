@@ -96,7 +96,7 @@ class Renderer
     content = File.open(file) {|f| f.read }
     breadcrumbs = BreadCrumbs.new(filename)
     opts = {
-            'breadcrumbs' => breadcrumbs
+            'breadcrumbs' => breadcrumbs,
             'title'       => @config['environment']['title'].value 
            }
     parse_liquid(content, opts)
