@@ -194,6 +194,9 @@ a:hover {
 
 #twitter li {
 	padding-bottom: 10px;
+}
+
+#twitter li p  {
 	margin-left: 60px;
 	font-size: 0.9em;
 }
