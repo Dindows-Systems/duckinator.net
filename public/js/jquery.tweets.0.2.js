@@ -62,7 +62,7 @@
 		        function(data) {
 		            $.each(data.results, function(i, tweet) {
 		                if(tweet.text !== undefined) {
-		                    $(obj).append(options.before+'<img src="'+ tweet.profile_image_url +'" alt="">'+tweet.text+'<br/><small>'+relative_time(tweet.created_at)+'</small>'+options.after);
+		                    $(obj).append(options.before+'<img src="'+ tweet.profile_image_url +'" alt="">'+tweet.text+'<br/><small><a href="http://twitter.com/'+options.username+'/status/'+options.id_str+'">'+relative_time(tweet.created_at)+'</a></small>'+options.after);
 		                }
 		            });
 		        }
