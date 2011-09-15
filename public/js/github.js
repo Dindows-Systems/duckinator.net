@@ -2,8 +2,10 @@ function github(username, identifier) {
 	var items = [];
 
 	$.getJSON('https://api.github.com/users/' + username + '/repos?callback=?', function(data){
-		$('<li data-pushed-at="' + data.pushed_at + '"><p><a href="' + data.html_url + '">' + data.name + '</a> (' + data.forks + ' forks, ' + data.watchers + ' watchers)</p>' +
-			'<p>' + data.description + '</p></li>').appendTo(identifier);
+		$.each(data, function(repo){
+			$('<li data-pushed-at="' + repo.pushed_at + '"><p><a href="' + repo.html_url + '">' + repo.name + '</a> (' + repo.forks + ' forks, ' + repo.watchers + ' watchers)</p>' +
+				'<p>' + repo.description + '</p></li>').appendTo(identifier);
+		});
 	});
 
 	$(identifier + ' li').sortElements(function(a, b){
