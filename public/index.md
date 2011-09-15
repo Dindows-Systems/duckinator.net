@@ -8,6 +8,7 @@ You can visit [profile.io/duckinator](http://profile.io/duckinator) for more inf
 I have many open source projects on [github](http://github.com/duckinator/).
 
 <div id="github_wrapper">
+<p id="github_message"></p>
 <ul id="github"></ul>
 </div>
 

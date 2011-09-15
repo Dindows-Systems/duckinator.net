@@ -71,8 +71,10 @@
 		rot_all();
 		mailfix();
 
-		if ($('#github'))
+		if ($('#github')) {
+			$('#github_message').text("My 10 most recently active personal projects:");
 			github('duckinator', '#github');
+		}
 
 		// This is so people w/out JS don't see a random "Twitter" on the right
 		$('#twitter_header').text('Twitter');
