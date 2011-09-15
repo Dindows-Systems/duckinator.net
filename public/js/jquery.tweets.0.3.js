@@ -59,11 +59,11 @@
 		}
 
 		function generate_avatar(tweet) {
-			return '<a href="http://twitter.com/' + tweet.from_user + '"><img width="48" height="48" src="' + tweet.profile_image_url + '" alt=""></a>';
+			return '<p class="avatar"><a href="http://twitter.com/' + tweet.from_user + '"><img width="48" height="48" src="' + tweet.profile_image_url + '" alt=""></a></p>';
 		}
 
 		function generate_footer(tweet) {
-			return '<small><a href="http://twitter.com/' + options.username + '/status/' + tweet.id_str + '">' + relative_time(tweet.created_at) + '</a></small>';
+			return '<small class="footer"><a href="http://twitter.com/' + options.username + '/status/' + tweet.id_str + '">' + relative_time(tweet.created_at) + '</a></small>';
 		}
 
 		function linkify(text) {
@@ -94,7 +94,7 @@
 							else
 								str += tweet.text
 
-							str += '<br/>' + generate_footer(tweet) + options.after;
+							str += generate_footer(tweet) + options.after;
 							$(obj).append(str);
 						}
 					});
