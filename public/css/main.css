@@ -207,6 +207,14 @@ a:hover {
 	margin-bottom: -35px;
 }
 
+#twitter a {
+	text-decoration: none;
+}
+
+#twitter a:hover {
+	text-decoration: underline;
+}
+
 footer {
 	margin-top: 40px;
 	border-top: 2px solid;
