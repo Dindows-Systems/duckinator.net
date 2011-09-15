@@ -185,6 +185,10 @@ a:hover {
 	padding-left: 10px;
 }
 
+#right small {
+	font-size: 0.6em;
+}
+
 #twitter {
 	list-style: none;
 	margin: 0px;
