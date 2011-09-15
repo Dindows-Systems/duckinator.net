@@ -71,14 +71,21 @@
 		rot_all();
 		mailfix();
 
-		if ($('#github')) {
-			$('#github_message').text("My 10 most recently active personal projects:");
-			github('duckinator', '#github');
+		function update_github() {
+			if ($('#github')) {
+				$('#github_message').text("My 10 most recently active personal projects:");
+				github('duckinator', '#github');
+			}
 		}
 
-		// This is so people w/out JS don't see a random "Twitter" on the right
-		$('#twitter_header').text('Twitter');
-		twitter('duckinator', '#twitter');
+		function update_twitter() {
+			// This is so people w/out JS don't see a random "Twitter" on the right
+			$('#twitter_header').text('Twitter');
+			twitter('duckinator', '#twitter');
+		}
+
+		setInterval(update_github,  1200000); // Every 20 minutes
+		setInterval(update_twitter, 120000);  // Every 2  minutes
 	</script>
 </body>
 </html>
