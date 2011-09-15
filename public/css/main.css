@@ -189,8 +189,11 @@ a:hover {
 #twitter {
 	list-style: none;
 	margin: 0px;
-	padding-left: 10px;
 	padding-bottom: 5px;
+}
+
+#twitter > * {
+	padding-left: 10px;
 }
 
 #twitter li {
