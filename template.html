@@ -72,23 +72,27 @@
 		mailfix();
 
 		function update_github() {
-			if ($('#github')) {
-				$('#github_message').text("My 10 most recently active personal projects:");
-				github('duckinator', '#github');
-			}
+			$('#github').text('');
+			github('duckinator', '#github');
 		}
 
 		function update_twitter() {
-			// This is so people w/out JS don't see a random "Twitter" on the right
-			$('#twitter_header').text('Twitter');
+			$('#twitter').text('');
 			twitter('duckinator', '#twitter');
 		}
 
-		update_github();  // Initial update
-		update_twitter(); // Initial update
+		if ($('#github')) {
+			$('#github_message').text("My 10 most recently active personal projects:");
+			update_github();  // Initial update
+			setInterval(update_github,  1200000); // Every 20 minutes
+		}
 
-		setInterval(update_github,  1200000); // Every 20 minutes
-		setInterval(update_twitter, 120000);  // Every 2  minutes
+		if ($('#twitter')) {
+			// This is so people w/out JS don't see a random "Twitter" on the right
+			$('#twitter_header').text('Twitter');
+			update_twitter(); // Initial update
+			setInterval(update_twitter, 120000);  // Every 2  minutes
+		}
 	</script>
 </body>
 </html>
