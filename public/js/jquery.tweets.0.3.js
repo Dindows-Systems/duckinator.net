@@ -89,10 +89,13 @@
 							if (options.avatar)
 								str += generate_avatar(tweet);
 
+							str += '<p class="text">';
 							if (options.linkify)
 								str += linkify(tweet.text)
 							else
 								str += tweet.text
+
+							p += '</p>';
 
 							str += generate_footer(tweet) + options.after;
 							$(obj).append(str);
