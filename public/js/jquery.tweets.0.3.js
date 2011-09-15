@@ -95,7 +95,7 @@
 							else
 								str += tweet.text
 
-							p += '</p>';
+							str += '</p>';
 
 							str += generate_footer(tweet) + options.after;
 							$(obj).append(str);
