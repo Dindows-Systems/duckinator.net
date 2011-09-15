@@ -58,7 +58,7 @@ h4, h5, h6 { font-size:1.1em; }
 
 /* Clearfix, see http://www.positioniseverything.net/easyclearing.html under '"Clearing", 21st Century Style' */
 .clearfix:after,
-#twitter li {
+#twitter li:after {
 	content: ".";
 	display: block;
 	height: 0;
