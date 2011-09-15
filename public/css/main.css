@@ -230,14 +230,10 @@ a:hover {
 	padding-left: 10px;
 }
 
-#github li {
-	margin-top: 5px;
-	margin-bottom: 5px;
-	-webkit-border-radius: 1em;
-	-moz-border-radius: 1em;
-	-ms-border-radius: 1em;
-	-o-border-radius: 1em;
-	border-radius: 1em;
+#github li, #twitter li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top: 1px dotted;
 }
 
 #github p {
@@ -245,7 +241,6 @@ a:hover {
 }
 
 #github p:first-child {
-	border-bottom: 1px dotted;
 	padding-left: 10px;
 	padding-right: 10px;
 }
