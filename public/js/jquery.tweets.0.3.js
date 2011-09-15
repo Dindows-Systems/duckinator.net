@@ -59,7 +59,7 @@
 		}
 
 		function generate_avatar(tweet) {
-			return '<a href="http://twitter.com/"' + tweet.from_user + '"><img src="' + tweet.profile_image_url + '" alt=""></a>';
+			return '<a href="http://twitter.com/' + tweet.from_user + '"><img src="' + tweet.profile_image_url + '" alt=""></a>';
 		}
 
 		function generate_footer(tweet) {
