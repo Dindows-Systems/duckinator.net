@@ -63,7 +63,7 @@
 		}
 
 		function generate_footer(tweet) {
-			return '<small><a href="http://twitter.com/' + options.username + '/status/' + options.id_str + '">' + relative_time(tweet.created_at) + '</a></small>';
+			return '<small><a href="http://twitter.com/' + options.username + '/status/' + tweet.id_str + '">' + relative_time(tweet.created_at) + '</a></small>';
 		}
 
 		function linkify(text) {
