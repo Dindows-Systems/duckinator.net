@@ -188,11 +188,12 @@ a:hover {
 }
 
 #twitter li {
-	margin-left: 50px;
+	padding-bottom: 10px;
+	margin-left: 55px;
 }
 
 #twitter li img {
-	margin-left: -50px;
+	margin-left: -55px;
 	margin-bottom: -35px;
 }
 
