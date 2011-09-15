@@ -84,6 +84,9 @@
 			twitter('duckinator', '#twitter');
 		}
 
+		update_github();  // Initial update
+		update_twitter(); // Initial update
+
 		setInterval(update_github,  1200000); // Every 20 minutes
 		setInterval(update_twitter, 120000);  // Every 2  minutes
 	</script>
