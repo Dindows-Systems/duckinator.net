@@ -245,7 +245,7 @@ a:hover {
 }
 
 #github p:first-child {
-	border-top: 1px dotted;
+	border-bottom: 1px dotted;
 	padding-left: 10px;
 	padding-right: 10px;
 }
