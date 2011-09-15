@@ -7,7 +7,9 @@ You can visit [profile.io/duckinator](http://profile.io/duckinator) for more inf
 ## Projects ##
 I have many open source projects on [github](http://github.com/duckinator/).
 
-<div id="github"></div>
+<div id="github_wrapper">
+<ul id="github"></ul>
+</div>
 
 ## duckinator.net is open source ##
 
