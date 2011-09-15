@@ -13,7 +13,7 @@ function github(username, identifier, limit) {
 			return a.getAttribute('data-pushed-at') < b.getAttribute('data-pushed-at') ? 1 : -1;
 		});
 
-		$.each((identifier + ' li'), function(index, li){
+		$.each($(identifier + ' li'), function(index, li){
 			if(index >= limit)
 				li.style.display = 'none';
 		});
