@@ -23,6 +23,7 @@ Below, I've collected information about two of the more commonly used version co
 #### Git ####
 * [Detailed git tagging info](http://blog.ashchan.com/archive/2008/06/30/tags-on-git)
 * [Learn.GitHub - Git Tagging](http://learn.github.com/p/tagging.html)
+* [Help.GitHub - Remotes (managing remote tags)](http://help.github.com/remotes/)
 * [Git Reference](http://gitref.org/)
 
 #### Mercurial ####
