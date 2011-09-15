@@ -59,7 +59,7 @@
 		}
 
 		function generate_avatar(tweet) {
-			return '<p class="avatar"><a href="http://twitter.com/' + tweet.from_user + '"><img width="48" height="48" src="' + tweet.profile_image_url + '" alt=""></a></p>';
+			return '<span><a href="http://twitter.com/' + tweet.from_user + '"><img width="48" height="48" src="' + tweet.profile_image_url + '" alt=""></a></span>';
 		}
 
 		function generate_footer(tweet) {
@@ -89,13 +89,13 @@
 							if (options.avatar)
 								str += generate_avatar(tweet);
 
-							str += '<p class="text">';
+							str += '<span class="text">';
 							if (options.linkify)
 								str += linkify(tweet.text)
 							else
 								str += tweet.text
 
-							str += '</p>';
+							str += '</span>';
 
 							str += generate_footer(tweet) + options.after;
 							$(obj).append(str);
