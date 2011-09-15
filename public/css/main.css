@@ -233,6 +233,10 @@ a:hover {
 #github li {
 	margin-top: 5px;
 	margin-bottom: 5px;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	-ms-border-radius: 1em;
+	-o-border-radius: 1em;
 	border-radius: 1em;
 }
 
@@ -242,10 +246,13 @@ a:hover {
 
 #github p:first-child {
 	border-top: 1px dotted;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #github p:nth-child(2) {
-	padding-left: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #github * {
