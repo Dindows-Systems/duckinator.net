@@ -9,6 +9,6 @@ function github(username, identifier) {
 	});
 
 	$(identifier + ' li').sortElements(function(a, b){
-		return $(a).text() > $(b).text() ? 1 : -1;
+		return $(a).getAttribute('data-pushed-at') > $(b).getAttribute('data-pushed-at') ? 1 : -1;
 	});
 }
