@@ -73,9 +73,9 @@
 			var regexpUrl = /((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi;
 			var regexpUser = /[\@]+([A-Za-z0-9-_]+)/gi;
 			var regexpHash = /(?:^| )[\#]+([A-Za-z0-9-_]+)/gi;
-			text = text.replace(regexpUrl,'<a href="$1">$1</a>');
-			text = text.replace(regexpUser,'<a href="http://twitter.com/$1">@$1</a>');
-			text = text.replace(regexpHash,' <a href="https://search.twitter.com/search?tag=$1&lang=all">#$1</a>');
+			text = text.replace(regexpUrl,'<a class="link" href="$1">$1</a>');
+			text = text.replace(regexpUser,'<a class="mention" href="http://twitter.com/$1">@$1</a>');
+			text = text.replace(regexpHash,' <a class="hashtag" href="https://search.twitter.com/search?tag=$1&lang=all">#$1</a>');
 			return text;
 		}
 
