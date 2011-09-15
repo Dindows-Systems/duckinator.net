@@ -224,6 +224,20 @@ a:hover {
 	color: #DDD;
 }
 
+#github {
+	list-style: none;
+	margin: 0px;
+	padding-left: 10px;
+}
+
+#github p {
+	margin: 0px;
+}
+
+#github p:nth-child(2) {
+	padding-left: 10px;
+}
+
 footer {
 	margin-top: 40px;
 	border-top: 2px solid;
