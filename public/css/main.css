@@ -230,6 +230,11 @@ a:hover {
 	padding-left: 10px;
 }
 
+#github li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
 #github p {
 	margin: 0px;
 }
