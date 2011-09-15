@@ -180,6 +180,11 @@ a:hover {
 	border: 1px dotted;
 }
 
+#right h1 {
+	margin-left: 0px;
+	padding-left: 10px;
+}
+
 #twitter {
 	list-style: none;
 	margin: 0px;
