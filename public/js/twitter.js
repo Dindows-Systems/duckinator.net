@@ -4,7 +4,7 @@
 
 function twitter(username, identifier, show_avatar) {
   if(typeof(show_avatar) == "undefined")
-    show_avatar = false;
+    show_avatar = true;
   
   $(document).ready(function(){
     $(identifier).tweets({
