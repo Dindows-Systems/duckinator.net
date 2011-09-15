@@ -216,6 +216,14 @@ a:hover {
 	text-decoration: underline;
 }
 
+#twitter .mention {
+	color: #BBB;
+}
+
+#twitter .mention:hover {
+	color: #DDD;
+}
+
 footer {
 	margin-top: 40px;
 	border-top: 2px solid;
