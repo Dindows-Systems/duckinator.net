@@ -64,12 +64,21 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.tweets.0.3.js"></script>
 	<script type="text/javascript" src="/js/twitter.js"></script>
+	<script type="text/javascript" src="/js/github.js"></script>
 	<script type="text/javascript">
 		legacyfix();
 		rot_all();
 		mailfix();
 
-		// This is just so people w/out JS don't see a random "Twitter" on the right
+		if($('#github')) {
+			$('#github').github({
+				user: 'duckinator',
+				forks: true,
+				tpl: '<li><p><a href="%url%">%name%</a> (<span class="forks">%forks%</span> forks, <span class="watchers">%watchers%</span> watchers)</p><p class="description">%description%</p></li>'
+			});
+		}
+
+		// This is so people w/out JS don't see a random "Twitter" on the right
 		$('#twitter_header').text('Twitter');
 		twitter('duckinator', '#twitter');
 	</script>
