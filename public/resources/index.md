@@ -3,11 +3,8 @@
 ## My stuff ##
 
 * [Blog](http://blog.duckinator.net)
-* [a-pastebin.co.cc](http://a-pastebin.co.cc)
 * [Photo gallery](http://gallery.duckinator.net)
-* [Miscellaneous](http://misc.duckinator.net)
-* [Screenshots](http://misc.duckinator.net/ss)
-* [3D shapes on GBA](http://misc.duckinator.net/dux/gba/3d.php)
+* [Screenshots](http://ss.duckinator.net/)
 
 ## Software ##
 
@@ -25,7 +22,8 @@ Below, I've collected information about two of the more commonly used version co
 
 #### Git ####
 * [Detailed git tagging info](http://blog.ashchan.com/archive/2008/06/30/tags-on-git)
-* [Short git tagging cheatsheet](http://blog.andrewcantino.com/2008/12/04/adding-and-removing-remote-git-tags)
+* [Learn.GitHub - Git Tagging](http://learn.github.com/p/tagging.html)
+* [Git Reference](http://gitref.org/)
 
 #### Mercurial ####
 * [Mercurial tutorial](http://mercurial.selenic.com/wiki/Tutorial)
