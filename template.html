@@ -76,23 +76,28 @@
 			github('duckinator', '#github');
 		}
 
-		function update_twitter() {
-			$('#twitter').text('');
-			twitter('duckinator', '#twitter');
+		function update_twitter(num_tweets) {
+			if(typeof(num_tweets) == "undefined")
+				num_tweets = 1;
+
+			//$('#twitter').text('');
+			twitter('duckinator', '#twitter', num_tweets);
 		}
 
-		if ($('#github')) {
-			$('#github_message').text("My 10 most recently active personal projects:");
-			update_github();  // Initial update
-			setInterval(update_github,  1200000); // Every 20 minutes
-		}
+		$(document).ready(function(){
+			if ($('#github')) {
+				$('#github_message').text("My 10 most recently active personal projects:");
+				update_github();  // Initial update
+				setInterval(update_github,  1200000); // Every 20 minutes
+			}
 
-		if ($('#twitter')) {
-			// This is so people w/out JS don't see a random "Twitter" on the right
-			$('#twitter_header').text('Twitter');
-			update_twitter(); // Initial update
-			setInterval(update_twitter, 120000);  // Every 2  minutes
-		}
+			if ($('#twitter')) {
+				// This is so people w/out JS don't see a random "Twitter" on the right
+				$('#twitter_header').text('Twitter');
+				update_twitter(4); // Initial update
+				setInterval(update_twitter, 120000);  // Every 2  minutes
+			}
+		});
 	</script>
 </body>
 </html>
