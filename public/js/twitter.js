@@ -4,7 +4,7 @@
  *+  https://github.com/duckinator/jQuery-Tweets
  */
 
-function twitter(username, identifier, num_tweets show_avatar) {
+function twitter(username, identifier, num_tweets, show_avatar) {
   if(typeof(num_tweets) == "undefined")
     num_tweets = 4;
 
