@@ -84,6 +84,9 @@
 			$('#twitter').text('');
 			twitter('duckinator', '#twitter', num_tweets);
 			$('#twitter').append(old);
+			$('#twitter li').sortElements(function(a, b){
+				$(a).children('small')[0].getAttribute('data-time') < $(b).children('small')[0].getAttribute('data-time') ? 1 : -1;
+			});
 		}
 
 		$(document).ready(function(){
