@@ -80,7 +80,7 @@
 			if(typeof(num_tweets) == "undefined")
 				num_tweets = 1;
 
-			old = $('#twitter').text();
+			old = $('#twitter').html();
 			$('#twitter').text('');
 			twitter('duckinator', '#twitter', num_tweets);
 			$('#twitter').append(old);
