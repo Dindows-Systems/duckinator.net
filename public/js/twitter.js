@@ -15,6 +15,5 @@ function twitter(username, identifier, num_tweets, show_avatar) {
     tweets: num_tweets,
     username: username,
     avatar: show_avatar,
-    prepend: true,
   });
 }

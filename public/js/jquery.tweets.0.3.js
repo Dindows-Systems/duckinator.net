@@ -38,7 +38,6 @@
 			loader: true,
 			avatar: true,
 			linkify: true,
-			prepend: false,
 		};
 		var options = $.extend(defaults, options);
 		function relative_time(time_value) {
@@ -99,11 +98,7 @@
 							str += '</span>';
 
 							str += generate_footer(tweet) + options.after;
-							if(options.prepend == true) {
-								$(obj).prepend(str);
-							} else {
-								$(obj).append(str);
-							}
+							$(obj).append(str);
 						}
 					});
 				}
