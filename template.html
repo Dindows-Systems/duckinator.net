@@ -76,17 +76,9 @@
 			github('duckinator', '#github');
 		}
 
-		function update_twitter(num_tweets) {
-			if(typeof(num_tweets) == "undefined")
-				num_tweets = 1;
-
-			old = $('#twitter').html();
+		function update_twitter() {
 			$('#twitter').text('');
-			twitter('duckinator', '#twitter', num_tweets);
-			$('#twitter').append(old);
-			$('#twitter li').sortElements(function(a, b){
-				$(a).children('small')[0].getAttribute('data-time') < $(b).children('small')[0].getAttribute('data-time') ? 1 : -1;
-			});
+			twitter('duckinator', '#twitter');
 		}
 
 		$(document).ready(function(){
@@ -102,7 +94,7 @@
 				update_twitter(4); // Initial update
 				setInterval(update_twitter, 120000);  // Every 2  minutes
 			}
-		});
+		})
 	</script>
 </body>
 </html>
