@@ -67,10 +67,6 @@
 	<script type="text/javascript" src="/js/jquery.sortElements.js"></script>
 	<script type="text/javascript" src="/js/github.js"></script>
 	<script type="text/javascript">
-		legacyfix();
-		rot_all();
-		mailfix();
-
 		function update_github() {
 			$('#github').text('');
 			github('duckinator', '#github');
@@ -82,6 +78,10 @@
 		}
 
 		$(document).ready(function(){
+			legacyfix();
+			rot_all();
+			mailfix();
+
 			if ($('#github')) {
 				$('#github_message').text("My 10 most recently active personal projects:");
 				update_github();  // Initial update
