@@ -2,9 +2,9 @@
 
 DIR=$(dirname $(readlink -f $0)) # Directory script is in
 
-cd $DIR/public/js
+cd $DIR/static/js
 
-echo > all.min.js
+echo > all.js
 
 for x in `ls *.js | grep -v 'all.js'`; do
     echo   >> all.js
