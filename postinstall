@@ -1,4 +1,4 @@
 #!/bin/bash
 
 /home/dotcloud/code/render/render.rb
-/home/dotcloud/code/minify-css.sh
+

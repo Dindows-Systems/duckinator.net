@@ -2,12 +2,7 @@
 
 DIR=$(dirname $(readlink -f $0)) # Directory script is in
 
-if [ ! -d "$DIR/static" ]; then
-    echo "Please run $0 *after* rendering the html"
-    exit 1
-fi
-
-cd $DIR/static/css
+cd $DIR/public/css
 
 which yuicompressor &>/dev/null || { echo "Please run ./get_yuicompressor.sh before running $0"; exit 1; }
 
