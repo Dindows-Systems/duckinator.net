@@ -202,7 +202,7 @@ a:hover {
 	min-height: 50px;
 }
 
-#twitter li span {
+#twitter span {
 	font-size: 0.9em;
 }
 
@@ -212,7 +212,7 @@ a:hover {
 	margin-top: -55px;
 }
 
-#twitter li img {
+#twitter img {
 	padding-right: 10px;
 }
 
