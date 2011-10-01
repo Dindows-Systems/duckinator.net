@@ -1,4 +1,5 @@
 #!/bin/bash
 
 /home/dotcloud/code/render/render.rb
+/home/dotcloud/code/render/combine-js.sh
 
