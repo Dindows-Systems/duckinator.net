@@ -8,7 +8,7 @@
 
 ## Software ##
 
-### Emualtors and Simulators ###
+### Emulators and Simulators ###
 * [Bochs](http://wiki.osdev.org/Bochs)
 * [VirtualBox](http://wiki.osdev.org/VirtualBox) ([official site](http://virtualbox.org))
 * [QEMU](http://wiki.osdev.org/QEMU) ([official site](http://qemu.org))
