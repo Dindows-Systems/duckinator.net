@@ -28,5 +28,9 @@ $(document).ready(function(){
 });
 
 Konami.init(function(){
-    alert('Tada?');
+    b = $('body')[0];
+    if (b.getAttribute('class') == 'konami')
+        b.setAttribute('class','');
+    else
+        b.setAttribute('class','konami');
 });
