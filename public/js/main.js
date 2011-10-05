@@ -28,9 +28,8 @@ $(document).ready(function(){
 });
 
 Konami.init(function(){
-    b = $('body')[0];
-    if (b.getAttribute('class') == 'konami')
-        b.setAttribute('class','');
+    if ($('body')[0].getAttribute('class') == 'konami')
+        $('body')[0].setAttribute('class','');
     else
-        b.setAttribute('class','konami');
+        $('body')[0].setAttribute('class','konami');
 });
