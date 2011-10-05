@@ -26,3 +26,7 @@ $(document).ready(function(){
 		setInterval(update_github,  1200000); // Every 20 minutes
 	}
 });
+
+Konami.init(function(){
+    alert('Tada?');
+});
