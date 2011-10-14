@@ -28,7 +28,7 @@ header, footer, article, section {
 }
 
 code {
-	border: 1px solid;
+	border-width: 1px;
 	margin: 15px;
 	padding: 15px;
 	display: block;
@@ -71,55 +71,90 @@ h4, h5, h6 { font-size:1.1em; }
 /* theme.css */
 
 * {
-	background-color: #222;
-	color: #DDD;
-	border-color: #DDD;
+	background-color: #D7C392;
+	color: #222;
+	border: 0px solid #333;
+}
+
+a {
+	color: #665326;
 }
 
 a:hover {
 	text-decoration: underline;
-	color: #AAA;
+	color: #8B7233;
+}
+
+#breadcrumbs {
+	margin: 0px;
+	padding: 0px;
 }
 
 #breadcrumbs a:not(:hover) {
+	color: #A4863D;
 	text-decoration: none;
 }
 
-#breadcrumbs a:hover {
-	color: #BBB;
+#breadcrumbs a:hover, #breadcrumbs a:last-child:hover {
+	color: #735d2A;
 }
 
 #breadcrumbs a:last-child {
 	text-decoration: underline;
-	color: #BBB;
-}
-
-#breadcrumbs a:last-child:hover {
-	text-decoration: none;
-	color: #DDD;
+	color: #413518;
 }
 
 #navbar {
+	margin-top: 10px;
 	margin-left: -15px;
 	margin-right: -15px;
 	padding-left: 20px;
 }
 
-#navbar, #navbar * {
-	background-color: #DDD;
-	color: #222;
+#navbar {
+	background-color: #C0A153;
 }
 
-#navbar li:hover > a, #navbar li:hover {
-	background-color: #222;
+#navbar * {
+	background-color: #A4863D;
 	color: #DDD;
 }
 
-#navbar > li {
-	display: inline-block;
+#navbar li:hover > a, #navbar li:hover {
+	background-color: #C0A054;
+}
+
+#navbar ul {
 	list-style: none;
-	margin-right: 10px;
-	padding: 4px;
+}
+
+#navbar > li {
+	display: table-cell;
+	margin: 0px;
+	padding: 5px;
+	border-width: 1px;
+}
+
+#navbar > li:first-child {
+	border-left-width: 1px;
+}
+
+#navbar > li:last-child {
+	border-right-width: 1px;
+}
+
+#navbar > li:first-child {
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#navbar > li:last-child {
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 #navbar li > ul {
@@ -127,10 +162,11 @@ a:hover {
 	position: absolute;
 	list-style: none;
 	margin-left: -14px;
-	margin-top: 4px;
+	margin-top: 5px;
 	padding: 10px;
 	opacity: 0;
 
+	border-width: 1px;
 	-webkit-border-radius: 0px 0px 5px 5px;
 	-moz-border-radius: 0px 0px 5px 5px;
 	-ms-border-radius: 0px 0px 5px 5px;
@@ -139,6 +175,7 @@ a:hover {
 }
 
 #navbar li:hover > ul {
+	padding: 0px;
 	visibility: visible;
 	opacity: 1;
 
@@ -151,13 +188,22 @@ a:hover {
 
 #navbar li > ul > li > a {
 	position: relative;
-	display: inline-block;
+	display: table-cell;
 	width: 100%;
+	margin: 0px;
+	padding: 4px;
+}
+
+#navbar li > ul > li:last-child > a {
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 #navbar li > ul > li {
-	margin-top: 2px;
-	padding: 4px;
+	margin: 0px;
+	padding: 5px;
 }
 
 #wrap {
@@ -178,7 +224,8 @@ a:hover {
 #right {
 	float: right;
 	width: 29%;
-	border: 1px dotted;
+	border-width: 1px;
+	border-style: dotted;
 }
 
 #right h1 {
@@ -230,12 +277,14 @@ a:hover {
 	text-decoration: underline;
 }
 
-#twitter .mention {
-	color: #BBB;
+#github li, #twitter li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-style: dotted;
 }
 
-#twitter .mention:hover {
-	color: #DDD;
+#twitter li {
+	border-top-width: 1px;
 }
 
 #github {
@@ -244,10 +293,15 @@ a:hover {
 	padding-left: 10px;
 }
 
-#github li, #twitter li {
-	padding-top: 5px;
-	padding-bottom: 5px;
-	border-top: 1px dotted;
+#github li {
+	padding: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+}
+
+#github li:first-child {
+	border-top-width: 1px;
 }
 
 #github p {
@@ -265,17 +319,33 @@ a:hover {
 }
 
 #github * {
-	background-color: #333;
+	/*background-color: #413518;*/
+}
+
+#github li p:first-child, #github li p:first-child * {
+	background-color: #c4a760;
 }
 
 footer {
+	clear: both;
 	margin-top: 40px;
-	border-top: 2px solid;
+	border-top-width: 1px;
 	margin-left: -15px;
 	margin-right: -15px;
 }
 
 footer > * {
+	margin: 0px;
 	margin-left: 15px;
 	margin-right: 15px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+footer p {
+	float: left;
+}
+
+footer div {
+	float: right;
 }
