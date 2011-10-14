@@ -10,7 +10,7 @@ which yuicompressor &>/dev/null || { echo "Please run ./get_yuicompressor.sh bef
 #csstidy test.css --template=highest test.min.css
 yuicompressor --type css -o main.min.css main.css
 
-cat main.min.css   >> all.min.css
+cat main.min.css    > all.min.css
 #echo               >> all.min.css
 #cat test.min.css   >> all.min.css
 
