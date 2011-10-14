@@ -26,3 +26,10 @@ $(document).ready(function(){
 		setInterval(update_github,  1200000); // Every 20 minutes
 	}
 });
+
+Konami.init(function(){
+    if ($('body')[0].getAttribute('class') == 'konami')
+        $('body')[0].setAttribute('class','');
+    else
+        $('body')[0].setAttribute('class','konami');
+});
