@@ -194,7 +194,7 @@ a:hover {
 	padding: 4px;
 }
 
-#navbar li > ul > li:last-child > a {
+#navbar li > ul > li:last-child, #navbar li > ul > li:last-child > a {
 	-moz-border-radius-bottomleft: 5px;
 	-moz-border-radius-bottomright: 5px;
 	border-bottom-left-radius: 5px;
