@@ -101,7 +101,7 @@ class Renderer
             'breadcrumbs' => breadcrumbs,
             'title'       => @config['environment']['title'].value 
            }
-    parse_liquid(content, opts)
+    content = parse_liquid(content, opts)
     
     return content unless html
     
