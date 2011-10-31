@@ -50,7 +50,6 @@ Ghost.prototype.move = function (top, left) {
 		top = $(window).height() - 70;
 
 	eyes = $(this.div.getElementsByClassName('eyes')[0]);
-	console.log(eyes);
 
 	if (top < this.top)
 		eyes.addClass('up');
