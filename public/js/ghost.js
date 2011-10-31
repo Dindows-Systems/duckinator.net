@@ -96,8 +96,13 @@ Ghost.prototype.create = function() {
 	return ghost;
 }
 
+Ghost.randomMove = function () {
+	Ghost.ghosts[0].move()
+	setTimeout(Ghost.randomMove, Math.floor(Math.random() * 10) + 5);
+}
+
 $(document).ready(function(){
 	var ghost = new Ghost($(window).height()/2,$(window).width()/2);
 	document.getElementsByTagName('body')[0].appendChild(ghost.div);
-	setInterval(function(){Ghost.ghosts[0].move()}, 10000);
+	Ghost.randomMove(); // Faily quick hack.
 });
