@@ -79,17 +79,12 @@ Ghost.prototype._createEye = function() {
 Ghost.prototype.create = function() {
 	var ghost  = this._createDiv('ghost'),
 	    inner  = this._createDiv('inner'),
-	    eyes   = this._createDiv('eyes'),
-	    bottom = this._createDiv('bottom');
+	    eyes   = this._createDiv('eyes');
 
 	eyes.appendChild(this._createEye());
 	eyes.appendChild(this._createEye());
-
-	bottom.appendChild(this._createDiv());
-	bottom.appendChild(this._createDiv());
 
 	inner.appendChild(eyes);
-	inner.appendChild(bottom);
 
 	ghost.appendChild(inner);
 
