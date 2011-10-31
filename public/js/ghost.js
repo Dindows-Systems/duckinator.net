@@ -3,6 +3,7 @@ function Ghost(top, left) {
 	this.left = left;
 	this._ghostId = Ghost.ghosts.length;
 	this.div = this.create();
+	this.moving = false;
 	this.move(top, left);
 	Ghost.ghosts.push(this);
 	$(this.div).hover(function() {
@@ -15,6 +16,10 @@ Ghost.ghosts = [];
 
 Ghost.prototype.move = function (top, left) {
 	// TODO: Make eyes move (.eyes.up, .eyes.down, .eyes.left, .eyes.right)
+	if (this.moving)
+		return;
+
+	this.moving = true;
 
 	if (typeof top == "undefined")
 		top = this.top;
@@ -57,6 +62,7 @@ Ghost.prototype.move = function (top, left) {
 
 	this.top  = top;
 	this.left = left;
+	this.moving = false;
 }
 
 Ghost.prototype._createDiv = function (className) {
