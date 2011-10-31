@@ -88,8 +88,10 @@ Ghost.prototype.create = function() {
 	bottom.appendChild(this._createDiv());
 	bottom.appendChild(this._createDiv());
 
-	ghost.appendChild(eyes);
-	ghost.appendChild(bottom);
+	inner.appendChild(eyes);
+	inner.appendChild(bottom);
+
+	ghost.appendChild(inner);
 
 	ghost.setAttribute("data-ghost-id", this._ghostId);
 
@@ -98,7 +100,7 @@ Ghost.prototype.create = function() {
 
 Ghost.randomMove = function () {
 	Ghost.ghosts[0].move()
-	setTimeout(Ghost.randomMove, Math.floor(Math.random() * 10) + 5);
+	setTimeout(Ghost.randomMove, Math.floor(Math.random() * 10) + 5000);
 }
 
 $(document).ready(function(){
