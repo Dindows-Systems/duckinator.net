@@ -49,10 +49,27 @@ Ghost.prototype.move = function (top, left) {
 	if (top >= $(window).height() - 70)
 		top = $(window).height() - 70;
 
+	eyes = $(this.div.getElementsByClassName('eyes')[0]);
+	console.log(eyes);
+
+	if (top < this.top)
+		eyes.addClass('up');
+
+	if (top > this.top)
+		eyes.addClass('down');
+
+	if (left < this.left)
+		eyes.addClass('left');
+
+	if (left > this.left)
+		eyes.addClass('right');
+
 	$(this.div).animate({
 		top:  top  + "px",
 		left: left + "px"
-	}, 1500);
+	}, 1500, function() {
+		eyes.removeClass('up down left right');
+	});
 
 	this.top  = top;
 	this.left = left;
