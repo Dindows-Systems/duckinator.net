@@ -27,9 +27,9 @@ $(document).ready(function(){
 	}
 });
 
-Konami.init(function(){
+/*Konami.init(function(){
     if ($('body')[0].getAttribute('class') == 'konami')
         $('body')[0].setAttribute('class','');
     else
         $('body')[0].setAttribute('class','konami');
-});
+});*/
