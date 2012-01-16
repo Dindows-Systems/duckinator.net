@@ -2,7 +2,7 @@ www:
     approot: .
     type: ruby
     requirements:
-        - redcarpet
+        - redcarpet=1.17.2
         - liquid
         - htmlentities
     environment:
