@@ -4,7 +4,7 @@ www:
     config:
         ruby-version: 1.9.2
     requirements:
-        - redcarpet=1.17.2
+        - redcarpet
         - liquid
         - htmlentities
     environment:
