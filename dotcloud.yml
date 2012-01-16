@@ -1,6 +1,8 @@
 www:
     approot: .
     type: ruby
+    config:
+        ruby-version: 1.9.2
     requirements:
         - redcarpet=1.17.2
         - liquid
