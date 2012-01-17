@@ -3,6 +3,10 @@ www:
     type: ruby
     config:
         ruby-version: 1.9.2
+    requirements:
+        - redcarpet -v 1.17.2
+        - liquid
+        - htmlentities
     environment:
         theme: 'fairview_pier'
         title: 'duckinator.net'
