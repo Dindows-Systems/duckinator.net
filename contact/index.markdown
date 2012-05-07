@@ -16,7 +16,8 @@ Why hello there, my friendly stalker buddy. Feel free to sneak around behind me 
 
 If you need to contact me privately, use the following:
 
+<!-- email: 5F4<o5F4<:?2E@C]?6E -->
 * Phone<span class="rot5" data-rot=""> (rot5 encoded)</span>: <span class="rot5" data-rot="095.444.3567">095.444.3567</span>
-* E-mail<span class="rot5" data-rot=""> (rot47 encoded)</span>: <span class="rot47 mail" data-rot="{{ "5F4<o5F4<:?2E@C]?6E" | htmlencode }}">{{ "5F4<o5F4<:?2E@C]?6E" | htmlencode }}</span>
+* E-mail<span class="rot5" data-rot=""> (rot47 encoded)</span>: <span class="rot47 mail" data-rot="5F4&lt;o5F4&lt;:?2E@C]?6E">5F4&lt;o5F4&lt;:?2E@C]?6E</span>
 
 <!--/sse-->
