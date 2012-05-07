@@ -5,15 +5,15 @@ server_port: 4000
 baseurl:    /
 url: http://localhost:4000
 
-source:      ./public
-destination: ../_site
-plugins:     ../_plugins
+source:      .
+destination: ./_site
+plugins:     ./_plugins
 
 future:      true
 lsi:         false
 pygments:    false
 markdown:    maruku
-permalink:   /articles/:year/:month/:day/:title/
+permalink:   /blog/:year/:month/:day/:title/
 
 layouts:
   default: default
