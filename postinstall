@@ -1,4 +1,5 @@
 #!/bin/bash
 
-/home/dotcloud/code/render/render.rb
+cd /home/dotcloud/code
+jekyll
 
