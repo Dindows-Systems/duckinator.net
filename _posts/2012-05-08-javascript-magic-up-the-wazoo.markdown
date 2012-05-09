@@ -46,7 +46,7 @@ All of these render using Canvas.
 * [jsmad (MP3)](https://github.com/ofmlabs/jsmad) - [Demo](http://codecs.ofmlabs.org)
 * [pcmdata.js (.wav)](https://github.com/jussi-kalliokoski/pcmdata.js) - No demo?
 * [mp2dec.js](https://github.com/cosinusoidally/mp2dec.js) - [Demo](http://cosinusoidally.github.com/mp2dec.js)
-* ogg/vorbis - [Demo](http://libwebpjs.hohenlimburg.org/vp8/ogg-vorbis-javascript-decoder/) (also non-FOSS?)
+* ogg/vorbis - [Demo](http://libwebpjs.hohenlimburg.org/vp8/ogg-vorbis-javascript-decoder/) (non-FOSS?)
 
 ### CAD (is that the best term for *all* of these?)
 
