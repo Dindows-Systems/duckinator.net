@@ -46,6 +46,9 @@
 
 	<div id="wrap" class="clearfix">
 		<article id="content">
+{% if page.layout == 'post' %}
+      <h1 id="post-title">{{ page.title }}</h1>
+{% endif %}
 {{ content | markdown }}
 		</article>
 		<div id="right">
