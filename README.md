@@ -10,7 +10,8 @@ This is designed as a jekyll app that uses dotcloud.
 
 Deployment:
 
+```bash
 dotcloud create YOUR_APP_NAME
 jekyll
 dotcloud push YOUR_APP_NAME
-
+```
