@@ -28,15 +28,15 @@ All of these render using Canvas.
 
 ### Plugin replacements
 
-* [shumway (Flash)](https://github.com/mozilla/shumway) - No demo?
-* [jvm-js](https://github.com/notmasteryet/jvm-js) - No demo?
-* [BicaVM (JVM)](https://github.com/nurv/BicaVM) - No demo?
+* [shumway (Flash)](https://github.com/mozilla/shumway) - No demo.
+* [jvm-js](https://github.com/notmasteryet/jvm-js) - No demo.
+* [BicaVM (JVM)](https://github.com/nurv/BicaVM) - No demo.
 
 ### Browser features
 
 * [html2canvas](http://html2canvas.hertzen.com) - [Demo](http://html2canvas.hertzen.com/screenshots.html). [Examples/tests](http://html2canvas.hertzen.com/examples.html).
 * [DrawWindow](https://github.com/bgrins/DrawWindow) - Renders HTML to Canvas. [Demos](http://bgrins.github.com/DrawWindow/)
-* [dom.js](https://github.com/andreasgal/dom.js) - Pure JavaScript implementation of the DOM. No demo?
+* [dom.js](https://github.com/andreasgal/dom.js) - Pure JavaScript implementation of the DOM. No demo.
 
 ### Audio
 
@@ -44,7 +44,7 @@ All of these render using Canvas.
 * [alac.js](https://github.com/ofmlabs/alac.js) - [Demo](http://codecs.ofmlabs.org)
 * [flac.js](https://github.com/ofmlabs/flac.js) - No demo yet.
 * [jsmad (MP3)](https://github.com/ofmlabs/jsmad) - [Demo](http://codecs.ofmlabs.org)
-* [pcmdata.js (.wav)](https://github.com/jussi-kalliokoski/pcmdata.js) - No demo?
+* [pcmdata.js (.wav)](https://github.com/jussi-kalliokoski/pcmdata.js) - No demo.
 * [mp2dec.js](https://github.com/cosinusoidally/mp2dec.js) - [Demo](http://cosinusoidally.github.com/mp2dec.js)
 * ogg/vorbis - [Demo](http://libwebpjs.hohenlimburg.org/vp8/ogg-vorbis-javascript-decoder/) (non-FOSS?)
 
