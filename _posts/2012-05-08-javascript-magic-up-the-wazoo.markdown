@@ -48,7 +48,7 @@ All of these render using Canvas.
 * [mp2dec.js](https://github.com/cosinusoidally/mp2dec.js) - [Demo](http://cosinusoidally.github.com/mp2dec.js)
 * ogg/vorbis - [Demo](http://libwebpjs.hohenlimburg.org/vp8/ogg-vorbis-javascript-decoder/) (non-FOSS?)
 
-### CAD (is that the best term for *all* of these?)
+### 3D and CAD
 
 * [OFFDecoder](https://github.com/yeuchi/OFFDecoder) - [Demo](http://www.ctyeung.com/JQuery/DecodeOFF/TestOFF.html)
 * [STLDecoder](https://github.com/yeuchi/STLDecoder) - [Demo](http://www.ctyeung.com/JQuery/DecodeSTL/TestSTL.html)
