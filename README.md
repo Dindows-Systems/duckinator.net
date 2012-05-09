@@ -4,7 +4,7 @@ Requires ruby, and the following gems:
 * maruku
 * liquid
 
-Released under ISC license (see _COPYING).
+Released under ISC license (see COPYING).
 
 This is designed as a jekyll app that uses dotcloud.
 
