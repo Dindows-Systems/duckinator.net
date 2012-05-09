@@ -30,12 +30,12 @@ All of these render using Canvas.
 
 * [shumway (Flash)](https://github.com/mozilla/shumway) - No demo?
 * [jvm-js](https://github.com/notmasteryet/jvm-js) - No demo?
-* [BicaVM](https://github.com/nurv/BicaVM) - Another JVM implementation. Apparently is "wildly incomplete." No demo?
+* [BicaVM (JVM)](https://github.com/nurv/BicaVM) - No demo?
 
 ### Browser features
 
-* [html2canvas](http://html2canvas.hertzen.com) - Renders HTML documents to a canvas.  [Demo](http://html2canvas.hertzen.com/screenshots.html). [Examples/tests](http://html2canvas.hertzen.com/examples.html).
-* [DrawWindow (HTML)](https://github.com/bgrins/DrawWindow) - Renders HTML documents to a canvas. [Demos](http://bgrins.github.com/DrawWindow/)
+* [html2canvas](http://html2canvas.hertzen.com) - [Demo](http://html2canvas.hertzen.com/screenshots.html). [Examples/tests](http://html2canvas.hertzen.com/examples.html).
+* [DrawWindow](https://github.com/bgrins/DrawWindow) - Renders HTML to Canvas. [Demos](http://bgrins.github.com/DrawWindow/)
 * [dom.js](https://github.com/andreasgal/dom.js) - Pure JavaScript implementation of the DOM. No demo?
 
 ### Audio
