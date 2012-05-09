@@ -16,7 +16,7 @@ markdown:    maruku
 #permalink:   /blog/:year/:month/:day/:title/
 permalink:   /post/:title/
 
-exclude:     README.md, COPYING
+exclude:     README.md, COPYING, dotcloud.yml
 
 layouts:
   default: default
