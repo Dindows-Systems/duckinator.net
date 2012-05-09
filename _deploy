@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+function fail() {
+  echo
+  echo "[FAIL] $@"
+  exit 1
+}
+
+jekyll || fail "Error running jekyll"
+
+if [ "$1" == "push" ]; then
+  dotcloud push duckinator || fail "Error pushing changes to dotcloud."
+fi
