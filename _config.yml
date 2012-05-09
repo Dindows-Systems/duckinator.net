@@ -16,6 +16,8 @@ markdown:    maruku
 #permalink:   /blog/:year/:month/:day/:title/
 permalink:   /post/:title/
 
+exclude:     README.md, COPYING
+
 layouts:
   default: default
   _posts: post
