@@ -9,5 +9,5 @@ function fail() {
 jekyll || fail "Error running jekyll"
 
 if [ "$1" == "push" ]; then
-  dotcloud push duckinator || fail "Error pushing changes to dotcloud."
+  dotcloud push duckinator --all || fail "Error pushing changes to dotcloud."
 fi
