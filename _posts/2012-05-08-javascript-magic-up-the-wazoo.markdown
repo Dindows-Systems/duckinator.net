@@ -17,13 +17,14 @@ All of these render using Canvas.
 * [jpgjs](https://github.com/notmasteryet/jpgjs) - [Demo](http://notmasteryet.github.com/jpgjs/example.html)
 * [jsgif](https://github.com/shachaf/jsgif) - [Demo](http://slbkbs.org/jsgif/)
 * [bmp.js](https://github.com/devongovett/bmp.js) - [Demo](http://devongovett.github.com/bmp.js/)
-* WebP - [Demo](http://libwebpjs.hohenlimburg.org/webp-experiment/lossless/libwebp-javascript-lossless-decoder.html) (not FOSS?)
 * [weppy (WebP)](https://github.com/antimatter15/weppy) - [Demo](http://antimatter15.github.com/weppy/demo.html)
 * [canvg (SVG)](http://code.google.com/p/canvg) - [Demo](http://canvg.googlecode.com/svn/trunk/examples/index.htm)
+* [psd.js](https://github.com/meltingice/psd.js) - [Demo](http://meltingice.github.com/psd.js) (Demo requires drag-and-drop support)
 
 ### Video decoders
 
 * [Broadway (H.264)](https://github.com/mbebenita/Broadway) - [Demo](http://mbebenita.github.com/Broadway/treeDemo.html) (Uses WebGL?)
+* [Route9.js (VP8/WebM)](https://github.com/bemasc/Broadway/tree/master/vp8) - [Demo](http://people.xiph.org/~bens/route9/route9.html)
 
 ### Plugin replacements
 
