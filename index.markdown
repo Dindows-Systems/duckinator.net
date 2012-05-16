@@ -1,5 +1,6 @@
 ---
 title: 
+layout: default
 ---
 
 ## A little about me ##
