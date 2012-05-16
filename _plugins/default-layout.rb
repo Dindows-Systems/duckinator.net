@@ -32,7 +32,7 @@ module Jekyll
           elsif @__layouts.keys.include?('default')
             self.data['layout'] ||= @__layouts['default']
           end
-          self.data['layout'] = 'default'
+          self.data['layout'] = 'default.html'
         rescue => e
           puts "YAML Exception reading #{name}: #{e.message}"
         end
