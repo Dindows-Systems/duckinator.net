@@ -17,11 +17,11 @@ module Jekyll
     end
     
     def read_yaml(base, name)
+      self.content = 'lolhi'
+      return
       __get_config_yml
       dir = base.split('/')[-1] # TODO: Remove hackiness :(
       
-      self.content = 'meepmeep'
-      return
       
       self.content = File.read(File.join(base, name))
       
