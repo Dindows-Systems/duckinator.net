@@ -22,7 +22,7 @@ module Jekyll
       self.content = File.read(File.join(base, name))
       
       if self.content =~ /^(---\s*\n.*?\n?)^(---\s*$\n?)/m
-        self.content = $POSTMATCH
+        self.content = $POSTMATCH + 'moo'
         
         begin
           self.data = YAML.load($1)
@@ -32,7 +32,6 @@ module Jekyll
           elsif @__layouts.keys.include?('default')
             self.data['layout'] ||= @__layouts['default']
           end
-          self.data['layout'] = 'default.html'
         rescue => e
           puts "YAML Exception reading #{name}: #{e.message}"
         end
