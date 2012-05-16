@@ -19,10 +19,14 @@ module Jekyll
     def read_yaml(base, name)
       __get_config_yml
       dir = base.split('/')[-1] # TODO: Remove hackiness :(
+      
+      self.content = 'meepmeep'
+      return
+      
       self.content = File.read(File.join(base, name))
       
       if self.content =~ /^(---\s*\n.*?\n?)^(---\s*$\n?)/m
-        self.content = $POSTMATCH + 'moo'
+        self.content = $POSTMATCH
         
         begin
           self.data = YAML.load($1)
