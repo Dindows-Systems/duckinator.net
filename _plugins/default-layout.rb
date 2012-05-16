@@ -7,7 +7,7 @@
 # _plugins/implicit-layout.rb, for example
 #
 # Based on code from: http://stackoverflow.com/questions/8490528/how-can-i-make-jekyll-use-a-layout-without-specifying-it
-
+=begin
 module Jekyll
   module Convertible
     # TODO: Find where this is already stored so it's less hacktastic
@@ -41,4 +41,4 @@ module Jekyll
     end
   end
 end
-
+=end
