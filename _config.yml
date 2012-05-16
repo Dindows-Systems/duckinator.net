@@ -18,9 +18,9 @@ permalink:   /post/:title/
 
 exclude:     README.md, COPYING, dotcloud.yml
 
-#layouts:
-#  default: default
-#  _posts: post
+layouts:
+  default: default
+  _posts: post
 
 maruku:
   use_tex:    false
