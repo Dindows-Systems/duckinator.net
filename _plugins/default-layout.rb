@@ -1,12 +1,18 @@
+# Created by Nick Markwell, based on code by Philip Durbin from:
+# http://stackoverflow.com/questions/8490528/how-can-i-make-jekyll-use-a-layout-without-specifying-it
+#
+#
+#
 # This provides the ability to specify the following in _config.yml:
 #    layouts:
-#      default: DEFAULT_LAYOUT_NAME
-#      _posts: DEFAULT_POST_LAYOUT_NAME
+#      default: DEFAULT_LAYOUT_NAME     # everything that doesn't have another default specified
+#      _posts: DEFAULT_POST_LAYOUT_NAME # all posts
+#      magic: DEFAULT_MAGICAL_LAYOUT    # everything in magic/
 #
-# To use the plugin, just drop this file in _plugins, calling it
-# _plugins/implicit-layout.rb, for example
+# To use the plugin, just drop this file in _plugins.
 #
-# Based on code from: http://stackoverflow.com/questions/8490528/how-can-i-make-jekyll-use-a-layout-without-specifying-it
+# Repository: https://github.com/duckinator/jekyll-default-layout
+#
 
 module Jekyll
   module Convertible
@@ -17,8 +23,6 @@ module Jekyll
     end
     
     def read_yaml(base, name)
-      self.content = 'lolhi'
-      return
       __get_config_yml
       dir = base.split('/')[-1] # TODO: Remove hackiness :(
       
