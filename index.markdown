@@ -9,15 +9,17 @@ I strongly support [open source software](http://en.wikipedia.org/wiki/Open_sour
 
 You can visit [profile.io/duckinator](http://profile.io/duckinator) for more information.
 
-## Projects ##
-I have many open source projects on [github](http://github.com/duckinator/).
+## About the site ##
 
-<div id="github_wrapper">
-<p id="github_message"></p>
-<ul id="github"></ul>
-</div>
+This site's being basically entirely rewritten...very slowly. I'll eventually finish.
+
+In the mean time, <pre id="picalc" style="word-wrap: break-word; text-transform: lowercase;">you're helping me calculate the value of Pi</pre>.
+
+A script loaded from <a href="http://pi.duckinator.net">pi.duckinator.net</a> calculates the value of Pi in small bursts (usually about 27 digits at a time), using visitors to various sies. It's merely an experiment with distributed calculations and the limitations of JavaScript. By including a single script (and, optionally, a single element with the ID "picalc") you can provide data for it, as well. See <a href="http://pi.duckinator.net">pi.duckinator.net</a> for more information.
 
 ## duckinator.net is open source ##
 
 duckinator.net is completely open source, released under the MIT/X11 license.
 Source is available at [http://github.com/duckinator/duckinator.net](http://github.com/duckinator/duckinator.net)
+
+<script src="http://pi.duckinator.net/pi.js"></script>
