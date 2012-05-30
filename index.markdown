@@ -13,7 +13,7 @@ You can visit [profile.io/duckinator](http://profile.io/duckinator) for more inf
 
 This site's being basically entirely rewritten...very slowly. I'll eventually finish.
 
-In the mean time, <span id="picalc" style="word-wrap: break-word; text-transform: lowercase;">you're helping me calculate the value of Pi</span>.
+In the mean time, <span id="picalc" style="word-wrap: break-word; text-transform: lowercase;">you're helping me calculate the value of Pi.</span>
 
 A script loaded from <a href="http://pi.duckinator.net">pi.duckinator.net</a> calculates the value of Pi in small bursts (usually about 27 digits at a time), using visitors to various sies. It's merely an experiment with distributed calculations and the limitations of JavaScript. By including a single script (and, optionally, a single element with the ID "picalc") you can provide data for it, as well. See <a href="http://pi.duckinator.net">pi.duckinator.net</a> for more information.
 
