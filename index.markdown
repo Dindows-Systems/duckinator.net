@@ -22,4 +22,8 @@ A script loaded from <a href="http://pi.duckinator.net">pi.duckinator.net</a> ca
 duckinator.net is completely open source, released under the MIT/X11 license.
 Source is available at [http://github.com/duckinator/duckinator.net](http://github.com/duckinator/duckinator.net)
 
-<script src="http://pi.duckinator.net/pi.js">/*silly markdown parsers*/</script>
+<script src="http://pi.duckinator.net/pi.js">
+PiCalc.calculate(function(data) {
+  document.getElementById('picalc').innerHTML = '<a href="http://pi.duckinator.net/pi">you just calculated ' + data['last_length'] + ' digits of Pi!</a>';
+});
+</script>
