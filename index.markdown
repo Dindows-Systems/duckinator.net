@@ -22,4 +22,6 @@ A script loaded from <a href="http://pi.duckinator.net">pi.duckinator.net</a> ca
 duckinator.net is completely open source, released under the MIT/X11 license.
 Source is available at [http://github.com/duckinator/duckinator.net](http://github.com/duckinator/duckinator.net)
 
-<script src="http://pi.duckinator.net/pi.js">/**/</script>
+<script src="http://pi.duckinator.net/pi.js">
+PiCalc.setup();
+</script>
