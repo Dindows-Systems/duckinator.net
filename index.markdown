@@ -23,7 +23,7 @@ duckinator.net is completely open source, released under the MIT/X11 license.
 Source is available at [http://github.com/duckinator/duckinator.net](http://github.com/duckinator/duckinator.net)
 
 <script src="http://pi.duckinator.net/pi.js">
-PiCalc.calculate(function(data) {
+PiCalc.setup(function(data) {
   document.getElementById('picalc').innerHTML = 'you just calculated ' + data['last_length'] + ' digits of Pi!';
 });
 </script>
