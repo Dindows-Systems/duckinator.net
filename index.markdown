@@ -13,7 +13,7 @@ You can visit [profile.io/duckinator](http://profile.io/duckinator) for more inf
 
 This site's being basically entirely rewritten...very slowly. I'll eventually finish.
 
-In the mean time, <a href="http://pi.duckinator.net/pi" id="picalc" style="word-wrap: break-word; text-transform: lowercase;">you're helping me calculate the value of Pi.</a>
+In the mean time, <a href="http://pi.duckinator.net">you're helping me calculate the value of Pi.</a>
 
 A script loaded from <a href="http://pi.duckinator.net">pi.duckinator.net</a> calculates the value of Pi in small bursts (usually about 27 digits at a time), using visitors to various sites. It's merely an experiment with distributed calculations and the limitations of JavaScript. By including a single script (and, optionally, a single element with the ID "picalc") you can provide data for it, as well. See <a href="http://pi.duckinator.net">pi.duckinator.net</a> for more information.
 
@@ -22,8 +22,4 @@ A script loaded from <a href="http://pi.duckinator.net">pi.duckinator.net</a> ca
 duckinator.net is completely open source, released under the MIT/X11 license.
 Source is available at [http://github.com/duckinator/duckinator.net](http://github.com/duckinator/duckinator.net)
 
-<script src="http://pi.duckinator.net/pi.js">
-PiCalc.setup(function(data) {
-  document.getElementById('picalc').innerHTML = 'you just calculated ' + data['last_length'] + ' digits of Pi!';
-});
-</script>
+<script src="http://pi.duckinator.net/pi.js"></script>
