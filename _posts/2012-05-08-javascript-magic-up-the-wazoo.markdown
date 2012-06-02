@@ -1,6 +1,7 @@
 ---
 title: Javascript magic up the wazoo!
 tags: javascript browser
+layout: post
 ---
 
 ## List, and descriptions, of various decoders
