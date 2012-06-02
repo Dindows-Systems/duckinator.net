@@ -2,6 +2,9 @@
 {% if page.title and page.title != '' %}
 	{% assign title_suffix = " &mdash; " %}
 {% endif %}
+{% capture bio %}
+{% include bio.markdown %}
+{% endcapture %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,93 +12,52 @@
 	<title>{{ page.title }}{{ title_suffix }}duckinator.net</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	
-	<!--<link rel="stylesheet" type="text/css" href="/css/all.min.css">-->
-	<!--<link rel="shortcut icon" href="/images/favicon.png">-->
-	
 	<link rel="alternate" type="application/rss+xml" title="duckinator.net" href="/rss.xml">
-
-	<!-- start Mixpanel -->
-<!--	<script type="text/javascript">
-		(function(d,c){var a,b,g,e;a=d.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===d.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';b=d.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);c._i=[];c.init=function(a,d,f){var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";g="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config".split(" ");
-		for(e=0;e<g.length;e++)(function(a){b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,0)))}})(g[e]);c._i.push([a,d,f])};window.mixpanel=c})(document,[]);
-		mixpanel.init("5ebb55ec2b9e2e0214ef630706eb797e");
-	</script>-->
-	<!-- end Mixpanel -->
 </head>
 <body class="{{ page.layout }}">
-	<header class="clearfix">
+<section id="wrap">
+	<asside id="navhead" class="clearfix">
 		<nav>
-			<h1 id="breadcrumbs">
-				<a href="/">duckinator.net</a>
-			</h1>
-			<ul id="navbar">
-				<li><a href="/">Home</a></li>
-				<li><a href="/dux/">dux</a>
-				<ul>
-					<li><a href="/dux/api/v0.1.0/">API documentation</a></li>
-					<li><a href="/dux/metodo/">metodo</a></li>
-				</ul>
-				</li>
-				<li><a href="/resources/">Resources and Links</a></li>
-				<li><a href="/contact/">Contact</a></li>
+			<ul>
+				<li><a href="/">home</a></li>
+				<li><a href="/dux/">dux</a></li>
+				<li><a href="/resources/">resources</a></li>
+				<li><a href="/contact/">contact</a></li>
 			</ul>
 		</nav>
-	</header>
+	</asside>
 
-	<div id="wrap" class="clearfix">
-		<article id="content">
+	<article id="content">
 {% if page.layout == 'post' %}
-      <h1 id="post-title">{{ page.title }}</h1>
+		<h1 id="post-title">{{ page.title }}</h1>
+		<div class="meta">
+			<time datetime="{{ page.date | date: '%Y-%m-%d' }}T00:00:00-05:00">{{ page.date | date: '%d %B %Y' }}</time>
+			<span class="tags"></span>
+		</div>
 {% endif %}
-{{ content | markdown }}
-		</article>
-		<div id="right">
-			<h1 id="twitter_header"></h1>
-			<ul id="twitter">
-			</ul>
-		</div>
-	</div>
 
+{{ content }}
+
+{% if page.layout == 'post' %}
 	<footer>
-		<p>Copyright &copy; {{ site.time | date: "%Y" }} Nick Markwell.</p>
-		<div>
-			<a href="http://validator.w3.org/check?uri=referer">HTML5</a>
-			<span class="dot">&middot;</span>
-			<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS3</a>
-			<span class="dot">&middot;</span>
-			<a href="http://github.com/duckinator/duckinator.net">Open Source</a>
-			<span class="dot">&middot;</span>
-			<a href="/sitemap">Sitemap</a>
-		</div>
+		{{ bio | markdownify }}
 	</footer>
+{% endif %}
+	</article>
 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/legacyfix.js"></script>
 	<script type="text/javascript" src="/js/mail.js"></script>
 	<script type="text/javascript" src="/js/rot.js"></script>
-	<script type="text/javascript" src="/js/jquery.sortElements.js"></script>
-	<script type="text/javascript" src="/js/jquery.tweets.0.3.js"></script>
-	<script type="text/javascript" src="/js/twitter.js"></script>
 	<script type="text/javascript">
-function update_twitter() {
-	$('#twitter').text('');
-	twitter('duckinator', '#twitter');
-}
-
-$(document).ready(function(){
-	legacyfix();
-	rot_all();
-	mailfix();
-
-	if ($('#twitter')) {
-		// This is so people w/out JS don't see a random "Twitter" on the right
-		$('#twitter_header').text('Twitter');
-		update_twitter(4); // Initial update
-		setInterval(update_twitter, 120000);  // Every 2  minutes
-	}
-});
+		window.onload = function() {
+			legacyfix();
+			mailfix();
+			rot_all();
+		}
 	</script>
+</section>
 </body>
 </html>
