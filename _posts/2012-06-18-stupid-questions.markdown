@@ -1,6 +1,5 @@
 ---
 title: Stupid Questions
-tags: stupid questions
 layout: post
 ---
 
