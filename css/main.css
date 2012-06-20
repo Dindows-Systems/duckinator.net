@@ -104,7 +104,7 @@ a:hover {
 }
 
 #navhead li:after {
-	content: '\B7';
+	content: ' \B7'; /* aka &middot; */
 }
 
 #navhead li:last-child:after {
