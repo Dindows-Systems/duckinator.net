@@ -154,6 +154,10 @@ footer img {
 	clear: both;
 }
 
+#posts li:last-child {
+	border-bottom-width: 0px;
+}
+
 #posts h3,
 #posts time {
 	margin: 0;
@@ -168,6 +172,7 @@ footer img {
 
 #pagination {
 	margin-top: 20px;
+	border-top-width: 1px;
 }
 
 #pagination a {
