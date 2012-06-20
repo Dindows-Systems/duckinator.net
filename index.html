@@ -17,6 +17,7 @@ layout: default
 
 </ul>
 
+{% if paginator.previous_page or paginator.next_page %}
 <!-- Pagination links -->
 <div id="pagination">
   {% if paginator.previous_page %}
@@ -27,3 +28,4 @@ layout: default
     <a href="/page{{paginator.next_page}}" class="next">Next</a>
   {% endif %}
 </div>
+{% endif %}
