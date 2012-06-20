@@ -47,3 +47,5 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: style
 
+# add this line to add pagination
+paginate: 10 # the number of post per page

@@ -138,6 +138,38 @@ footer img {
 	background: #778DA8;
 }
 
+#posts a {
+	text-decoration: none;
+}
+
+#posts {
+	margin: 0;
+	padding: 0;
+}
+
+#posts li {
+	list-style: none;
+	display: block;
+	border-bottom-width: 1px;
+	clear: both;
+}
+
+#posts li:last-child {
+	border-bottom-width: 0px;
+}
+
+#posts h3,
+#posts time {
+	margin: 0;
+	padding: 10px;
+	width: 49%;
+	display: inline-block;
+}
+
+#posts time {
+	text-align: right;
+}
+
 /* Wider displays */
 
 @media (min-width: 960px) {
