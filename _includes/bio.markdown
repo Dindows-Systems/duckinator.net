@@ -2,7 +2,7 @@
 
 # It's the person who did that thing! Hi!
 
-I kick servers at [official.fm labs](http://labs.official.fm). We're teaching the web how to [sing](http://codecs.ofmlabs.org).
+I kick servers at [official.fm labs](http://labs.official.fm). We're teaching the web how to [sing](http://labs.official.fm/codecs).
 
 I'm a monkey's uncle, and love discussing things concerning math, software, or hardware.
 
