@@ -104,7 +104,7 @@ a:hover {
 }
 
 #navhead li:after {
-	padding-left: 5px;
+	margin-left: 5px;
 	content: '\B7'; /* aka &middot; */
 }
 
