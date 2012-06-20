@@ -150,29 +150,28 @@ footer img {
 #posts li {
 	list-style: none;
 	display: block;
-	border-bottom-width: 1px;
-	clear: both;
-}
-
-#posts li:last-child {
 	border-bottom-width: 0px;
+	clear: both;
 }
 
 #posts h3,
 #posts time {
 	margin: 0;
 	padding: 10px;
-	width: 49%;
+}
+
+#posts h3 {
 	display: inline-block;
+	border-bottom-width: 1px;
 }
 
 #posts time {
 	text-align: right;
+	display: none;
 }
 
 #pagination {
-	padding-top: 20px;
-	border-top-width: 1px;
+	margin-top: 20px;
 }
 
 #pagination a {
@@ -194,6 +193,17 @@ footer img {
 /* Wider displays */
 
 @media (min-width: 960px) {
+	#posts li {
+		border-bottom-width: 1px;
+	}
+
+	#posts h3,
+	#posts time {
+		width: 49%;
+		display: inline-block;
+		border-bottom-width: 0px;
+	}
+
 	#navhead {
 		float: left;
 	}
