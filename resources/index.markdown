@@ -6,9 +6,7 @@ title: Resources
 
 ## My stuff ##
 
-* [Blog](http://blog.duckinator.net)
-* [Photo gallery](http://gallery.duckinator.net)
-* [Screenshots](http://ss.duckinator.net/)
+* [Dux](/dux)
 
 ## Software ##
 

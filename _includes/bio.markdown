@@ -1,8 +1,16 @@
-# (Insert header here).
+<img src="/avatar.jpg" alt="">
 
-I'm the resident server kicker at [official.fm labs](http://labs.official.fm), where we teach the web how to [sing](http://codecs.ofmlabs.org).
+# It's the person who did that thing! Hi!
 
-I'm a monkey's uncle, and love discussing most things related to math, software, or hardware.
+I kick servers at [official.fm labs](http://labs.official.fm). We're teaching the web how to [sing](http://codecs.ofmlabs.org).
 
-You may know me as "duckinator" on [Twitter](http://twitter.com/duckinator) or [GitHub](http://github.com/duckinator). I'm also available on [Google+](http://duckinator.net/+).
+I'm a monkey's uncle, and love discussing things concerning math, software, or hardware.
+
+<!--sse-->
+
+You may know me as "duckinator" on [Twitter](http://twitter.com/duckinator) or [GitHub](http://github.com/duckinator). I'm also available on [Google+](http://duckinator.net/+), by phone at <span class="rot5" data-rot="095.444.3567">095.444.3567 (rot5 encoded)</span>, or via e-mail at <span class="rot47 mail" data-rot="5F4&lt;o5F4&lt;:?2E@C]?6E">5F4&lt;o5F4&lt;:?2E@C]?6E (rot47 encoded)</span>.
+
+<!-- email: 5F4<o5F4<:?2E@C]?6E -->
+
+<!--/sse-->
 

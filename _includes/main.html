@@ -19,18 +19,17 @@
 </head>
 <body class="{{ page.layout }}">
 <section id="wrap">
-	<asside id="navhead" class="clearfix">
+	<asside id="navhead">
 		<nav>
 			<ul>
 				<li><a href="/">home</a></li>
-				<li><a href="/dux/">dux</a></li>
+				<li><a href="https://github.com/duckinator">code</a></li>
 				<li><a href="/resources/">resources</a></li>
-				<li><a href="/contact/">contact</a></li>
 			</ul>
 		</nav>
 	</asside>
 
-	<article id="content">
+<section id="dynamic">
 {% case page.layout %}
 
 {% when 'post' %}
@@ -39,7 +38,7 @@
 	{% include layouts/default.html %}
 
 {% endcase %}
-	</article>
+</section>
 
 	<script type="text/javascript" src="/js/legacyfix.js"></script>
 	<script type="text/javascript" src="/js/mail.js"></script>
@@ -50,9 +49,6 @@
 			mailfix();
 			rot_all();
 		}
-	</script>
-	<script src="http://pi.duckinator.net/pi.js">
-		PiCalc.setup();
 	</script>
 </section>
 </body>
