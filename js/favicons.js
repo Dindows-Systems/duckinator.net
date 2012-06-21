@@ -1,9 +1,11 @@
 function load_favicon(anchor) {
-	if (document.width < 960)
-		return;
-
-	anchor.setAttribute('style', 'background-image: url(' + anchor.origin + '/favicon.ico);');
-	anchor.className += ' icon';
+	if (document.width >= 960) {
+		anchor.setAttribute('style', 'background-image: url(' + anchor.origin + '/favicon.ico);');
+		anchor.classList.add('icon');
+	} else {
+		anchor.setAttribute('style', 'background-image: none;');
+		anchor.classList.remove('icon');
+	}
 }
 
 function load_favicons() {
