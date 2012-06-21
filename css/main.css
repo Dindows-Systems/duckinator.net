@@ -203,15 +203,23 @@ footer img {
 /* This was 960px. The 7px is somehow related to .icon, but I'm not sure how. */
 @media (min-width: 967px) {
 	#navhead .icon {
-		background-size: 0px;
-		-webkit-background-size: 0px;
-		-khtml-background-size: 0px;
+		-webkit-transition-property: background-position-x;
+		-moz-transition-property: background-position-x;
+		-ms-transition-property: background-position-x;
+		-o-transition-property: background-position-x;
+		transition-property: background-position-x;
+
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+
+		background-position-x: -32px;
 	}
 
 	#navhead .icon:hover {
-		background-size: 16px;
-		-webkit-background-size: 16px;
-		-khtml-background-size: 16px;
+		background-position-x: 0;
 	}
 
 	#posts li {
