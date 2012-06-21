@@ -198,10 +198,6 @@ footer img {
 	background: 0 0 no-repeat;
 }
 
-@media (max-width: 960px) {
-	.icon { background: none !important; }
-}
-
 /* Wider displays */
 
 @media (min-width: 960px) {
