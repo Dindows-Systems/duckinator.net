@@ -200,7 +200,8 @@ footer img {
 
 /* Wider displays */
 
-@media (not handheld) and (min-width: 960px) {
+/* FIXME: This is a hack to stop the iPod from using this media query. */
+@media (min-width: 981px) {
 	.icon {
 		background-size: 16px;
 		-webkit-background-size: 16px;
