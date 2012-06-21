@@ -4,7 +4,14 @@ function load_favicon(anchor) {
 }
 
 function load_favicons() {
-	anchors = document.querySelectorAll('#navhead a, .social a');
+	selector = '.social a';
+
+	// We don't want the :hover-related stuff on touchscreens
+	// it's simply not usable there.
+	if(!window.touch)
+		selector += ', #navhead a';
+
+	anchors = document.querySelectorAll(selector);
 
 	for (var i = 0; i < anchors.length; i++) {
 		load_favicon(anchors[i]);
