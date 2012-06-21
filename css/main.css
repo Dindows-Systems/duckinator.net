@@ -198,13 +198,13 @@ footer img {
 	background: 0 center no-repeat;
 }
 
+#navhead .icon {
+	background-size: 0px;
+}
+
 /* Wider displays */
 
 @media (min-width: 960px) {
-	#navhead .icon {
-		background-size: 0px;
-	}
-
 	#navhead .icon:hover {
 		background-size: 16px;
 	}
