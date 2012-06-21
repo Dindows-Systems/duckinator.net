@@ -200,7 +200,7 @@ footer img {
 
 /* Wider displays */
 
-@media (min-width: 960px) {
+@media (not handheld) and (min-width: 960px) {
 	.icon {
 		background-size: 16px;
 		-webkit-background-size: 16px;
