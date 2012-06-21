@@ -191,15 +191,12 @@ footer img {
 }
 
 .icon {
+	background: none;
 	background-size: 0px;
 	-webkit-background-size: 0px;
 	-khtml-background-size: 0px;
 	padding-left: 0px;
 	background: 0 0 no-repeat;
-}
-
-@media (max-width: 960px) {
-	.icon { background: none !important; }
 }
 
 /* Wider displays */
