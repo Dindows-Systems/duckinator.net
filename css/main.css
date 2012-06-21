@@ -191,9 +191,10 @@ footer img {
 }
 
 .icon {
-	background-size: 0px;
-	-webkit-background-size: 0px;
-	-khtml-background-size: 0px;
+	background-size: 16px;
+	-webkit-background-size: 16px;
+	-khtml-background-size: 16px;
+	padding-left: 18px;
 	background: 0 center no-repeat;
 }
 
@@ -201,14 +202,6 @@ footer img {
 
 /* This was 960px. The 7px is somehow related to .icon, but I'm not sure how. */
 @media (min-width: 967px) {
-	.icon {
-		background-size: 16px;
-		-webkit-background-size: 16px;
-		-khtml-background-size: 16px;
-		padding-left: 18px;
-		background: 0 center no-repeat;
-	}
-
 	#navhead .icon {
 		background-size: 0px;
 		-webkit-background-size: 0px;
