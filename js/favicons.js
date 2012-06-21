@@ -1,5 +1,6 @@
 function load_favicon(anchor) {
-	anchor.setAttribute('style', 'background-image: url(' + anchor.origin + '/favicon.ico);');
+	// Why doesn't firefox have anchor.origin? :(
+	anchor.setAttribute('style', 'background-image: url(' + anchor.protocol + '//' + anchor.hostname + ':' + anchor.port + '/favicon.ico);');
 	anchor.classList.add('icon');
 }
 
