@@ -190,6 +190,14 @@ footer img {
 	content: '\20\BB';
 }
 
+.icon {
+	background-size: 0px;
+	-webkit-background-size: 0px;
+	-khtml-background-size: 0px;
+	padding-left: 0px;
+	background: 0 0 no-repeat;
+}
+
 /* Wider displays */
 
 @media (min-width: 960px) {
