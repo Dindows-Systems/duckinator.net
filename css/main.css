@@ -193,6 +193,22 @@ footer img {
 /* Wider displays */
 
 @media (min-width: 960px) {
+	.icon {
+		background-size: 16px;
+		-webkit-background-size: 16px;
+		-khtml-background-size: 16px;
+		padding-left: 18px;
+		background: 0 center no-repeat;
+	}
+
+	#navhead .icon {
+		background-size: 0px;
+	}
+
+	#navhead .icon:hover {
+		background-size: 16px;
+	}
+
 	#posts li {
 		border-bottom-width: 1px;
 	}
