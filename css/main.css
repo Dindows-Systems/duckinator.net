@@ -85,7 +85,8 @@ a {
 	color: #F8E8CF;
 }
 
-a:hover {
+a:hover,
+a:focus {
 	color: #F3DAB2;
 }
 
@@ -221,7 +222,8 @@ footer img {
 		background-position-x: -32px;
 	}
 
-	#navhead .icon:hover {
+	#navhead .icon:hover,
+	#navhead .icon:focus {
 		background-position-x: 0;
 	}
 
