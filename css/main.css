@@ -89,6 +89,13 @@ a:hover {
 	color: #F3DAB2;
 }
 
+#dynamic {
+	max-width: 800px;
+/*	background: transparent;
+	border-radius: 1em;
+	padding: 20px;*/
+}
+
 #wrap {
   width: 100%;
   max-width: 960px;
@@ -110,10 +117,6 @@ a:hover {
 
 #navhead li:last-child:after {
 	content: '';
-}
-
-#dynamic {
-  max-width: 800px;
 }
 
 header img {
