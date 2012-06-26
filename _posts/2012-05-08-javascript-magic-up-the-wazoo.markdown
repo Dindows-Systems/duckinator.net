@@ -42,13 +42,24 @@ All of these render using Canvas.
 
 ### Audio
 
+* [pitch.js](https://github.com/ofmlabs/pitch.js) - pitch detection library.
+* [Aurora.js](https://github.com/ofmlabs/aurora.js) - this is not a decoder, but rather a framework for making them.
+
+
+Codecs using Aurora.js:
+
 * [aac.js](https://github.com/ofmlabs/aac.js) - No demo yet.
 * [alac.js](https://github.com/ofmlabs/alac.js) - [Demo](http://labs.official.fm/codecs/alac)
 * [flac.js](https://github.com/ofmlabs/flac.js) - [Demo](http://labs.official.fm/codecs/flac)
-* [jsmad (MP3)](https://github.com/ofmlabs/jsmad) - [Demo](http://labs.official.fm/codecs/mp3)
+* [jsmad (MP3)](https://github.com/ofmlabs/jsmad) - See mp3.js.
+* [mp3.js](https://github.com/devongovett/mp3.js) - Fork of jsmad modified to use Aurora.js. [Demo](http://labs.official.fm/codecs/mp3)
+* [ogg/vorbis](https://github.com/jsantell/ogg.js) - Demo: the [README](https://github.com/jsantell/ogg.js#readme) explains how to run a demo locally.
+
+Codecs not using Aurora.js:
+
 * [pcmdata.js (.wav)](https://github.com/jussi-kalliokoski/pcmdata.js) - No demo.
 * [mp2dec.js](https://github.com/cosinusoidally/mp2dec.js) - [Demo](http://cosinusoidally.github.com/mp2dec.js)
-* ogg/vorbis - [Demo](http://libwebpjs.hohenlimburg.org/vp8/ogg-vorbis-javascript-decoder/) (non-FOSS?)
+* ogg/vorbis - Alternative, and older, ogg/vorbis implementation. This may not be FOSS. [Demo](http://libwebpjs.hohenlimburg.org/vp8/ogg-vorbis-javascript-decoder/)
 
 ### 3D and CAD
 
