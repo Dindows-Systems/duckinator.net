@@ -2,15 +2,19 @@
 
 DIR=$(dirname $(readlink -f $0)) # Directory script is in
 
-cd $DIR/public/css
+cd $DIR/css
 
-which yuicompressor &>/dev/null || { echo "Please run ./get_yuicompressor.sh before running $0"; exit 1; }
+echo -n > all.min.css
 
-#csstidy main.css --template=highest main.min.css
-#csstidy test.css --template=highest test.min.css
-yuicompressor --type css -o main.min.css main.css
+for x in *.css; do
+  [ "$x" == "all.min.css" ] && continue
+  csstidy $x --template=highest $x.tmp
+done
 
-cat main.min.css    > all.min.css
-#echo               >> all.min.css
-#cat test.min.css   >> all.min.css
+for x in *.tmp; do
+  cat $x >> all.min.css
+  echo >> all.min.css
+done
+
+rm *.tmp
 
