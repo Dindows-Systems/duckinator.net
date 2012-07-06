@@ -61,6 +61,16 @@ function mailfix() {
 }
 /* end   mail.js */
 
+/* start main.js */
+window.onload = function() {
+	legacyfix();
+	mailfix();
+	rot_all();
+	load_favicons();
+}
+
+/* end   main.js */
+
 /* start rot.js */
 function _rot_js_entity_decode(data) {
 	var matches = data.match(/&#\d+;?/g);
