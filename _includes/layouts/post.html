@@ -2,11 +2,11 @@
 	<h1 id="post-title">{{ page.title }}</h1>
 	<div class="meta">
 		<time datetime="{{ page.date | date: '%Y-%m-%d' }}T00:00:00-05:00">{{ page.date | date: '%d %B %Y' }}</time>
-		<span class="tags">
+		<ul class="tags">
 		{% for tag in page.tags %}
-			<a href="/blog/tags/{{ tag | replace: '_', '+' }}">{{ tag | replace: '_', ' ' }}</a>{% unless forloop.last %}, {% endunless %}
+			<li><a href="/blog/tags/{{ tag | replace: '_', '+' }}">{{ tag | replace: '_', ' ' }}</a></li>
 		{% endfor %}
-		</span>
+		</ul>
 	</div>
 
 {{ content }}

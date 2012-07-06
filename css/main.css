@@ -97,6 +97,21 @@ a:focus {
 	padding: 20px;*/
 }
 
+.tags {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+.tags li {
+	list-style: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+	padding-right: 5px;
+}
+
 #wrap {
   width: 100%;
   max-width: 960px;
@@ -266,6 +281,14 @@ footer img {
 	  float: right;
 	}
 
+	.meta {
+		font-weight: bold;
+	}
+
+	.meta .tags:before {
+		content: '\B7'; /* aka &middot; */
+	}
+
 	header img {
 		display: block;
 
@@ -289,4 +312,8 @@ footer img {
 		margin-left: 0px;
 		border-radius: 0.5em;
 	}
+}
+
+iframe {
+  padding-top: 20px;
 }
