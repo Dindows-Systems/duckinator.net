@@ -1,13 +1,13 @@
 <article id="content">
-  <h1 id="post-title">{{ page.title }}</h1>
-  <div class="meta">
-  	<time datetime="{{ page.date | date: '%Y-%m-%d' }}T00:00:00-05:00">{{ page.date | date: '%d %B %Y' }}</time>
-  	<span class="tags">
-  	{% for tag in page.tags %}
-  		<a href="/blog/tags/{{ tag }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
-  	{% endfor %}
-  	</span>
-  </div>
+	<h1 id="post-title">{{ page.title }}</h1>
+	<div class="meta">
+		<time datetime="{{ page.date | date: '%Y-%m-%d' }}T00:00:00-05:00">{{ page.date | date: '%d %B %Y' }}</time>
+		<span class="tags">
+		{% for tag in page.tags %}
+			<a href="/blog/tags/{{ tag | replace: '_', '+' }}">{{ tag | replace: '_', ' ' }}</a>{% unless forloop.last %}, {% endunless %}
+		{% endfor %}
+		</span>
+	</div>
 
 {{ content }}
 </article>
