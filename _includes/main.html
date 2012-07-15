@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+<head>
 {% assign title_suffix = "" %}
 {% if page.title and page.title != '' %}
 	{% assign title_suffix = " &mdash; " %}
@@ -5,9 +8,6 @@
 {% capture bio %}
 {% include bio.markdown %}
 {% endcapture %}
-<!DOCTYPE html>
-<html>
-<head>
 	<meta charset="utf-8"> 
 	<title>{{ page.title }}{{ title_suffix }}duckinator.net</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
