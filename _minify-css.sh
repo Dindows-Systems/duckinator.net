@@ -8,7 +8,9 @@ echo -n > all.min.css
 
 for x in *.css; do
   [ "$x" == "all.min.css" ] && continue
-  csstidy $x --template=highest $x.tmp
+  # TODO: Figure out how to make csstidy be niec.
+  #csstidy $x --template=highest $x.tmp
+  cat $x > $x.tmp
 done
 
 for x in *.tmp; do
