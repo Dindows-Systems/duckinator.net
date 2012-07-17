@@ -2,7 +2,7 @@
 {% include social.markdown %}
 {% endcapture %}
 
-<img src="/avatar.jpg" alt="">
+<img src="/avatar_200x200.jpg" alt="">
 
 # It's the person who did that thing! Hi!
 
