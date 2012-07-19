@@ -11,7 +11,7 @@ Under basically any circumstances, Sicuro can be used to execute untrusted code.
 
 # The main problem
 
-It appears that attempts at making it more efficient have actually left Sicuro wide open to abuse. There was an attempt to make it lazily load trusted components, and that seems to have opened up a bug letting you `require` anything in the stdlib, including DL. DL is used for loading shared objects and calling functions in them.
+It appears that attempts at making Sicuro more efficient have actually left it wide open to abuse. There was an attempt to make it lazily load trusted components, and that seems to have opened up a bug letting you `require` anything in the stdlib, including DL. DL is used for loading shared objects and calling functions in them.
 
 The following is the relevant part of the code for lazily loading trusted components. You can view it in context in [lib/sicuro/base.rb](https://github.com/duckinator/sicuro/blob/761e955fbbba07638d69bc62159199cdf0716a7d/lib/sicuro/base.rb#L254-256), lines 254 through 256.
 
@@ -32,7 +32,7 @@ Following is a tidied up version of the code that exposed the bug.
     
     Libc.kill(0, 9)
 
-Changing `Libc.kill(0, 9)` to `Libc.kill(-1, 9)` will terminate _all processes the user who made the call to `Sicuro.eval` can terminate._
+Calling `Libc.kill(-1, 9)` will terminate _all processes the user who called `Sicuro.eval` can terminate._
 
 Here is similar code that will allow you to execute arbitrary shell code:
 
@@ -63,8 +63,8 @@ At the very least, `GC.disable` could make it use too much memory, causing insta
 
 # Conclusion
 
-While removing things from the whitelist was beyond trivial, it appears fixing the code execution problem is proving immensely difficult. I am not sure I will be able to do it and retain all current functionality.
+While removing things from the whitelist was trivial, it appears fixing the code execution problem is proving immensely difficult. I am not sure I will be able to do it and retain all current functionality.
 
-I highly recommend that, once the next version is released, everyone upgrade immediately. This is a major security hole, and allows execution of any untrusted code that can be done through a shared library. This includes calls to `execve()` and related functions, as mentioned above.
+I highly recommend that, once the next version is released, everyone upgrade immediately. This is a major security hole, and allows execution of any untrusted code that can be done through a shared library. This includes calls to `system()` and related functions, as mentioned above.
 
 <video style="width: 100%; max-width: 798px;" controls="controls" src="/assets/sicuro-untrusted-code-execution-bug.ogv"></video>
