@@ -1,6 +1,6 @@
 ---
-title: Sicuro's Latest Security Bug
-tags: sicuro security bug
+title: Untrusted Code Execution Bug in Sicuro
+tags: sicuro security bug untrusted code execution
 layout: post
 draft: true
 ---
