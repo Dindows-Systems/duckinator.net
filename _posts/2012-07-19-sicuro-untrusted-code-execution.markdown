@@ -59,7 +59,7 @@ There's always something hiding, right? That little thing you find when hunting 
 
 At the very least, `GC.disable` could make it use too much memory, causing instability, and `Signal.trap` could be used to handle signals used to terminate the process &ndash; and ignore them. I'm not entirely sure what `ObjectSpace` can be used for, but I do not know what it does, so I do not like it being whitelisted. I've also been told `ObjectSpace` is "dangerous." I may look into this later.
 
-`GC`, `Signal`, and `ObjectSpace` will not be whitelisted as of the next version.
+`GC`, `Signal`, and `ObjectSpace` will not be whitelisted as of the next release.
 
 # Conclusion
 
