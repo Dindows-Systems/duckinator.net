@@ -27,14 +27,12 @@ a, img {
 }
 
 code {
-	border-width: 1px;
+	background: rgba(248, 232, 207, 0.2); /*#f8e8cf*/
+	border: none;
+	border-radius: 0.5em;
 	margin: 15px;
 	padding: 15px;
 	display: block;
-}
-
-code * {
-	border: none;
 }
 
 p code, span code, li code {
