@@ -2,7 +2,6 @@
 title: Untrusted Code Execution Bug in Sicuro
 tags: sicuro security bug untrusted code execution
 layout: post
-draft: true
 ---
 
 [Jens Nockert](http://twitter.com/jensnockert) has exposed a rather major security hole in Sicuro.
