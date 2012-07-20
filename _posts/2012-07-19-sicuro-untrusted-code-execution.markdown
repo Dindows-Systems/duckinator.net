@@ -64,7 +64,7 @@ At the very least, `GC.disable` could make it use too much memory, causing insta
 
 # Conclusion
 
-While removing things from the whitelist was trivial, it appears fixing the code execution problem is proving immensely difficult. I am not sure I will be able to fix it and retain all current functionality.
+While removing things from the whitelist was trivial, fixing the code execution problem is proving immensely difficult. I am not sure I will be able to fix it and retain all current functionality.
 
 I highly recommend that, once the next version is released, everyone upgrade immediately. This is a major security hole, and allows execution of any untrusted code that can be done through a shared library. This includes calls to `system()` and related functions, as mentioned above.
 
