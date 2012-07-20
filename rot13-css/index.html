@@ -21,8 +21,83 @@ ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFT
 <head>
 <title>rot13 in CSS</title>
 </head>
+<meta charset="utf-8">
+<title>rot13 css demo - duckinator.net</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" type="text/css" href="./css/normalize.css"> 
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+<link rel="alternate" type="application/rss+xml" title="duckinator.net" href="/rss.xml">
 <style>
+/* Start weird hack */
+
+.rot13 a { text-decoration: none; }
+
+.rot13 a {
+	display: inline-block;
+	border-bottom: 1px solid;
+	line-height: 1;
+  margin-bottom: 4px;
+}
+
+/* End weird hack */
+
+
 .rot13 *::before { display: inline-block; }
+
+.rot13:hover .a::before { content: 'a'; }
+.rot13:hover .b::before { content: 'b'; }
+.rot13:hover .c::before { content: 'c'; }
+.rot13:hover .d::before { content: 'd'; }
+.rot13:hover .e::before { content: 'e'; }
+.rot13:hover .f::before { content: 'f'; }
+.rot13:hover .g::before { content: 'g'; }
+.rot13:hover .h::before { content: 'h'; }
+.rot13:hover .i::before { content: 'i'; }
+.rot13:hover .j::before { content: 'j'; }
+.rot13:hover .k::before { content: 'k'; }
+.rot13:hover .l::before { content: 'l'; }
+.rot13:hover .m::before { content: 'm'; }
+.rot13:hover .n::before { content: 'n'; }
+.rot13:hover .o::before { content: 'o'; }
+.rot13:hover .p::before { content: 'p'; }
+.rot13:hover .q::before { content: 'q'; }
+.rot13:hover .r::before { content: 'r'; }
+.rot13:hover .s::before { content: 's'; }
+.rot13:hover .t::before { content: 't'; }
+.rot13:hover .u::before { content: 'u'; }
+.rot13:hover .v::before { content: 'v'; }
+.rot13:hover .w::before { content: 'w'; }
+.rot13:hover .x::before { content: 'x'; }
+.rot13:hover .y::before { content: 'y'; }
+.rot13:hover .z::before { content: 'z'; }
+
+.rot13:hover .A::before { content: 'A'; }
+.rot13:hover .B::before { content: 'B'; }
+.rot13:hover .C::before { content: 'C'; }
+.rot13:hover .D::before { content: 'D'; }
+.rot13:hover .E::before { content: 'E'; }
+.rot13:hover .F::before { content: 'F'; }
+.rot13:hover .G::before { content: 'G'; }
+.rot13:hover .H::before { content: 'H'; }
+.rot13:hover .I::before { content: 'I'; }
+.rot13:hover .J::before { content: 'J'; }
+.rot13:hover .K::before { content: 'K'; }
+.rot13:hover .L::before { content: 'L'; }
+.rot13:hover .M::before { content: 'M'; }
+.rot13:hover .N::before { content: 'N'; }
+.rot13:hover .O::before { content: 'O'; }
+.rot13:hover .P::before { content: 'P'; }
+.rot13:hover .Q::before { content: 'Q'; }
+.rot13:hover .R::before { content: 'R'; }
+.rot13:hover .S::before { content: 'S'; }
+.rot13:hover .T::before { content: 'T'; }
+.rot13:hover .U::before { content: 'U'; }
+.rot13:hover .V::before { content: 'V'; }
+.rot13:hover .W::before { content: 'W'; }
+.rot13:hover .X::before { content: 'X'; }
+.rot13:hover .Y::before { content: 'Y'; }
+.rot13:hover .Z::before { content: 'Z'; }
 
 .rot13 .a::before { content: 'n'; }
 .rot13 .b::before { content: 'o'; }
@@ -79,6 +154,35 @@ ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFT
 .rot13 .Z::before { content: 'M'; }
 </style>
 <body>
+<!-- Start boilerplate -->
+<section id="wrap">
+<asside id="navhead">
+	<nav>
+		<ul>
+			<li><a class="rot13" href="/"><span class=u></span><span class=b></span><span class=z></span><span class=r></span></a></li>
+			<li><a class="rot13" href="https://github.com/duckinator"><span class=p></span><span class=b></span><span class=q></span><span class=r></span></a></li>
+			<li><a class="rot13" href="/resources/"><span class=e></span><span class=r></span><span class=f></span><span class=b></span><span class=h></span><span class=e></span><span class=p></span><span class=r></span><span class=f></span></a></li>
+		</ul>
+	</nav>
+</asside>
+
+<section id="dynamic">
+<article id="content">
+<h1 class="rot13" id="post-title"><span class=Q></span><span class=r></span><span class=z></span><span class=b></span>: <span class=e></span><span class=b></span><span class=g></span>13 <span class=r></span><span class=a></span><span class=p></span><span class=b></span><span class=q></span><span class=v></span><span class=a></span><span class=t></span> <span class=v></span><span class=a></span> <span class=P></span><span class=F></span><span class=F></span></h1>
+<div class="meta">
+<time class="rot13" datetime="2012-07-19T00:00:00-05:00">19 <span class=W></span><span class=h></span><span class=y></span><span class=l></span> 2012</time>
+<ul class="tags">
+<li><a class="rot13" href="/blog/tags/css"><span class=p></span><span class=f></span><span class=f></span></a></li>
+<li><a class="rot13" href="/blog/tags/browser"><span class=o></span><span class=e></span><span class=b></span><span class=j></span><span class=f></span><span class=r></span><span class=e></span></a></li>
+<li><a class="rot13" href="/blog/tags/rot13"><span class=e></span><span class=b></span><span class=g></span>13</a></li>
+<li><a class="rot13" href="/blog/tags/demo"><span class=q></span><span class=r></span><span class=z></span><span class=b></span></a></li>
+</ul>
+</div>
+
+<!-- End boilerplate -->
+
+<!-- Start content -->
+
 <p class="rot13">
 <span class=G></span>
 <span class=u></span>
@@ -127,16 +231,9 @@ ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFT
 <span class=v></span>
 <span class=a></span>
 &nbsp;
-<span class=W></span>
-<span class=n></span>
-<span class=i></span>
-<span class=n></span>
+<span class=P></span>
 <span class=F></span>
-<span class=p></span>
-<span class=e></span>
-<span class=v></span>
-<span class=c></span>
-<span class=g></span>.
+<span class=F></span>.
 </p>
 <p class="rot13">
 <span class=V></span>
@@ -229,6 +326,52 @@ ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFT
 <span class=g></span>.
 </p>
 <p class="rot13">
+<span class=U></span>
+<span class=b></span>
+<span class=i></span>
+<span class=r></span>
+<span class=e></span>
+&nbsp;
+<span class=b></span>
+<span class=i></span>
+<span class=r></span>
+<span class=e></span>
+&nbsp;
+<span class=n></span>
+&nbsp;
+<span class=y></span>
+<span class=v></span>
+<span class=a></span>
+<span class=r></span>
+&nbsp;
+<span class=g></span>
+<span class=b></span>
+&nbsp;
+<span class=i></span>
+<span class=v></span>
+<span class=r></span>
+<span class=j></span>
+&nbsp;
+<span class=v></span>
+<span class=g></span>
+<span class=f></span>
+&nbsp;
+<span class=e></span>
+<span class=b></span>
+<span class=g></span>13
+&nbsp;
+<span class=r></span>
+<span class=d></span>
+<span class=h></span>
+<span class=v></span>
+<span class=i></span>
+<span class=n></span>
+<span class=y></span>
+<span class=r></span>
+<span class=a></span>
+<span class=g></span>.
+</p>
+<p class="rot13">
 <span class=I></span>
 <span class=v></span>
 <span class=r></span>
@@ -266,5 +409,31 @@ ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFT
 <span class=b></span>
 <span class=a></span>.
 </p>
+
+<!-- End content -->
+
+
+<!-- Start more boilerplate -->
+
+</article>
+<footer>
+<p><img src="//static.duckinator.net/avatar_200x200.jpg" alt=""></p>
+<h1>It's the person who did that thing! Hi!</h1>
+<p class="rot13"><span class=V></span> <span class=x></span><span class=v></span><span class=p></span><span class=x></span> <span class=f></span><span class=r></span><span class=e></span><span class=i></span><span class=r></span><span class=e></span><span class=f></span> <span class=n></span><span class=g></span> <a href="http://labs.official.fm"><span class=b></span><span class=s></span><span class=s></span><span class=v></span><span class=p></span><span class=v></span><span class=n></span><span class=y></span>.<span class=s></span><span class=z></span> <span class=y></span><span class=n></span><span class=o></span><span class=f></span></a>. <span class=J></span><span class=r></span>'<span class=e></span><span class=r></span> <span class=g></span><span class=r></span><span class=n></span><span class=p></span><span class=u></span><span class=v></span><span class=a></span><span class=t></span> <span class=g></span><span class=u></span><span class=r></span> <span class=j></span><span class=r></span><span class=o></span> <span class=u></span><span class=b></span><span class=j></span> <span class=g></span><span class=b></span> <a href="http://labs.official.fm/codecs"><span class=f></span><span class=v></span><span class=a></span><span class=t></span></a>.</p>
+<p class="rot13"><span class=V></span>'<span class=z></span> <span class=n></span> <span class=z></span><span class=b></span><span class=a></span><span class=x></span><span class=r></span><span class=l></span>'<span class=f></span> <span class=h></span><span class=a></span><span class=p></span><span class=y></span><span class=r></span>, <span class=n></span><span class=a></span><span class=q></span> <span class=y></span><span class=b></span><span class=i></span><span class=r></span> <span class=q></span><span class=v></span><span class=f></span><span class=p></span><span class=h></span><span class=f></span><span class=f></span><span class=v></span><span class=a></span><span class=t></span> <span class=g></span><span class=u></span><span class=v></span><span class=a></span><span class=t></span><span class=f></span> <span class=z></span><span class=n></span><span class=g></span><span class=u></span>, <span class=f></span><span class=b></span><span class=s></span><span class=g></span><span class=j></span><span class=n></span><span class=e></span><span class=r></span>, <span class=b></span><span class=e></span> <span class=u></span><span class=n></span><span class=e></span><span class=q></span><span class=j></span><span class=n></span><span class=e></span><span class=r></span> <span class=e></span><span class=r></span><span class=y></span><span class=n></span><span class=g></span><span class=r></span><span class=q></span>.</p>
+ 
+<section class="social">
+<p class="rot13"><span class=L></span><span class=b></span><span class=h></span> <span class=z></span><span class=n></span><span class=l></span> <span class=x></span><span class=a></span><span class=b></span><span class=j></span> <span class=z></span><span class=r></span> <span class=n></span><span class=f></span> "<span class=q></span><span class=h></span><span class=p></span><span class=x></span><span class=v></span><span class=a></span><span class=n></span><span class=g></span><span class=b></span><span class=e></span>" <span class=b></span><span class=a></span> <a href="http://twitter.com/duckinator"><span class=G></span><span class=j></span><span class=v></span><span class=g></span><span class=g></span><span class=r></span><span class=e></span></a> <span class=b></span><span class=e></span> <a href="http://github.com/duckinator"><span class=T></span><span class=v></span><span class=g></span><span class=U></span><span class=h></span><span class=o></span></a>. <span class=V></span>'<span class=z></span> <span class=n></span><span class=y></span><span class=f></span><span class=b></span> <a href="https://plus.google.com/107547838680915160730"><span class=T></span><span class=b></span><span class=b></span><span class=t></span><span class=y></span><span class=r></span>+</a>, <span class=o></span><span class=l></span> <span class=c></span><span class=u></span><span class=b></span><span class=a></span><span class=r></span> <span class=n></span><span class=g></span> <span class="rot5" data-rot="095.444.3567">095.444.3567 (<span class=e></span><span class=b></span><span class=g></span>5 <span class=r></span><span class=a></span><span class=p></span><span class=b></span><span class=q></span><span class=r></span><span class=q></span>)</span>, <span class=b></span><span class=e></span> <span class=i></span><span class=v></span><span class=n></span> <span class=r></span><span class=z></span><span class=n></span><span class=v></span><span class=y></span> <span class=n></span><span class=g></span> <span class="rot47 mail" data-rot="5F4&lt;o5F4&lt;:?2E@C]?6E">5F4&lt;o5F4&lt;:?2E@C]?6E (<span class=e></span><span class=b></span><span class=g></span>47 <span class=r></span><span class=a></span><span class=p></span><span class=b></span><span class=q></span><span class=r></span><span class=q></span>)</span>.</p>
+ 
+</section>
+ 
+</footer>
+</section>
+
+</section>
+
+<!-- End more boilerplate -->
+
+
 </body>
 </html>
