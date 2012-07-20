@@ -4,7 +4,7 @@
 
 <img src="//static.duckinator.net/avatar_200x200.jpg" alt="">
 
-# It's the person who did that thing! Hi!
+# Hey, it's duck! Also known as Nick Markwell.
 
 I kick servers at [official.fm labs](http://labs.official.fm). We're teaching the web how to [sing](http://labs.official.fm/codecs).
 
