@@ -6,14 +6,14 @@ cd $DIR/css
 
 echo -n > all.min.css
 
-for x in *.css; do
+for x in {normalize,main}.css; do
   [ "$x" == "all.min.css" ] && continue
   # TODO: Figure out how to make csstidy be niec.
   #csstidy $x --template=low $x.tmp
   cat $x > $x.tmp
 done
 
-for x in *.tmp; do
+for x in {normalize,main}.css.tmp; do
   cat $x >> all.min.css
   echo >> all.min.css
 done

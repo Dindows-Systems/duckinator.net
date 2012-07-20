@@ -1,321 +1,3 @@
-/* Applies to all elements */
-* {
-  /* apply a natural box layout model to all elements */
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/*
- * See https://developer.mozilla.org/en/Images,_Tables,_and_Mysterious_Gaps
- *+ for why this is needed. (it doesn't apply to just tables)
- */
-a, img {
-  display: inline-block;
-  vertical-align: bottom;
-}
-
-/* main.css */
-
-.text-content, p {
-	line-height: 150%;
-	/*text-align: justify;*/
-}
-
-.func, .monospace, code {
-	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
-}
-
-code {
-	background: rgba(248, 232, 207, 0.2); /*#f8e8cf*/
-	border: none;
-	border-radius: 0.5em;
-	margin: 15px;
-	padding: 15px;
-	display: block;
-}
-
-p code, span code, li code {
-	padding-top: 1px;
-	padding-bottom: 1px;
-	padding-left: 5px;
-	padding-right: 5px;
-	margin: 0px;
-	display: inline;
-}
-
-img {
-	border: none;
-}
-
-h1 { font-size:1.5em; }
-h2 { font-size:1.4em; }
-h3 { font-size:1.1em; }
-h4, h5, h6 { font-size:1.1em; }
-
-/* Clearfix, see http://www.positioniseverything.net/easyclearing.html under '"Clearing", 21st Century Style' */
-.clearfix:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-
-
-/* theme.css */
-
-body {
-	margin: 15px;
-	padding: 0px;
-	font-size: 100%;
-	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
-	height: 100%;
-	background-color: #2B3844;
-}
-
-* {
-	color: #FAEFDE;
-	border: 0px solid #F8E8CF;
-}
-
-a {
-	color: #F8E8CF;
-}
-
-a:hover,
-a:focus {
-	color: #F3DAB2;
-}
-
-#dynamic {
-	max-width: 800px;
-/*	background: transparent;
-	border-radius: 1em;
-	padding: 20px;*/
-}
-
-.tags {
-	list-style: none;
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-}
-
-.tags li {
-	list-style: none;
-	display: inline;
-	padding: 0;
-	margin: 0;
-	padding-right: 5px;
-}
-
-#wrap {
-  width: 100%;
-  max-width: 960px;
-  margin: auto;
-}
-
-#navhead ul {
-  padding-left: 0px;
-}
-
-#navhead li {
-	display: inline-block;
-}
-
-#navhead li:after {
-	margin-left: 5px;
-	content: '\B7'; /* aka &middot; */
-}
-
-#navhead li:last-child:after {
-	content: '';
-}
-
-header img {
-	display: none;
-}
-
-footer {
-	clear: both;
-	margin-top: 40px;
-	border-top-width: 1px;
-	margin-left: -15px;
-	margin-right: -15px;
-}
-
-footer img {
-	display: none;
-}
-
-::selection {
-	color: white;
-	text-shadow: none;
-	background: #778DA8;
-}
-
-#posts a {
-	text-decoration: none;
-}
-
-#posts {
-	margin: 0;
-	padding: 0;
-}
-
-#posts li {
-	list-style: none;
-	display: block;
-	border-bottom-width: 0px;
-	clear: both;
-}
-
-#posts h3,
-#posts time {
-	margin: 0;
-	padding: 10px;
-}
-
-#posts h3 {
-	display: inline-block;
-	border-bottom-width: 1px;
-}
-
-#posts time {
-	text-align: right;
-	display: none;
-}
-
-#pagination {
-	margin-top: 20px;
-}
-
-#pagination a {
-	text-decoration: none;
-}
-
-#pagination .previous:before {
-	content: '\AB\20';
-}
-
-#pagination .next {
-	float: right;
-}
-
-#pagination .next:after {
-	content: '\20\BB';
-}
-
-.icon {
-	background-size: 16px;
-	-webkit-background-size: 16px;
-	-khtml-background-size: 16px;
-	padding-left: 18px;
-	background-position: 0 center;
-	background-repeat: no-repeat;
-}
-
-/* Wider displays */
-
-/* This was 960px. The 7px is somehow related to .icon, but I'm not sure how. */
-@media (min-width: 967px) {
-	#navhead .icon {
-		-webkit-transition-property: background-position;
-		-moz-transition-property: background-position;
-		-ms-transition-property: background-position;
-		-o-transition-property: background-position;
-		transition-property: background-position;
-
-		-webkit-transition-duration: 0.5s;
-		-moz-transition-duration: 0.5s;
-		-ms-transition-duration: 0.5s;
-		-o-transition-duration: 0.5s;
-		transition-duration: 0.5s;
-
-		padding-left: 25px;
-
-		background-position: -32px center;
-	}
-
-	#navhead .icon:hover,
-	#navhead .icon:focus {
-		background-position: 0 center;
-	}
-
-	#posts li {
-		border-bottom-width: 1px;
-	}
-
-	#posts h3,
-	#posts time {
-		width: 49%;
-		display: inline-block;
-		border-bottom-width: 0px;
-	}
-
-	#navhead {
-		float: left;
-	}
-
-	#navhead a {
-		text-decoration: none;
-		font-size: 1.5em;
-	}
-
-	#navhead ul {
-		padding-top: 1.2em;
-	}
-
-	#navhead li {
-		display: block;
-	}
-
-	#navhead li:after {
-		content: '';
-	}
-
-	#dynamic {
-	  float: right;
-	}
-
-	.meta {
-		font-weight: bold;
-	}
-
-	.meta .tags:before {
-		content: '\B7'; /* aka &middot; */
-	}
-
-	header img {
-		display: block;
-
-		float: left;
-		width: 200px;
-		height: 200px;
-		margin: 20px;
-		margin-top: 10px;
-		margin-left: 0;
-		border-radius: 1em;
-	}
-
-	footer img {
-		display: block;
-		float: left;
-		/*height: 120px;
-		width: 120px;*/
-		height: 200px;
-		width: 200px;
-		margin: 20px;
-		margin-left: 0px;
-		border-radius: 0.5em;
-	}
-}
-
-iframe {
-  padding-top: 20px;
-}
-
 /*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
 
 /* =============================================================================
@@ -819,5 +501,323 @@ textarea {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+/* Applies to all elements */
+* {
+  /* apply a natural box layout model to all elements */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+ * See https://developer.mozilla.org/en/Images,_Tables,_and_Mysterious_Gaps
+ *+ for why this is needed. (it doesn't apply to just tables)
+ */
+a, img {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* main.css */
+
+.text-content, p {
+	line-height: 150%;
+	/*text-align: justify;*/
+}
+
+.func, .monospace, code {
+	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
+}
+
+code {
+	background: rgba(248, 232, 207, 0.2); /*#f8e8cf*/
+	border: none;
+	border-radius: 0.5em;
+	margin: 15px;
+	padding: 15px;
+	display: block;
+}
+
+p code, span code, li code {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0px;
+	display: inline;
+}
+
+img {
+	border: none;
+}
+
+h1 { font-size:1.5em; }
+h2 { font-size:1.4em; }
+h3 { font-size:1.1em; }
+h4, h5, h6 { font-size:1.1em; }
+
+/* Clearfix, see http://www.positioniseverything.net/easyclearing.html under '"Clearing", 21st Century Style' */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+/* theme.css */
+
+body {
+	margin: 15px;
+	padding: 0px;
+	font-size: 100%;
+	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
+	height: 100%;
+	background-color: #2B3844;
+}
+
+* {
+	color: #FAEFDE;
+	border: 0px solid #F8E8CF;
+}
+
+a {
+	color: #F8E8CF;
+}
+
+a:hover,
+a:focus {
+	color: #F3DAB2;
+}
+
+#dynamic {
+	max-width: 800px;
+/*	background: transparent;
+	border-radius: 1em;
+	padding: 20px;*/
+}
+
+.tags {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+.tags li {
+	list-style: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+	padding-right: 5px;
+}
+
+#wrap {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+}
+
+#navhead ul {
+  padding-left: 0px;
+}
+
+#navhead li {
+	display: inline-block;
+}
+
+#navhead li:after {
+	margin-left: 5px;
+	content: '\B7'; /* aka &middot; */
+}
+
+#navhead li:last-child:after {
+	content: '';
+}
+
+header img {
+	display: none;
+}
+
+footer {
+	clear: both;
+	margin-top: 40px;
+	border-top-width: 1px;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+footer img {
+	display: none;
+}
+
+::selection {
+	color: white;
+	text-shadow: none;
+	background: #778DA8;
+}
+
+#posts a {
+	text-decoration: none;
+}
+
+#posts {
+	margin: 0;
+	padding: 0;
+}
+
+#posts li {
+	list-style: none;
+	display: block;
+	border-bottom-width: 0px;
+	clear: both;
+}
+
+#posts h3,
+#posts time {
+	margin: 0;
+	padding: 10px;
+}
+
+#posts h3 {
+	display: inline-block;
+	border-bottom-width: 1px;
+}
+
+#posts time {
+	text-align: right;
+	display: none;
+}
+
+#pagination {
+	margin-top: 20px;
+}
+
+#pagination a {
+	text-decoration: none;
+}
+
+#pagination .previous:before {
+	content: '\AB\20';
+}
+
+#pagination .next {
+	float: right;
+}
+
+#pagination .next:after {
+	content: '\20\BB';
+}
+
+.icon {
+	background-size: 16px;
+	-webkit-background-size: 16px;
+	-khtml-background-size: 16px;
+	padding-left: 18px;
+	background-position: 0 center;
+	background-repeat: no-repeat;
+}
+
+/* Wider displays */
+
+/* This was 960px. The 7px is somehow related to .icon, but I'm not sure how. */
+@media (min-width: 967px) {
+	#navhead .icon {
+		-webkit-transition-property: background-position;
+		-moz-transition-property: background-position;
+		-ms-transition-property: background-position;
+		-o-transition-property: background-position;
+		transition-property: background-position;
+
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+
+		padding-left: 25px;
+
+		background-position: -32px center;
+	}
+
+	#navhead .icon:hover,
+	#navhead .icon:focus {
+		background-position: 0 center;
+	}
+
+	#posts li {
+		border-bottom-width: 1px;
+	}
+
+	#posts h3,
+	#posts time {
+		width: 49%;
+		display: inline-block;
+		border-bottom-width: 0px;
+	}
+
+	#navhead {
+		float: left;
+	}
+
+	#navhead a {
+		text-decoration: none;
+		font-size: 1.5em;
+	}
+
+	#navhead ul {
+		padding-top: 1.2em;
+	}
+
+	#navhead li {
+		display: block;
+	}
+
+	#navhead li:after {
+		content: '';
+	}
+
+	#dynamic {
+	  float: right;
+	}
+
+	.meta {
+		font-weight: bold;
+	}
+
+	.meta .tags:before {
+		content: '\B7'; /* aka &middot; */
+	}
+
+	header img {
+		display: block;
+
+		float: left;
+		width: 200px;
+		height: 200px;
+		margin: 20px;
+		margin-top: 10px;
+		margin-left: 0;
+		border-radius: 1em;
+	}
+
+	footer img {
+		display: block;
+		float: left;
+		/*height: 120px;
+		width: 120px;*/
+		height: 200px;
+		width: 200px;
+		margin: 20px;
+		margin-left: 0px;
+		border-radius: 0.5em;
+	}
+}
+
+iframe {
+  padding-top: 20px;
 }
 
