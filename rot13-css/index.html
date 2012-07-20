@@ -31,13 +31,28 @@ ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFT
 <style>
 /* Start weird hack */
 
-.rot13 a { text-decoration: none; }
+body { margin: 0; }
 
-.rot13 a {
+.rot13 a, a.rot13 {
+  text-decoration: none;
 	display: inline-block;
 	border-bottom: 1px solid;
 	line-height: 1;
+}
+
+.rot13 a:hover,
+.rot13 a:focus,
+a..rot13:hover,
+a.rot13:focus { color: #F3DAB2;  }
+
+p.rot13 a, p a.rot13 {
   margin-bottom: 4px;
+}
+
+#navhead a.rot13 {
+  border-bottom: none;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 /* End weird hack */
@@ -159,9 +174,9 @@ ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFT
 <asside id="navhead">
 	<nav>
 		<ul>
-			<li><a class="rot13" href="/"><span class=u></span><span class=b></span><span class=z></span><span class=r></span></a></li>
-			<li><a class="rot13" href="https://github.com/duckinator"><span class=p></span><span class=b></span><span class=q></span><span class=r></span></a></li>
-			<li><a class="rot13" href="/resources/"><span class=e></span><span class=r></span><span class=f></span><span class=b></span><span class=h></span><span class=e></span><span class=p></span><span class=r></span><span class=f></span></a></li>
+			<li><a class="rot13 icon" href="/" style="background-image: url(http://duckinator.net:/favicon.ico);"><span class=u></span><span class=b></span><span class=z></span><span class=r></span></a></li>
+			<li><a class="rot13 icon" href="https://github.com/duckinator" style="background-image: url(https://github.com:/favicon.ico);"><span class=p></span><span class=b></span><span class=q></span><span class=r></span></a></li>
+			<li><a class="rot13 icon" href="/resources/" style="background-image: url(http://duckinator.net:/favicon.ico);"><span class=e></span><span class=r></span><span class=f></span><span class=b></span><span class=h></span><span class=e></span><span class=p></span><span class=r></span><span class=f></span></a></li>
 		</ul>
 	</nav>
 </asside>
