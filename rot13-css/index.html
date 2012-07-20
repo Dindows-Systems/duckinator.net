@@ -25,146 +25,8 @@ ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFT
 <title>rot13 css demo - duckinator.net</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" type="text/css" href="http://duckinator.net/css/all.min.css"> 
-<link rel="alternate" type="application/rss+xml" title="duckinator.net" href="/rss.xml">
-<style>
-/* Start weird hack */
-
-.rot13 a, a.rot13 {
-  text-decoration: none;
-	display: inline-block;
-	border-bottom: 1px solid;
-	line-height: 1;
-}
-
-.rot13 a:hover,
-.rot13 a:focus,
-a..rot13:hover,
-a.rot13:focus { color: #F3DAB2;  }
-
-p.rot13 a, p a.rot13 {
-  margin-bottom: 4px;
-}
-
-#navhead a.rot13 {
-  border-bottom: none;
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
-
-/* End weird hack */
-
-
-.rot13 *::before { display: inline-block; }
-
-.rot13:hover .a::before { content: 'a'; }
-.rot13:hover .b::before { content: 'b'; }
-.rot13:hover .c::before { content: 'c'; }
-.rot13:hover .d::before { content: 'd'; }
-.rot13:hover .e::before { content: 'e'; }
-.rot13:hover .f::before { content: 'f'; }
-.rot13:hover .g::before { content: 'g'; }
-.rot13:hover .h::before { content: 'h'; }
-.rot13:hover .i::before { content: 'i'; }
-.rot13:hover .j::before { content: 'j'; }
-.rot13:hover .k::before { content: 'k'; }
-.rot13:hover .l::before { content: 'l'; }
-.rot13:hover .m::before { content: 'm'; }
-.rot13:hover .n::before { content: 'n'; }
-.rot13:hover .o::before { content: 'o'; }
-.rot13:hover .p::before { content: 'p'; }
-.rot13:hover .q::before { content: 'q'; }
-.rot13:hover .r::before { content: 'r'; }
-.rot13:hover .s::before { content: 's'; }
-.rot13:hover .t::before { content: 't'; }
-.rot13:hover .u::before { content: 'u'; }
-.rot13:hover .v::before { content: 'v'; }
-.rot13:hover .w::before { content: 'w'; }
-.rot13:hover .x::before { content: 'x'; }
-.rot13:hover .y::before { content: 'y'; }
-.rot13:hover .z::before { content: 'z'; }
-
-.rot13:hover .A::before { content: 'A'; }
-.rot13:hover .B::before { content: 'B'; }
-.rot13:hover .C::before { content: 'C'; }
-.rot13:hover .D::before { content: 'D'; }
-.rot13:hover .E::before { content: 'E'; }
-.rot13:hover .F::before { content: 'F'; }
-.rot13:hover .G::before { content: 'G'; }
-.rot13:hover .H::before { content: 'H'; }
-.rot13:hover .I::before { content: 'I'; }
-.rot13:hover .J::before { content: 'J'; }
-.rot13:hover .K::before { content: 'K'; }
-.rot13:hover .L::before { content: 'L'; }
-.rot13:hover .M::before { content: 'M'; }
-.rot13:hover .N::before { content: 'N'; }
-.rot13:hover .O::before { content: 'O'; }
-.rot13:hover .P::before { content: 'P'; }
-.rot13:hover .Q::before { content: 'Q'; }
-.rot13:hover .R::before { content: 'R'; }
-.rot13:hover .S::before { content: 'S'; }
-.rot13:hover .T::before { content: 'T'; }
-.rot13:hover .U::before { content: 'U'; }
-.rot13:hover .V::before { content: 'V'; }
-.rot13:hover .W::before { content: 'W'; }
-.rot13:hover .X::before { content: 'X'; }
-.rot13:hover .Y::before { content: 'Y'; }
-.rot13:hover .Z::before { content: 'Z'; }
-
-.rot13 .a::before { content: 'n'; }
-.rot13 .b::before { content: 'o'; }
-.rot13 .c::before { content: 'p'; }
-.rot13 .d::before { content: 'q'; }
-.rot13 .e::before { content: 'r'; }
-.rot13 .f::before { content: 's'; }
-.rot13 .g::before { content: 't'; }
-.rot13 .h::before { content: 'u'; }
-.rot13 .i::before { content: 'v'; }
-.rot13 .j::before { content: 'w'; }
-.rot13 .k::before { content: 'x'; }
-.rot13 .l::before { content: 'y'; }
-.rot13 .m::before { content: 'z'; }
-.rot13 .n::before { content: 'a'; }
-.rot13 .o::before { content: 'b'; }
-.rot13 .p::before { content: 'c'; }
-.rot13 .q::before { content: 'd'; }
-.rot13 .r::before { content: 'e'; }
-.rot13 .s::before { content: 'f'; }
-.rot13 .t::before { content: 'g'; }
-.rot13 .u::before { content: 'h'; }
-.rot13 .v::before { content: 'i'; }
-.rot13 .w::before { content: 'j'; }
-.rot13 .x::before { content: 'k'; }
-.rot13 .y::before { content: 'l'; }
-.rot13 .z::before { content: 'm'; }
-
-.rot13 .A::before { content: 'N'; }
-.rot13 .B::before { content: 'O'; }
-.rot13 .C::before { content: 'P'; }
-.rot13 .D::before { content: 'Q'; }
-.rot13 .E::before { content: 'R'; }
-.rot13 .F::before { content: 'S'; }
-.rot13 .G::before { content: 'T'; }
-.rot13 .H::before { content: 'U'; }
-.rot13 .I::before { content: 'V'; }
-.rot13 .J::before { content: 'W'; }
-.rot13 .K::before { content: 'X'; }
-.rot13 .L::before { content: 'Y'; }
-.rot13 .M::before { content: 'Z'; }
-.rot13 .N::before { content: 'A'; }
-.rot13 .O::before { content: 'B'; }
-.rot13 .P::before { content: 'C'; }
-.rot13 .Q::before { content: 'D'; }
-.rot13 .R::before { content: 'E'; }
-.rot13 .S::before { content: 'F'; }
-.rot13 .T::before { content: 'G'; }
-.rot13 .U::before { content: 'H'; }
-.rot13 .V::before { content: 'I'; }
-.rot13 .W::before { content: 'J'; }
-.rot13 .X::before { content: 'K'; }
-.rot13 .Y::before { content: 'L'; }
-.rot13 .Z::before { content: 'M'; }
-</style>
+<link rel="stylesheet" type="text/css" href="./css/duckinator.net-all.css"> 
+<link rel="stylesheet" type="text/css" href="./css/rot13.css">
 <body>
 <!-- Start boilerplate -->
 <section id="wrap">
@@ -430,7 +292,7 @@ p.rot13 a, p a.rot13 {
 
 </article>
 <footer>
-<p><img src="http://static.duckinator.net/avatar_200x200.jpg" alt=""></p>
+<p><img src="./avatar_200x200.jpg" alt=""></p>
 <h1 class="rot13"><span class=U></span><span class=r></span><span class=l></span>, <span class=V></span>'<span class=z></span> <span class=A></span><span class=v></span><span class=p></span><span class=x></span> <span class=Z></span><span class=n></span><span class=e></span><span class=x></span><span class=j></span><span class=r></span><span class=y></span><span class=y></span>. <span class=N></span><span class=x></span><span class=n></span> "<span class=q></span><span class=h></span><span class=p></span><span class=x></span>."</h1>
 <p class="rot13"><span class=V></span> <span class=x></span><span class=v></span><span class=p></span><span class=x></span> <span class=f></span><span class=r></span><span class=e></span><span class=i></span><span class=r></span><span class=e></span><span class=f></span> <span class=n></span><span class=g></span> <a href="http://labs.official.fm"><span class=b></span><span class=s></span><span class=s></span><span class=v></span><span class=p></span><span class=v></span><span class=n></span><span class=y></span>.<span class=s></span><span class=z></span> <span class=y></span><span class=n></span><span class=o></span><span class=f></span></a>. <span class=J></span><span class=r></span>'<span class=e></span><span class=r></span> <span class=g></span><span class=r></span><span class=n></span><span class=p></span><span class=u></span><span class=v></span><span class=a></span><span class=t></span> <span class=g></span><span class=u></span><span class=r></span> <span class=j></span><span class=r></span><span class=o></span> <span class=u></span><span class=b></span><span class=j></span> <span class=g></span><span class=b></span> <a href="http://labs.official.fm/codecs"><span class=f></span><span class=v></span><span class=a></span><span class=t></span></a>.</p>
 <p class="rot13"><span class=V></span>'<span class=z></span> <span class=n></span> <span class=z></span><span class=b></span><span class=a></span><span class=x></span><span class=r></span><span class=l></span>'<span class=f></span> <span class=h></span><span class=a></span><span class=p></span><span class=y></span><span class=r></span>, <span class=n></span><span class=a></span><span class=q></span> <span class=y></span><span class=b></span><span class=i></span><span class=r></span> <span class=q></span><span class=v></span><span class=f></span><span class=p></span><span class=h></span><span class=f></span><span class=f></span><span class=v></span><span class=a></span><span class=t></span> <span class=g></span><span class=u></span><span class=v></span><span class=a></span><span class=t></span><span class=f></span> <span class=z></span><span class=n></span><span class=g></span><span class=u></span>, <span class=f></span><span class=b></span><span class=s></span><span class=g></span><span class=j></span><span class=n></span><span class=e></span><span class=r></span>, <span class=b></span><span class=e></span> <span class=u></span><span class=n></span><span class=e></span><span class=q></span><span class=j></span><span class=n></span><span class=e></span><span class=r></span> <span class=e></span><span class=r></span><span class=y></span><span class=n></span><span class=g></span><span class=r></span><span class=q></span>.</p>
