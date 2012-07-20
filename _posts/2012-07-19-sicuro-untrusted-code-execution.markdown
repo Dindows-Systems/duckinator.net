@@ -6,7 +6,7 @@ layout: post
 
 [Jens Nockert](http://twitter.com/jensnockert) has exposed a rather major security hole in Sicuro.
 
-Under basically any circumstances, Sicuro can be used to execute untrusted code. The demonstrated technique used by Jens was to terminate all processes that can be terminated by the user who the initial `Sicuro#eval` call was made under. I have demonstrated the ability to use it to access a remote shell, but am unsure if it could be used for privilege escalation.
+Under basically any circumstances, Sicuro can be used to execute untrusted code. The demonstrated technique used by Jens was to terminate all processes that can be terminated by the user who ran the initial `Sicuro#eval` call. I have demonstrated the ability to use it to access a remote shell, but am unsure if it could be used for privilege escalation.
 
 # The main problem
 
