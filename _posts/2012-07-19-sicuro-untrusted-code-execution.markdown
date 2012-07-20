@@ -12,6 +12,8 @@ Under basically any circumstances, Sicuro can be used to execute untrusted code.
 
 It appears that attempts at making Sicuro more efficient have actually left it wide open to abuse. There was an attempt to make it lazily load trusted components, and that seems to have opened up a bug letting you `require` anything in the stdlib, including DL. DL is used for loading shared objects and calling functions in them.
 
+Please note that it can `require`, _any_ code in the ruby stdlib, and this is just _a single example._
+
 The following is the relevant part of the code for lazily loading trusted components. You can view it in context in [lib/sicuro/base.rb](https://github.com/duckinator/sicuro/blob/761e955fbbba07638d69bc62159199cdf0716a7d/lib/sicuro/base.rb#L254-256), lines 254 through 256.
 
     # Without Gem we won't require unresolved gems, therefore we restore the original require.
@@ -50,7 +52,7 @@ Congratulations, you now can run `netcat $IP 1337` to connect. The IP could easi
 
 There's a video at the bottom, but it's a bit difficult to read at that scale, so you can [go directly to the video](/assets/sicuro-untrusted-code-execution-bug.ogv).
 
-It may also be possible to escalate privileges using this.
+It may also be possible to escalate privileges using this method.
 
 # The small problem
 
