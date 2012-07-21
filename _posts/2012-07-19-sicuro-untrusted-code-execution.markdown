@@ -4,6 +4,11 @@ tags: sicuro security bug untrusted code execution
 layout: post
 ---
 
+<div class="update">
+<p>This has been fixed as of <a href="https://github.com/duckinator/sicuro/tree/v0.4.0">Sicuro v0.4.0</a>.</p>
+<p>Unfortunately, I had to disable <code>require</code> and <code>load</code> almost entirely. The exception is that <code>require</code> will return <code>false</code> if a file was already included.</p>
+</div>
+
 [Jens Nockert](http://twitter.com/jensnockert) has exposed a rather major security hole in Sicuro.
 
 Under basically any circumstances, Sicuro can be used to execute untrusted code. The demonstrated technique used by Jens was to terminate the process group that `Sicuro#eval` was called from. By modifying one of the parameters, it would instead terminate all processes that can be terminated by the user who ran the initial `Sicuro#eval` call. I have demonstrated the ability to use it to access a remote shell, but am unsure if it could be used for privilege escalation.

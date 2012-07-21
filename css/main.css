@@ -22,11 +22,11 @@ a, img {
 	/*text-align: justify;*/
 }
 
-.func, .monospace, code {
+.func, .monospace, code, .update {
 	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
 }
 
-code {
+.update, code {
 	background: rgba(248, 232, 207, 0.2); /*#f8e8cf*/
 	border: none;
 	border-radius: 0.5em;
@@ -35,13 +35,30 @@ code {
 	display: block;
 }
 
-p code, span code, li code {
+.update, p code, span code, li code {
 	padding-top: 1px;
 	padding-bottom: 1px;
 	padding-left: 5px;
 	padding-right: 5px;
 	margin: 0px;
 	display: inline;
+}
+
+.update {
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 20px;
+
+  border: 1px solid;
+}
+
+.update:before {
+  display: inline-block;
+  content: 'Update:';
+  font-weight: bold;
+  font-size: 1.3em;
 }
 
 img {
