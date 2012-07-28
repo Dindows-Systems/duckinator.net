@@ -2,7 +2,7 @@
 {% include social.markdown %}
 {% endcapture %}
 
-<img src="//static.duckinator.net/avatar_200x200.jpg" alt="">
+<img src="/avatar_200x200.jpg" alt="">
 
 # Hey, I'm Nick Markwell. Aka "duck."
 
