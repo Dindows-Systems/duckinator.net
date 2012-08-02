@@ -731,27 +731,35 @@ footer img {
 
 .icon {
 	background-size: 16px;
-	-webkit-background-size: 16px;
-	-khtml-background-size: 16px;
 	padding-left: 18px;
 	background-position: 0 center;
 	background-repeat: no-repeat;
+}
+
+#navhead .gittip {
+	border: 0;
+	margin: 0;
+	margin-top: 5px;
+	padding: 0;
+	vertical-align: bottom;
 }
 
 /* Wider displays */
 
 /* This was 960px. The 7px is somehow related to .icon, but I'm not sure how. */
 @media (min-width: 967px) {
+	#navhead .gittip {
+		margin-left: 25px;
+	}
+
 	#navhead .icon {
 		-webkit-transition-property: background-position;
 		-moz-transition-property: background-position;
-		-ms-transition-property: background-position;
 		-o-transition-property: background-position;
 		transition-property: background-position;
 
 		-webkit-transition-duration: 0.5s;
 		-moz-transition-duration: 0.5s;
-		-ms-transition-duration: 0.5s;
 		-o-transition-duration: 0.5s;
 		transition-duration: 0.5s;
 
