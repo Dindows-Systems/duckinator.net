@@ -9,7 +9,7 @@ echo -n > all.min.css
 for x in {normalize,main}.css; do
   cat $x > $x.tmp
 
-  # Loop over everything 5 times.
+  # Loop over everything 2 times.
   # Should probably have it just do this until it doesn't change...
   for ((i=0;i<2;i++)); do
 
