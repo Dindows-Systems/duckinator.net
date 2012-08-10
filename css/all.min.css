@@ -236,7 +236,7 @@ body{margin:15px;padding:0px;font-size:100%;font-family:"DejaVu Sans","Bitstream
 *{color:#FAEFDE;border:0px solid #F8E8CF;}
 a{color:#F8E8CF;}
 a:hover,a:focus{color:#F3DAB2;}
-#dynamic{max-width:800px;/*background:transparent;border-radius:1em;padding:20px;*/}
+#dynamic{max-width:800px;}
 .tags{list-style:none;display:inline-block;padding:0;margin:0;}
 .tags li{list-style:none;display:inline;padding:0;margin:0;padding-right:5px;}
 #wrap{width:100%;max-width:960px;margin:auto;}
@@ -275,7 +275,6 @@ footer img{display:none;}
 .meta{font-weight:bold;}
 .meta .tags:before{content:'\B7';}
 header img{display:block;float:left;width:200px;height:200px;margin:20px;margin-top:10px;margin-left:0;border-radius:1em;}
-footer img{display:block;float:left;/*height:120px;width:120px;*/
-height:200px;width:200px;margin:20px;margin-left:0px;border-radius:0.5em;}}
+footer img{display:block;float:left;height:200px;width:200px;margin:20px;margin-left:0px;border-radius:0.5em;}}
 iframe{padding-top:20px;}
 

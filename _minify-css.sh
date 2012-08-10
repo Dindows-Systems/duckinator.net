@@ -9,32 +9,37 @@ echo -n > all.min.css
 for x in {normalize,main}.css; do
   cat $x > $x.tmp
 
-  # Remove single-line comments
-  sed -i  's|/\*.*\*/||g'             $x.tmp
+  # Loop over everything 5 times.
+  # Should probably have it just do this until it doesn't change...
+  for ((i=0;i<2;i++)); do
 
-  # Remove all tabs and leading whitespace.
-  sed -i  's/\t\|^[\t ]*//g'          $x.tmp
+    # Remove all tabs and leading whitespace.
+    sed -i    's/\t\|^[\t ]*//g'             $x.tmp
 
-  # Remove whitespace around colons and brackets.
-  sed -i  's/ *\(:\|{\|}\) */\1/g'    $x.tmp
+    # Remove whitespace around colons and brackets.
+    sed -i    's/ *\(:\|{\|}\) */\1/g'       $x.tmp
 
-  # Make comma-separated list be single-line (foo,\nbar -> foo,bar).
-  sed -i -n '1h;1!H;${;g;s/,\n/,/g;p;}' $x.tmp
+    # Make comma-separated list be single-line (foo,\nbar -> foo,bar).
+    sed -i -n '1h;1!H;${;g;s/,\n/,/g;p;}'    $x.tmp
 
-  # Remove newlines before closing brackets (foo\n} -> foo}).
-  sed -i -n '1h;1!H;${;g;s/\s*\n}/}/g;p;}' $x.tmp
+    # Remove newlines before closing brackets (foo\n} -> foo}).
+    sed -i -n '1h;1!H;${;g;s/\s*\n}/}/g;p;}' $x.tmp
 
-  # Remove newlines after opening brackets ({\nfoo -> {foo).
-  sed -i -n '1h;1!H;${;g;s/{\s*\n/{/g;p;}' $x.tmp
+    # Remove newlines after opening brackets ({\nfoo -> {foo).
+    sed -i -n '1h;1!H;${;g;s/{\s*\n/{/g;p;}' $x.tmp
 
-  # Remove newlines after semicolons (foo;\nbar -> foo;bar).
-  sed -i -n '1h;1!H;${;g;s/;\s*\n/;/g;p;}' $x.tmp
+    # Remove newlines after semicolons (foo;\nbar -> foo;bar).
+    sed -i -n '1h;1!H;${;g;s/;\s*\n/;/g;p;}' $x.tmp
 
-  # Remove repeated newlines.
-  # TODO: Make this less hideous.
-  cat $x.tmp | grep -v "^$" > $x.tmp2
-  cat $x.tmp2 > $x.tmp
-  rm $x.tmp2
+    # Remove single-line comments
+    sed -i    's|/\*.*\*/||g'                $x.tmp
+
+    # Remove repeated newlines.
+    # TODO: Make this less hideous.
+    cat $x.tmp | grep -v "^$" > $x.tmp2
+    cat $x.tmp2 > $x.tmp
+    rm $x.tmp2
+  done
 done
 
 for x in {normalize,main}.css.tmp; do
@@ -42,5 +47,5 @@ for x in {normalize,main}.css.tmp; do
   echo >> all.min.css
 done
 
-rm *.tmp
+#rm *.tmp
 
