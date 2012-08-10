@@ -1,4 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,900");
+/*@import url("https://fonts.googleapis.com/css?family=Lato:300,900");*/
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Lato Black'), local('Lato-Black'), url(https://themes.googleusercontent.com/static/fonts/lato/v6/BVtM30trf7q_jfqYeHfjtA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff) format('woff');
+}
+
 button.gittip {
 	font: normal 9pt/9pt "Lato", sans-serif;
 	text-decoration: none;
