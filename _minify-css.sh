@@ -24,6 +24,12 @@ for x in {normalize,main}.css; do
   # Remove newlines before closing brackets (foo\n} -> foo}).
   sed -i -n '1h;1!H;${;g;s/\n}/}/g;p;}' $x.tmp
 
+  # Remove newlines after opening brackets ({\nfoo -> {foo).
+  sed -i -n '1h;1!H;${;g;s/{\n/{/g;p;}' $x.tmp
+
+  # Remove newlines after semicolons (foo;\nbar -> foo;bar).
+  sed -i -n '1h;1!H;${;g;s/;\n/;/g;p;}' $x.tmp
+
   # Remove repeated newlines.
   # TODO: Make this less hideous.
   cat $x.tmp | grep -v "^$" > $x.tmp2
