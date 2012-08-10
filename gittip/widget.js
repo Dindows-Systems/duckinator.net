@@ -27,7 +27,7 @@ GittipWidget.setup = function() {
 		css = '/widget.css';
 
 	if (!('jQuery' in window)) {
-		GittipWidget.create_element('script', 'jquery', {'src': 'https://www.gittip.com/assets/jquery-1.7.1.min.js', 'type': 'text/javascript'});
+		GittipWidget.create_element('script', 'jquery', {'src': 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', 'type': 'text/javascript'});
 		GittipWidget.create_element('link',   'widget', {'href': css, 'type': 'text/css', 'rel': 'stylesheet'});
 		setTimeout(GittipWidget.setup, 100);
 		return;
