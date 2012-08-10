@@ -665,6 +665,8 @@ footer {
 	border-top-width: 1px;
 	margin-left: -15px;
 	margin-right: -15px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 footer img {
@@ -736,19 +738,17 @@ footer img {
 	background-repeat: no-repeat;
 }
 
-#navhead .gittip {
-	border: 0;
-	margin: 0;
-	margin-top: 5px;
-	padding: 0;
-	vertical-align: bottom;
+#navhead button.gittip {
+	margin-top: 4px;
+  margin-bottom: 4px;
+	vertical-align: middle;
 }
 
 /* Wider displays */
 
 /* This was 960px. The 7px is somehow related to .icon, but I'm not sure how. */
 @media (min-width: 967px) {
-	#navhead .gittip {
+	#navhead button.gittip {
 		margin-left: 25px;
 	}
 
