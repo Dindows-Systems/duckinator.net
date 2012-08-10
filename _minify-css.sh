@@ -7,30 +7,28 @@ cd $DIR/css
 echo -n > all.min.css
 
 for x in {normalize,main}.css; do
-  [ "$x" == "all.min.css" ] && continue
-  # TODO: Figure out how to make csstidy be niec.
-  #csstidy $x --template=default $x.tmp
   cat $x > $x.tmp
 
+  # Remove single-line comments
   sed -i  's|/\*.*\*/||g'             $x.tmp
-  sed -i  's/\t\|^[\t ]*//g'          $x.tmp
-  sed -i  's/ *\(:\|{\|}\) */\1/g'    $x.tmp
-  #sed -i 's/,\n/,/g'                 $x.tmp
 
-  # foo,\nbar -> foo,bar
+  # Remove all tabs and leading whitespace.
+  sed -i  's/\t\|^[\t ]*//g'          $x.tmp
+
+  # Remove whitespace around colons and brackets.
+  sed -i  's/ *\(:\|{\|}\) */\1/g'    $x.tmp
+
+  # Make comma-separated list be single-line (foo,\nbar -> foo,bar).
   sed -i -n '1h;1!H;${;g;s/,\n/,/g;p;}' $x.tmp
 
-  # foo\n} -> foo}
+  # Remove newlines before closing brackets (foo\n} -> foo}).
   sed -i -n '1h;1!H;${;g;s/\n}/}/g;p;}' $x.tmp
 
-  # We run this 3 times because I want to avoid loops.
-  # \n\n -> \n
-  sed -i -n '1h;1!H;${;g;s/\n\n/\n/g;p;}' $x.tmp
-  sed -i -n '1h;1!H;${;g;s/\n\n/\n/g;p;}' $x.tmp
-  sed -i -n '1h;1!H;${;g;s/\n\n/\n/g;p;}' $x.tmp
-
-  # Remove comments
-  #sed -i -n '1h;1!H;${;g;s|/\*(^\*/)+\*/||g;p;}' $x.tmp
+  # Remove repeated newlines.
+  # TODO: Make this less hideous.
+  cat $x.tmp | grep -v "^$" > $x.tmp2
+  cat $x.tmp2 > $x.tmp
+  rm $x.tmp2
 done
 
 for x in {normalize,main}.css.tmp; do
