@@ -47,5 +47,5 @@ for x in {normalize,main}.css.tmp; do
   echo >> all.min.css
 done
 
-#rm *.tmp
+rm *.tmp
 
