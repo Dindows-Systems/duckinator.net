@@ -12,8 +12,8 @@ I'm a monkey's uncle, and love discussing things concerning math, software, or h
 
 <!--sse-->
 
-<section class="social">
+<div class="social">
 {{ social | markdownify }}
-</section>
+</div>
 
 <!--/sse-->
