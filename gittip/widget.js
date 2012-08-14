@@ -1,5 +1,7 @@
 var GittipWidget = {};
 
+GittipWidget.initialized = false;
+
 GittipWidget.create_element = function(el_type, ident, opts) {
 	var id = "autoloaded-" + ident;
 	if (document.getElementById(id))
@@ -26,24 +28,38 @@ GittipWidget.setup = function() {
 	if (!css)
 		css = '/widget.css';
 
-	if (!('jQuery' in window)) {
-		GittipWidget.create_element('script', 'jquery', {'src': 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', 'type': 'text/javascript'});
+	if (!this.initialized) {
 		GittipWidget.create_element('link',   'widget', {'href': css, 'type': 'text/css', 'rel': 'stylesheet'});
+		GittipWidget.initialized = true;
+	}
+
+	if ((!document.getElementById('gittip-widget-button')) && document.getElementById('autoloaded-widget')) {
+		var spans = document.getElementsByTagName('span'),
+		    username, btn, span;
+
+		for (var i in spans) {
+			if (spans[i].getAttribute('class').split(' ').indexOf('gittip') >= 0) {
+				span = spans[i];
+				username = span.getAttribute('data-username');
+				break;
+			}
+		}
+
+    btn = document.createElement('button');
+		btn.className = 'gittip';
+		btn.id = 'gittip-widget-button';
+		btn.setAttribute('data-username', username);
+		btn.innerHTML = 'Gittip';
+
+		span.appendChild(btn);
+
+		btn.onclick = function(event) {
+			window.open('https://www.gittip.com/' + username);
+		};
+	} else {
 		setTimeout(GittipWidget.setup, 100);
 		return;
 	}
-
-	$(document).ready(function() {
-		var span = $('span.gittip'),
-		    username = span[0].getAttribute('data-username'),
-		    btn = $('<button class="gittip" data-username="' + username + '">Gittip</button>');
-
-		span.append(btn);
-
-		$('.gittip').click(function(event) {
-			window.open('https://www.gittip.com/' + username);
-		});
-	});
 }
 
 GittipWidget.setup();
