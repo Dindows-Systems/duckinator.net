@@ -1,9 +1,9 @@
 /* Applies to all elements */
 * {
-  /* apply a natural box layout model to all elements */
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	/* apply a natural box layout model to all elements */
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /*
@@ -11,8 +11,8 @@
  *+ for why this is needed. (it doesn't apply to just tables)
  */
 a, img {
-  display: inline-block;
-  vertical-align: bottom;
+	display: inline-block;
+	vertical-align: bottom;
 }
 
 /* main.css */
@@ -45,20 +45,20 @@ a, img {
 }
 
 .update {
-  display: inline-block;
-  margin-left: 15px;
-  margin-top: 2em;
-  margin-bottom: 1em;
-  padding: 20px;
+	display: inline-block;
+	margin-left: 15px;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	padding: 20px;
 
-  border: 1px solid;
+	border: 1px solid;
 }
 
 .update:before {
-  display: inline-block;
-  content: 'Update:';
-  font-weight: bold;
-  font-size: 1.3em;
+	display: inline-block;
+	content: 'Update:';
+	font-weight: bold;
+	font-size: 1.3em;
 }
 
 img {
@@ -128,13 +128,13 @@ a:focus {
 }
 
 #wrap {
-  width: 100%;
-  max-width: 960px;
-  margin: auto;
+	width: 100%;
+	max-width: 960px;
+	margin: auto;
 }
 
 #navhead ul {
-  padding-left: 0px;
+	padding-left: 0px;
 }
 
 #navhead li {
@@ -235,7 +235,7 @@ footer img {
 
 #navhead button.gittip {
 	margin-top: 4px;
-  margin-bottom: 4px;
+	margin-bottom: 4px;
 	vertical-align: middle;
 }
 
@@ -338,5 +338,5 @@ footer img {
 }
 
 iframe {
-  padding-top: 20px;
+	padding-top: 20px;
 }
