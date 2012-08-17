@@ -260,9 +260,7 @@ footer img{display:none;}
 #pagination .next{float:right;}
 #pagination .next:after{content:'\20\BB';}
 .icon{background-size:16px;padding-left:18px;background-position:0 center;background-repeat:no-repeat;}
-#navhead button.gittip{margin-top:4px;margin-bottom:4px;vertical-align:middle;}
-@media (min-width:967px){#navhead button.gittip{margin-left:25px;}
-#navhead .icon{-webkit-transition-property:background-position;-moz-transition-property:background-position;-o-transition-property:background-position;transition-property:background-position;-webkit-transition-duration:0.5s;-moz-transition-duration:0.5s;-o-transition-duration:0.5s;transition-duration:0.5s;padding-left:25px;background-position:-32px center;}
+@media (min-width:967px){#navhead .icon{-webkit-transition-property:background-position;-moz-transition-property:background-position;-o-transition-property:background-position;transition-property:background-position;-webkit-transition-duration:0.5s;-moz-transition-duration:0.5s;-o-transition-duration:0.5s;transition-duration:0.5s;padding-left:25px;background-position:-32px center;}
 #navhead .icon:hover,#navhead .icon:focus{background-position:0 center;}
 #posts li{border-bottom-width:1px;}
 #posts h3,#posts time{width:49%;display:inline-block;border-bottom-width:0px;}
