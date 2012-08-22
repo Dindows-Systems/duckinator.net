@@ -34,6 +34,10 @@ for x in {normalize,main}.css; do
     # Remove single-line comments
     sed -i    's|/\*.*\*/||g'                $x.tmp
 
+    # Remove multi-line comments
+    # TODO: Make this less hideous.
+    sed -i '/\/\*/,/\*\//d'                  $x.tmp
+
     # Remove repeated newlines.
     # TODO: Make this less hideous.
     cat $x.tmp | grep -v "^$" > $x.tmp2
