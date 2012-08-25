@@ -32,6 +32,12 @@
 	</asside>
 
 <section id="dynamic">
+{% if page.draft %}
+<div id="draft-msg">
+This post is a draft! Please don't share it publicly while this message is visible.
+</div>
+{% endif %}
+
 {% case page.layout %}
 
 {% when 'post' %}

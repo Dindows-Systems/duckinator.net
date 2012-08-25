@@ -105,4 +105,5 @@ footer img{display:none;}
 header img{display:block;float:left;width:200px;height:200px;margin:10px 20px 20px 0;border-radius:1em;}
 footer img{display:block;float:left;height:200px;width:200px;margin:20px 20px 20px 0px;border-radius:0.5em;}}
 iframe{padding-top:20px;}
+#draft-msg{background:rgba(248, 132, 107, 0.3);border-radius:0.5em;display:inline-block;margin:2em 0 1em 15px;padding:20px;border:1px solid;}
 
