@@ -11,7 +11,7 @@ It seems that _aside from being surrounded by asthma triggers_ (things that, for
 
 ### What _is_ Asthma?
 
-I'll start this post off with a rather simplified explanation of asthma: asthma is caused by spasms in the _bronchi_ of the lungs, which leads to -- sometimes very severe -- difficulty breathing. Asthma _triggers_ are things that can trigger asthma attacks; they vary from person to person, can change as they get older, and can change _depending on how tired they are, or their emotional state at the time._ It's often, but not always, due to an allergic reaction. However, it can also be triggered by other forms of hypersensitivity -- for me, most strong smells can trigger an asthma attack. I am more prone to asthma attacks when I'm tired or highly stressed. For some people, it's quite a bit more mild. For others, it's far more extreme.
+I'll start this post off with a rather simplified explanation of asthma: asthma is caused by spasms in the _bronchi_ of the lungs, which leads to -- sometimes very severe -- difficulty breathing. Asthma _triggers_ are things that can trigger asthma attacks; they vary from person to person, can change as they get older, and can change _depending on how tired they are, or their emotional state at the time,_ among many other things. It's often, but not always, due to an allergic reaction. It can also be triggered by other forms of hypersensitivity -- for me, most strong smells can trigger an asthma attack. I am more prone to asthma attacks when I'm tired or highly stressed. For some people, it's quite a bit more mild. For others, it's far more extreme.
 
 ### The medications
 
