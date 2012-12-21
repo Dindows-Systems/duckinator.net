@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+{% assign debug = true %} {% comment %} set to false to disable debugging {% endcomment %}
 {% assign title_suffix = "" %}
 {% if page.title and page.title != '' %}
 	{% assign title_suffix = " &mdash; " %}
@@ -11,10 +12,13 @@
 	<meta charset="utf-8"> 
 	<title>{{ page.title }}{{ title_suffix }}duckinator.net</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-	<!--<link rel="stylesheet" type="text/css" href="/css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">-->
+
+{% if debug %}
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+{% else %}
 	<link rel="stylesheet" type="text/css" href="/css/all.min.css">
+{% endif %}
 	
 	<link rel="alternate" type="application/rss+xml" title="duckinator.net" href="/rss.xml">
 </head>
