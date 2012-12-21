@@ -6,9 +6,9 @@
 
 # Hey, I'm Nick Markwell.
 
-But you may know me as "duck" or "duckinator." I can be described by a myriad of labels.
+You may know me as "duck" or "duckinator."
 
-To start, I am a brony, programming polyglot, a (not so great) musician, and an amateur photographer.
+I am a brony, programming polyglot, musician, and amateur photographer.
 
 I solve problems that bother me, and I create strange things to do so.
 
