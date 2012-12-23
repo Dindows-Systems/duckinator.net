@@ -19,14 +19,13 @@ a, img {
 
 .text-content, p {
 	line-height: 150%;
-	/*text-align: justify;*/
 }
 
-.func, .monospace, code, .update {
+.monospace, code {
 	font-family: "DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono",Monaco,"Lucida Console","Courier New",monospace;
 }
 
-.update, code {
+.update, .draft, code {
 	background: rgba(248, 232, 207, 0.2); /*#f8e8cf*/
 	border: none;
 	border-radius: 0.5em;
@@ -35,27 +34,11 @@ a, img {
 	display: block;
 }
 
-.update, p code, span code, li code {
+.update, .draft, p code, span code, li code {
 	/* padding: [top/bottom] [left/right] */
 	padding: 1px 5px;
 	margin: 0px;
 	display: inline;
-}
-
-.update {
-	display: inline-block;
-	/* margin: [top] [right] [bottom] [left] */
-	margin: 2em 0 1em 15px;
-	padding: 20px;
-
-	border: 1px solid;
-}
-
-.update:before {
-	display: inline-block;
-	content: 'Update:';
-	font-weight: bold;
-	font-size: 1.3em;
 }
 
 img {
@@ -67,46 +50,30 @@ h2 { font-size:1.4em; }
 h3 { font-size:1.1em; }
 h4, h5, h6 { font-size:1.1em; }
 
-/* Clearfix, see http://www.positioniseverything.net/easyclearing.html under '"Clearing", 21st Century Style' */
-.clearfix:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-
-
 /* theme.css */
 
 body {
-	margin: 15px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	font-size: 100%;
 	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
 	height: 100%;
-	background-color: #2B3844;
+	background-color: #689CD2;
 }
 
 * {
-	color: #FAEFDE;
-	border: 0px solid #F8E8CF;
-}
-
-a {
-	color: #F8E8CF;
-}
-
-a:hover,
-a:focus {
-	color: #F3DAB2;
+	color: white;
+	border: 0px solid #A3A9FA;
 }
 
 #dynamic {
-	max-width: 800px;
-/*	background: transparent;
-	border-radius: 1em;
-	padding: 20px;*/
+	max-width: 960px;
+	margin: auto;
+	padding: 20px;
+}
+
+.meta {
+	font-weight: bold;
 }
 
 .tags {
@@ -117,6 +84,7 @@ a:focus {
 }
 
 .tags li {
+	font-size: 0.8em;
 	list-style: none;
 	display: inline;
 	/* padding: [top] [right] [bottom] [left] */
@@ -124,27 +92,29 @@ a:focus {
 	margin: 0;
 }
 
-#wrap {
-	width: 100%;
-	max-width: 960px;
-	margin: auto;
+#header {
+	display: block;
+	background: #3564B2;
+	margin: 0;
+	padding: 0;
+
+	-moz-box-shadow: 0 2px 2px #3564B2;
+	-webkit-box-shadow: 0 2px 2px #3564B2;
+	box-shadow: 0 2px 2px #3564B2;
 }
 
-#navhead ul {
-	padding-left: 0px;
+#header ul {
+	padding: 0px;
+	margin: 0;
 }
 
-#navhead li {
+#header li {
 	display: inline-block;
 }
 
-#navhead li:after {
-	margin-left: 5px;
-	content: '\B7'; /* aka &middot; */
-}
-
-#navhead li:last-child:after {
-	content: '';
+#header a {
+	font-weight: bold;
+	padding: 15px 30px;
 }
 
 header img {
@@ -233,25 +203,24 @@ footer img {
 
 /* This was 960px. The 7px is somehow related to .icon, but I'm not sure how. */
 @media (min-width: 967px) {
-	#navhead .icon {
+	#header .icon {
 		-webkit-transition-property: background-position;
 		-moz-transition-property: background-position;
 		-o-transition-property: background-position;
 		transition-property: background-position;
 
-		-webkit-transition-duration: 0.5s;
-		-moz-transition-duration: 0.5s;
-		-o-transition-duration: 0.5s;
-		transition-duration: 0.5s;
+		-webkit-transition-duration: 0.3s;
+		-moz-transition-duration: 0.3s;
+		-o-transition-duration: 0.3s;
+		transition-duration: 0.3s;
 
-		padding-left: 25px;
-
-		background-position: -32px center;
+		background-position: 5px -50%;
 	}
 
-	#navhead .icon:hover,
-	#navhead .icon:focus {
-		background-position: 0 center;
+	#header .icon:hover,
+	#header .icon:focus,
+	#header .active {
+		background-position: 5px 50%;
 	}
 
 	#posts li {
@@ -265,37 +234,8 @@ footer img {
 		border-bottom-width: 0px;
 	}
 
-	#navhead {
-		float: left;
-	}
-
-	#navhead a {
-		text-decoration: none;
-		font-size: 1.5em;
-	}
-
-	#navhead ul {
-		padding-top: 1.2em;
-	}
-
-	#navhead li {
-		display: block;
-	}
-
-	#navhead li:after {
-		content: '';
-	}
-
-	#dynamic {
-		float: right;
-	}
-
-	.meta {
-		font-weight: bold;
-	}
-
-	.meta .tags:before {
-		content: '\B7'; /* aka &middot; */
+	.meta .tags {
+		margin-left: 1em;
 	}
 
 	header img {
@@ -304,20 +244,16 @@ footer img {
 		float: left;
 		width: 200px;
 		height: 200px;
-		/* margin: [top] [right] [bottom] [left] */
-		margin: 10px 20px 20px 0;
-		border-radius: 1em;
+		margin-right: 2em;
 	}
 
 	footer img {
 		display: block;
 		float: left;
-		/*height: 120px;
-		width: 120px;*/
 		height: 200px;
 		width: 200px;
 		/* margin: [top] [right] [bottom] [left] */
-		margin: 20px 20px 20px 0px;
+		margin: 0px 20px 20px 0px;
 		border-radius: 0.5em;
 	}
 }
@@ -326,14 +262,33 @@ iframe {
 	padding-top: 20px;
 }
 
-#draft-msg {
-	background: rgba(248, 132, 107, 0.3);
-	border-radius: 0.5em;
 
+.update, .draft {
 	display: inline-block;
 	/* margin: [top] [right] [bottom] [left] */
 	margin: 2em 0 1em 15px;
 	padding: 20px;
 
 	border: 1px solid;
+}
+
+.update:before {
+	display: inline-block;
+	content: 'Update:';
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+.draft {
+	background: rgba(248, 132, 107, 0.3);
+	font-weight: bold;
+}
+
+/* Active link */
+
+#header .active,
+#header a:hover,
+#header a:focus
+{
+	background-color: rgba(0, 0, 0, 0.2);
 }

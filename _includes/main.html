@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-{% assign debug = true %} {% comment %} set to false to disable debugging {% endcomment %}
 {% assign title_suffix = "" %}
 {% if page.title and page.title != '' %}
 	{% assign title_suffix = " &mdash; " %}
@@ -9,27 +8,42 @@
 {% capture bio %}
 {% include bio.markdown %}
 {% endcapture %}
+{% if page.url == '/index.html' %}
+  {% assign page_class = 'home' %}
+{% else %}
+  {% capture page_class %}{{ page.url | remove: 'index.html' | remove_first: '/' | split: '/' | first }}{% endcapture %}
+{% endif %}
+
+
+{% case page_class %}
+{% when 'home' %}
+  {% assign home_class = 'active' %}
+{% when 'blog' %}
+  {% assign blog_class = 'active' %}
+{% when 'resources' %}
+  {% assign resources_class = 'active' %}
+{% endcase %}
+
 	<meta charset="utf-8"> 
 	<title>{{ page.title }}{{ title_suffix }}duckinator.net</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-{% if debug %}
-	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-{% else %}
+	<!--<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">-->
+
 	<link rel="stylesheet" type="text/css" href="/css/all.min.css">
-{% endif %}
 	
 	<link rel="alternate" type="application/rss+xml" title="duckinator.net" href="/rss.xml">
 </head>
-<body class="{{ page.layout }}">
+<body class="{{ page.layout }} {{ page_class }}">
 <section id="wrap">
-	<asside id="navhead">
+	<asside id="header">
 		<nav>
 			<ul>
-				<li><a href="/">home</a></li>
+				<li><a class="{{ home_class }}" href="/">home</a></li>
+				<li><a class="{{ blog_class }}" href="/blog">blog</a></li>
 				<li><a href="https://github.com/duckinator">code</a></li>
-				<li><a href="/resources/">resources</a></li>
+				<li><a class="{{ resources_class }}" href="/resources/">resources</a></li>
 				<li><a href="/rot13-css/">rot13 css</a></li>
 			</ul>
 		</nav>
@@ -37,7 +51,7 @@
 
 <section id="dynamic">
 {% if page.draft %}
-<div id="draft-msg">
+<div class="draft">
 This post is a draft! Please don't share it publicly while this message is visible.
 </div>
 {% endif %}

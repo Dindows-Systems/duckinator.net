@@ -10,7 +10,7 @@ function load_favicons() {
 	// We don't want the :hover-related stuff on touchscreens
 	// it's simply not usable there.
 	if(!('ontouchstart' in window))
-		selector += ', #navhead a';
+		selector += ', #header a';
 
 	anchors = document.querySelectorAll(selector);
 
