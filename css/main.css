@@ -97,10 +97,6 @@ body {
 	background: #3564B2;
 	margin: 0;
 	padding: 0;
-
-	-moz-box-shadow: 0 2px 2px #3564B2;
-	-webkit-box-shadow: 0 2px 2px #3564B2;
-	box-shadow: 0 2px 2px #3564B2;
 }
 
 #header ul {
