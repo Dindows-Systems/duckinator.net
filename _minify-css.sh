@@ -6,7 +6,13 @@ cd $DIR/css
 
 echo -n > all.min.css
 
-for x in {normalize,main}.css; do
+ORIGINAL_FILES=$(cat ../_includes/main.html | grep -E '<link rel="stylesheet"' | sed 's/.*<link .* href="\/css\/\(.*\)">.*/\1/' | grep -v 'all.min.css' | xargs echo)
+TEMP_FILES=$(echo $ORIGINAL_FILES | sed 's/.css/.css.tmp/g')
+
+#for x in {normalize,main}.css; do
+echo "Minifying files."
+for x in $ORIGINAL_FILES; do
+  echo "  $x"
   cat $x > $x.tmp
 
   # Loop over everything 2 times.
@@ -46,7 +52,10 @@ for x in {normalize,main}.css; do
   done
 done
 
-for x in {normalize,main}.css.tmp; do
+echo
+echo "Concatenating temporary files to all.min.css."
+for x in $TEMP_FILES; do
+  echo "  $x"
   cat $x >> all.min.css
   echo >> all.min.css
 done

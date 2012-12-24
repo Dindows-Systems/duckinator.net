@@ -17,6 +17,10 @@ a, img {
 
 /* main.css */
 
+a {
+	color: inherit;
+}
+
 .text-content, p {
 	line-height: 150%;
 }
@@ -58,59 +62,37 @@ body {
 	font-size: 100%;
 	font-family: "DejaVu Sans","Bitstream Vera Sans",Verdana,Helvetica,sans-serif;
 	height: 100%;
-	background-color: #689CD2;
+	background-color: #373737;
+	/*color: white;*/
+  color: black;
 }
 
 * {
-	color: white;
-	border: 0px solid #A3A9FA;
+	border: 0px solid #CCC;
+}
+
+.constraint {
+	margin: 0 auto;
+	max-width: 960px;
 }
 
 #dynamic {
-	max-width: 960px;
-	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+#dynamic .constraint {
 	padding: 20px;
-}
+	padding-top: 50px;
 
-.meta {
-	font-weight: bold;
-}
+	background: #EEE;
+	color: black;
 
-.tags {
-	list-style: none;
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-}
-
-.tags li {
-	font-size: 0.8em;
-	list-style: none;
-	display: inline;
-	/* padding: [top] [right] [bottom] [left] */
-	padding: 0 5px 0 0;
-	margin: 0;
-}
-
-#header {
-	display: block;
-	background: #3564B2;
-	margin: 0;
-	padding: 0;
-}
-
-#header ul {
-	padding: 0px;
-	margin: 0;
-}
-
-#header li {
-	display: inline-block;
-}
-
-#header a {
-	font-weight: bold;
-	padding: 15px 30px;
+	min-height: 100%;
 }
 
 header img {
@@ -136,155 +118,7 @@ footer img {
 	background: #778DA8;
 }
 
-#posts a {
-	text-decoration: none;
-}
-
-#posts {
-	margin: 0;
-	padding: 0;
-}
-
-#posts li {
-	list-style: none;
-	display: block;
-	border-bottom-width: 0px;
-	clear: both;
-}
-
-#posts h3,
-#posts time {
-	margin: 0;
-	padding: 10px;
-}
-
-#posts h3 {
-	display: inline-block;
-	border-bottom-width: 1px;
-}
-
-#posts time {
-	text-align: right;
-	display: none;
-}
-
-#pagination {
-	margin-top: 20px;
-}
-
-#pagination a {
-	text-decoration: none;
-}
-
-#pagination .previous:before {
-	content: '\AB\20';
-}
-
-#pagination .next {
-	float: right;
-}
-
-#pagination .next:after {
-	content: '\20\BB';
-}
-
-.icon {
-	background-size: 16px;
-	padding-left: 18px;
-	background-position: 0 center;
-	background-repeat: no-repeat;
-}
-
-/* Wider displays */
-
-/* This was 960px. The 7px is somehow related to .icon, but I'm not sure how. */
-@media (min-width: 967px) {
-	#header .icon {
-		-webkit-transition-property: background-position;
-		-moz-transition-property: background-position;
-		-o-transition-property: background-position;
-		transition-property: background-position;
-
-		-webkit-transition-duration: 0.3s;
-		-moz-transition-duration: 0.3s;
-		-o-transition-duration: 0.3s;
-		transition-duration: 0.3s;
-
-		background-position: 5px -50%;
-	}
-
-	#header .icon:hover,
-	#header .icon:focus,
-	#header .active {
-		background-position: 5px 50%;
-	}
-
-	#posts li {
-		border-bottom-width: 1px;
-	}
-
-	#posts h3,
-	#posts time {
-		width: 49%;
-		display: inline-block;
-		border-bottom-width: 0px;
-	}
-
-	.meta .tags {
-		margin-left: 1em;
-	}
-
-	header img {
-		display: block;
-
-		float: left;
-		width: 200px;
-		height: 200px;
-		margin-right: 2em;
-	}
-
-	footer img {
-		display: block;
-		float: left;
-		height: 200px;
-		width: 200px;
-		/* margin: [top] [right] [bottom] [left] */
-		margin: 0px 20px 20px 0px;
-		border-radius: 0.5em;
-	}
-}
-
 iframe {
 	padding-top: 20px;
 }
 
-
-.update, .draft {
-	display: inline-block;
-	/* margin: [top] [right] [bottom] [left] */
-	margin: 2em 0 1em 15px;
-	padding: 20px;
-
-	border: 1px solid;
-}
-
-.update:before {
-	display: inline-block;
-	content: 'Update:';
-	font-weight: bold;
-	font-size: 1.3em;
-}
-
-.draft {
-	background: rgba(248, 132, 107, 0.3);
-	font-weight: bold;
-}
-
-/* Active link */
-
-#header .active,
-#header a:hover,
-#header a:focus
-{
-	background-color: rgba(0, 0, 0, 0.2);
-}

@@ -8,7 +8,7 @@
 
 You may know me as "duck" or "duckinator."
 
-I am a brony, programming polyglot, musician, and amateur photographer.
+I am an artist, programming polyglot, musician, and amateur photographer.
 
 I solve problems that bother me, and I create strange things to do so.
 

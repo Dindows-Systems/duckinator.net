@@ -28,33 +28,41 @@
 	<title>{{ page.title }}{{ title_suffix }}duckinator.net</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!--<link rel="stylesheet" type="text/css" href="/css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">-->
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/draft-update.css">
+	<link rel="stylesheet" type="text/css" href="/css/pagination.css">
+	<link rel="stylesheet" type="text/css" href="/css/post-list.css">
+	<link rel="stylesheet" type="text/css" href="/css/post.css">
+	<link rel="stylesheet" type="text/css" href="/css/wide.css">
 
-	<link rel="stylesheet" type="text/css" href="/css/all.min.css">
+	<!--<link rel="stylesheet" type="text/css" href="/css/all.min.css">-->
 	
 	<link rel="alternate" type="application/rss+xml" title="duckinator.net" href="/rss.xml">
 </head>
 <body class="{{ page.layout }} {{ page_class }}">
-<section id="wrap">
-	<asside id="header">
-		<nav>
-			<ul>
-				<li><a class="{{ home_class }}" href="/">home</a></li>
-				<li><a class="{{ blog_class }}" href="/blog">blog</a></li>
-				<li><a href="https://github.com/duckinator">code</a></li>
-				<li><a class="{{ resources_class }}" href="/resources/">resources</a></li>
-				<li><a href="/rot13-css/">rot13 css</a></li>
-			</ul>
-		</nav>
-	</asside>
 
-<section id="dynamic">
-{% if page.draft %}
-<div class="draft">
-This post is a draft! Please don't share it publicly while this message is visible.
+<div id="header">
+	<nav>
+		<ul class="constraint">
+			<!-- Formatted weirdly to get around http://da.gd/inlinedisp -->
+			<li><a class="icon {{ home_class }}" href="/">Home</a></li><li>
+			<a class="icon {{ blog_class }}" href="/blog/">Blog</a></li><li>
+			<a class="icon" href="https://github.com/duckinator">GitHub</a></li><li>
+			<a class="icon {{ resources_class }}" href="/resources/">Resources</a></li><li>
+			<a class="icon" href="/rot13-css/">Rot13 CSS</a></li>
+		</ul>
+	</div>
 </div>
-{% endif %}
+
+<div id="dynamic">
+  <div class="constraint">
+    {% if page.draft %}
+    <div class="draft">
+    This post is a draft! Please don't share it publicly while this message is visible.
+    </div>
+    {% endif %}
 
 {% case page.layout %}
 
@@ -64,9 +72,10 @@ This post is a draft! Please don't share it publicly while this message is visib
 	{% include layouts/default.html %}
 
 {% endcase %}
-</section>
 
-	<script src="/js/all.js"></script>
-</section>
+  </div>
+</div>
+
+<script src="/js/all.js"></script>
 </body>
 </html>
