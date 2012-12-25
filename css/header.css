@@ -7,7 +7,7 @@
 
 #header ul {
 	padding: 0px;
-  border-bottom-width: 1px;
+	border-bottom-width: 1px;
 }
 
 #header li {
@@ -17,7 +17,7 @@
 #header a {
 	font-weight: bold;
 	padding: 15px 30px;
-  text-decoration: none;
+	text-decoration: none;
 }
 
 /* Active link */
@@ -27,11 +27,11 @@
 #header a:focus
 {
 	/*background-color: rgba(0, 0, 0, 0.2);*/
-  background-color: #CCC; /* Same as broder color */
+	background-color: #CCC; /* Same as broder color */
 }
 
 #header a:hover,
 #header a:focus
 {
-  text-decoration: underline;
+	text-decoration: underline;
 }

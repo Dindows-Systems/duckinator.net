@@ -1,7 +1,7 @@
 /* Wider displays */
 
 @media (min-width: 960px) {
-	#dynamic-wrap {
+	#dynamic {
 		position: absolute;
 		top: 0;
 		left: 0;

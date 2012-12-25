@@ -64,7 +64,7 @@ body {
 	height: 100%;
 	background-color: #373737;
 	/*color: white;*/
-  color: black;
+	color: black;
 }
 
 * {
@@ -76,23 +76,20 @@ body {
 	max-width: 960px;
 }
 
-#dynamic {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-}
-
 #dynamic .constraint {
 	padding: 20px;
 	padding-top: 50px;
 
+	min-height: 100%;
+}
+
+#dynamic .constraint, #header .constraint {
 	background: #EEE;
 	color: black;
+}
 
-	min-height: 100%;
+#dynamic header {
+	overflow: hidden;
 }
 
 header img {
