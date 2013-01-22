@@ -125,10 +125,8 @@ p.rot13 a, p a.rot13 {
   margin-bottom: 3px;
 }
 
-#navhead a.rot13 {
+#header a {
   border-bottom: none;
-  margin-top: 2px;
-  margin-bottom: 2px;
 }
 
 /* End weird hack */
