@@ -8,6 +8,6 @@ function fail() {
 
 jekyll || fail "Error running jekyll"
 
-if [ "$1" == "push" ]; then
-  dotcloud push duckinator --all || fail "Error pushing changes to dotcloud."
-fi
+cd _site || fail "_site does not exist?"
+wget https://github.com/duckinator/resume/raw/master/public/resume.pdf || fail "Could not fetch resume."
+
