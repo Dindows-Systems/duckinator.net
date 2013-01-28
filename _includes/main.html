@@ -51,7 +51,8 @@
 			<a class="icon {{ blog_class }}" href="/blog/">Blog</a></li><li>
 			<a class="icon" href="https://github.com/duckinator">GitHub</a></li><li>
 			<a class="icon {{ resources_class }}" href="/resources/">Resources</a></li><li>
-			<a class="icon" href="/rot13-css/">ROT13 CSS</a></li>
+			<a class="icon" href="/rot13-css/">ROT13 CSS</a></li><li>
+			<a class="icon" href="http://docs.google.com/viewer?url=http%3A%2F%2Fduckinator.net%2Fresume.pdf">Resume</a> <sup><a href="/resume.pdf">[Download]</a></sup></li>
 		</ul>
 	</nav>
 </div>
@@ -68,6 +69,8 @@
 
 {% when 'post' %}
 	{% include layouts/post.html %}
+{% when 'raw' %}
+  {% include layouts/raw.html %}
 {% else %}
 	{% include layouts/default.html %}
 
