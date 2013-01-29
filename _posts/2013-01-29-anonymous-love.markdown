@@ -5,7 +5,7 @@ layout: post
 draft: true
 ---
 
-The internet seems to be an overwhelmingly sad place. I decided I wanted to try my hand at fixing that.
+The internet seems to be an overwhelmingly sad place. I've decided to try my hand at fixing that.
 
 The most direct approach would be to encourage people to tell others they are loved. When contemplating how to approach this, it became apparent that being told "I love you" can trigger reactions that do more harm than good. "What do they want in return?" "Is this a trick?" "I don't know what to say." It is not the message causing problems, it is the presentation. It can trigger negative emotions. What is needed is a neutral presentation of the same idea.
 
