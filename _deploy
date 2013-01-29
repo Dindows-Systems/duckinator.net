@@ -8,6 +8,3 @@ function fail() {
 
 jekyll || fail "Error running jekyll"
 
-cd _site || fail "_site does not exist?"
-wget https://github.com/duckinator/resume/raw/master/public/resume.pdf || fail "Could not fetch resume."
-
