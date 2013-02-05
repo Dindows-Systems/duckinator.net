@@ -9,35 +9,38 @@
 {% include bio.markdown %}
 {% endcapture %}
 {% if page.url == '/index.html' %}
-  {% assign page_class = 'home' %}
+	{% assign page_class = 'home' %}
 {% else %}
-  {% capture page_class %}{{ page.url | remove: 'index.html' | remove_first: '/' | split: '/' | first }}{% endcapture %}
+	{% capture page_class %}{{ page.url | remove: 'index.html' | remove_first: '/' | split: '/' | first }}{% endcapture %}
 {% endif %}
 
 
 {% case page_class %}
 {% when 'home' %}
-  {% assign home_class = 'active' %}
+	{% assign home_class = 'active' %}
 {% when 'blog' %}
-  {% assign blog_class = 'active' %}
+	{% assign blog_class = 'active' %}
 {% when 'resources' %}
-  {% assign resources_class = 'active' %}
+	{% assign resources_class = 'active' %}
 {% when 'resume' %}
-  {% assign resume_class = 'active' %}
+	{% assign resume_class = 'active' %}
 {% endcase %}
 
 	<meta charset="utf-8"> 
 	<title>{{ page.title }}{{ title_suffix }}duckinator.net</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!--<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	
+	{% comment %}
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<link rel="stylesheet" type="text/css" href="/css/header.css">
 	<link rel="stylesheet" type="text/css" href="/css/draft-update.css">
 	<link rel="stylesheet" type="text/css" href="/css/pagination.css">
 	<link rel="stylesheet" type="text/css" href="/css/post-list.css">
 	<link rel="stylesheet" type="text/css" href="/css/post.css">
-	<link rel="stylesheet" type="text/css" href="/css/wide.css">-->
+	<link rel="stylesheet" type="text/css" href="/css/wide.css">
+	{% endcomment %}
 
 	<link rel="stylesheet" type="text/css" href="/css/all.min.css">
 	
@@ -60,25 +63,25 @@
 </div>
 
 <div id="dynamic">
-  <div class="constraint">
-    {% if page.draft %}
-    <div class="draft">
-    This post is a draft! Please don't share it publicly while this message is visible.
-    </div>
-    {% endif %}
+	<div class="constraint">
+		{% if page.draft %}
+		<div class="draft">
+		This post is a draft! Please don't share it publicly while this message is visible.
+		</div>
+		{% endif %}
 
 {% case page.layout %}
 
 {% when 'post' %}
 	{% include layouts/post.html %}
 {% when 'raw' %}
-  {% include layouts/raw.html %}
+	{% include layouts/raw.html %}
 {% else %}
 	{% include layouts/default.html %}
 
 {% endcase %}
 
-  </div>
+	</div>
 </div>
 
 <script src="/js/all.js"></script>
